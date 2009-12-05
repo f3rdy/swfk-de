@@ -5,29 +5,37 @@
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 
-\chapter*{Preface}\normalsize
-    \addcontentsline{toc}{chapter}{Preface}
+%\chapter*{Preface}\normalsize
+\chapter*{Vorwort}\normalsize
+    %\addcontentsline{toc}{chapter}{Preface}
+    \addcontentsline{toc}{chapter}{Vorwort} 
 \begin{center}
-{\em A Note to Parents...}
+%{\em A Note to Parents...}
+{\em Ein Hinweis für Eltern...}
 \end{center}
 \pagestyle{plain}
 
 \noindent
-Dear Parental Unit or other Caregiver,
+%Dear Parental Unit or other Caregiver,
+Liebes Elternteil oder andere Bezugsperson,
 
-In order for your child to get started with programming, you're going to need to install Python on your computer.  This book has recently been updated to use Python 3.0--this latest version of Python is not compatible with earlier versions, so if you have an earlier version of Python installed, then you'll need to download an older release of the book.
+%In order for your child to get started with programming, you're going to need to install Python on your computer.  This book has recently been updated to use Python 3.0--this latest version of Python is not compatible with earlier versions, so if you have an earlier version of Python installed, then you'll need to download an older release of the book.
+Damit ihr Kind programmieren anfangen kann, müssen Sie Python auf ihrem Computer installieren. Dieses Buch ist vor kurzem an Python 3.1 angepasst worden - diese neueste Version von Python ist nicht kompatibel mit früheren Versionen. Wenn Sie also eine ältere Version von Python installiert haben, sollten Sie auf eine ältere Version des Buchs zurückgreifen.
 
-Installing Python is a fairly straight-forward task, but there are a few wrinkles depending upon what sort of Operating System you're using.  If you've just bought a shiny new computer, have no idea what to do with it, and that previous statement has filled you with a severe case of the cold chills, you'll probably want to find someone to do this for you.  Depending upon the state of your computer, and the speed of your internet connection, this could take anything from 15 minutes to a few hours.
+%Installing Python is a fairly straight-forward task, but there are a few wrinkles depending upon what sort of Operating System you're using.  If you've just bought a shiny new computer, have no idea what to do with it, and that previous statement has filled you with a severe case of the cold chills, you'll probably want to find someone to do this for you.  Depending upon the state of your computer, and the speed of your internet connection, this could take anything from 15 minutes to a few hours.
+Die Installation von Python ist heine Hexerei, aber es gibt einige Besonderheiten zu beachten, abhängig vom verwendeten Betriebssystem. Wenn Sie gerade einen neuen Computer gekauft haben und keine Ahnung haben, wie Sie die Installation anstellen sollen, ist es wahrscheinlich besser jemanden zu finden, der das für Sie macht. Abhängig vom PC und der Geschwindigkeit der Internetverbindung kann die Installation zwischen 15 Minuten und einigen Stunden dauern.
 
 \begin{WINDOWS}
 
 \noindent
-First of all, go to \href{http://www.python.org}{www.python.org} and download the latest Windows installer for Python 3.  At time of writing, this is:
+%First of all, go to \href{http://www.python.org}{www.python.org} and download the latest Windows installer for Python 3.  At time of writing, this is:
+Gehen Sie zuerst zu \href{http://www.python.org}{www.python.org} und laden die neueste Version von Python 3 herunter. Zur Zeit des Schreibens ist dies:
 \begin{quote}
-     \href{http://www.python.org/ftp/python/3.0.1/python-3.0.1.msi}{http://www.python.org/ftp/python/3.0.1/python-3.0.1.msi}
+     %\href{http://www.python.org/ftp/python/3.0.1/python-3.0.1.msi}{http://www.python.org/ftp/python/3.0.1/python-3.0.1.msi}
+    \href{http://www.python.org/ftp/python/3.1.1/python-3.1.1.msi}{http://www.python.org/ftp/python/3.1.1/python-3.1.1.msi}
 \end{quote}
-Double-click the icon for the Windows installer (you do remember where you downloaded it to, don't you?), and then follow the instructions to install it in the default location (this is probably \emph{c:$\backslash$Python30} or something very similar).
-
+%Double-click the icon for the Windows installer (you do remember where you downloaded it to, don't you?), and then follow the instructions to install it in the default location (this is probably \emph{c:$\backslash$Python30} or something very similar).
+Zum Installieren genügt ein Doppelklick auf die eben heruntergeladene Datei (Sie erinnern sich noch wohin Sie es gespeichert haben, oder?), und folgen den Anweisungen um es im Standardordner zu installieren (das ist wahrscheinlich \emph{c:$\backslash$Python31} oder etwas sehr ähnliches).
 \end{WINDOWS}
 
 \begin{MAC}
@@ -120,18 +128,31 @@ Type "help", "copyright", "credits" or "license" for more information.
 \begin{LINUX}
 
 \noindent
-First of all, download and install the latest version of Python 3 for your distribution.  Given the large number of Linux flavours, it's impossible to give exact details on installation for each---but chances are, if you're running Linux, you already know what you're doing anyway.  In fact, you're probably insulted by the very idea of being told how to install$\ldots$anything
+%First of all, download and install the latest version of Python 3 for your distribution.  Given the large number of Linux flavours, it's impossible to give exact details on installation for each---but chances are, if you're running Linux, you already know what you're doing anyway.  In fact, you're probably insulted by the very idea of being told how to install$\ldots$anything
+Laden Sie zuerst die neueste Version von Python 3 für Ihre Distribution herunter. Nachdem es eine große Anzahl von Linux Distributionen gibt, ist es unmöglich eine exakte Anleitung für jede Distribution anzugeben---aber wenn Sie Linux verwenden, ist die Wahrscheinlichkeit groß, dass Sie wissen, wie es geht. Vielleicht sind Sie sogar beleidigt dass Ihnen überhaupt jemand Tipps gibt wie man $\ldots$irgendwas installiert.
 
+\noindent
+Trotzdem ein kleiner Hinweis. Auf Ubuntu und Debian basierenden Systemen würde es so funktionieren
+
+\begin{listing}
+\begin{verbatim}
+sudo apt-get install python3.1
+\end{verbatim}
+\end{listing}
 \end{LINUX}
 
 \noindent
-\emph{\color{BrickRed}After installation$\ldots$}
+%\emph{\color{BrickRed}After installation$\ldots$}
+\emph{\color{BrickRed}Nach der Installation$\ldots$}
 
 \noindent
-$\ldots$You might need to sit down next to your child for the first few chapters, but hopefully after a few examples, they should be batting your hands away from the keyboard to do it themselves.  They should, at least, know how to use a text editor of some kind before they start (no, not a Word Processor, like Microsoft Word---a plain, old-fashioned text editor)---they should at least able to open and close files, create new text files and save what they're doing.  Apart from that, this book will try to teach the basics from there.
+%$\ldots$You might need to sit down next to your child for the first few chapters, but hopefully after a few examples, they should be batting your hands away from the keyboard to do it themselves.  They should, at least, know how to use a text editor of some kind before they start (no, not a Word Processor, like Microsoft Word---a plain, old-fashioned text editor)---they should at least able to open and close files, create new text files and save what they're doing.  Apart from that, this book will try to teach the basics from there.
+$\ldots$Die ersten Kapitel über sollten Sie Ihr Kind noch am Computer begleiten. Dann wird es hoffentlich die Kontrolle über die Tastatur übernehmen wollen und selber weiter experimentieren. Vorher sollten sie aber wenigstens wissen, wie man einen Texteditor verwendet (nein, kein Textverarbeitungsprogramm wie Microsoft World oder Open Office---ein einfacher altmodischer Texteditor)---und sie sollten zumindest Dateien öffenen und schließen, sowie die Änderungen in den Textdateien speichern können. Von da an wird dieses Buch versuchen die Grundlagen beizubringen. 
 \\
 \\
 \noindent\\
-Thanks for your time, and kind regards,
+%Thanks for your time, and kind regards,
+Danke für deine Zeit und liebe Grüße,
 \noindent\\
-THE BOOK
+%THE BOOK
+DAS BUCH

@@ -20,7 +20,7 @@ platforms = 'win', 'mac', 'linux'
 #
 # find the executables to use in compiling the books
 #
-latex = find_executable('latex')
+latex = find_executable('latex')  #original
 makeindex = find_executable('makeindex')
 dvipdf = find_executable('dvipdf')
 
@@ -98,7 +98,7 @@ class LatexCommand(Command):
             spawn([makeindex, '%s/swfk.idx' % target_dir])
             spawn([latex, '--output-directory=%s' % target_dir, tex])
 
-            pdf = '%s/swfk-%s-%s%s.pdf' % (target_dir, platform, version, fname_suffix)
+            pdf = '%s/swfk-de-%s-%s%s.pdf' % (target_dir, platform, version, fname_suffix)
             spawn([dvipdf, '%s/swfk.dvi' % target_dir, pdf])
 
             zf = ZipFile('%s/swfk-%s-%s%s.zip' % (target_dir, platform, version, fname_suffix), 'w')
