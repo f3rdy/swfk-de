@@ -21,26 +21,3 @@ Nach dem entpacken aller Bilder, den folgenden Befehl aufrufen
 python setup.py build
 
 Nach ein paar Minuten sind die PDF's für Linux, Windows und Mac im target Verzeichnis fertig.
-
-
-TODO
-Anpassen der Titelbilder
-preface: den Mac Abschnitt übersetzen
-ch1  übersetzen
-ch2  übersetzen
-ch3  übersetzen
-ch4  übersetzen
-ch5  übersetzen
-ch6  übersetzen
-ch7  übersetzen
-ch8  übersetzen
-ch9  übersetzen
-ch10 übersetzen
-
-app a übersetzen
-app b übersetzen
-app c übersetzen
-app d übersetzen
-
-testen ob hg clone und bauen mit latex auch funktioniert
-

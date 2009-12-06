@@ -49,14 +49,14 @@
 
 \begin{document}
 
-\include{frontmatter}
+%\include{frontmatter}
 
-\include{preface}
+%\include{preface}
 
 \pagestyle{headings}
 \pagenumbering{arabic}
 
-%\include{ch1}
+\include{ch1}
 %\include{ch2}
 %\include{ch3}
 %\include{ch4}
