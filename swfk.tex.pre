@@ -16,6 +16,7 @@
 \usepackage{eso-pic}
 \usepackage[utf8]{inputenc} %für deutsche Übersetzung hinzugefügt
 \usepackage[ngerman]{babel} %für deutsche Übersetzung hinzugefügt
+\usepackage[right]{eurosym} %für das Euro Symbol hinzugefügt
 
 \parindent 1cm
 \parskip 0.2cm
@@ -56,9 +57,9 @@
 \pagestyle{headings}
 \pagenumbering{arabic}
 
-\include{ch1}
+%\include{ch1}
 \include{ch2}
-%\include{ch3}
+\include{ch3}
 %\include{ch4}
 %\include{ch5}
 %\include{ch6}
@@ -71,7 +72,7 @@
 %\include{appendixa}
 %\include{appendixb}
 %\include{appendixc}
-%\include{appendixd}
+\include{appendixd}
 
 \printindex
 

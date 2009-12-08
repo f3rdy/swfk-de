@@ -5,26 +5,39 @@
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 
-\chapter{Answers to ``Things to try''}\label{app:answers}
+\chapter{Antworten zu ``Dinge zum Ausprobieren''}\label{app:answers}
 
-Here is where you can find the answers to the questions asked in each chapter in the section ``Things to try''.
+%Here is where you can find the answers to the questions asked in each chapter in the section ``Things to try''.
+Hier kannst du die gesamten Antworten finden, die in jedem Kapitel unter `Dinge zum ausprobieren' gestellt werden.
 
-\subsection*{Chapter \ref{ch:8multipliedby3.57}}
+%\subsection*{Chapter \ref{ch:8multipliedby3.57}}
+\subsection*{Antworten zu Kapitel \ref{ch:8multipliedby3.57}}
 
-1. The answer to \textbf{Exercise 1} might be something like the following:
+%1. The answer to \textbf{Exercise 1} might be something like the following:
+1. Die Antwort zu \textbf{Übung 1} könnte so aussehen:
 
+%\begin{listing}
+%\begin{verbatim}
+%>>> toys = [ 'car', 'Nintendo Wii', 'computer', 'bike' ]
+%>>> foods = [ 'pancakes', 'chocolate', 'ice cream' ]
+%>>> favourites = toys + foods
+%>>> print(favourites)
+%['car', 'Nintendo Wii', 'computer', 'bike', 'pancakes', 'chocolate', 'ice cream']
+%\end{verbatim}
+%\end{listing}
 \begin{listing}
 \begin{verbatim}
->>> toys = [ 'car', 'Nintendo Wii', 'computer', 'bike' ]
->>> foods = [ 'pancakes', 'chocolate', 'ice cream' ]
->>> favourites = toys + foods
->>> print(favourites)
-['car', 'Nintendo Wii', 'computer', 'bike', 'pancakes', 'chocolate', 'ice cream']
+>>> spielsachen = [ 'Auto', 'Nintendo Wii', 'Computer', 'Fahrrad' ]
+>>> speisen = [ 'Pfannkuchen', 'Schokolade', 'Pizza' ]
+>>> favouriten = spielsachen + speisen
+>>> print(favouriten)
+['Auto', 'Nintendo Wii', 'Computer', 'Fahrrad', 'Pfannkuchen', 'Schokolade', 'Pizza']
 \end{verbatim}
 \end{listing}
 
 \noindent
-2.  The answer to \textbf{Exercise 2} is simply adding the result of multiplying 3 by 25 and the result of multiplying 10 by 32.  The following equations shows the result of this equation:
+%2.  The answer to \textbf{Exercise 2} is simply adding the result of multiplying 3 by 25 and the result of multiplying 10 by 32.  The following equations shows the result of this equation:
+2. Die Antwort zu \textbf{Übung 2} ist das Ergebnis von zwei Multiplikationen, deren Ergebnis miteinander addiert werden. Zuerst wird 3 mal 25 multipliziert und dann 10 mit 32. Die beiden Ergebnisse werden addiert. Die folgende Formel führt zur Lösung:
 
 \begin{listing}
 \begin{verbatim}
@@ -34,7 +47,8 @@ Here is where you can find the answers to the questions asked in each chapter in
 \end{listing}
 
 \noindent
-However, given that we looked at the use of brackets in Chapter 2, you might have decided that you needed to put brackets around some parts of this equation.  You might've done something like this:
+%However, given that we looked at the use of brackets in Chapter 2, you might have decided that you needed to put brackets around some parts of this equation.  You might've done something like this:
+Aber vielleicht hast du auch Klammern verwendet, nachdem wir das in  Kapitel \ref{ch:8multipliedby3.57} so genau behandelt haben. Vielleicht hast du folgende Formel aufgeschrieben:
 
 \begin{listing}
 \begin{verbatim}
@@ -44,21 +58,31 @@ However, given that we looked at the use of brackets in Chapter 2, you might hav
 \end{listing}
 
 \noindent
-The answer is the same, because multiplication is done before addition.  In either equation, the two multiplication operations are performed first, and the results are added.  However, the second equation is possibly slightly better than the first---because it's immediately obvious to the reader which operations are performed first.  A less knowledgeable programmer (who doesn't know as much about the order of operations) might think that, in the first equation, you multiply 3 by 25, then add 10, then multiply the result by 32 (the answer to that is 2720---completely wrong).  With the brackets, it's a bit more obvious what gets calculated first.
+%The answer is the same, because multiplication is done before addition.  In either equation, the two multiplication operations are performed first, and the results are added.  However, the second equation is possibly slightly better than the first---because it's immediately obvious to the reader which operations are performed first.  A less knowledgeable programmer (who doesn't know as much about the order of operations) might think that, in the first equation, you multiply 3 by 25, then add 10, then multiply the result by 32 (the answer to that is 2720---completely wrong).  With the brackets, it's a bit more obvious what gets calculated first.
+Das Ergebnis ist wieder das gleiche, weil die Multiplikation vor der Addition ausgeführt wird. In jeder Formel werden die zwei Multiplikationen zuerst ausgeführt und dann addiert. Aber die zweite Formel ist etwas besser als die erste---weil der Leser sofort erkennt, welche Teile zuerst berechnet werden. Jemand, der sich mit der Reihenfolge der Operatoren nicht so gut auskennt, könnte ansonsten meinen, dass in der ersten Formel 3 mit 25 multipliziert wird, dann 10 dazugezählt und das Ergebnis mit 32 multipliziert wird (das Ergebnis wäre dann 2720 und das wäre völlig falsch). Mit den Klammern wird es etwas klarer, was zuerst berechnet wird.
 
 \noindent
-3.  The answer to \textbf{Exercise 3} will be something like the following:
+%3.  The answer to \textbf{Exercise 3} will be something like the following:
+3. Die Antwort zu \textbf{Übung 3} wird ungefähr so ausschauen:
 
+%\begin{listing}
+%\begin{verbatim}
+%>>> first_name = 'Mary'
+%>>> second_name = 'Wilson'
+%>>> print('My name is %s %s' % (first_name, second_name))
+%My name is Mary Wilson
+%\end{verbatim}
+%\end{listing}
 \begin{listing}
 \begin{verbatim}
->>> first_name = 'Mary'
->>> second_name = 'Wilson'
->>> print('My name is %s %s' % (first_name, second_name))
-My name is Mary Wilson
+>>> vorname  = 'Santa'
+>>> nachname = 'Klaus'>>> print('Mein Name ist %s %s' (vorname, nachname))
+Mein Name ist Santa Klaus
 \end{verbatim}
 \end{listing}
 
-\subsection*{Chapter \ref{ch:turtles}}
+%\subsection*{Chapter \ref{ch:turtles}}
+\subsection*{Antworten zu Kapitel \ref{ch:turtles}}
 
 \noindent
 1. A rectangle is like a square, except two of its sides are longer than the other two.  By telling the turtle to do the following operations, you can easily draw a rectangle:
@@ -120,7 +144,8 @@ For example, the following code will drawing the rectangle in figure\ref{fig46}.
 \end{figure}
 
 
-\subsection*{Chapter \ref{ch:againandagain}}
+%\subsection*{Chapter \ref{ch:againandagain}}
+\subsection*{Antworten zu Kapitel \ref{ch:againandagain}}
 
 \noindent
 1. The loop stops after the first print.  So when you run the code in the Python console you get:
@@ -206,7 +231,8 @@ interest earned for savings 130.477318383 for year 10 is 3.91431955149
 \end{verbatim}
 \end{listing}
 
-\subsection*{Chapter \ref{ch:sortoflikerecycling}}
+%\subsection*{Chapter \ref{ch:sortoflikerecycling}}
+\subsection*{Antworten zu Kapitel \ref{ch:sortoflikerecycling}}
 
 \noindent
 1. Turning the for-loop into a function is actually quite easy.  The function will look something like this:
@@ -315,7 +341,8 @@ interest earned for savings 895.423848271 for year 11 is 53.7254308963
 \end{verbatim}
 \end{listingignore}
 
-\subsection*{Chapter \ref{ch:turtlesgalore}}
+%\subsection*{Chapter \ref{ch:turtlesgalore}}
+\subsection*{Antworten zu Kapitel \ref{ch:turtlesgalore}}
 
 \noindent
 1. There's a hard way to draw an octagon, and an easy way.  The hard way, isn't hard because it's complicated.  It's hard because it requires more typing:
