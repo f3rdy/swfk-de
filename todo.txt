@@ -1,8 +1,9 @@
 Anpassen der Titelbilder
 
-preface: den Mac Abschnitt übersetzen
+swfk.tex.pre pdf Titel anpassen
 
-ch1  übersetzen
+preface: den Mac Abschnitt testen und übersetzen
+
 ch2  übersetzen
 ch3  übersetzen
 ch4  übersetzen
@@ -17,6 +18,8 @@ app a übersetzen
 app b übersetzen
 app c übersetzen
 app d übersetzen
+
+Übernehmen vom Design der französischen Version
 
 testen ob hg clone und bauen mit latex auch nach frischem checkout funktioniert
 
