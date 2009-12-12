@@ -85,32 +85,55 @@ Mein Name ist Santa Klaus
 \subsection*{Antworten zu Kapitel \ref{ch:turtles}}
 
 \noindent
-1. A rectangle is like a square, except two of its sides are longer than the other two.  By telling the turtle to do the following operations, you can easily draw a rectangle:
+%1. A rectangle is like a square, except two of its sides are longer than the other two.  By telling the turtle to do the following operations, you can easily draw a rectangle:
+1. Ein Rechteck ist wie ein Quadrat, aber bei einem Rechteck sind zwei Seiten länger als die anderen zwei. So könntest du der Schildkröte befehlen ein Rechteck zu zeichnen.
 
+%\begin{itemize}
+% \item move forward a certain number of pixels
+% \item turn left
+% \item move forward a shorter number of pixels
+% \item turn left
+% \item move forward, the number of pixels in the first movement
+% \item turn left
+% \item move forward the shorter number of pixels in the second movement
+%\end{itemize}
 \begin{itemize}
- \item move forward a certain number of pixels
- \item turn left
- \item move forward a shorter number of pixels
- \item turn left
- \item move forward, the number of pixels in the first movement
- \item turn left
- \item move forward the shorter number of pixels in the second movement
+ \item bewege dich um eine Anzahl von Pixel nach vorne
+ \item drehe dich nach links
+ \item bewege dich eine kleinere Anzahl von Pixel nach vorne
+ \item drehe dich nach links
+ \item bewege dich um eine Anzahl von Pixel nach vorne
+ \item drehe dich nach links
+ \item bewege dich eine kleinere Anzahl von Pixel nach vorne
 \end{itemize}
-
 \noindent
-For example, the following code will drawing the rectangle in figure\ref{fig46}.
+%For example, the following code will drawing the rectangle in figure\ref{fig46}.
+Zum Beispiel würde der folgende Code das Rechteck in Abbildung~\ref{fig46} erzeugen.
 
+%\begin{listing}
+%\begin{verbatim}
+%>>> import turtle
+%>>> t = turtle.Pen()
+%>>> t.forward(150)
+%>>> t.left(90)
+%>>> t.forward(50)
+%>>> t.left(90)
+%>>> t.forward(150)
+%>>> t.left(90)
+%>>> t.forward(50)
+%\end{verbatim}
+%\end{listing}
 \begin{listing}
 \begin{verbatim}
 >>> import turtle
->>> t = turtle.Pen()
->>> t.forward(150)
->>> t.left(90)
->>> t.forward(50)
->>> t.left(90)
->>> t.forward(150)
->>> t.left(90)
->>> t.forward(50)
+>>> schildkroete = turtle.Pen()
+>>> schildkroete.forward(150)
+>>> schildkroete.left(90)
+>>> schildkroete.forward(50)
+>>> schildkroete.left(90)
+>>> schildkroete.forward(150)
+>>> schildkroete.left(90)
+>>> schildkroete.forward(50)
 \end{verbatim}
 \end{listing}
 
@@ -118,31 +141,49 @@ For example, the following code will drawing the rectangle in figure\ref{fig46}.
 \begin{center}
 \includegraphics[width=82mm]{figure46.eps}
 \end{center}
-\caption{Turtle drawing a rectangle.}\label{fig46}
+%\caption{Turtle drawing a rectangle.}\label{fig46}
+\caption{Die Schildkröte malt ein Rechteck.}\label{fig46}
 \end{figure}
 
 \noindent
-2. A triangle is a bit more complicated to draw, because you need to know more about angles and line lengths.  If you haven't studied angles in school then this may be a bit harder to do than you expect.  You can draw a basic triangle (see figure~\ref{fig47}) using the following code:
+%2. A triangle is a bit more complicated to draw, because you need to know more about angles and line lengths.  If you haven't studied angles in school then this may be a bit harder to do than you expect.  You can draw a basic triangle (see figure~\ref{fig47}) using the following code:
+Ein Dreieck zu zeichnen ist schon etwas komplizierter, weil du die Grad und die Linienlänge rausfinden musst. Wenn du noch nicht viel darüber in der Schule gehört hast, könnte das ein wenig schwerer sein. Hier wäre der Code, der das Bild in Abbildung~\ref{fig47} erzeugt:
 
+%\begin{listing}
+%\begin{verbatim}
+%>>> import turtle
+%>>> t = turtle.Pen()
+%>>> t.forward(100)
+%>>> t.left(135)
+%>>> t.forward(70)
+%>>> t.left(90)
+%>>> t.forward(70)
+%\end{verbatim}
+%\end{listing}
 \begin{listing}
 \begin{verbatim}
 >>> import turtle
->>> t = turtle.Pen()
->>> t.forward(100)
->>> t.left(135)
->>> t.forward(70)
->>> t.left(90)
->>> t.forward(70)
+>>> schildkroete = turtle.Pen()
+>>> schildkroete.forward(100)
+>>> schildkroete.left(135)
+>>> schildkroete.forward(70)
+>>> schildkroete.left(90)
+>>> schildkroete.forward(70)
 \end{verbatim}
 \end{listing}
 
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=82mm]{figure47.eps}
+%\end{center}
+%\caption{Turtle drawing a triangle.}\label{fig47}
+%\end{figure}
 \begin{figure}
 \begin{center}
 \includegraphics[width=82mm]{figure47.eps}
 \end{center}
-\caption{Turtle drawing a triangle.}\label{fig47}
+\caption{Die Schildkröte malt ein Dreieck.}\label{fig47}
 \end{figure}
-
 
 %\subsection*{Chapter \ref{ch:againandagain}}
 \subsection*{Antworten zu Kapitel \ref{ch:againandagain}}
