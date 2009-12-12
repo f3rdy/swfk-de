@@ -4,8 +4,9 @@ swfk.tex.pre pdf Titel anpassen
 
 preface: den Mac Abschnitt testen und übersetzen
 
-ch2  übersetzen
-ch3  übersetzen
+ch1  OK
+ch2  OK
+ch3  OK
 ch4  übersetzen
 ch5  übersetzen
 ch6  übersetzen
@@ -19,9 +20,12 @@ app b übersetzen
 app c übersetzen
 app d übersetzen
 
+Alle Kapitel in die Rechtschreibkorrektur werfen
+
 Übernehmen vom Design der französischen Version
 
 testen ob hg clone und bauen mit latex auch nach frischem checkout funktioniert
+und dazuschreiben, welche Pakete auf Ubuntu installiert sein müssen
 
 Anlegen von swfk-de auf googlecode
 
