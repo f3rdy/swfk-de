@@ -7,7 +7,7 @@ preface: den Mac Abschnitt testen und übersetzen
 ch1  OK
 ch2  OK
 ch3  OK
-ch4  übersetzen
+ch4  OK
 ch5  übersetzen
 ch6  übersetzen
 ch7  übersetzen
