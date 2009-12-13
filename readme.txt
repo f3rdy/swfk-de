@@ -28,3 +28,9 @@ P.s. in diesen Files wird die Generierung des pdf eingetellt
 + in setup.py auf Zeile 17 oder 18 ob nur ein pdf oder drei pdf rauskommen (für Mac, Linux, Windows)
 + in swfk.tex.pre von Zeile 53 bis Zeile 75 welche Kapitel dabei sind und welche nicht.
 + auf frontmatter.tex auf Zeile 34 welche Version im Dateinamen des pdf stehen wird.
+
+P.p.s.: damit beim hg push auch der richtige Benutzer mitkommt, in die 
+.hg/hgrc Datei
+den Abschnitt hinzufügen
+[ui]
+username = Vorname Nachname <vorname.nachname@gmail.com> 
