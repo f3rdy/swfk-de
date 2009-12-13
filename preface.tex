@@ -17,10 +17,10 @@
 
 \noindent
 %Dear Parental Unit or other Caregiver,
-Liebes Elternteil oder andere Bezugsperson,
+Liebe Eltern (oder andere Bezugsperson),
 
 %In order for your child to get started with programming, you're going to need to install Python on your computer.  This book has recently been updated to use Python 3.0--this latest version of Python is not compatible with earlier versions, so if you have an earlier version of Python installed, then you'll need to download an older release of the book.
-Damit ihr Kind programmieren anfangen kann, müssen Sie Python auf ihrem Computer installieren. Dieses Buch ist vor kurzem an Python 3.1 angepasst worden - diese neueste Version von Python ist nicht kompatibel mit früheren Versionen. Wenn Sie also eine ältere Version von Python installiert haben, sollten Sie auf eine ältere Version des Buchs zurückgreifen.
+damit ihr Kind programmieren anfangen kann, müssen Sie Python auf ihrem Computer installieren. Dieses Buch ist vor kurzem an Python 3.1 angepasst worden - diese neueste Version von Python ist nicht kompatibel mit früheren Versionen. Wenn Sie also eine ältere Version von Python installiert haben, sollten Sie auf eine ältere Version des Buchs zurückgreifen.
 
 %Installing Python is a fairly straight-forward task, but there are a few wrinkles depending upon what sort of Operating System you're using.  If you've just bought a shiny new computer, have no idea what to do with it, and that previous statement has filled you with a severe case of the cold chills, you'll probably want to find someone to do this for you.  Depending upon the state of your computer, and the speed of your internet connection, this could take anything from 15 minutes to a few hours.
 Die Installation von Python ist heine Hexerei, aber es gibt einige Besonderheiten zu beachten, abhängig vom verwendeten Betriebssystem. Wenn Sie gerade einen neuen Computer gekauft haben und keine Ahnung haben, wie Sie die Installation anstellen sollen, ist es wahrscheinlich besser jemanden zu finden, der das für Sie macht. Abhängig vom PC und der Geschwindigkeit der Internetverbindung kann die Installation zwischen 15 Minuten und einigen Stunden dauern.
@@ -41,87 +41,90 @@ Zum Installieren genügt ein Doppelklick auf die eben heruntergeladene Datei (Si
 \begin{MAC}
 
 \noindent
-At time of writing, installing Python 3 on your Mac is a more complicated process than usual.  At the moment, there are no one-click install packages available.  There is information out there describing the installation process (here is a good \href{http://farmdev.com/thoughts/66/python-3-0-on-mac-os-x-alongside-2-6-2-5-etc-/}{page}), but the basic process is to download the source package and then build it yourself.  This isn't as difficult as it sounds, but you will need to follow a few steps in the Terminal.  If you find this too complicated, I recommend sticking with the \href{http://www.briggs.net.nz/log/wp-content/uploads/2008/03/swfk-mac.zip}{previous version} of this book.
+%At time of writing, installing Python 3 on your Mac is a more complicated process than usual.  At the moment, there are no one-click install packages available.  There is information out there describing the installation process (here is a good \href{http://farmdev.com/thoughts/66/python-3-0-on-mac-os-x-alongside-2-6-2-5-etc-/}{page}), but the basic process is to download the source package and then build it yourself.  This isn't as difficult as it sounds, but you will need to follow a few steps in the Terminal.  If you find this too complicated, I recommend sticking with the \href{http://www.briggs.net.nz/log/wp-content/uploads/2008/03/swfk-mac.zip}{previous version} of this book.
+Das installieren von Python 3 ist inzwischen auch auf dem Mac eine komfortable Sache geworden. Auf \href{http://python.org/download/}{http://python.org/download/} gibt es ein Disk Image für den Mac. Zur Zeit des Schreibens ist der Link dafür 
+\\
+\href{http://python.org/ftp/python/3.1.1/python-3.1.1.dmg}{http://python.org/ftp/python/3.1.1/python-3.1.1.dmg}. Nach dem Download zuerst das Image durch einen Doppelklick auf die Datei mounten. Zur eigentlichen Installation dann auf Python.mpkg klicken und den Anweisungen folgen. Somit ist Python installiert.
 
-\noindent
-First of all, go to \href{www.python.org}{www.python.org} and download the Python source package. As of Dec 2008, the address for this download is:
+%\noindent
+%First of all, go to \href{www.python.org}{www.python.org} and download the Python source package. As of Dec 2008, the address for this download is:
 
-\noindent
-\href{http://www.python.org/ftp/python/3.0/Python-3.0.tar.bz2}{http://www.python.org/ftp/python/3.0/Python-3.0.tar.bz2}
+%\noindent
+%\href{http://www.python.org/ftp/python/3.0/Python-3.0.tar.bz2}{http://www.python.org/ftp/python/3.0/Python-3.0.tar.bz2}
 
-\noindent
-Start the Terminal application, and enter the following commands:
+%\noindent
+%Start the Terminal application, and enter the following commands:
 
-\begin{listing}
-\begin{verbatim}
-$ cd ~/Downloads/Python-3.0/
-$ ./configure --enable-framework MACOSX_DEPLOYMENT_TARGET=10.5 --with-universal-archs=all
-$ make && make test
-$ sudo make frameworkinstall
-\end{verbatim}
-\end{listing}
+%\begin{listing}
+%\begin{verbatim}
+%$ cd ~/Downloads/Python-3.0/
+%$ ./configure --enable-framework MACOSX_DEPLOYMENT_TARGET=10.5 --with-universal-archs=all
+%$ make && make test
+%$ sudo make frameworkinstall
+%\end{verbatim}
+%\end{listing}
 
-\noindent
-The following steps may, or may not, be necessary.  First of all type: 
+%\noindent
+%The following steps may, or may not, be necessary.  First of all type: 
 
-\code{ls -la /Library/Frameworks/Python.framework/Versions/}
+%\code{ls -la /Library/Frameworks/Python.framework/Versions/}
 
-\noindent
-In my case, there are only two directories shown:
+%\noindent
+%In my case, there are only two directories shown:
 
-\begin{listing}
-\begin{verbatim}
-    drwxr-xr-x  4 root  admin  136  6 Dec 23:31 .
-    drwxr-xr-x  6 root  admin  204  6 Dec 23:31 ..
-    drwxr-xr-x  9 root  admin  306  6 Dec 23:32 3.0
-    lrwxr-xr-x  1 root  admin    3  6 Dec 23:31 Current -> 3.0
-\end{verbatim}
-\end{listing}
+%\begin{listing}
+%\begin{verbatim}
+%    drwxr-xr-x  4 root  admin  136  6 Dec 23:31 .
+%    drwxr-xr-x  6 root  admin  204  6 Dec 23:31 ..
+%    drwxr-xr-x  9 root  admin  306  6 Dec 23:32 3.0
+%    lrwxr-xr-x  1 root  admin    3  6 Dec 23:31 Current -> 3.0
+%\end{verbatim}
+%\end{listing}
 
-\noindent
-If you have more than those two directories listed (for example)$\ldots$
+%\noindent
+%If you have more than those two directories listed (for example)$\ldots$
 
-\begin{listing}
-\begin{verbatim}
-    drwxr-xr-x  4 root  admin  136   6 Dec 23:31 .
-    drwxr-xr-x  6 root  admin  204   6 Dec 23:31 ..
-    drwxr-xr-x  9 root  admin  306   7 Nov 08:19 2.4
-    drwxr-xr-x  9 root  admin  306  22 Mar 23:32 2.5
-    drwxr-xr-x  9 root  admin  306  12 Dec 10:22 2.6
-    drwxr-xr-x  9 root  admin  306   6 Dec 23:31 3.0
-    lrwxr-xr-x  1 root  admin    3   6 Dec 23:31 Current -> 3.0
-\end{verbatim}
-\end{listing}
+%\begin{listing}
+%\begin{verbatim}
+%    drwxr-xr-x  4 root  admin  136   6 Dec 23:31 .
+%    drwxr-xr-x  6 root  admin  204   6 Dec 23:31 ..
+%    drwxr-xr-x  9 root  admin  306   7 Nov 08:19 2.4
+%    drwxr-xr-x  9 root  admin  306  22 Mar 23:32 2.5
+%    drwxr-xr-x  9 root  admin  306  12 Dec 10:22 2.6
+%    drwxr-xr-x  9 root  admin  306   6 Dec 23:31 3.0
+%    lrwxr-xr-x  1 root  admin    3   6 Dec 23:31 Current -> 3.0
+%\end{verbatim}
+%\end{listing}
 
-\noindent
-$\ldots$then you may need to perform the following steps:
+%\noindent
+%$\ldots$then you may need to perform the following steps:
 
-\begin{listing}
-\begin{verbatim}
-$ cd /Library/Frameworks/Python.framework/Versions/
-$ sudo rm Current
-$ sudo ln -s 2.5 Current
-\end{verbatim}
-\end{listing}
+%\begin{listing}
+%\begin{verbatim}
+%$ cd /Library/Frameworks/Python.framework/Versions/
+%$ sudo rm Current
+%$ sudo ln -s 2.5 Current
+%\end{verbatim}
+%\end{listing}
 
-Finally, you'll want to setup Python 3 as the default, for when your child opens the Terminal application. To do this you'll need to edit the path used by Terminal--start Terminal, and then enter the following command \code{pico ~/.bash\_profile}.  This file may (or may not) exist already, and if it does, there may (or may not) already be a path set up.  In any case, at the bottom of the file, add the following:
+%Finally, you'll want to setup Python 3 as the default, for when your child opens the Terminal application. To do this you'll need to edit the path used by Terminal--start Terminal, and then enter the following command \code{pico ~/.bash\_profile}.  This file may (or may not) exist already, and if it does, there may (or may not) already be a path set up.  In any case, at the bottom of the file, add the following:
 
-\begin{listing}
-\begin{verbatim}
-export PATH="/Library/Frameworks/Python.framework/Versions/3.0/bin:${PATH}"
-\end{verbatim}
-\end{listing}
+%\begin{listing}
+%\begin{verbatim}
+%export PATH="/Library/Frameworks/Python.framework/Versions/3.0/bin:${PATH}"
+%\end{verbatim}
+%\end{listing}
 
-Save your changes, by hitting CTRL+X, and typing Y to save. If you restart the Terminal app, and type \code{python}, with any luck, you should see something similar to the following:
+%Save your changes, by hitting CTRL+X, and typing Y to save. If you restart the Terminal app, and type \code{python}, with any luck, you should see something similar to the following:
 
-\begin{listing}
-\begin{verbatim}
-Python 3.0 (r30:67503, Dec  6 2008, 23:22:48) 
-[GCC 4.0.1 (Apple Inc. build 5465)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>>
-\end{verbatim}
-\end{listing}
+%\begin{listing}
+%\begin{verbatim}
+%Python 3.0 (r30:67503, Dec  6 2008, 23:22:48) 
+%[GCC 4.0.1 (Apple Inc. build 5465)] on darwin
+%Type "help", "copyright", "credits" or "license" for more information.
+%>>>
+%\end{verbatim}
+%\end{listing}
 
 \end{MAC}
 
@@ -136,7 +139,7 @@ Trotzdem ein kleiner Hinweis. Auf Ubuntu und Debian basierenden Systemen würde 
 
 \begin{listing}
 \begin{verbatim}
-sudo apt-get install python3.1
+sudo apt-get install python3
 \end{verbatim}
 \end{listing}
 \end{LINUX}
