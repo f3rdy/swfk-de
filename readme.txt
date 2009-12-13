@@ -19,5 +19,12 @@ for x in `ls -1 *.zip`; do unzip $x; done
 Nach dem entpacken aller Bilder, den folgenden Befehl aufrufen
 
 python setup.py build
+oder auch
+python3 setup.py build
 
 Nach ein paar Minuten sind die PDF's für Linux, Windows und Mac im target Verzeichnis fertig.
+
+P.s. in diesen Files wird die Generierung des pdf eingetellt
++ in setup.py auf Zeile 17 oder 18 ob nur ein pdf oder drei pdf rauskommen (für Mac, Linux, Windows)
++ in swfk.tex.pre von Zeile 53 bis Zeile 75 welche Kapitel dabei sind und welche nicht.
++ auf frontmatter.tex auf Zeile 34 welche Version im Dateinamen des pdf stehen wird.
