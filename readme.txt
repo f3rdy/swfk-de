@@ -8,6 +8,11 @@ Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105,
 To build, you'll need latex, and dvipdf
 
 
+Auf einem frischen Ubuntu sollten diese Pakete installiert sein, damit das Generieren der pdf's gleich klappt.
+Am besten gleich in der Konsole
+sudo apt-get mercurial python3 texmaker texlive-full
+eingeben und auch die Abhängigkeiten mit Installieren.
+
 
 Anleitung zum PDF's generieren
 
