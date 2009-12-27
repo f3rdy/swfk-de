@@ -5,6 +5,14 @@
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 \documentclass[12pt,leqno,a4paper]{book}
+
+%%% Schriften, funktioniert nicht mit Latex, vielleicht mit xetex?
+%\usepackage{fontspec}
+%\setmainfont{Linux Libertine O}
+%\setromanfont[Mapping=tex-text]{Linux Libertine O}
+%\setsansfont[Mapping=tex-text]{Linux Biolinum O}
+
+%% Pakete
 \usepackage[dvips]{graphicx}
 \usepackage[usenames]{color}
 %\usepackage[colorlinks,pdfauthor={Jason R Briggs},pdftitle={Snake Wrangling for Kids - Learning to Program with Python},pdfsubject={Programming for Kids},pdfkeywords={python,kids,programming}]{hyperref}
@@ -19,6 +27,31 @@
 \usepackage[ngerman]{babel} %für deutsche Übersetzung hinzugefügt
 \usepackage[right]{eurosym} %für das Euro Symbol hinzugefügt
 
+
+\usepackage[Bjornstrup]{fncychap} %% Option Bjornstrup ist in neueren, ansonsten Option Glenn probieren
+%\usepackage{fancybox} %für die Rahmen um die Codebeispiele
+\usepackage{fancyvrb} %für die Rahmen um die Codebeispiele
+\usepackage{listings}
+\usepackage{color}
+\usepackage{fix-cm}
+\usepackage{makeidx} 
+
+%%%%%%problem \usepackage[xetex=true, colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+%\usepackage{scalefnt}
+\usepackage{float}
+\usepackage{subfigure}
+\usepackage[all]{hypcap}
+\usepackage[tight]{shorttoc}
+\usepackage{url}
+
+
+%% Farben
+%\definecolor{bleu}{rgb}{0,0,0.4}
+%\definecolor{lbleu}{rgb}{0.9,0.9,1}
+%\definecolor{mbleu}{rgb}{0.5,0.5,1}
+%\definecolor{gray}{rgb}{0.7,0.7,0.7}
+
+%% Maße
 \parindent 1cm
 \parskip 0.2cm
 \topmargin 0.2cm
@@ -48,14 +81,13 @@
 \author{Jason R Briggs}
 
 
-
 \makeindex
 
 \begin{document}
 
-%\include{frontmatter}
-
-%\include{preface}
+%\include{frontmatter} % Titelbild, Umschlag
+\shorttableofcontents{Zusammenfassung}{0} % Wie \tableofcontents, aber nur Kapitel, wenn {0} mitgegeben
+\include{preface} % Vorwort
 
 \pagestyle{headings}
 \pagenumbering{arabic}
@@ -78,5 +110,7 @@
 \include{appendixd}
 
 \printindex
+
+\tableofcontents
 
 \end{document}

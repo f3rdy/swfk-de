@@ -10,8 +10,14 @@ To build, you'll need latex, and dvipdf
 
 Auf einem frischen Ubuntu sollten diese Pakete installiert sein, damit das Generieren der pdf's gleich klappt.
 Am besten gleich in der Konsole
-sudo apt-get mercurial python3 texmaker texlive-full
+sudo apt-get mercurial python3 texmaker texlive-full ttf-linux-libertine
 eingeben und auch die Abhängigkeiten mit Installieren.
+
+
+Nachdem das fncychap Makro noch von 2005 war:
+von http://www.ctan.org/tex-archive/macros/latex/contrib/fncychap/
+das fncychap.sty holen und nach /usr/share/texmf-texlive/tex/latex/fncychap/fncychap.sty kopieren.
+
 
 
 Anleitung zum PDF's generieren
