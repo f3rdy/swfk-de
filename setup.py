@@ -20,7 +20,7 @@ platforms = 'linux', # for bulding only one version (faster)
 #
 # find the executables to use in compiling the books
 #
-latex = find_executable('latex')  #original
+latex = find_executable('latex')
 makeindex = find_executable('makeindex')
 dvipdf = find_executable('dvipdf')
 
