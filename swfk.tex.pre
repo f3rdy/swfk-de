@@ -86,8 +86,11 @@
 \begin{document}
 
 %\include{frontmatter} % Titelbild, Umschlag
-\shorttableofcontents{Zusammenfassung}{0} % Wie \tableofcontents, aber nur Kapitel, wenn {0} mitgegeben
-\include{preface} % Vorwort
+
+%% Wie \tableofcontents, aber nur Kapitel, wenn {0} mitgegeben
+\shorttableofcontents{Zusammenfassung}{0} 
+
+%\include{preface} % Vorwort
 
 \pagestyle{headings}
 \pagenumbering{arabic}
