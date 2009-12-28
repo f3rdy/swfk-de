@@ -5,74 +5,111 @@
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 
-\chapter{Sort of like recycling$\ldots$}\label{ch:sortoflikerecycling}
+%\chapter{Sort of like recycling$\ldots$}\label{ch:sortoflikerecycling}
+\chapter{Wie Recycling$\ldots$}\label{ch:sortoflikerecycling}
 
-Think about how much rubbish you create each day. Bottled water or bottles of soft drink, packets of crisps, plastic sandwich wrappers, bags of vegetables, meat on plastic trays, plastic shopping bags, newspapers, magazines, and so on and so on and so on$\ldots$
+%Think about how much rubbish you create each day. Bottled water or bottles of soft drink, packets of crisps, plastic sandwich wrappers, bags of vegetables, meat on plastic trays, plastic shopping bags, newspapers, magazines, and so on and so on and so on$\ldots$
+Denke einmal darüber nach, wie viel Müll du jeden Tag erzeugst. Getränkeflaschen, Chipstüten, Sandwichpapier, Fleischtassen, Einkaufstüten, Zeitungen, Magazine und so weiter.
 \par
-Now just think about what would happen if all of that trash just got dumped in a pile at the end of your driveway.
+%Now just think about what would happen if all of that trash just got dumped in a pile at the end of your driveway.
+Stell dir einmal kurz vor wie das wäre, wenn der ganze Müll am Ende deiner Straße auf einen großen Haufen landen würde.
 
 \begin{center}
 \includegraphics*[width=100mm]{trash.eps}
 \end{center}
 
-Of course, you probably recycle as much as possible.  Which is fortunate, because no one likes having to climb over a rubbish heap, on the way to school.  So, those glass bottles in the recycle bin are hopefully melted down, and then turned into new jars and bottles; paper is pulped into recycled paper; plastic turned into heavier plastic goods---so your front lawn doesn't disappear under tonnes of garbage. We get to reuse some of the goods we create, rather than eating a gaping hole in the side of the world to manufacture the same things over and over again.
+%Of course, you probably recycle as much as possible.  Which is fortunate, because no one likes having to climb over a rubbish heap, on the way to school.  So, those glass bottles in the recycle bin are hopefully melted down, and then turned into new jars and bottles; paper is pulped into recycled paper; plastic turned into heavier plastic goods---so your front lawn doesn't disappear under tonnes of garbage. We get to reuse some of the goods we create, rather than eating a gaping hole in the side of the world to manufacture the same things over and over again.
+Vielleicht trennst du jetzt schon den Müll und hilfst so bei der Wiederverwertung. Das ist auch ein Glück, denn niemand will gerne auf dem Weg in die Schule über einen Müllberg klettern. Mit dem Recycling werden aus alten Glasflaschen wieder neue. Aus Plastik neuer Kunststoff und aus Altpapier werden wieder neue Zeitungen. 
 
-Recycling or reuse, in the programming world, is just as important. Not because your program will disappear under a pile of garbage---but if you don't re-use some of what you're doing, you'll eventually wear your fingers down to painful stubs through over-typing.
+%Recycling or reuse, in the programming world, is just as important. Not because your program will disappear under a pile of garbage---but if you don't re-use some of what you're doing, you'll eventually wear your fingers down to painful stubs through over-typing.
+Recycling und Wiederverwerten sind in der Welt der Programmierung genauso interessant. Nicht weil dein Programm unter einem Müllberg verschwinden würde---sondern damit du deine Fingerkuppen schonst, und nicht alles immer wieder eintippen musst.
 
-There are a number of different ways to reuse code in Python (and in programming languages in general), but we've seen one of the ways already, back in Chapter 3, with the function range.  Functions\index{functions} are one way to reuse code---so you can write the code once, then use it in your programs again and again.  Let's first try a simple example of a function:
+%There are a number of different ways to reuse code in Python (and in programming languages in general), but we've seen one of the ways already, back in Chapter 3, with the function range.  Functions\index{functions} are one way to reuse code---so you can write the code once, then use it in your programs again and again.  Let's first try a simple example of a function:
+Es gibt verschiedene Möglichkeiten in Python (und anderen Programmiersprachen) wie man Code wieder verwendet, und eine Art haben wir schon in Kapitel 3 mit der range Funktion kennengelernt. Funktionen\index{Funktionen} sind also eine Art der Wiederverwendung---du schreibst den Code einmal und verwendest ihn in deinem Programmen immer wieder. Probier ein einfaches Beispiel:
 
-\begin{listing}
-\begin{verbatim}
->>> def myfunction(myname):
-...     print('hello %s' % myname)
+%\begin{listing}
+%\begin{verbatim}
+%>>> def myfunction(myname):
+%...     print('hello %s' % myname)
+%...
+%\end{verbatim}
+%\end{listing}
+\begin{Verbatim}[frame=single]
+>>> def meine_funktion(mein_name):
+...     print('Hallo %s' % mein_name)
 ...
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
-The above function has a name `myfunction' and has a parameter `myname'.  A \emph{parameter} is a variable which is only available within the `body' of the function (which is the block of code immediately after the line starting with \code{def}---in case you're wondering, \code{def} is short for define).  You can run the function by calling its name with brackets surrounding the parameter value:
 
-\begin{listing}
-\begin{verbatim}
->>> myfunction('Mary')
-hello Mary
-\end{verbatim}
-\end{listing}
+%The above function has a name `myfunction' and has a parameter `myname'.  A \emph{parameter} is a variable which is only available within the `body' of the function (which is the block of code immediately after the line starting with \code{def}---in case you're wondering, \code{def} is short for define).  You can run the function by calling its name with brackets surrounding the parameter value:
+Diese Funktion hat den Namen `meine\_funktion' und hat den Parameter `mein\_name'. Ein \emph{Parameter} ist eine Variable, die nur innerhalb eines Blockes eine Bedeutung hat (das ist der Block der sofort nach der \code{def} Zeile beginnt). \code{def} ist die Kurzform von define und mit diesem Schlüsselwort definierst du Funktionen. Die Funktion kannst du ausprobieren, indem du sie aufrufst und in runden Klammern einen Parameter mitgibst.
+
+%\begin{listing}
+%\begin{verbatim}
+%>>> myfunction('Mary')
+%hello Mary
+%\end{verbatim}
+%\end{listing}
+\begin{Verbatim}[frame=single]
+>>> meine_funktion('Hannah')
+Hallo Hannah
+\end{Verbatim}
+
 
 \noindent
-We could change the function to take 2 parameters:
+%We could change the function to take 2 parameters:
+Jetzt ändern wir die Funktion, damit 2 Parameter übergeben werden können:
 
-\begin{listing}
-\begin{verbatim}
->>> def myfunction(firstname, lastname):
-...     print('Hello %s %s' % (firstname, lastname))
+%\begin{listing}
+%\begin{verbatim}
+%>>> def myfunction(firstname, lastname):
+%...     print('Hello %s %s' % (firstname, lastname))
+%...
+%\end{verbatim}
+%\end{listing}
+\begin{Verbatim}[frame=single]
+>>> def meine_funktion(vorname, nachname):
+...     print('Hallo %s %s' % (vorname, nachname))
 ...
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 \noindent
-And then call it in a similar fashion to the first:
+%And then call it in a similar fashion to the first:
+Und aufrufen funktioniert ganz ähnlich:
 
-\begin{listing}
-\begin{verbatim}
->>> myfunction('Mary', 'Smith')
-Hello Mary Smith
-\end{verbatim}
-\end{listing}
-
-\noindent
-Or we could create some variables and call the function with the variables:
-
-\begin{listing}
-\begin{verbatim}
->>> fn = 'Joe'
->>> ln = 'Robertson'
->>> myfunction(fn, ln)
-Hello Joe Robertson
-\end{verbatim}
-\end{listing}
+%\begin{listing}
+%\begin{verbatim}
+%>>> myfunction('Mary', 'Smith')
+%Hello Mary Smith
+%\end{verbatim}
+%\end{listing}
+\begin{Verbatim}[frame=single]
+>>> meine_funktion('Hannah', 'Schmidt')
+Hallo Hanna Schmidt
+\end{Verbatim}
 
 \noindent
-We can return values from a function using the \code{return}\index{return} statement:
+%Or we could create some variables and call the function with the variables:
+Oder wir erzeugen ein Paar Variablen und rufen die Funktion mit den Variablen auf:
+
+%\begin{listing}
+%\begin{verbatim}
+%>>> fn = 'Joe'
+%>>> ln = 'Robertson'
+%>>> myfunction(fn, ln)
+%Hello Joe Robertson
+%\end{verbatim}
+%\end{listing}
+\begin{Verbatim}[frame=single]
+>>> vn = 'Thomas'
+>>> nn = 'Fuchs'
+>>> meine_funktion(vn, nn)
+Hallo Thomas Fuchs
+\end{Verbatim}
+
+\noindent
+%We can return values from a function using the \code{return}\index{return} statement:
+Und die Funktion kann auch Werte zurückgeben indem das \code{return}\index{return} Schlüsselwort verwendet wird:
 
 \begin{listing}
 \begin{verbatim}
