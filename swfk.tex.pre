@@ -44,12 +44,16 @@
 \usepackage[tight]{shorttoc}
 \usepackage{url}
 
-
-%% Farben
-%\definecolor{bleu}{rgb}{0,0,0.4}
-%\definecolor{lbleu}{rgb}{0.9,0.9,1}
-%\definecolor{mbleu}{rgb}{0.5,0.5,1}
-%\definecolor{gray}{rgb}{0.7,0.7,0.7}
+%% Farben der Links
+\hypersetup{
+    colorlinks = true,
+    linkcolor = blue,
+    anchorcolor = blue,
+    citecolor = blue,
+    filecolor = blue,
+    pagecolor = blue,
+    urlcolor = blue
+}
 
 %% Maße
 \parindent 1cm
@@ -60,6 +64,7 @@
 \textwidth 15cm
 \textheight 21cm
 
+%% Farbe für die Achtung Boxen
 \definecolor{PaleBlue}{rgb}{0.95,0.95,1}
 
 \newenvironment{listing}
@@ -83,37 +88,46 @@
 
 \makeindex
 
+
+%% Hier geht das Dokument los
 \begin{document}
 
-%\include{frontmatter} % Titelbild, Umschlag
+%% Titelbild, Umschlag
+\include{frontmatter} 
 
 %% Wie \tableofcontents, aber nur Kapitel, wenn {0} mitgegeben
-\shorttableofcontents{Zusammenfassung}{0} 
+%\shorttableofcontents{Zusammenfassung}{0} 
+\shorttableofcontents{kleine Zusammenfassung 0}{0} 
+\shorttableofcontents{kleine Zusammenfassung 1}{1} 
 
-%\include{preface} % Vorwort
+\include{preface} % Vorwort
 
 \pagestyle{headings}
 \pagenumbering{arabic}
 
-%\include{ch1}
-%\include{ch2}
-%\include{ch3}
-%\include{ch4}
-%\include{ch5}
+%% Kapitel
+\include{ch1}
+\include{ch2}
+\include{ch3}
+\include{ch4}
+\include{ch5}
 \include{ch6}
 \include{ch7}
-%\include{ch8}
-%\include{ch9}
-%\include{ch10}
+\include{ch8}
+\include{ch9}
+\include{ch10}
+
 
 \appendix
-%\include{appendixa}
-%\include{appendixb}
-%\include{appendixc}
+\include{appendixa}
+\include{appendixb}
+\include{appendixc}
 \include{appendixd}
 
+%% Stichwortverzeichnis
 \printindex
 
-\tableofcontents
+%% genaues Inhaltsverzeichnis
+%\tableofcontents
 
 \end{document}

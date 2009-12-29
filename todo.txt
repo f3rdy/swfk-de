@@ -1,8 +1,4 @@
-Anpassen der Titelbilder
 
-swfk.tex.pre pdf Titel anpassen
-
-preface: Bilder vom Installieren in den Mac Abschnitt?
 
 ch1  OK
 ch2  OK
@@ -10,7 +6,7 @@ ch3  OK
 ch4  OK
 ch5  OK
 ch6  übersetzen
-ch7  OK überprüfen /users/benutzer/Desktop am Mac stimmt
+ch7  OK
 ch8  übersetzen
 ch9  übersetzen
 ch10 übersetzen
@@ -22,11 +18,19 @@ app d übersetzen
 
 Alle Kapitel in die Rechtschreibkorrektur werfen
 
+
+Anpassen der Titelbilder                                   OK
+swfk.tex.pre pdf Titel anpassen                            OK
+preface: Bilder vom Installieren in den Mac Abschnitt?
+
+Inhaltsverzeichnis und Links korrekt?                     
+
 Übernehmen vom Design der französischen Version
     Kapiteldesign \usepackage[Bjornstrup]{fncychap}        OK
-    Rahmen um Codebeispiele mit \usepackage{fancyvrb}
+    Rahmen um Codebeispiele mit \usepackage{fancyvrb}      OK
+    Schriften Linux Libertine einbauen
 
-Schriften Linux Libertine einbauen
+
 
 testen ob hg clone und bauen mit latex auch nach frischem checkout funktioniert
 und dazuschreiben, welche Pakete auf Ubuntu installiert sein müssen
