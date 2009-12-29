@@ -1,7 +1,7 @@
 % ch3.tex
-% Dieses Werk ist unter einem Creative Commons Namensnennung-Keine kommerzielle Nutzung-Weitergabe 
-% unter gleichen Bedingungen 3.0 Deutschland Lizenzvertrag lizenziert. Um die Lizenz anzusehen, gehen Sie bitte 
-% zu http://creativecommons.org/licenses/by-nc-sa/3.0/de/ oder schicken Sie einen Brief an 
+% Dieses Werk ist unter einem Creative Commons Namensnennung-Keine kommerzielle Nutzung-Weitergabe
+% unter gleichen Bedingungen 3.0 Deutschland Lizenzvertrag lizenziert. Um die Lizenz anzusehen, gehen Sie bitte
+% zu http://creativecommons.org/licenses/by-nc-sa/3.0/de/ oder schicken Sie einen Brief an
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 
@@ -12,7 +12,7 @@
 Es gibt bestimmte gemeinsamkeiten zwischen einer lebendigen Schildkröte und einer Python Schildkröte. Ich echten Leben sind Schildkröten (manchmal) grüne Reptilien, die sich langsam bewegen und ihr Haus auf dem Rücken tragen. In der Python Welt sind Schildkröten schwarze Pfeile die sich sehr langsam am Bildschirm bewegen. Ohne Haus.
 
 %In fact, considering that a Python turtle leaves a trail as it moves around the screen, this makes it less like a real turtle, and more like a snail or a slug.  However, I suppose that a module called `slug' wouldn't be particularly attractive, so it makes sense to stick with turtles.  Just imagine the turtle is carrying a couple of marker pens with it, and drawing as it goes.
-Wenn man bedenkt, dass die Python Schildkröte eine Spur am Bildschirm hinterlässt, was für echte Schildkröten ungewöhnlich ist, müsst das Python Modul eher `Nacktschnecke' heißen. Das klingt aber wenig attraktiv und so bleiben wir beim Namen Schildkröte (auf Englisch: turtle). Stell dir einfach vor, dass die Schildkröte ein paar Textmarker mitgenommen hat um ihren Weg zu markieren. 
+Wenn man bedenkt, dass die Python Schildkröte eine Spur am Bildschirm hinterlässt, was für echte Schildkröten ungewöhnlich ist, müsst das Python Modul eher `Nacktschnecke' heißen. Das klingt aber wenig attraktiv und so bleiben wir beim Namen Schildkröte (auf Englisch: turtle). Stell dir einfach vor, dass die Schildkröte ein paar Textmarker mitgenommen hat um ihren Weg zu markieren.
 
 %In the deep, dark, and distant past, there was a simple programming language called Logo.  Logo was used to control a robot turtle (called Irving).  Over time, the turtle evolved from a robot that could move around the floor, to a small arrow moving around a screen.
 In der fernen Vergangenheit gab es einmal eine einfache Programmiersprache die Logo genannt wurde. Logo wurde verwendet um eine kleine Roboterschildkröte (mit dem Namen Irving) zu steuern. Die Zeit verging und aus dem Roboter, der sich am Boden bewegte wurde ein kleiner Pfleil am Monitor der sich bewegte.
@@ -27,11 +27,9 @@ Das Python Schildkrötenmodul (wir kommen ein wenig später zu Modulen, aber fü
 Fangen wir an. Zuerst sagen wir Python, dass wird dieses Schildkrötenmodul verwenden wollen und importieren es:
 
 
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> import turtle
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Then we need to display a canvas to draw on.  A canvas is just like the material an artist might use for painting; in this case it's a blank space for drawing on:
 Dann brauchen wir eine Leinwand um darauf zu malen. So eine Leinwand wie Künstler verwenden. In unserem Fall ist es eine leere Fläche auf dem Bildschirm:
@@ -41,11 +39,9 @@ Dann brauchen wir eine Leinwand um darauf zu malen. So eine Leinwand wie Künstl
 %>>> t = turtle.Pen()
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> schildkroete = turtle.Pen()
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %In this code, we call a special function (Pen\index{Pen}) on the module turtle, which automatically creates a canvas we can draw on.  A function is a re-useable piece of code (again we'll come to functions later) that does something useful---in this case, an object which represents the turtle is returned by the Pen function---we set that object to the variable `t' (in effect we're giving our turtle canvas the name `t'). When you type the code into the Python console, you'll see a blank box (the canvas) appear, looking something like figure~\ref{fig10}.
 Mit diesem Code rufen wir die Funktion (Pen\index{Pen}) vom turtle Modul auf. Es erzeugt automatisch die Leinwand zum drauf malen. Eine Funktion ist eine Stück Code, das immer wieder verwendet werden kann (dazu kommen wir später) und nützliche Dinge tut. In diesem Fall gibt die Pen Funktion ein Objekt zurück, das die Schildkröte darstellt. Wir verbinden unsere Variable `schildkroete' mit diesem Objekt (genau genommen benennen wir die Leinwand mit diesem Namen). Nachdem du diesen Code in die Python Konsole eingetippt hast, erscheint eine leere Box (die Leinwand) und schaut ungefähr aus wie Abbildung~\ref{fig10}.
@@ -64,7 +60,7 @@ Mit diesem Code rufen wir die Funktion (Pen\index{Pen}) vom turtle Modul auf. Es
 
 
 %You can send instructions to the turtle, by using functions on the object that was created (by calling \code{turtle.Pen})---since we assigned that object to the variable \code{t}, we use \code{t} to send the instructions.
-Jetzt kannst du Befehle an die Schildkröte schicken, indem zu Funktionen auf das Objekt anwendest, was beim \code{turtle.Pen} Aufruf zurückkam. Nachdem wir das Objekt `schildkroete' genannt haben, können wir unsere Befehle an \code{schildkroete} schicken. 
+Jetzt kannst du Befehle an die Schildkröte schicken, indem zu Funktionen auf das Objekt anwendest, was beim \code{turtle.Pen} Aufruf zurückkam. Nachdem wir das Objekt `schildkroete' genannt haben, können wir unsere Befehle an \code{schildkroete} schicken.
 %One turtle instruction is \code{forward}.  Forward\index{turtle!forward} tells the turtle to move forward in whatever direction she is facing (I have no idea whether it's a boy or a girl turtle, but let's just assume it's a girl-turtle for the moment). Let's tell the turtle to move forward 50 pixels (we'll talk about pixels in a minute):
 Eine Funktion ist  \code{forward}. Forward\index{Schildkröte!vorwärts} bedeutet vorwärts und sagt der Schildkröte sich nach vorne (wohin ihre Nase zeigt) zu bewegen. Lass uns der Schildkröte sagen, dass sie sich 50 Pixel nach vorne bewegen soll (Pixel werden gleich erklärt).
 
@@ -73,11 +69,9 @@ Eine Funktion ist  \code{forward}. Forward\index{Schildkröte!vorwärts} bedeute
 %>>> t.forward(50)
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> schildkroete.forward(50)
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %You should see something like figure~\ref{fig11}.
 Es sollte etwas wie Abbildung~\ref{fig11} erscheinen.
@@ -119,11 +113,9 @@ Nun können wir der Schildkröte sagen dass sie links\index{Schildkröte!Links a
 %>>> t.left(90)
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> Schildkroete.left(90)
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %This tells the turtle to turn left, 90 degrees.  You may not have learned about degrees\index{degrees} in school so far, but the easiest way to think about them, is that they are like the divisions on the face of a clock as seen in figure~\ref{fig13}.
 Damit sagst du der Schildkröte, dass sie links abbiegen soll (90 Grad). Du hast in der Schule vielleicht schon etwas über Winkelgrad\index{Grad} gehört. Wenn nicht könntest du dir das ungefähr wie das Ziffernblatt von einer Uhr vorstellen. Schau mal auf Abbildung~\ref{fig13}.
@@ -175,16 +167,14 @@ Probieren wir das noch einmal:
 %>>> t.left(90)
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> schildkroete.forward(50)
 >>> schildkroete.left(90)
 >>> schildkroete.forward(50)
 >>> schildkroete.left(90)
 >>> schildkroete.forward(50)
 >>> schildkroete.left(90)
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Our turtle has drawn a square and is left facing the same direction as she started (see figure~\ref{fig16}).
 Unsere Schildkröte hat ein Quadrat gezeichnet und schaut wieder in die selbe Richtung, wie sie gestartet ist (schau dir Abbildung~\ref{fig16} an).
@@ -205,11 +195,9 @@ Wir können die Leinwand auch löschen, indem wir den Befehl clear\index{Schildk
 %>>> t.clear()
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> schildkroete.clear()
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Some of the other basic functions you can use with your turtle are: \code{reset}\index{turtle!reset}, which also clears the screen, but puts the turtle automatically back into her starting position; \code{backward}\index{turtle!backward}, which moves the turtle backwards; \code{right}, which turns the turtle to the right; \code{up}\index{turtle!up (stop drawing)} which tells the turtle to stop drawing as she moves (in other words pick her pen up off the canvas); and finally \code{down}\index{turtle!down (start drawing)} which tells the turtle to start drawing again. You call these functions in the same way we've used the others:
 Einige andere Befehle, die die Schildkröte versteht sind: \code{reset}\index{Schildkröte!zurücksetzen} was auch die Leinwand löscht, aber die Schildkröte auch wieder am Start absetzt; mit \code{backward}\index{Schildkröte!rückwärts} geht die Schildkröte rückwärts; mit \code{right}\index{Schildkröte!rechts} biegt die Schildkröte rechts ab; und wenn sie keine Spur mehr zeichnen soll, dann gibt man \code{up}\index{Schildkröte!up (aufhören zu zeichnen)} ein. Wenn die Schildkröte wieder zeichnen anfangen soll, dann gib \code{down}\index{Schildkröte!down (anfangen zeichnen)} ein. Du kannst diese Befehle wie gewohnt verwenden:
@@ -223,15 +211,13 @@ Einige andere Befehle, die die Schildkröte versteht sind: \code{reset}\index{Sc
 %>>> t.down()
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> schildkroete.reset()
 >>> schildkroete.backward(100)
 >>> schildkroete.right(90)
 >>> schildkroete.up()
 >>> schildkroete.down()
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 \noindent
 %We'll come back to the turtle module shortly.

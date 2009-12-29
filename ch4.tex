@@ -1,7 +1,7 @@
 % ch4.tex
-% Dieses Werk ist unter einem Creative Commons Namensnennung-Keine kommerzielle Nutzung-Weitergabe 
-% unter gleichen Bedingungen 3.0 Deutschland Lizenzvertrag lizenziert. Um die Lizenz anzusehen, gehen Sie bitte 
-% zu http://creativecommons.org/licenses/by-nc-sa/3.0/de/ oder schicken Sie einen Brief an 
+% Dieses Werk ist unter einem Creative Commons Namensnennung-Keine kommerzielle Nutzung-Weitergabe
+% unter gleichen Bedingungen 3.0 Deutschland Lizenzvertrag lizenziert. Um die Lizenz anzusehen, gehen Sie bitte
+% zu http://creativecommons.org/licenses/by-nc-sa/3.0/de/ oder schicken Sie einen Brief an
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 
@@ -27,12 +27,10 @@ Das könnte man in Python folgendermaßen schreiben:
 %    print('you are too old!')
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 if alter > 20:
     print('du bist zu alt!')
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %An if-statement is made up of an `if' followed by what is called a `condition' (more on that in a second), followed by a colon (:).  The lines following the if must be in a block---and if the answer to the question is `yes' (or True, as we call it in programming terms) the commands in the block will be run.
 Eine if-Bedingung besteht aus einem `if' gefolgt von der sogenannten `Bedingung', gefolgt von einem Doppelpunkt (:). Die folgenden Zeilen müssen in einem Block sein---und wenn die Antwort auf die Frage `ja' (heißt in der Programmiersprache true oder wahr) ist, wird der Block ausgeführt.
@@ -86,11 +84,9 @@ Nehmen wir an, dass du die Variable \code{alter} auf dein Alter setzt und du 12 
 %age > 10
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 alter > 10
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %$\ldots$ would again return True.  If you are 8 years old, it would return False.  If you are 10 years old, it would also return False---because the condition is checking for greater than ($>$) 10, and not greater than or equal ($>$=) to 10.
 $\ldots$ Wahr (true) zurückgeben. Wenn du 8 Jahre wärst, dann käme Falsch (false) zurück. Wenn du genau 10 Jahre wärest, würde auch Falsch rauskommen---weil die Bedingung ja fragt ob du älter als ($>$) 10 und nicht ob du älter oder auch gleichalt ($>$=) als 10 bist.
@@ -105,13 +101,11 @@ Probieren wir es ein paar mal aus:
 %...     print('got here')
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter = 10
 >>> if alter > 10:
 ...     print('dann kommst du hier an')
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 \noindent
 %If you enter the above example into the console, what might happen?
@@ -132,13 +126,12 @@ Weil der Wert der Variable \code{alter} nicht größer als 10 ist, wird der Bloc
 %...     print('got here')
 %\end{verbatim}
 %\end{listingignore}
-\begin{listingignore}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter = 10
 >>> if alter >= 10:
-...     print('dann kommst du hier an')...
-\end{verbatim}
-\end{listingignore}
+...     print('dann kommst du hier an')
+...
+\end{Verbatim}
 
 %If you try this example, then you should see the message got here printed to the console.  The same will happen for the next example:
 Wenn du das Beispiel von oben nun ausprobierst, solltest die Nachricht `dann kommmst du hier an' auf der Konsole erscheinen. (Nach der Zeile mit dem print Befehl zwei mal die Eingabetaste drücken kann helfen). Das gleiche wird auch beim nächsten Beispiel passieren:
@@ -151,15 +144,13 @@ Wenn du das Beispiel von oben nun ausprobierst, solltest die Nachricht `dann kom
 %got here
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> age = 10
 >>> if age == 10:
 ...     print('dann kommst du hier an')
 ...
 dann kommst du hier an
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %\section{Do this$\ldots$ or ELSE!!!}
 \section{Tu dies$\ldots$ oder das!!!}
@@ -177,8 +168,7 @@ Wir können die if-Bedingung auch erweitern, so dass auch etwas passiert, wenn d
 %Hello
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter = 12
 >>> if alter == 12:
 ...     print('Hallo')
@@ -186,8 +176,7 @@ Wir können die if-Bedingung auch erweitern, so dass auch etwas passiert, wenn d
 ...     print('Auf Wiedersehen')
 ...
 Hallo
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Type in the above example and you should see `Hello' printed to the console.  Change the value of the variable \code{age} to another number, and `Goodbye' will be printed:
 Nachdem du das Beispiel eingetippt hast, sollte die Ausgabe `Hallo' auf der Konsole erscheinen. Ändere den Wert der Variable \code{alter} auf eine andere Zahl und es wird `Auf Wiedersehen' ausgegeben.
@@ -203,8 +192,7 @@ Nachdem du das Beispiel eingetippt hast, sollte die Ausgabe `Hallo' auf der Kons
 %Goodbye
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter = 8
 >>> if alter == 12:
 ...     print('Hallo')
@@ -212,8 +200,7 @@ Nachdem du das Beispiel eingetippt hast, sollte die Ausgabe `Hallo' auf der Kons
 ...     print('Auf Wiedersehen')
 ...
 Auf Wiedersehen
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %\section{Do this$\ldots$ or do this$\ldots$ or do this$\ldots$ or ELSE!!!}
 \section{Tu das$\ldots$ oder dies$\ldots$ oder jenes$\ldots$ oder!!!}
@@ -238,8 +225,7 @@ Wir können die if-Bedingung sogar weiter aufspalten, indem wir elif (Kurzform f
 %13. you are 12
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
  1. >>> alter = 12
  2. >>> if alter == 10:
  3. ...     print('Du bist 10')
@@ -253,8 +239,7 @@ Wir können die if-Bedingung sogar weiter aufspalten, indem wir elif (Kurzform f
 11. ...     print('Hä?')
 12. ...
 13. Du bist 12
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %In the code above, line 2 checks whether the value of the age variable is equal to 10.  It's not, so it then jumps to line 4 to check whether the value of the \code{age} variable is equal to 11.  Again, it's not, so it jumps to line 6 to check whether the variable is equal to 12.  In this case it is, so Python moves to the block in line 7, and runs the print command.  (Hopefully you've also noticed that there are 5 groups in this code---lines 3, 5, 7, 9 and line 11)
 Im obigen Code überprüft die zweite Zeile, ob der Wert der Variable 10 entspricht. Wenn nicht springt Python zu Zeile 4 um zu überprüfen, ob der Wert der \code{alter} Variable 11 entspricht. Wenn es wieder nicht so ist, springt Python zu Zeile 6. Dort wird geschaut, ob die Variable den Wert 12 hat. In diesem Fall ist es so und deswegen kommt danach die Zeile 7 dran und der print Befehl wird ausgeführt. Wenn du den Code anschaust, erkennt du 5 Gruppen---Zeile 3, 5, 7, 9 und 11.
@@ -272,14 +257,12 @@ Du kannst auch Bedingungen kombinieren in dem du die Schlüsselworte `and' und `
 %4. ...     print('huh?')
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 1. >>> if alter == 10 or alter == 11 or alter == 12 or alter == 13:
 2. ...     print('Du bist %s' % alter)
 3. ... else:
 4. ...     print('Hä?')
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %If any of the conditions in line 1 are true (i.e. if age is 10 \textbf{or} age is 11 \textbf{or} age is 12 \textbf{or} age is 13), then the block of code in line 2 is run, otherwise Python moves to line 4.  We could shrink the example a little bit more by using the `and', $>$= and $<$= symbols:
 Wenn eine Bedingung der ersten Zeile wahr ist (z.B.: wenn die Variable alter 10 \textbf{oder} 11 \textbf{oder} 12 \textbf{oder} 13 ist, dann springt Python zu Zeile 2, ansonsten zu Zeile 4. Noch kompakter geschrieben geht es mit der Hilfe der `and', $>$= und $<$= Symbole:
@@ -292,14 +275,12 @@ Wenn eine Bedingung der ersten Zeile wahr ist (z.B.: wenn die Variable alter 10 
 %4. ...     print('huh?')
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 1. >>> if alter >= 10 and alter <= 13:
 2. ...     print('Du bist %s' % alter)
 3. ... else:
 4. ...     print('Häh?')
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Hopefully, you've figured out that if \textbf{both} the conditions on line 1 are true then the block of code in line 2 is run (if age is greater than or equal to 10 \textbf{and} age is less than or equal to 13). So if the value of the variable age is 12, then `you are 12' would be printed to the console:  because 12 is greater than 10 and it is also less than 13.
 Hoffentlich erkennst du, dass wenn \textbf{beide} Bedingungen auf der ersten Zeile erfüllt sind, der Block auf der zweiten Zeile ausgeführt wird (wenn die Variable alter größer gleich 10 oder kleiner gleich 13 ist). Wenn der Wert der alter Variable also 12 ist, würde `Du bist 12' ausgegeben werden: weil 12 größer als 10 und auch kleiner als 13 ist.
@@ -320,13 +301,11 @@ Variablen können Nummern, Strings und Listen sein. Aber man kann auch `nichts' 
 %None
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> meine_variable = None
 >>> print(meine_variable)
 None
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %None is a way to reset a variable back to being un-used, or can be a way to create a variable without setting its value before it is used.
 Die Verwendung von None ist eine Möglichkeit eine Variable zurückzusetzen oder eine Variable zu erzeugen ohne ihr gleich einen Wert zu geben.
@@ -341,13 +320,11 @@ Machen wir ein kleines Beispiel. Dein Fußballteam sammelt Geld für neue Unifor
 %>>> player3 = None
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> spieler1 = None
 >>> spieler2 = None
 >>> spieler3 = None
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %We could then use an if-statement, to check these variables, to determine if all the members of the team had returned with the money they'd raised:
 Mit einer if-Bedingung könnten wir diese Variablen überprüfen um zu sehen, ob die Teammitglieder denn schon alle vom Geld sammeln zurückgekommen sind.
@@ -360,14 +337,12 @@ Mit einer if-Bedingung könnten wir diese Variablen überprüfen um zu sehen, ob
 %...     print('You have raised %s' % (player1 + player2 + player3))
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> if spieler1 is None or spieler2 is None or spieler3 is None:
 ...     print('Warte bitte bis alle Spieler zurückgekommen sind')
 ... else:
 ...     print('Ihr habt %s gesammelt' % (spieler1 + spieler22 + spieler3))
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %The if-statement checks whether any of the variables have a value of \code{None}, and prints the first message if they do.  If each variable has a real value, then the second message is printed with the total money raised. If you try this code out with all variables set to None, you'll see the first message (don't forget to create the variables first or you'll get an error message):
 Die if-Bedingung überprüft ob eine der Variablen noch den Wert \code{None} hat und spuckt die erste Nachricht aus, wenn ja. Wenn jede Variable einen Wert hat, dann wird die zweite Nachricht ausgegeben und die gesammelte Geldsumme ausgegeben. Wenn du alle Variablen auf None setzt, wirst du die erste Nachricht sehen (erzeuge die Variablen aber vorher, ansonsten gibt es eine Fehlermeldung):
@@ -381,16 +356,14 @@ Die if-Bedingung überprüft ob eine der Variablen noch den Wert \code{None} hat
 %Please wait until all players have returned
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> if spieler1 is None or spieler2 is None or spieler3 is None:
 ...     print('Warte bitte bis alle Spieler zurückgekommen sind')
 ... else:
 ...     print('Ihr habt %s gesammelt' % (spieler1 + spieler2 + spieler3))
 ...
 Warte bitte bis alle Spieler zurückgekommen sind
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Even if we set one or two of the variables, we'll still get the message:
 Auch wenn du 2 Variablen auf bestimmte Werte setzt, wirst du folgende Nachricht bekommen:
@@ -406,8 +379,7 @@ Auch wenn du 2 Variablen auf bestimmte Werte setzt, wirst du folgende Nachricht 
 %Please wait until all players have returned
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> spieler1 = 100
 >>> spieler3 = 300
 >>> if spieler1 is None or spieler2 is None or spieler3 is None:
@@ -416,8 +388,7 @@ Auch wenn du 2 Variablen auf bestimmte Werte setzt, wirst du folgende Nachricht 
 ...     print('Ihr habt %s gesammelt' % (spieler1 + spieler2 + spieler3))
 ...
 Warte bitte bis alle Spieler zurückgekommen sind
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 \noindent
 %Finally, once all variables are set, you'll see the message in the second block:
@@ -435,8 +406,7 @@ Erst wenn alle Variablen Werte zugewiesen haben, kommt die Nachricht vom zweiten
 %You have raised 900
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> spieler1 = 100
 >>> spieler2 = 200
 >>> spieler3 = 300
@@ -446,8 +416,7 @@ Erst wenn alle Variablen Werte zugewiesen haben, kommt die Nachricht vom zweiten
 ...     print('Ihr habt %s gesammelt' % (spieler1 + spieler2 + spieler3))
 ...
 Ihr habt 900 gesammelt
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %\section{What's the difference$\ldots$?}\label{whatsthedifference}\index{equality}
 \section{Was ist der Unterschied$\ldots$?}\label{whatsthedifference}\index{Gleichheit}
@@ -464,12 +433,10 @@ Abgesehen von den Anführungsstrichen nicht viel könntest du denken.  Aber nach
 %...     print('you are 10')
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> if alter == 10:
 ...     print('du bis 10')
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %If you set variable age to 10, the print statement will be called:
 Wenn du die Variable auf 10 setzt, dann wird die print Funktion ausgeführt:
@@ -483,15 +450,13 @@ Wenn du die Variable auf 10 setzt, dann wird die print Funktion ausgeführt:
 %you are 10
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter = 10
 >>> if alter == 10:
 ...     print('du bist 10')
 ...
 du bist 10
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %However, if age is set to \code{'10'} (note the quotes), then it won't:
 Aber wenn die Variable alter den Wert \code{'10'} (achte auf die Anführungsstriche), dann wird die print Funktion nicht ausgeführt:
@@ -504,14 +469,12 @@ Aber wenn die Variable alter den Wert \code{'10'} (achte auf die Anführungsstri
 %...
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter = '10'
 >>> if alter == 10:
 ...     print('du bist 10')
 ...
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Why is the code in the block not run?  Because a string is different from a number, even if they look the same:
 Warum wird der Code im Block (der print Block) nicht ausgeführt? Weil ein String sich von einer Zahl unterscheidet, auch wenn sie gleich aussehen:
@@ -526,19 +489,17 @@ Warum wird der Code im Block (der print Block) nicht ausgeführt? Weil ein Strin
 %10
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter1 = 10
 >>> alter2 = '10'
 >>> print(alter1)
 10
 >>> print(alter2)
 10
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %See!  They look exactly the same.  Yet, because one is a string, and the other is a number, they are different values. Therefore age == 10 (age equals 10) will never be true, if the value of the variable is a string.
-Siehst du! Sie schauen genau gleich aus. Aber weil die eine Variable ein String ist und die andere Variable eine Nummer, sind es verschiedene Werte. Deswegen wird alter == 10 (alter ist gleich 10) bei einem String nie wahr sein. 
+Siehst du! Sie schauen genau gleich aus. Aber weil die eine Variable ein String ist und die andere Variable eine Nummer, sind es verschiedene Werte. Deswegen wird alter == 10 (alter ist gleich 10) bei einem String nie wahr sein.
 \par
 %Probably the best way to think about it, is to consider 10 books and 10 bricks.  The number of items might be the same, but you couldn't say that 10 books are exactly the same as 10 bricks, could you? Luckily in Python we have magic functions which can turn strings into numbers and numbers into strings (even if they won't quite turn bricks into books). For example, to convert the string '10' into a number you would use the function \code{int}:
 Der wahrscheinlich beste Weg das zu verstehen ist an 10 Bücher und 10 Ziegelsteine zu denken. Die Anzahl ist die gleiche, aber könntest du sagen, dass 10 Bücher das gleich wie 10 Ziegelsteine sind? Zum Glück hat Python einige magische Funktionen, die Strings in Nummern und Nummern in Strings verwandeln können (auch wenn dadurch Bücher nicht zu Ziegelsteinen werden). Wenn du zum Beispiel den string '10' in eine Nummer wandeln willst, dann könntest du die Funktion \code{int} verwenden:
@@ -549,12 +510,10 @@ Der wahrscheinlich beste Weg das zu verstehen ist an 10 Bücher und 10 Ziegelste
 %>>> converted_age = int(age)
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter = '10'
 >>> verwandeltes_alter = int(alter)
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 \noindent
 %The variable converted\_age now holds the number 10, and not a string. To convert a number into a string, you would use the function \code{str}:
@@ -566,12 +525,10 @@ Die Variable verwandeltes\_alter hat jetzt die Nummer 10 und keinen String. Um e
 %>>> converted_age = str(age)
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter = 10
 >>> verwandeltes_alter = str(alter)
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 \noindent
 %converted\_age now holds the string 10, and not a number. Back to that if-statement which prints nothing:
@@ -585,14 +542,12 @@ verwandeltes\_alter hat jetzt den String 10 und keine Nummer. Nun zurück zur if
 %...
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter = '10'
 >>> if alter == 10:
 ...     print('du bist 10')
 ...
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 \noindent
 %If we convert the variable \emph{before} we check, then we'll get a different result:
@@ -608,15 +563,13 @@ Wenn wir nun die Variable zu einer Zahl machen, \emph{bevor} wir die Bedingung �
 %you are 10
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> alter = '10'
 >>> verwandeltes_alter = int(alter)
 >>> if verwendeltes_alter == 10:
 ...     print('du bist 10')
 ...
 du bist 10
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 \newpage

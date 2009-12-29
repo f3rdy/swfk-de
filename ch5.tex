@@ -1,7 +1,7 @@
 % ch5.tex
-% Dieses Werk ist unter einem Creative Commons Namensnennung-Keine kommerzielle Nutzung-Weitergabe 
-% unter gleichen Bedingungen 3.0 Deutschland Lizenzvertrag lizenziert. Um die Lizenz anzusehen, gehen Sie bitte 
-% zu http://creativecommons.org/licenses/by-nc-sa/3.0/de/ oder schicken Sie einen Brief an 
+% Dieses Werk ist unter einem Creative Commons Namensnennung-Keine kommerzielle Nutzung-Weitergabe
+% unter gleichen Bedingungen 3.0 Deutschland Lizenzvertrag lizenziert. Um die Lizenz anzusehen, gehen Sie bitte
+% zu http://creativecommons.org/licenses/by-nc-sa/3.0/de/ oder schicken Sie einen Brief an
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 
@@ -28,8 +28,7 @@ Programmierer mögen sich auch nicht gerne wiederholen. Davon werden sie auch se
 %hello
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> print("hallo")
 hallo
 >>> print("hallo")
@@ -40,8 +39,7 @@ hallo
 hallo
 >>> print("hallo")
 hallo
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Which is$\ldots$ rather tedious.
 Und das ist$\ldots$ ziemlich mühsam.
@@ -53,7 +51,7 @@ Oder du verwendest die for-Schleife (beachte die 4 Leerzeichen auf der zweiten Z
 %\begin{verbatim}
 %>>> for x in range(0, 5):
 %... @@@@print('hello')
-%... 
+%...
 %hello
 %hello
 %hello
@@ -61,28 +59,24 @@ Oder du verwendest die for-Schleife (beachte die 4 Leerzeichen auf der zweiten Z
 %hello
 %\end{verbatim}
 %\end{listingignore}
-\begin{listingignore}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> for x in range(0, 5):
 ... @@@@print('hallo')
-... 
+...
 hallo
 hallo
 hallo
 hallo
 hallo
-\end{verbatim}
-\end{listingignore}
+\end{Verbatim}
 
 %\code{range}\index{functions!range} is a function and is a quick and easy way to create a list of numbers ranging between a start and end number. For example:
 Mit der \code{range}\index{Funktion!range} Funktion kannst du schnell und einfach Zahlenlisten erzeugen, die von einer Startnummer anfangen und bei einer Endnummer aufhören. Zum Beispiel:
 
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> print(list(range(10, 20)))
 [10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %So in the case of the for-loop, what the code `\code{for x in range(0, 5)}' is actually telling Python, is to create a list of numbers (0, 1, 2, 3, 4) and then for each number, store the value in the variable \code{x}. We can then use the x in our print statement if we want to:
 Bei unserem Beispiel mit der for-Schleife `\code{for x in range(0, 5)}' erzeugt Python eigentlich eine Liste von Zahlen (0, 1, 2, 3, 4) und speichert die Werte in der Variable \code{x}. Wir können die Variable x auch in unserer print Funktion verwenden:
@@ -98,16 +92,15 @@ Bei unserem Beispiel mit der for-Schleife `\code{for x in range(0, 5)}' erzeugt 
 %hello 4
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> for x in range(0, 5):
 ...     print('hallo %s' % x)
 hallo 0
 hallo 1
 hallo 2
-hallo 3hallo 4
-\end{verbatim}
-\end{listing}
+hallo 3
+hallo 4
+\end{Verbatim}
 
 %If we get rid of the for-loop again, it might look something like this:
 Ohne die for-Schleife würde es ungefähr so aussehen:
@@ -126,17 +119,18 @@ Ohne die for-Schleife würde es ungefähr so aussehen:
 %print('hello %s' % x)
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}x = 0
+\begin{Verbatim}[frame=single]
+x = 0
 print('hallo %s' % x)
 x = 1
 print('hallo %s' % x)
-x = 2print('hallo %s' % x)
-x = 3print('hallo %s' % x)
+x = 2
+print('hallo %s' % x)
+x = 3
+print('hallo %s' % x)
 x = 4
 print('hallo %s' % x)
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %So the loop has actually saved us from writing an extra 8 lines of code.  This is extremely useful, since the average programmer is more lazy than a hippopotamus on a hot day, when it comes to typing. Good programmers hate doing things more than once, so the for-loop is one of the more useful statements in a programming language.
 Die Schleife hat uns also das schreiben von 8 Zeilen erspart. Das ist extrem nützlich, weil der durchschnittliche Programmierer wenns ums schreiben geht, fauler ist, als ein Nilpferd an einem heißen Sommertag. Gute Programmierer hassen Dinge mehr als einmal zu machen, also ist die for-Schleife eine sehr nützliche Konstruktion.
@@ -163,7 +157,7 @@ Wir müssen auch nicht unbedingt \code{range} verwenden, sondern könnnten auch 
 
 %\begin{listing}
 %\begin{verbatim}
-%>>> shopping_list = [ 'eggs', 'milk', 'cheese', 'celery', 'peanut butter', 
+%>>> shopping_list = [ 'eggs', 'milk', 'cheese', 'celery', 'peanut butter',
 %... 'baking soda' ]
 %>>> for i in shopping_list:
 %...     print(i)
@@ -175,8 +169,7 @@ Wir müssen auch nicht unbedingt \code{range} verwenden, sondern könnnten auch 
 %baking soda
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> Einkaufsliste = ['Eier', 'Milch', 'Käse', 'Sellerie', 'Honig', 'Backpulver']
 >>> for i in Einkaufsliste:
 ...     print(i)
@@ -187,15 +180,14 @@ Käse
 Sellerie
 Honig
 Backpulver
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %The above code is a way of saying, ``for each item in the list, store the value in the variable `i' and then print the contents of that variable''.  Again, if we got rid of the for-loop, we'd have to do something like this:
 Mit diesem Code-Beispiel sagen wir Python ``speichere jeden Listeneintrag in der Variable `i' und gib den Inhalt der Variable danach aus''. Ohne die for-Schleife müssten wir es so schreiben:
 
 %\begin{listing}
 %\begin{verbatim}
-%>>> shopping_list = [ 'eggs', 'milk', 'cheese', 'celery', 'peanut butter', 
+%>>> shopping_list = [ 'eggs', 'milk', 'cheese', 'celery', 'peanut butter',
 %... 'baking soda' ]
 %>>> print(shopping_list[0])
 %eggs
@@ -211,8 +203,7 @@ Mit diesem Code-Beispiel sagen wir Python ``speichere jeden Listeneintrag in der
 %baking soda
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> Einkaufsliste = ['Eier', 'Milch', 'Käse', 'Sellerie', 'Honig', 'Backpulver']
 >>> print(Einkaufsliste[0])
 Eier
@@ -226,8 +217,7 @@ Sellerie
 Honig
 >>> print(Einkaufsliste[5])
 Backpulver
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %So once again, the loop has saved us from a lot of typing.
 Die for-Schleife hat uns wieder eine Menge Tippen erspart.
@@ -252,13 +242,11 @@ Ein Codeblock ist eine Gruppierung von Anweisungen. Bei einem for-loop könntest
 %...     print(i)
 %\end{verbatim}
 %\end{listingignore}
-\begin{listingignore}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> for i in Einkaufsliste:
 ...     kaufen(i)
 ...     print(i)
-\end{verbatim}
-\end{listingignore}
+\end{Verbatim}
 
 %Don't bother typing that example into the Python console---because we don't have a buy function and you'll get an error message if you do try to run it---but it does demonstrate a simple Python block made up of 2 commands:
 Du brauchst das Beispiel jetzt nicht in der Python Konsole ausprobieren---weil wir die kaufen Funktion noch nicht haben und du einen Fehler zurückbekommen würdest---aber es zeigt dir, wie ein Python Block mit 2 Anweisungen ausschaut:
@@ -269,12 +257,10 @@ Du brauchst das Beispiel jetzt nicht in der Python Konsole ausprobieren---weil w
 %print(i)
 %\end{verbatim}
 %\end{listingignore}
-\begin{listingignore}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 kaufen(i)
 print(i)
-\end{verbatim}
-\end{listingignore}
+\end{Verbatim}
 
 %In Python, white space\index{white space} such as tab (when you press the tab key) and space (when you press the space bar) is \emph{very} important.  Code that is at the same position is grouped together into blocks.
 Leerzeichen\index{Leerzeichen} sind in Python sehr wichtig. Leerzeichen kannst du einfügen, indem zu die Leertaste oder die Tabulator-Taste drückst. Code, der an der gleichen Position gruppiert wurde, ergibt einen Codeblock.
@@ -296,8 +282,7 @@ Leerzeichen\index{Leerzeichen} sind in Python sehr wichtig. Leerzeichen kannst d
 %	        this would be block 4
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
     das wäre Block 1
     das wäre Block 1
     das wäre Block 1
@@ -311,8 +296,7 @@ Leerzeichen\index{Leerzeichen} sind in Python sehr wichtig. Leerzeichen kannst d
             das wäre Block 4
             das wäre Block 4
             das wäre Block 4
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 %But you must be consistent with your spacing.  For example:
 Du musst aber die Leerzeichen einheitlich verwenden. Zum Beispiel:
 
@@ -323,13 +307,11 @@ Du musst aber die Leerzeichen einheitlich verwenden. Zum Beispiel:
 %...       print(i)
 %\end{verbatim}
 %\end{listingignore}
-\begin{listingignore}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> for i in Einkaufsliste:
 ...     kaufen(i)
 ...       print(i)
-\end{verbatim}
-\end{listingignore}
+\end{Verbatim}
 
 %The second line (\code{function buy(i)}) starts with \textbf{4} spaces.  The third line (print(i)) starts with \textbf{6} spaces.  Let's take another look at that code with visible spaces (using @ again):
 Die zweite Zeile (\code{Funktion kaufen(i)}) fängt mit \textbf{4} Leerzeichen an. Die dritte Zeile (print(i)) fängt mit \textbf{6} Leerzeichen an. Schauen wir uns das ganze nochmals an, indem die Leerzeichen durch sichtbare @-Zeichen ersetzt werden.
@@ -341,13 +323,11 @@ Die zweite Zeile (\code{Funktion kaufen(i)}) fängt mit \textbf{4} Leerzeichen a
 %... @@@@@@print(i)
 %\end{verbatim}
 %\end{listingignore}
-\begin{listingignore}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> for i in Einkaufsliste:
 ... @@@@kaufen(i)
 ... @@@@@@print(i)
-\end{verbatim}
-\end{listingignore}
+\end{Verbatim}
 
 %This would cause an error.  Once you start using 4 spaces, you need to continue using 4 spaces.  And if you want to put a block \emph{inside} another block, you'll need 8 spaces (2 x 4) at the beginning of the lines for that inner block.
 Das würde einen Fehler verursachen. Wenn du einmal mit 4 Leerzeichen angefangen hast, dann musst du auch mit 4 Leerzeichen weitermachen. Und wenn du einen Block in einen anderer Block \emph{verschachteln} willst, dann brauchst du 8 Leerzeichen (2 x 4) am Anfang des inneren Blocks.
@@ -361,12 +341,10 @@ Der erste Block hat also 4 Leerzeichen (ich markiere sie wieder, damit du sie se
 %@@@@here's my first block
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 @@@@das ist mein erster Block
 @@@@das ist mein erster Block
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %And then the second block (which is `inside' the first) needs 8 spaces:
 Der zweite Block (der `innerhalb' des ersten ist) braucht 8 Leerzeichen:
@@ -379,14 +357,12 @@ Der zweite Block (der `innerhalb' des ersten ist) braucht 8 Leerzeichen:
 %@@@@@@@@here's my second block
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 @@@@das ist mein erster Block
 @@@@das ist mein erster Block
 @@@@@@@@das ist mein zweiter Block
 @@@@@@@@das ist mein zweiter Block
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Why do we want to put one block `inside' another?  Usually we do this when the second block relies on the first in some way.  Such as our for-loop.  If the line with the for-loop is the first block, then the statements we want to run over and over again are in the second block---in a way they rely on the first block to work properly.
 Warum werden Blöcke `ineinander' verschachtelt? Normalerweise dann, wenn der zweite Block vom ersten Block abhängt. Wenn die for-Schleife der erste Block ist, dann sind die Anweisungen, die immer wieder ausgeführt werden, der zweite Block---somit braucht der zweite Block den ersten Block um richtig zu funktionieren.
@@ -412,8 +388,7 @@ Lass uns ein echtes Beispiel probieren. Öffne die Konsole und tippe folgendes e
 %c
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> meine_liste = [ 'a', 'b', 'c' ]
 >>> for i in meine_liste:
 ...     print(i)
@@ -425,11 +400,10 @@ b
 b
 c
 c
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %After the second print, press the Enter key on the blank line---which tells the console you want to end the block. It will then print each item in the list twice.
-Drücke nach dem zweiten print Befehl zwei mal die Enter Taste---damit sagst du der Python Konsole, dass du den Block beendest. Danach wird jedes Element der Liste zwei mal ausgegeben. 
+Drücke nach dem zweiten print Befehl zwei mal die Enter Taste---damit sagst du der Python Konsole, dass du den Block beendest. Danach wird jedes Element der Liste zwei mal ausgegeben.
 \par
 \noindent
 %The next example will cause an error message to be displayed:
@@ -448,8 +422,7 @@ Das folgende Beispiel wird nicht funktionieren und ein Fehler wird angezeigt wer
 %IndentationError: unexpected indent
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> meine_liste = [ 'a', 'b', 'c' ]
 >>> for i in meine_liste:
 ...     print(i)
@@ -459,8 +432,7 @@ Das folgende Beispiel wird nicht funktionieren und ein Fehler wird angezeigt wer
     print(i)
     ^
 IndentationError: unexpected indent
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %The second print line has 6 spaces, not 4, which Python doesn't like because it wants spacing to stay the same.
 Die zweite print Zeile hat 6 Leerzeichen und nicht 4, was Python nicht mag, weil die Abstände immer gleich bleiben müssen.
@@ -489,16 +461,14 @@ Hier ist ein etwas komplizierteres Beispiel mit 2 Codeblöcken:
 %...
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> meine_liste = [ 'a', 'b', 'c' ]
 >>> for i in meine_liste:
 ...     print(i)
 ...     for j in meine_liste:
 ...         print(j)
 ...
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 \noindent
 %Where are the blocks in this code and what is it going to do...?
@@ -518,16 +488,14 @@ Hier gibt es \textbf{zwei} Blöcke---der erste Block gehört zur ersten for-Schl
 %...
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> meine_liste = [ 'a', 'b', 'c' ]
 >>> for i in meine_liste:
 ...     print(i)                #
 ...     for j in meine_liste    #-- diese Zeilen sind der ERSTE Block
 ...         print(j)            #
 ...
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 
 %Block number two is the single print line in the second for-loop:
@@ -543,16 +511,14 @@ Der zweite Block ist die print Zeile der zweiten for-Schleife:
 %...
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> meine_liste = [ 'a', 'b', 'c' ]
 >>> for i in meine_liste:
-...     print(i)                
-...     for j in meine_liste    
+...     print(i)
+...     for j in meine_liste
 ...         print(j)            # diese Zeile ist der ZWEITE Block
 ...
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Can you figure out what this little bit of code is going to do?
 Kannst du vorhersagen, was dieses kleine Codebeispiel machen wird?
@@ -567,7 +533,7 @@ Es werden die drei Buchstaben von `meine\_liste' ausgeben. Aber wie oft? Wenn du
 %...     print(i)
 %...     for j in mylist:
 %...         print(j)
-%... 
+%...
 %a
 %a
 %b
@@ -582,14 +548,13 @@ Es werden die drei Buchstaben von `meine\_liste' ausgeben. Aber wie oft? Wenn du
 %c
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> meine_liste = [ 'a', 'b', 'c' ]
 >>> for i in meine_liste:
 ...     print(i)
 ...     for j in meine_liste:
 ...         print(j)
-... 
+...
 a
 a
 b
@@ -602,8 +567,7 @@ c
 a
 b
 c
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 
 %How about something more useful than just printing letters?  Remember that calculation we came up with at the beginning of this book to work out how much you might have saved at the end of the year, if you earned \$5 doing chores, \$30 doing a paper route and spent \$10 a week?
@@ -613,11 +577,9 @@ Wie wäre es mit etwas anderem als nur Buchstaben auszugeben? Erinnerst du dich 
 %It looked like this:
 Das hat so ausgesehen:
 
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> (5 + 30 - 10) * 52
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 \noindent
 %(That's \$5 + \$30 - \$10 multiplied by 52 weeks in the year).
@@ -633,13 +595,11 @@ Es könnte praktisch sein zu sehen, wie dein Erspartes über das Jahr hinaus ans
 %>>> spending = 10
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> hausarbeit = 5
 >>> zeitung = 30
 >>> ausgaben = 10
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %We can perform the original calculation using the variables:
 Die Rechnung können wir nun auch mit den Variablen durchführen:
@@ -650,12 +610,10 @@ Die Rechnung können wir nun auch mit den Variablen durchführen:
 %1300
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> (hausarbeit + zeitung - ausgaben) * 52
 1300
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Or we can see the savings increase over the year, by creating another variable called savings, and then using a loop:
 Oder wir lassen uns für jede Woche im Jahr den zusammengesparten Betrag ausrechnen, indem wir die neue Variable `erspartes' in einer for-Schleife verwenden:
@@ -669,15 +627,13 @@ Oder wir lassen uns für jede Woche im Jahr den zusammengesparten Betrag ausrech
 %5. ...
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 1. >>> erspartes = 0
 2. >>> for woche in range(1, 53):
 3. ...     erspartes = erspartes + hausarbeit + zeitung - ausgaben
 4. ...     print('%s Woche = %s' % (woche, erspartes))
 5. ...
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %On line 1 the variable `savings' is loaded with 0 (because we haven't saved anything yet).\\
 In der ersten Zeile setzen wir die Variable `erspartes' auf 0 (am Anfang des Jahres haben wir noch nichts gespart).\\
@@ -707,8 +663,7 @@ In Zeile 4 ist ein print Befehl, der gleichzeitig die Woche sowie den gesammelte
 %Week 15 = 375
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 1 Woche = 25
 2 Woche = 50
 3 Woche = 75
@@ -724,8 +679,7 @@ In Zeile 4 ist ein print Befehl, der gleichzeitig die Woche sowie den gesammelte
 13 Woche = 325
 14 Woche = 350
 15 Woche = 375
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %$\ldots$going all the way up to week 52.
 $\ldots$bis zur Woche 52.
@@ -742,12 +696,10 @@ Die for-Schleife ist nicht die einzige Art von Schleifen, die du in Python verwe
 %...     print(step)
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> for stufe in range(0,20):
 ...     print(stufe)
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Now imagine a staircase going up a mountainside.  You might run out of energy before you reach the top.  Or the weather might turn bad forcing you to stop climbing.  This is a while-loop.
 Stelle dir jetzt eine Treppe vor, die auf einen Berg hinaufführt. Du könntest beim hochsteigen müde werden. Oder es kommt ein Wetterumbruch und du drehst um. Das wäre dann eine while-Schleife.
@@ -765,8 +717,7 @@ Stelle dir jetzt eine Treppe vor, die auf einen Berg hinaufführt. Du könntest 
 %...         step = step + 1
 %\end{verbatim}
 %\end{listingignore}
-\begin{listingignore}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> stufe = 0
 >>> while stufe < 10000:
 ...     print(stufe)
@@ -776,8 +727,7 @@ Stelle dir jetzt eine Treppe vor, die auf einen Berg hinaufführt. Du könntest 
 ...         break
 ...     else:
 ...         step = step + 1
-\end{verbatim}
-\end{listingignore}
+\end{Verbatim}
 
 %Don't bother running the code sample above, because we haven't bothered to create the variables \code{tired} and \code{badweather}.  But it demonstrates the basics of a while-loop.  \emph{While} the value of variable \code{step} is less than 10000 (step $<$ 10000) the code in the block is executed.  In the block, we print the value of \code{step}, then check whether \code{tired} or \code{badweather} is true.  If \code{tired} is true, then the \code{break} statement stops the code in the loop executing (basically we jump out of the loop to the next line of code immediately following the block).  If \code{badweather} is true, we also break out of the loop.  If not, then \textbf{1} is added to the value of \code{step}, and the condition of the while loop (step $<$ 10000) is checked again.
 Den obigen Code kannst du noch nicht ausprobieren solange die Variablen \code{muede} oder \code{schlechtes\_wetter} nicht existieren. Aber es zeigt dir die Grundlagen einer while-Schleife. Solange die Variable \code{stufe} kleiner als 10000 ist, wird der Inhalt des Blocks ausgeführt. Im Block selber wird der Wert der Variable stufe ausgegeben, danach wird überprüft, ob die Variable \code{muede} oder \code{schlechtes\_wetter} wahr ist. Wenn \code{muede} wahr ist, dann verlässt Python den Block und macht außerhalb weiter. Wenn \code{schlechtes\_wetter} wahr ist genauso. In entgegengesetzten Fall wird \textbf{1} zur Variable \code{stufe} dazugezählt und die Bedingung am Anfang der Schleife wird wieder überprüft.
@@ -802,29 +752,25 @@ Die Schritte einer while-Schleife sind zusammengefasst:
 %More commonly, a while-loop might be created with a couple of conditions:
 Sehr häufig wird eine while-Schleife mit mehreren Bedingungen verwendet:
 
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> x = 45
 >>> y = 80
 >>> while x < 50 and y < 100:
 ...     x = x + 1
 ...     y = y + 1
 ...     print(x, y)
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %In this loop, we create a variable \code{x} with the value 45, and a variable \code{y} with the value 80.  There are two conditions that are checked by the loop: whether \code{x} is less than 50 and whether \code{y} is less than 100. While both conditions are true, the block of code is executed, adding 1 to both variables and then printing them. The output of this code is just:
 In dieser Schleife erzeugen wir die Variable \code{x} mit dem Wert 45 und die Variable \code{y} mit dem Wert 80. Es sind zwei Bedingungen, die in der Schleife überprüft werden: ob \code{x} kleiner als 50 ist, oder \code{y} kleiner als 100 ist. Wenn beide Bedingungen wahr sind, dann wird der Codeblock ausgeführt, in dem jeweils die Zahl 1 zu den Variablen hinzugefügt wird und die Variablen ausgegeben. Die Ausgabe des Codes wird folgende sein:
 
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 46 81
 47 82
 48 83
 49 84
 50 85
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 %Maybe you can figure out why these numbers are printed?\footnote{We start counting at 45 in the variable \code{x} and at 80 in the variable \code{y}, and then increment (add one) to each variable every time the code in the loop is run.  The conditions check that \code{x} must be less than 50 and \code{y} must be less than 100.  After looping five times (adding 1 to each variable) the value in x reaches 50.  Now the first condition (x $<$ 50) is no longer true, so Python knows to stop looping.}
 Vielleich kannst du herausfinden, warum diese Nummern ausgegeben werden?\footnote{Wir beginnen mit \code{x} bei 45 zu zählen und \code{y} fängt bei 80 an. Bei jedem Schleifendurchlauf werden die Zahlen um 1 erhöht. Die Bedingung am Anfang schaut darauf, dass \code{x} kleiner als 50 und \code{y} kleiner als 100 ist. Nach 5 Durchläufen erreicht die Variable \code{x} den Wert 50. Nun ist die erste Bedingung (x $<$ 50) nicht mehr wahr und Python verlässt die Schleife.}
@@ -842,16 +788,14 @@ Gerne wird die while-Schleife auch für halb-unendliche Schleifen verwendet. Das
 %...         break
 %\end{verbatim}
 %\end{listingignore}
-\begin{listingignore}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> while True:
 ...     hier steht eine Menge Code
 ...     hier steht eine Menge Code
 ...     hier steht eine Menge Code
 ...     if eine_bedingung == True:
 ...         break
-\end{verbatim}
-\end{listingignore}
+\end{Verbatim}
 %The condition for the while loop is just `True'.  So it will always run the code in the block (thus the loop is eternal or infinite). Only if the variable some\_condition is true will the code break out of the loop.  You can see a better example of this in Appendix~\ref{app:afewpythonmodules} (the section about the \code{random} module), but you might want to wait until you've read the next chapter before taking a look at it.
 Die Bedingung für die while-Schleife ist `True' (also Wahr). Deswegen wird der nachfolgende Block auch immer ausgeführt (dies erzeugt eine sogenannte Endlosschleife). Erst wenn die Bedingung \code{eine\_bedingung} True (Wahr) wird, verlässt Python die Schleife. Ein schönes Beispiel kannst du im Anhang~\ref{app:afewpythonmodules} sehen (im Abschnitt über das \code{random} Modul), aber vielleicht liest du noch das nächste Kapitel, bevor zu im Anhang nachblätterst.
 
@@ -875,14 +819,12 @@ Was wird der folgende Code machen?
 %...         break
 %\end{verbatim}
 %\end{listing}
-\begin{listing}
-\begin{verbatim}
+\begin{Verbatim}[frame=single]
 >>> for x in range(0, 20):
 ...     print('Hallo %s' % x)
 ...     if x < 9:
 ...         break
-\end{verbatim}
-\end{listing}
+\end{Verbatim}
 
 
 
@@ -890,7 +832,7 @@ Was wird der folgende Code machen?
 \subsection*{Übung 2}
 %When you save money in a bank, you earn interest.  `Interest' is the money the bank pays you for letting them use your money---each year you are paid a small amount of money depending upon how much you've saved.  This payment is usually added back to your savings account at the bank, and it also makes you money$\ldots$ which is a bit confusing, so you might have to ask Mum or Dad to explain.
 Wenn du Geld in die Bank bringst, bekommst du Zinsen. `Zinsen' ist der Geldbetrag, den du von der Bank bekommst, damit die Bank dein Geld benutzen kann---jedes Jahr bekommst du so einen kleinen Betrag auf dein Sparbuch zum anderen Geld. Vielleicht fragst du deine Eltern wie das alles funktioniert.
-%Interest is calculated using percentages.  If you don't know what a percentage is, don't worry, it's enough to know that if the bank is paying you 1\% (1 percent) interest, you can multiply the monetary amount by the number 0.01 (if your amount is \$1000, then you will do: 1000 * 0.01).  If they're paying you 2\% interest, you can use the number 0.02, and so on.  
+%Interest is calculated using percentages.  If you don't know what a percentage is, don't worry, it's enough to know that if the bank is paying you 1\% (1 percent) interest, you can multiply the monetary amount by the number 0.01 (if your amount is \$1000, then you will do: 1000 * 0.01).  If they're paying you 2\% interest, you can use the number 0.02, and so on.
 Jedenfalls berechnet man die Zinsen mit Prozent. Wenn du nicht weißt, was Prozent sind, macht das nichts. Du musst dir nur merken, wenn du 1\% (1 Prozent) Zinsen bekommst, kannst du die Geldsumme mit 0.01 multiplizieren um die Zinsen zu berechnen (bei \EUR{1000} bekommst du also 1000 x 0.01 = \EUR{10}). Bei zwei Prozent Zinsen multiplizierst du mit 0.02 und so weiter.
 %If you have \$100 saved in a bank account, and they pay you 3\% interest every year, how much money do you think you will have each year, up to 10 years?  You can write a program using a for-loop to figure it out  (Hint: remember to add the interest to the total).
 Wenn du nun \EUR{100} gespart hast, und du bekommst 3\% Zinsen pro Jahr, wie viel Geld wirst du am Ende der nächsten 10 Jahre haben? Du kannst das mit einer for-Schleife berechnen (Tipp: zähle die Zinsen am Ende des Jahres zur Geldsumme dazu).
