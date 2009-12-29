@@ -93,41 +93,40 @@
 \begin{document}
 
 %% Titelbild, Umschlag
-\include{frontmatter} 
+%\include{frontmatter} 
 
 %% Wie \tableofcontents, aber nur Kapitel, wenn {0} mitgegeben
-%\shorttableofcontents{Zusammenfassung}{0} 
-\shorttableofcontents{kleine Zusammenfassung 0}{0} 
-\shorttableofcontents{kleine Zusammenfassung 1}{1} 
+\shorttableofcontents{Kapitel}{0} 
 
-\include{preface} % Vorwort
+%% Vorwort
+\include{preface}
 
 \pagestyle{headings}
 \pagenumbering{arabic}
 
 %% Kapitel
-\include{ch1}
-\include{ch2}
-\include{ch3}
-\include{ch4}
-\include{ch5}
+%\include{ch1}
+%\include{ch2}
+%\include{ch3}
+%\include{ch4}
+%\include{ch5}
 \include{ch6}
 \include{ch7}
-\include{ch8}
-\include{ch9}
-\include{ch10}
+%\include{ch8}
+%\include{ch9}
+%\include{ch10}
 
 
 \appendix
-\include{appendixa}
-\include{appendixb}
-\include{appendixc}
-\include{appendixd}
+%\include{appendixa}
+%\include{appendixb}
+%\include{appendixc}
+%\include{appendixd}
 
 %% Stichwortverzeichnis
 \printindex
 
 %% genaues Inhaltsverzeichnis
-%\tableofcontents
+\tableofcontents
 
 \end{document}
