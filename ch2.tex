@@ -97,7 +97,7 @@ Was passiert also, wenn du jede Woche \EUR{10} ausgibst? Wie viel hast du dann a
 Das sind \EUR{5} und \EUR{30} minus \EUR{10} multipliziert mit 52 Wochen im Jahr. Am Endes des Jahres wären \EUR{1300} übrig. Gut, das ist jetzt immer noch nicht so besonders spannend. Das hätten wir auch alles mit einem Taschenrechner machen können. Aber wir kommen da nochmals zurück und zeigen, wie das noch nützlicher und spannender wird.
 
 %You can do multiplication\index{multiplication} and addition\index{addition} (obviously), and subtraction\index{subtraction} and division\index{division} in the Python console, along with a bunch of other maths operations that we won't go into now.  For the moment the basic maths symbols for Python (actually they're called operators\index{operators}) are:
-Du kannst in der Python Konsole Multipizieren\index{Multiplikation}, Addieren\index{Addition}, Substrahieren\index{Substrahieren} und auch Dividieren\index{Division}, aber auch andere mathematische Funktionen verwenden, auf die wir später eingehen werden. Fürs Erste sind die wichtigsten mathematischen Symbole in Python (eigentlich heißen sie Operatoren\index{Operatoren}):
+Du kannst in der Python Konsole Multipizieren\index{Multiplikation}, Addieren\index{Addition}, Substrahieren\index{Substraktion} und auch Dividieren\index{Division}, aber auch andere mathematische Funktionen verwenden, auf die wir später eingehen werden. Fürs Erste sind die wichtigsten mathematischen Symbole in Python (eigentlich heißen sie Operatoren\index{Operatoren}):
 
 %\begin{center}
 %\begin{tabular}{|c|c|}
@@ -154,7 +154,7 @@ In Python würdest du die Division aber so notieren ``100 / 20''.
 \emph{Das ist auch viel einfacher denke ich. Aber was weiß ich schon. Ich bin nur ein Buch.}
 
 %\section{Use of brackets and ``Order of Operations''}\index{order of operations}
-\section{Verwendung von Klammern und die ``Reihenfolge der Operationen''}\index{order of operations}
+\section{Verwendung von Klammern und die ``Reihenfolge der Operationen''}\index{Reihenfolge von Operatoren}
 
 %We use brackets in a programming language to control what is called ``Order of Operations''.  An operation is the use of an operator (one of those symbols in the table above).  There are more operators than those basic symbols, but for that simple list (addition, subtraction, multiplication and division), it's enough to know that multiplication and division both have a higher order than addition and subtraction.  Which means you do the multiplication or division part of an equation before you do the addition or subtraction part.  In the following equation, all the operators are addition (+), the numbers are added in order:
 Wir verwenden Klammern in Programmiersprachen um die ``Reihenfolge der Operationen'' zu bestimmen. Bei einer Operation verwendet man Operatoren (einen aus der Liste vorhin). Es gibt mehr Operatoren als in der kurzen Liste stehen, aber fürs Erste genügt zu wissen, dass Multiplikation und Division einen höheren Rang haben als Addition und Subtraktion. Das bedeutet, dass du in einer Rechnung zuerst den Teil mit der Multiplikation und Division berechnest und dann erst die Addition und Subtraktion. In der folgenden Formel kommen nur Additionen vor (+) und die Zahlen werden der Reihenfolge nach addiert:
@@ -218,7 +218,7 @@ Ohne Klammern wird zuerst 30 mit 20 multipliziert, das Ergebnis durch 10 dividie
 \emph{Merke dir einfach, dass Multiplikation und Division immer vor Addition und Subtraktion kommen, außer es werden Klammern verwendet, die als erste behandelt werden. (Merksatz: Punkt vor Strichrechnung.}
 
 %\section{There's nothing so fickle as a variable}\index{variable}
-\section{Es gibt nichts unbeständigeres als eine Variable}\index{variable}
+\section{Es gibt nichts unbeständigeres als eine Variable}\index{Variablen}
 
 %A `variable' is a programming term used to describe a place to store things.  The `things' can be numbers, or text, or lists of numbers and text---and all sorts of other items too numerous to go into here.  For the moment, let's just think of a variable as something a bit like a mailbox.
 Eine `Variable' ist eine Programmierausdruck der einen Platz zum Speichern von Dingen bezeichnet. Diese `Dinge' können Nummern, Text, Listen von Zahlen oder auch eine Vielzahl von anderen Dingen sein. Eine Variable ist so etwas wie ein Briefkasten.
@@ -348,7 +348,7 @@ das_ist_auch_eine_gueltige_variable_aber_vielleicht_nicht_so_nuetzlich
 \end{Verbatim}
 
 %\section{Using Variable}\index{Variables}
-\section{Variablen verwenden}\index{Variables}
+\section{Variablen verwenden}\index{Variablen}
 
 %Now we know how to create a variable, how do we use it?  Remember that equation we came up with earlier?  The one to work out how much money you'd have left at the end of the year, if you earned \$5 a week doing chores, \$30 a week on a paper round, and spent \$10 per week.  So far we have:
 Jetzt wissen wir wie man Variablen erzeugt. Aber wie wenden wir sie an? Erinnerst du dich an die Rechnung von früher? Die Berechnung wieviel Geld du am Ende des Jahres gespart haben würdest, wenn du \EUR{5} für die Hausarbeit bekommst und \EUR{30} fürs Zeitung austragen. \EUR{10} pro Woche gibst du aus. Bis jetzt schaut das so aus:
@@ -432,7 +432,7 @@ So bleiben dir also \EUR{884} am Ende des Jahres übrig. Fürs arbeiten mit Vari
 \emph{Denk an einen Postkasten der eine Beschriftung hat!}
 
 %\section{A Piece of String?}\index{strings}
-\section{Ein String?}\index{strings}
+\section{Ein String?}\index{Strings}
 
 %If you're paying attention, and not just skimming through looking for the good bits, you might remember I mentioned that variables can be used for all sorts of things---not just numbers. In programming, most of the time we call text a `string'. Which might seem a bit weird; but if you think that text is just `stringing together' (or joining together) a bunch of letters, perhaps it might make a little more sense.
 Wenn du ein wenig aufpasst und die Seiten nicht nur flüchtig überfliegst, dann erinnerst du dich vielleicht, dass sich Variablen für alle möglichen Dinge eignen---nicht nur Zahlen. Beim Programmieren wird ein Text `String' benannt. Das klingt ein wenig ungewohnt; aber String ist das englische Wort für Schnur und so Wörter kann man sich als aufgefädelte Buchstaben vorstellen. Dann macht die Bezeichung `String' für Text vielleicht etwas mehr Sinn.
@@ -511,7 +511,7 @@ SyntaxError: EOL while scanning string literal
 \end{Verbatim}
 
 %\index{multi-line string}We'll talk more about errors later, but for the moment, if you want more than one line of text, you can use 3 single quotes:
-\index{Mehrzeilige Strings}Wir werden die Fehler später noch genauer betrachten, aber wenn du fürs erste Strings mit mehreren Zeilen haben willst, kannst du 3 einfache Anführungsstriche verwenden:
+\index{Strings!mehrzeilig}Wir werden die Fehler später noch genauer betrachten, aber wenn du fürs erste Strings mit mehreren Zeilen haben willst, kannst du 3 einfache Anführungsstriche verwenden:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -630,7 +630,7 @@ Hallo Romeo und Julia, wie geht es euch heute?
 Wenn du mehr als einen Platzhalter verwendest, musst du die mitgegebenen Variablen mit Klammern einpacken---also (name1, name2) ist der richtige Weg um 2 Variablen mitzugeben. Man sagt zu so einem Set von Variablen in runden Klammern auch \emph{Tupel}, und es verhält sich ein wenig wie eine Liste. Darüber wollen wir jetzt reden.
 
 %\section{Not quite a shopping list}\index{lists}
-\section{Fast schon eine Einkaufsliste}\index{lists}
+\section{Fast schon eine Einkaufsliste}\index{Listen}
 
 %Eggs, milk, cheese, celery, peanut butter, and baking soda.  Which is not quite a full shopping list, but good enough for our purposes. If you wanted to store this in a variable you could create a string:
 Eier, Milch, Käse, Sellerie, Honig und Backpulver. Das ist zwar noch nicht die gesamte Einkaufsliste, aber gut genug für unsere Zwecke. Wenn du das alles in einer Variable speichern willst, dann könnte es so ausschauen:
@@ -835,7 +835,7 @@ Wir können auch Einträge von der Liste streichen in dem wir das Kommando `del'
 Da die Positionen mit 0 anfängt, bedeutet shopping\_list[5] eigentlich den sechsten Eintrag.
 
 %\subsection*{\color{BrickRed}2 lists are better than 1}\index{lists!joining}
-\subsection*{\color{BrickRed}Zwei Listen sind besser als Eine}\index{lists!joining}
+\subsection*{\color{BrickRed}Zwei Listen sind besser als Eine}\index{Listen!zusammenfügen}
 
 %We can join lists together by adding them, as if we were adding two numbers:
 Wir können auch Listen verbinden, wie man zwei Nummern addiert:
