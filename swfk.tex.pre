@@ -95,9 +95,9 @@
 %% Titelbild, Umschlag
 \include{frontmatter} 
 
-%% Wie \tableofcontents, aber nur Kapitel, wenn {0} mitgegeben
-%% funktioniert noch nicht ganz
-%\shorttableofcontents{Kapitel}{0} 
+%%%% Wie \tableofcontents, aber nur Kapitel, wenn {0} mitgegeben
+%%%% funktioniert noch nicht ganz
+%%%\shorttableofcontents{Kapitel}{0} 
 
 %% Vorwort
 \include{preface}
@@ -113,15 +113,15 @@
 \include{ch5}
 \include{ch6}
 \include{ch7}
-\include{ch8}
-\include{ch9}
-\include{ch10}
+%\include{ch8}
+%\include{ch9}
+%\include{ch10}
 
 
 \appendix
-\include{appendixa}
-\include{appendixb}
-\include{appendixc}
+%\include{appendixa}
+%\include{appendixb}
+%\include{appendixc}
 \include{appendixd}
 
 %% Stichwortverzeichnis
