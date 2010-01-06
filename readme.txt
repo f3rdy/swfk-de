@@ -10,7 +10,7 @@ To build, you'll need latex, and dvipdf
 
 Auf einem frischen Ubuntu sollten diese Pakete installiert sein, damit das Generieren der pdf's gleich klappt.
 Am besten gleich in der Konsole
-sudo apt-get mercurial python3 texmaker texlive-full ttf-linux-libertine
+sudo apt-get mercurial python3 python3-tk texmaker texlive-full ttf-linux-libertine
 eingeben und auch die Abhängigkeiten mit Installieren.
 
 
