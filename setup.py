@@ -14,8 +14,8 @@ target_dir = 'target'
 #
 # 
 #
-#platforms = 'linux', 'mac', 'win'
-platforms = 'linux', # for bulding only one version (faster)
+platforms = 'linux', 'mac', 'win'
+#platforms = 'linux', # for bulding only one version (faster)
 
 #
 # find the executables to use in compiling the books

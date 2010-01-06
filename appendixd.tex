@@ -5,7 +5,7 @@
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 
-\chapter{Antworten zu ``Dinge zum Ausprobieren''}\label{app:answers}
+\chapter{Antworten zu ``Probiere es aus''}\label{app:answers}
 
 %Here is where you can find the answers to the questions asked in each chapter in the section ``Things to try''.
 Hier kannst du die gesamten Antworten finden, die in jedem Kapitel unter `Dinge zum ausprobieren' gestellt werden.
@@ -432,8 +432,9 @@ Zinsen für 1215.50625 Euro im 5 Jahr sind 60.7753125
 
 
 \noindent
-3. The mini-program is a bit more complicated than the functions we've already created.  First we need to import the sys module so we can ask for input.  Then we need to prompt the user of our program for each of the values.  Apart from that, the function stays roughly the same:
+%3. The mini-program is a bit more complicated than the functions we've already created.  First we need to import the sys module so we can ask for input.  Then we need to prompt the user of our program for each of the values.  Apart from that, the function stays roughly the same:
 \subsubsection{Lösung zu Kapitel~\ref{ch:sortoflikerecycling}, Übung 3}
+Dieses kleine Programm ist ein wenig komplizierter, als das bisherige. Zuerst müssen wir das \code{sys} Modul importieren um Tastatureingaben verarbeiten zu könnnen. Und wir fragen den Benutzer nach den einzelnen Werten. Sonst bleibt es gleich.
 
 %\begin{Verbatim}[frame=single]
 %>>> import sys
@@ -518,69 +519,111 @@ Zinsen für 949.149279168 Euro im 12 Jahr sind 56.9489567501
 \subsection*{Antworten zu Kapitel~\ref{ch:turtlesgalore}}
 
 \noindent
-1. There's a hard way to draw an octagon, and an easy way.  The hard way, isn't hard because it's complicated.  It's hard because it requires more typing:
+%1. There's a hard way to draw an octagon, and an easy way.  The hard way, isn't hard because it's complicated.  It's hard because it requires more typing:
 \subsubsection{Lösung zu Kapitel~\ref{ch:turtlesgalore}, Übung 1}
+Es gibt eine lange Variante ein Achteck zu zeichnen und eine kurze kompliziertere. Bei der langen Variante ist viel zu tippen. 
 
+%\begin{Verbatim}[frame=single]
+%import turtle
+%t = turtle.Pen()
+%>>> t.forward(50)
+%>>> t.right(45)
+%>>> t.forward(50)
+%>>> t.right(45)
+%>>> t.forward(50)
+%>>> t.right(45)
+%>>> t.forward(50)
+%>>> t.right(45)
+%>>> t.forward(50)
+%>>> t.right(45)
+%>>> t.forward(50)
+%>>> t.right(45)
+%>>> t.forward(50)
+%>>> t.right(45)
+%>>> t.forward(50)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 import turtle
-t = turtle.Pen()
->>> t.forward(50)
->>> t.right(45)
->>> t.forward(50)
->>> t.right(45)
->>> t.forward(50)
->>> t.right(45)
->>> t.forward(50)
->>> t.right(45)
->>> t.forward(50)
->>> t.right(45)
->>> t.forward(50)
->>> t.right(45)
->>> t.forward(50)
->>> t.right(45)
->>> t.forward(50)
+schildkroete = turtle.Pen()
+>>> schildkroete.forward(50)
+>>> schildkroete.right(45)
+>>> schildkroete.forward(50)
+>>> schildkroete.right(45)
+>>> schildkroete.forward(50)
+>>> schildkroete.right(45)
+>>> schildkroete.forward(50)
+>>> schildkroete.right(45)
+>>> schildkroete.forward(50)
+>>> schildkroete.right(45)
+>>> schildkroete.forward(50)
+>>> schildkroete.right(45)
+>>> schildkroete.forward(50)
+>>> schildkroete.right(45)
+>>> schildkroete.forward(50)
 \end{Verbatim}
 
 \noindent
-You can see from that code that we tell the turtle to move forward 50 pixels, then turn right 45 degrees.  We do this 8 times.  Which is a lot of time.  The easier way to draw an octagon is the following code (which produces the octagon in figure~\ref{fig48}):
+%You can see from that code that we tell the turtle to move forward 50 pixels, then turn right 45 degrees.  We do this 8 times.  Which is a lot of time.  The easier way to draw an octagon is the following code (which produces the octagon in figure~\ref{fig48}):
+Wie du sehen kannst, sagen wir der Schildkröte, dass sie sich 50 Pixel nach vorne bewegen soll und dann 45 Grad nach rechts drehen. Wir machen das ganze 8 mal. Was ziemlich oft ist. Die kurzte Variante ist folgende (die das folgende Achteck in Bild~\ref{fig48} erzeugt):
 
+%\begin{Verbatim}[frame=single]
+%>>> for x in range(0,8):
+%...     t.forward(50)
+%...     t.right(45)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> for x in range(0,8):
-...     t.forward(50)
-...     t.right(45)
+...     schildkroete.forward(50)
+...     schildkroete.right(45)
 \end{Verbatim}
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=82mm]{figure48.eps}
 \end{center}
-\caption{Turtle drawing an octagon.}\label{fig48}
+%\caption{Turtle drawing an octagon.}\label{fig48}
+\caption{Die Schildkröte zeichnet ein Achteck.}\label{fig48}
 \end{figure}
 
 \noindent
-2.  If you take another look at the other functions in Chapter~\ref{ch:turtlesgalore}, you'll already see how to create a filled shape. We can convert the octagon code into a function that takes a colour, but we'll also want to reuse the hexcolour function
+%2.  If you take another look at the other functions in Chapter~\ref{ch:turtlesgalore}, you'll already see how to create a filled shape. We can convert the octagon code into a function that takes a colour, but we'll also want to reuse the hexcolour function
 \subsubsection{Lösung zu Kapitel~\ref{ch:turtlesgalore}, Übung 2}
+Wenn du dich nochmals in Kapitel~\ref{ch:turtlesgalore} schlau machst, findest du die Funktion, die nötig ist, um die Formen mit Farbe zu füllen. Ändern wir die \code{achteck} Funktion, damit wir gleich die Farbe mitgeben können.
 
+%\begin{Verbatim}[frame=single]
+%>>> def octagon(red, green, blue):
+%...     t.color(red, green, blue)
+%...     t.begin_fill()
+%...     for x in range(0,8):
+%...         t.forward(50)
+%...         t.right(45)
+%...     t.end_fill()
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> def octagon(red, green, blue):
-...     t.color(red, green, blue)
-...     t.begin_fill()
+>>> def achteck(rot, gruen, blau):
+...     schildkroete.color(rot, gruen, blau)
+...     schildkroete.begin_fill()
 ...     for x in range(0,8):
-...         t.forward(50)
-...         t.right(45)
-...     t.end_fill()
+...         schildkroete.forward(50)
+...         schildkroete.right(45)
+...     schildkroete.end_fill()
 \end{Verbatim}
 
-We set the colour, then turn filling on.  Then we run the for loop to draw the octagon, finally we switch filling back off again to fill in the shape. How about a blue octagon (see figure~\ref{fig49}):
+%We set the colour, then turn filling on.  Then we run the for loop to draw the octagon, finally we switch filling back off again to fill in the shape. How about a blue octagon (see figure~\ref{fig49}):
+In der Funktion setzen wir die Farbe und schalten dann `ausfüllen' ein. Wir zeichnen danach das Achteck und schalten `ausfüllen' aus, um das Achteck zu füllen. Für ein blaues Achteck (siehe Bild~\ref{fig49}) geben wir folgendes ein:
 
+%\begin{Verbatim}[frame=single]
+%>>> octagon(0, 0, 1)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> octagon(0, 0, 1)
+>>> achteck(0, 0, 1)
 \end{Verbatim}
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=82mm]{figure49.eps}
 \end{center}
-\caption{Turtle drawing a blue octagon.}\label{fig49}
+%\caption{Turtle drawing a blue octagon.}\label{fig49}
+\caption{Die Schildkröte malt ein blaues Achteck.}\label{fig49}
 \end{figure}
 \newpage

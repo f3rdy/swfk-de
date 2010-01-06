@@ -7,14 +7,14 @@ ch4  OK
 ch5  OK
 ch6  OK
 ch7  OK
-ch8  übersetzen
+ch8  OK
 ch9  übersetzen
 ch10 übersetzen
 
 app a übersetzen
 app b übersetzen
 app c übersetzen
-app d übersetzen
+app d OK
 
 Alle Kapitel in die Rechtschreibkorrektur werfen
 
@@ -30,9 +30,11 @@ Inhaltsverzeichnis und Links korrekt?
     Rahmen um Codebeispiele mit \usepackage{fancyvrb}      OK
     Schriften Linux Libertine einbauen
 
+
 Den Index überprüfen
 
 testen ob hg clone und bauen mit latex auch nach frischem checkout funktioniert
 und dazuschreiben, welche Pakete auf Ubuntu installiert sein müssen
 
-in appendix d bei Übungen links einfügen zu Übung 1, Übung 2 der einzelnen Kapitel
+in appendix d bei Übungen Links einfügen zu Übung 1, Übung 2 der einzelnen Kapitel
+
