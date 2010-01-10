@@ -5,11 +5,13 @@
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 
-\chapter{Built-in Functions}\label{app:builtinfunctions}
+%\chapter{Built-in Functions}\label{app:builtinfunctions}
+\chapter{Eingebaute Funktionen}\label{app:builtinfunctions}
 
 Python has a number of built-in functions---functions that can be used without needing to \textbf{import} them first.  Some of the available built-in functions are listed below.
 
-\subsection*{abs}\index{functions!abs}
+%\subsection*{abs}\index{functions!abs}
+\subsection*{abs}\index{Funktionen!abs}
 
 The \textbf{abs} function returns the absolute value of a number.  An absolute value is a number that is not negative.  So the absolute value of 10 is 10, and the absolute value of -20.5 is 20.5.  For example:
 
@@ -20,7 +22,8 @@ The \textbf{abs} function returns the absolute value of a number.  An absolute v
 20.5
 \end{Verbatim}
 
-\subsection*{bool}\index{functions!bool}
+%\subsection*{bool}\index{functions!bool}
+\subsection*{bool}\index{Funktionen!bool}
 
 The \textbf{bool} function returns either True or False based on the value passed as its parameter. For numbers, 0 returns False, while any other number returns True:
 
@@ -44,7 +47,8 @@ False
 True
 \end{Verbatim}
 
-\subsection*{cmp}\index{functions!cmp}
+%\subsection*{cmp}\index{functions!cmp}
+\subsection*{cmp}\index{Funktionen!cmp}
 
 The \textbf{cmp} function compares two values and returns a negative number if the first value is less than the second; returns 0 if the first value is equal to the second; and returns a positive number if the first value is greater than the second. For example, 1 is less than 2:
 
@@ -103,7 +107,8 @@ A lower-case 'a' is actually greater than an upper-case 'A'. Of course$\ldots$
 \noindent
 $\ldots$3 letter a's (aaa) are less than 4 letter a's (aaaa).
 
-\subsection*{dir}\index{functions!dir}
+%\subsection*{dir}\index{functions!dir}
+\subsection*{dir}\index{Funktionen!dir}
 
 The \textbf{dir} function returns a list of information about a value.  You can use dir on strings, numbers, functions, modules, objects, classes---pretty much anything.  On some values, the information might not be all that useful (in fact it might not make a huge amount of sense at all).  For example, calling dir on the number 1 results in$\ldots$
 
@@ -148,7 +153,8 @@ Aaaaa
 
 $\ldots$\code{isalnum} (which returns True if a string is alphanumeric---contains only letters and numbers), \code{isalpha} (which returns True if a string contains only letters), and so on. Dir can be useful when you have a variable and quickly want to find out what you can do with it.
 
-\subsection*{eval}\index{functions!eval}
+%\subsection*{eval}\index{functions!eval}
+\subsection*{eval}\index{Funktionen!eval}
 
 The \textbf{eval} function takes a string as a parameter and runs it as though it were a Python expression.  This is similar to the \textbf{exec} keyword, but works a little differently.  With exec you can create mini Python programs in your string, but eval only allows simple expressions, such as:
 
@@ -157,11 +163,13 @@ The \textbf{eval} function takes a string as a parameter and runs it as though i
 50
 \end{Verbatim}
 
-\subsection*{file}\index{functions!file}
+%\subsection*{file}\index{functions!file}
+\subsection*{file}\index{Funktionen!file}
 
 A function to open a file and return a file object with functions that can access information in the file (the contents of the file, its size and so on). You can find more information about file and file objects in Chapter~\ref{ch:ashortchapteraboutfiles}.
 
-\subsection*{float}\index{functions!float}
+%\subsection*{float}\index{functions!float}
+\subsection*{float}\index{Funktionen!float}
 
 The \textbf{float} function converts a string or a number into a floating point number. A floating point number is a number with a decimal place (also called a real number). For example, the number 10 is an `integer' (also called a whole number), but 10.0, 10.1, 10.253, and so on, are all `floats'. You can convert a string to a float by calling:
 
@@ -197,7 +205,8 @@ Of course, converting a floating point number just returns another floating poin
 \noindent
 Calling float with no arguments, returns 0.0.
 
-\subsection*{int}\index{functions!int}
+%\subsection*{int}\index{functions!int}
+\subsection*{int}\index{Funktionen!int}
 
 The \textbf{int} function converts a string or a number into a whole number (or integer). For example:
 
@@ -220,7 +229,8 @@ ValueError: invalid literal for int() with base 10: '123.456'
 \noindent
 However, if you call int with no argument, then 0 is returned.
 
-\subsection*{len}\index{functions!len}
+%\subsection*{len}\index{functions!len}
+\subsection*{len}\index{Funktionen!len}
 
 The \textbf{len} function returns the length of an object. In this case of a string, it returns the number of characters in the string:
 
@@ -277,7 +287,8 @@ the item at index 3 is d
 \noindent
 We store the length of the list in the variable `length', and then use that variable in the \code{range} function to create our loop.
 
-\subsection*{max}\index{functions!max}
+%\subsection*{max}\index{functions!max}
+\subsection*{max}\index{Funktionen!max}
 
 The \textbf{max} function returns the largest item in a list, tuple or even a string. For example:
 
@@ -304,7 +315,8 @@ And you don't have to use lists, or tuples or strings. You can also call the max
 450
 \end{Verbatim}
 
-\subsection*{min}\index{functions!min}
+%\subsection*{min}\index{functions!min}
+\subsection*{min}\index{Funktionen!min}
 
 The \textbf{min} function works in the same way as max, except it returns the smallest item in the list/tuple/string:
 
@@ -314,7 +326,8 @@ The \textbf{min} function works in the same way as max, except it returns the sm
 4
 \end{Verbatim}
 
-\subsection*{range}\index{functions!range}
+%\subsection*{range}\index{functions!range}
+\subsection*{range}\index{Funktionen!range}
 
 The \textbf{range} function is mainly used in for-loops, when you want to loop through some code a number of times. We first saw range in Chapter~\ref{ch:againandagain}, so we've seen how to use it with two arguments, but it can also be used with three arguments. Here's another example of range with two arguments:
 
@@ -367,7 +380,8 @@ Each number in the list increases by 2 from the previous number. We can use larg
 
 This creates a list from 0 to 500 (but not including 500, of course), incrementing the numbers by 50.
 
-\subsection*{sum}\index{functions!sum}
+%\subsection*{sum}\index{functions!sum}
+\subsection*{sum}\index{Funktionen!sum}
 
 The \textbf{sum} function adds up items in a list and returns the total number. For example:
 
