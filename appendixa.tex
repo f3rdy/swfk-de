@@ -5,62 +5,96 @@
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 
-\chapter{Python Keywords}\label{app:pythonkeywords}
+%\chapter{Python Keywords}\label{app:pythonkeywords}
+\chapter{Python Schlüsselworte}\label{app:pythonkeywords}
 
-Keywords in Python (indeed, in most programming languages) are important words that are used by the language itself. If you try to use these special words as variables, or use them in the wrong way, you will get strange (sometimes funny, sometimes confusing) error messages from the Python console.  Each of the Python keywords, and a basic description is given below.
+%Keywords in Python (indeed, in most programming languages) are important words that are used by the language itself. If you try to use these special words as variables, or use them in the wrong way, you will get strange (sometimes funny, sometimes confusing) error messages from the Python console.  Each of the Python keywords, and a basic description is given below.
+Schlüsselwörter in Python (oder anderen Programmiersprachen) sind wichtige Wörter, die Python selber verwendet. Wenn du diese Schlüsselwörter als Variablen verwenden willst, oder sie falsch benutzt, wirst du komische (manchmal lustige, manchmal verwirrende) Fehlernachrichten zurück bekommen. Alle Python Schlüsselwörter mit einer kurzen Erklärung folgen in diesem Kapitel.
 
-\subsection*{and}\index{keywords!and}
+%\subsection*{and}\index{keywords!and}
+\subsection*{and}\index{Schlüsselwörter!and}
 
-The keyword \textbf{and} is used to join two expressions together in a statement (like an if-statement), to say that both expressions must be true.  For example:
+%The keyword \textbf{and} is used to join two expressions together in a statement (like an if-statement), to say that both expressions must be true.  For example:
+Das Schlüsselwort \textbf{and} wird verwendet um 2 Ausdrücke zu verbinden. Beide Ausdrücke müssen dann wahr sein. Zum Beispiel:
 
+%\begin{Verbatim}[frame=single]
+%if age > 10 and age < 20
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
-if age > 10 and age < 20
+if alter > 10 and alter < 20
 \end{Verbatim}
 
 \noindent
-This means that age must be greater than 10 and less than 20.
+%This means that age must be greater than 10 and less than 20.
+Das bedeutet, daß die Variable alter größer als 10 und kleiner als 20 sein muss.
 
-\subsection*{as}\index{keywords!as}
+%\subsection*{as}\index{keywords!as}
+\subsection*{as}\index{Schlüsselwörter!as}
 
-The keyword \textbf{as} is used to give another name to an imported module. For example, if you had a module with a name like:
+%The keyword \textbf{as} is used to give another name to an imported module. For example, if you had a module with a name like:
+Mit dem Schlüsselwort \textbf{as} kannst du ein importiertes Modul unter einem anderen Namen ansprechen. Wenn du zum Beispiel ein Modul mit diesem Namen hättest:
 
+%\begin{Verbatim}[frame=single]
+%i_am_a_python_module_that_is_not_very_useful
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
-i_am_a_python_module_that_is_not_very_useful
+ich_bin_ein_python_modul_mit_einem_besonders_langem_namen
 \end{Verbatim}
 
 \noindent
-It would be enormously annoying to have to type that module name every time you want to use it:
+%It would be enormously annoying to have to type that module name every time you want to use it:
+Das wäre sehr lästig, wenn du jedes Mal wenn du das Modul verwenden willst den ganzen Namen eintippen müsstest:
 
+%\begin{Verbatim}[frame=single]
+%>>> import i_am_a_python_module_that_is_not_very_useful
+%>>>
+%>>> i_am_a_python_module_that_is_not_very_useful.do_something()
+%I have done something
+%>>>  i_am_a_python_module_that_is_not_very_useful.do_something_else()
+%I have done something else!
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> import i_am_a_python_module_that_is_not_very_useful
+>>> import ich_bin_ein_python_modul_mit_einem_besonders_langem_namen
 >>>
->>> i_am_a_python_module_that_is_not_very_useful.do_something()
-I have done something
->>>  i_am_a_python_module_that_is_not_very_useful.do_something_else()
-I have done something else!
+>>> ich_bin_ein_python_modul_mit_einem_besonders_langem_namen.mach_was()
+Ich habe was gemacht.
+>>> ich_bin_ein_python_modul_mit_einem_besonders_langem_namen.mach_was_anderes()
+Ich hab was anderes gemacht!
 \end{Verbatim}
 
 \noindent
-Instead you can give it a new name when you import it, then just use that new name (kind of like a nickname):
+%Instead you can give it a new name when you import it, then just use that new name (kind of like a nickname):
+Stattdessen kannst du dem Modul beim importieren einen neuen kurzen Namen geben (wie ein Spitzname):
 
+%\begin{Verbatim}[frame=single]
+%>>> import i_am_a_python_module_that_is_not_very_useful as notuseful
+%>>>
+%>>> notuseful.do_something()
+%I have done something
+
+%>>> notuseful.do_something_else()
+%I have done something else!
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> import i_am_a_python_module_that_is_not_very_useful as notuseful
+>>> import ich_bin_ein_python_modul_mit_einem_besonders_langem_namen as kurzer_name
 >>>
->>> notuseful.do_something()
-I have done something
-
->>> notuseful.do_something_else()
-I have done something else!
+>>> kurzer_name.mach_was()
+Ich habe was gemacht.
+>>> kurzer_name.mach_was_anderes()
+Ich hab was anderes gemacht!
 \end{Verbatim}
 
 \noindent
-You probably won't use the keyword `as' that much, though.
+%You probably won't use the keyword `as' that much, though.
+Meist wird das Schlüsselwort `as' aber selten verwendet.
 
-\subsection*{assert}\index{keywords!assert}
+%\subsection*{assert}\index{keywords!assert}
+\subsection*{assert}\index{Schlüsselwörter!assert}
 
 Assert is an advanced keyword that is used by programmers to say that some code must be true. It's another way of catching errors and problems in code---and usually used by more advanced programs.
 
-\subsection*{break}\index{keywords!break}
+%\subsection*{break}\index{keywords!break}
+\subsection*{break}\index{Schlüsselwörter!break}
 
 The \textbf{break} keyword is used to stop some code from running. You might use a break inside a for-loop such as:
 
@@ -93,11 +127,13 @@ end counting
 \noindent
 Take a look at Chapter~\ref{ch:againandagain} to find out more information about for-loops.
 
-\subsection*{class}\index{keywords!class}
+%\subsection*{class}\index{keywords!class}
+\subsection*{class}\index{Schlüsselwörter!class}
 
 The \textbf{class} keyword is used to define a type of object. This is a feature provided in many programming languages, and is very useful when developing more complicated programs, but is a little too advanced for this book.
 
-\subsection*{del}\index{keywords!del}
+%\subsection*{del}\index{keywords!del}
+\subsection*{del}\index{Schlüsselwörter!del}
 
 Del is a special function used to get rid of something. For example, if you had a list of things you wanted for your birthday in your diary, but then changed your mind about one, you would cross it off the list, and add the new one:
 
@@ -131,19 +167,23 @@ And then to see the new list:
 \noindent
 See Chapter~\ref{ch:8multipliedby3.57} for more information about lists.
 
-\subsection*{elif}\index{keywords!elif}
+%\subsection*{elif}\index{keywords!elif}
+\subsection*{elif}\index{Schlüsselwörter!elif}
 
 The keyword \textbf{elif} is used as part of an if-statement.  See \textbf{if} below...
 
-\subsection*{else}\index{keywords!else}
+%\subsection*{else}\index{keywords!else}
+\subsection*{else}\index{Schlüsselwörter!else}
 
 The keyword \textbf{else} is also used as part of an if-statement.  See \textbf{if} below...
 
-\subsection*{except}\index{keywords!except}
+%\subsection*{except}\index{keywords!except}
+\subsection*{except}\index{Schlüsselwörter!except}
 
 Another keyword used for catching problems in code. Again this is used in more complicated programs, but too advanced for this book.
 
-\subsection*{exec}\index{keywords!exec}
+%\subsection*{exec}\index{keywords!exec}
+\subsection*{exec}\index{Schlüsselwörter!exec}
 
 \textbf{exec} is a special function used to look at a string as though it was a piece of Python code. For example, you can create a variable with a string value as follows:
 
@@ -176,11 +216,13 @@ hello there
 
 It's a bit of a weird idea, and something that might not make sense to you until you needed it.  Like \code{assert} it's one of those advanced keywords that is used in more sophisticated programs.
 
-\subsection*{finally}\index{keywords!finally}
+%\subsection*{finally}\index{keywords!finally}
+\subsection*{finally}\index{Schlüsselwörter!finally}
 
 This is another advanced keyword, used to make sure that if an error occurs, some special code runs (usually to tidy up any 'mess' that a piece of code has left behind).
 
-\subsection*{for}\index{keywords!for}
+%\subsection*{for}\index{keywords!for}
+\subsection*{for}\index{Schlüsselwörter!for}
 
 The \textbf{for} keyword is used to create a for-loop of some kind. For example:
 
@@ -200,7 +242,8 @@ x is 3
 x is 4
 \end{Verbatim}
 
-\subsection*{from}\index{keywords!from}
+%\subsection*{from}\index{keywords!from}
+\subsection*{from}\index{Schlüsselwörter!from}
 
 When importing a module, you can just import the part of it you need, using the \textbf{from} keyword. For example, the turtle module has a function \code{Pen()}, which is used to create a Pen object (basically a canvas on which the turtle moves)---you can import the entire turtle module and then use the \code{Pen} function, as follows:
 
@@ -246,7 +289,8 @@ By saying ```gmtime' is not defined'' Python is telling us that it doesn't know 
 
 In this case, we import everything from the time module, and can refer to the individual functions by name.
 
-\subsection*{global}\index{keywords!global}
+%\subsection*{global}\index{keywords!global}
+\subsection*{global}\index{Schlüsselwörter!global}
 
 In Chapter~\ref{ch:sortoflikerecycling}, we talked about \emph{scope}.  Scope is the `visibility' of a variable. If a variable is defined outside of a function, usually it can be seen inside the function. If defined inside a function, usually it can't be seen \textbf{outside} of that function.
 \par
@@ -273,7 +317,8 @@ NameError: name 'b' is not defined
 
 The variable \code{a} is now global (visible across the `world'), but \code{b} is still only visible inside the function.  Note that you must call \code{global} before saving a value using in your global variable.
 
-\subsection*{if}\index{keywords!if}
+%\subsection*{if}\index{keywords!if}
+\subsection*{if}\index{Schlüsselwörter!if}
 
 A statement making a decision about something---which is sometimes used with the additional keywords \code{else} and \code{elif} (else if).  An if-statement is a way of saying, ``if something is true, then perform an action of some kind''.  For example:
 
@@ -288,7 +333,8 @@ else:
 
 This if-statement says that if a toy price is over \$1000, it is over-priced; if the toy price is over \$100, then it's expensive.... otherwise it says (prints) ``I would like that toy''. Chapter~\ref{ch:howtoaskaquestion} has more information about if-statements.
 
-\subsection*{import}\index{keywords!import}
+%\subsection*{import}\index{keywords!import}
+\subsection*{import}\index{Schlüsselwörter!import}
 
 The \textbf{import} keyword is to tell Python to load a module so it can be used. For example:
 
@@ -321,19 +367,22 @@ Or can lettuce be found in a shopping list:
 lettuce is not in the shopping list
 \end{Verbatim}
 
-\subsection*{is}\index{keywords!is}
+%\subsection*{is}\index{keywords!is}
+\subsection*{is}\index{Schlüsselwörter!is}
 
 The keyword \textbf{is}, is sort of like the equals operator (==) which is used to tell if two things are equal (for example 10 == 10 is true, 10 == 11 is false).  However, there is a fundamental difference between \textbf{is} and ==. If you are comparing two things, == may return true, where is may not (even if you think the things are the same).
 \par
 This is one of those extremely advanced programming concepts, that tends to be enormously confusing, so for the moment just stick with using ==.
 
-\subsection*{lambda}\index{keywords!lambda}
+%\subsection*{lambda}\index{keywords!lambda}
+\subsection*{lambda}\index{Schlüsselwörter!lambda}
 
 Another advanced keyword. In fact lambda is so complicated, even to write an explanation about it would cause this book to burst into flames.
 \par
 \emph{So best not to talk about it.}
 
-\subsection*{not}\index{keywords!not}
+%\subsection*{not}\index{keywords!not}
+\subsection*{not}\index{Schlüsselwörter!not}
 
 If something is true, the \textbf{not} keyword makes it false.  For example, if we create a variable \code{x} and set it to the value True...
 
@@ -394,7 +443,8 @@ if not age == 10:
 \noindent
 Which, you've probably already realised, is just another way of saying, ``if age is not 10''.
 
-\subsection*{or}\index{keywords!or}
+%\subsection*{or}\index{keywords!or}
+\subsection*{or}\index{Schlüsselwörter!or}
 
 The \textbf{or} keyword is used to join two expressions together in a statement (such as an if-statement), to say that at least one of the expressions should be true.  For example:
 
@@ -407,7 +457,8 @@ The \textbf{or} keyword is used to join two expressions together in a statement 
 
 In this case, if the variable \code{friend} contains `Rachel' or `Rob' then it prints `The Robinsons'.  If the variable friend contains `Bill' or `Bob' then it prints `The Baxters'.
 
-\subsection*{pass}\index{keywords!pass}
+%\subsection*{pass}\index{keywords!pass}
+\subsection*{pass}\index{Schlüsselwörter!pass}
 
 Sometimes when you're writing a program you only want to write bits of it, to try things out.  The problem with this is that you can't have an if-statement without the block of code that should be run if the expression in the if-statement is true. You also can't have a for-loop without the block of code that should be run in the loop. For example:
 
@@ -459,7 +510,8 @@ x is 6
 \noindent
 Later on you can add the code in the block for the if-statement (replacing the \textbf{pass} keyword).
 
-\subsection*{print}\index{keywords!print}
+%\subsection*{print}\index{keywords!print}
+\subsection*{print}\index{Schlüsselwörter!print}
 
 The \textbf{print} keyword, writes something to the Python console; such as a string, a number or a variable:
 
@@ -469,11 +521,13 @@ print(10)
 print(x)
 \end{Verbatim}
 
-\subsection*{raise}\index{keywords!raise}
+%\subsection*{raise}\index{keywords!raise}
+\subsection*{raise}\index{Schlüsselwörter!raise}
 
 Another advanced keyword.  In this case, \textbf{raise} is used to cause an error to happen---which might seem like a strange thing to do but, in advanced programs, is actually quite useful.
 
-\subsection*{return}\index{keywords!return}
+%\subsection*{return}\index{keywords!return}
+\subsection*{return}\index{Schlüsselwörter!return}
 
 The \textbf{return} keyword is used to return a value from a function.  For example, you might create a function to return the amount of money you've saved:
 
@@ -496,11 +550,13 @@ or printed:
 >>> print(mymoney())
 \end{Verbatim}
 
-\subsection*{try}\index{keywords!try}
+%\subsection*{try}\index{keywords!try}
+\subsection*{try}\index{Schlüsselwörter!try}
 
 The \textbf{try} keyword is the beginning of a block of code that ends with the \textbf{except} and/or \textbf{finally} keywords.  All together, these \textbf{try/except/finally} blocks of code are used to handle errors in a program---for example, to make sure that the program displays a useful message to the user, rather than an ugly Python error.
 
-\subsection*{while}\index{keywords!while}
+%\subsection*{while}\index{keywords!while}
+\subsection*{while}\index{Schlüsselwörter!while}
 
 A bit like a for-loop, \textbf{while} is another way of looping code.  Where a for-loop counts through a range (of numbers), a while loop keeps running while an expression is True.  You have to be rather careful with while loops, because if the expression is always True, the loop will never end (this is called an infinite loop).  For example:
 
@@ -521,11 +577,13 @@ If you run the above code, it will loop forever.  Well, at least until you eithe
 
 Will print `hello' 9 times (each time adding 1 to the variable \code{x}, until \code{x} is no longer less than 10). This is obviously a bit like a for-loop, but does have its uses in certain situations.
 
-\subsection*{with}\index{keywords!with}
+%\subsection*{with}\index{keywords!with}
+\subsection*{with}\index{Schlüsselwörter!with}
 
 \textbf{With} is a very advanced keyword.
 
-\subsection*{yield}\index{keywords!yield}
+%\subsection*{yield}\index{keywords!yield}
+\subsection*{yield}\index{Schlüsselwörter!yield}
 \textbf{Yield} is another very advanced keyword.
 
 \newpage
