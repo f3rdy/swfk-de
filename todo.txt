@@ -11,7 +11,7 @@ ch8  OK
 ch9  übersetzen
 ch10 übersetzen
 
-app a übersetzen
+app a OK
 app b übersetzen
 app c übersetzen
 app d OK
@@ -32,6 +32,7 @@ Inhaltsverzeichnis und Links korrekt?
 
 
 Den Index überprüfen
+In Appendix A das Bild der Wunschliste anpassen
 
 testen ob hg clone und bauen mit latex auch nach frischem checkout funktioniert
 und dazuschreiben, welche Pakete auf Ubuntu installiert sein müssen

@@ -26,7 +26,7 @@ if alter > 10 and alter < 20
 
 \noindent
 %This means that age must be greater than 10 and less than 20.
-Das bedeutet, daß die Variable alter größer als 10 und kleiner als 20 sein muss.
+Das bedeutet, dass die Variable alter größer als 10 und kleiner als 20 sein muss.
 
 %\subsection*{as}\index{keywords!as}
 \subsection*{as}\index{Schlüsselwörter!as}
@@ -38,7 +38,7 @@ Mit dem Schlüsselwort \textbf{as} kannst du ein importiertes Modul unter einem 
 %i_am_a_python_module_that_is_not_very_useful
 %\end{Verbatim}
 \begin{Verbatim}[frame=single]
-ich_bin_ein_python_modul_mit_einem_besonders_langem_namen
+ich_bin_ein_python_modul_mit_langem_namen
 \end{Verbatim}
 
 \noindent
@@ -54,11 +54,11 @@ Das wäre sehr lästig, wenn du jedes Mal wenn du das Modul verwenden willst den
 %I have done something else!
 %\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> import ich_bin_ein_python_modul_mit_einem_besonders_langem_namen
+>>> import ich_bin_ein_python_modul_mit_langem_namen
 >>>
->>> ich_bin_ein_python_modul_mit_einem_besonders_langem_namen.mach_was()
+>>> ich_bin_ein_python_modul_mit_langem_namen.mach_was()
 Ich habe was gemacht.
->>> ich_bin_ein_python_modul_mit_einem_besonders_langem_namen.mach_was_anderes()
+>>> ich_bin_ein_python_modul_mit_langem_namen.mach_was_anderes()
 Ich hab was anderes gemacht!
 \end{Verbatim}
 
@@ -76,7 +76,7 @@ Stattdessen kannst du dem Modul beim importieren einen neuen kurzen Namen geben 
 %I have done something else!
 %\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> import ich_bin_ein_python_modul_mit_einem_besonders_langem_namen as kurzer_name
+>>> import ich_bin_ein_python_modul_mit_langem_namen as kurzer_name
 >>>
 >>> kurzer_name.mach_was()
 Ich habe was gemacht.
@@ -91,185 +91,287 @@ Meist wird das Schlüsselwort `as' aber selten verwendet.
 %\subsection*{assert}\index{keywords!assert}
 \subsection*{assert}\index{Schlüsselwörter!assert}
 
-Assert is an advanced keyword that is used by programmers to say that some code must be true. It's another way of catching errors and problems in code---and usually used by more advanced programs.
+%Assert is an advanced keyword that is used by programmers to say that some code must be true. It's another way of catching errors and problems in code---and usually used by more advanced programs.
+Assert ist ein fortgeschrittenes Schlüsselwort. Damit geben Programmieren an, dass etwas wahr sein muss. Damit kannst du Fehler und Probleme in Code finden---was normalerweise in fortgeschrittenen Programmen genutzt wird.
 
 %\subsection*{break}\index{keywords!break}
 \subsection*{break}\index{Schlüsselwörter!break}
 
-The \textbf{break} keyword is used to stop some code from running. You might use a break inside a for-loop such as:
+%The \textbf{break} keyword is used to stop some code from running. You might use a break inside a for-loop such as:
+Mit dem \textbf{break} Schlüsselwort stoppst du Code beim ausführen. Zum Beispiel könntest du den Befehl innerhalb einer for-Schleife verwenden:
 
+%\begin{Verbatim}[frame=single]
+%>>> age = 25
+%>>> for x in range(1, 100):
+%...     print('counting %s' % x)
+%...     if x == age:
+%...         print('end counting')
+%...         break
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> age = 25
+>>> alter = 25
 >>> for x in range(1, 100):
-...     print('counting %s' % x)
-...     if x == age:
-...         print('end counting')
+...     print('zähle %s' % x)
+...     if x == alter:
+...         print('zählen zu Ende')
 ...         break
 \end{Verbatim}
 
 \noindent
-If the variable `age' was set to 10, this would print out:
+%If the variable `age' was set to 10, this would print out:
+Wenn die Variable `alter' auf 10 gesetzt ist, würde folgendes ausgegeben werden:
 
+%\begin{Verbatim}[frame=single]
+%counting 1
+%counting 2
+%counting 3
+%counting 4
+%counting 5
+%counting 6
+%counting 7
+%counting 8
+%counting 9
+%counting 10
+%end counting
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
-counting 1
-counting 2
-counting 3
-counting 4
-counting 5
-counting 6
-counting 7
-counting 8
-counting 9
-counting 10
-end counting
+zähle 1
+zähle 2
+zähle 3
+zähle 4
+zähle 5
+zähle 6
+zähle 7
+zähle 8
+zähle 9
+zähle 10
+zählen zu Ende
 \end{Verbatim}
 
 \noindent
-Take a look at Chapter~\ref{ch:againandagain} to find out more information about for-loops.
+%Take a look at Chapter~\ref{ch:againandagain} to find out more information about for-loops.
+Schau in Kapitel~\ref{ch:againandagain} nach für Details zu den for-Schleifen.
 
 %\subsection*{class}\index{keywords!class}
 \subsection*{class}\index{Schlüsselwörter!class}
 
-The \textbf{class} keyword is used to define a type of object. This is a feature provided in many programming languages, and is very useful when developing more complicated programs, but is a little too advanced for this book.
+%The \textbf{class} keyword is used to define a type of object. This is a feature provided in many programming languages, and is very useful when developing more complicated programs, but is a little too advanced for this book.
+Mit dem \textbf{class} Schlüsselwort definierst du eine Art von Objekt. Das ist schon etwas fortgeschrittener, ist aber sehr nützlich wenn größere Programme programmiert. Für dieses Buch ist es zu fortgeschritten.
 
 %\subsection*{del}\index{keywords!del}
 \subsection*{del}\index{Schlüsselwörter!del}
 
-Del is a special function used to get rid of something. For example, if you had a list of things you wanted for your birthday in your diary, but then changed your mind about one, you would cross it off the list, and add the new one:
+%Del is a special function used to get rid of something. For example, if you had a list of things you wanted for your birthday in your diary, but then changed your mind about one, you would cross it off the list, and add the new one:
+Del ist eine Funktion um etwas zu löschen. Wenn du eine Liste mit Geburtstagswünschen hast und etwas nicht mehr haben willst, dann würdest du es durchstreichen und was neues hinschreiben:
 
 \begin{center}
 \includegraphics*[width=70mm]{list.eps}
 \end{center}
 
 \noindent
-If we had the same list in python:
+%If we had the same list in python:
+Die gleiche Liste in Pyhton wäre:
 
+%\begin{Verbatim}[frame=single]
+%>>> what_i_want = ['remote controlled car', 'new bike', 'computer game']
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> what_i_want = ['remote controlled car', 'new bike', 'computer game']
+>>> was_ich_will = ['ferngesteuertes Auto', 'neues Fahrrad', 'Computerspiel']
 \end{Verbatim}
 
 \noindent
-We could remove the computer game by using \code{del}, and add the new item by using the function append:
+%We could remove the computer game by using \code{del}, and add the new item by using the function append:
+Wir könntes das Computerspiel entfernen indem wir \code{del} verwenden und etwas neues mit der Funktion \code{append} hinzufügen:
 
+%\begin{Verbatim}[frame=single]
+%>>> del what_i_want[2]
+%>>> what_i_want.append('roboreptile')
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> del what_i_want[2]
->>> what_i_want.append('roboreptile')
+>>> del was_ich_will[2]
+>>> was_ich_will.append('Spielzeug-Reptil')
 \end{Verbatim}
 
 \noindent
-And then to see the new list:
+%And then to see the new list:
+Somit beinhaltet die neue Liste:
 
+%\begin{Verbatim}[frame=single]
+%>>> print(what_i_want)
+%['remote controlled car', 'new bike', 'roboreptile']
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> print(what_i_want)
-['remote controlled car', 'new bike', 'roboreptile']
+>>> print(was_ich_will)
+['ferngesteuertes Auto', 'neues Fahrrad', 'Spielzeug-Reptil']
 \end{Verbatim}
 
 \noindent
-See Chapter~\ref{ch:8multipliedby3.57} for more information about lists.
+%See Chapter~\ref{ch:8multipliedby3.57} for more information about lists.
+In Kapitel~\ref{ch:8multipliedby3.57} gibts genauere Details zu Listen.
 
 %\subsection*{elif}\index{keywords!elif}
 \subsection*{elif}\index{Schlüsselwörter!elif}
 
-The keyword \textbf{elif} is used as part of an if-statement.  See \textbf{if} below...
+%The keyword \textbf{elif} is used as part of an if-statement.  See \textbf{if} below...
+\textbf{elif} wird als Teil von if-Bedingungen verwendet. Schau bei \textbf{if} weiter unten nach...
 
 %\subsection*{else}\index{keywords!else}
 \subsection*{else}\index{Schlüsselwörter!else}
 
-The keyword \textbf{else} is also used as part of an if-statement.  See \textbf{if} below...
+%The keyword \textbf{else} is also used as part of an if-statement.  See \textbf{if} below...
+\textbf{else} ist auch ein Teil von if-Bedingungen. Schau weiter unten bei \textbf{if} nach...
 
 %\subsection*{except}\index{keywords!except}
 \subsection*{except}\index{Schlüsselwörter!except}
 
-Another keyword used for catching problems in code. Again this is used in more complicated programs, but too advanced for this book.
+%Another keyword used for catching problems in code. Again this is used in more complicated programs, but too advanced for this book.
+Ein anderes Schlüsselwort um mit Fehlern in Code umzugehen. Das ist für kompliziertere Programme und zu fortgeschritten für dieses Buch.
 
 %\subsection*{exec}\index{keywords!exec}
 \subsection*{exec}\index{Schlüsselwörter!exec}
 
-\textbf{exec} is a special function used to look at a string as though it was a piece of Python code. For example, you can create a variable with a string value as follows:
+%\textbf{exec} is a special function used to look at a string as though it was a piece of Python code. For example, you can create a variable with a string value as follows:
+\textbf{exec} ist eine spezielle Funktion um einen String wie Python Code zu behandeln. Zum Beispiel kannst du eine Variable mit diesem Wert erzeugen:
 
+%\begin{Verbatim}[frame=single]
+%>>> myvar = 'hello there'
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> myvar = 'hello there'
+>>> meine_variable = 'Hallo, wie gehts?'
 \end{Verbatim}
 
 \noindent
-Then print the contents:
+%Then print the contents:
+Und den Inhalt ausgeben:
 
+%\begin{Verbatim}[frame=single]
+%>>> print(myvar)
+%hello there
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> print(myvar)
-hello there
+>>> print(meine_variable)
+Hallo, wie gehts?
 \end{Verbatim}
 
 \noindent
-But you could also put some Python code in that string instead:
+%But you could also put some Python code in that string instead:
+Aber du könntest auch Python Code in die String Variable packen:
 
+%\begin{Verbatim}[frame=single]
+%>>> myvar = 'print("hello there")'
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> myvar = 'print("hello there")'
+>>> meine_variable = 'print("Hallo, wie gehts?")'
 \end{Verbatim}
 
 \noindent
-And then you could use exec to turn that string into a mini Python program and run it:
+%And then you could use exec to turn that string into a mini Python program and run it:
+Und mit \textbf{exec} verpackst du den String in ein mini Python Programm und führst es aus:
 
+%\begin{Verbatim}[frame=single]
+%>>> exec(myvar)
+%hello there
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> exec(myvar)
-hello there
+>>> exec(meine_variable)
+Hallo, wie gehts?
 \end{Verbatim}
 
-It's a bit of a weird idea, and something that might not make sense to you until you needed it.  Like \code{assert} it's one of those advanced keywords that is used in more sophisticated programs.
+%It's a bit of a weird idea, and something that might not make sense to you until you needed it.  Like \code{assert} it's one of those advanced keywords that is used in more sophisticated programs.
+Das ist vielleicht eine komische Art Code auszuführen, aber wenn du es einmal brauchst, wirst du es zu schätzen wissen. Genau wie \code{assert} ist es ein Schlüsselwort für den fortgeschrittenen Programmierer für größere Programme.
 
 %\subsection*{finally}\index{keywords!finally}
 \subsection*{finally}\index{Schlüsselwörter!finally}
 
-This is another advanced keyword, used to make sure that if an error occurs, some special code runs (usually to tidy up any 'mess' that a piece of code has left behind).
+%This is another advanced keyword, used to make sure that if an error occurs, some special code runs (usually to tidy up any 'mess' that a piece of code has left behind).
+\code{finally} heißt auf Deutsch soviel wie `endlich' oder `zuletzt'. Mit diesem fortgeschrittenen Schlüsselwort wird nachdem ein Fehler aufgetreten ist, ein definierter Code ausgeführt, der wieder etwas Ordnung schafft.
 
 %\subsection*{for}\index{keywords!for}
 \subsection*{for}\index{Schlüsselwörter!for}
 
-The \textbf{for} keyword is used to create a for-loop of some kind. For example:
+%The \textbf{for} keyword is used to create a for-loop of some kind. For example:
+Mit \textbf{for} werden for-Schleifen erzeugt. Zum Beispiel:
 
+%\begin{Verbatim}[frame=single]
+%for x in range(0,5):
+%    print('x is %s' % x)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 for x in range(0,5):
-    print('x is %s' % x)
+    print('x ist %s' % x)
 \end{Verbatim}
 
 \noindent
-The above for-loop executes the block of code (the print statement) 5 times, creating the output:
+%The above for-loop executes the block of code (the print statement) 5 times, creating the output:
+Diese for-Schleife führt den Codeblock (den Print Befehl) 5 mal aus und erzeugt folgende Ausgabe:
 
+%\begin{Verbatim}[frame=single]
+%x is 0
+%x is 1
+%x is 2
+%x is 3
+%x is 4
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
-x is 0
-x is 1
-x is 2
-x is 3
-x is 4
+x ist 0
+x ist 1
+x ist 2
+x ist 3
+x ist 4
 \end{Verbatim}
 
 %\subsection*{from}\index{keywords!from}
 \subsection*{from}\index{Schlüsselwörter!from}
 
-When importing a module, you can just import the part of it you need, using the \textbf{from} keyword. For example, the turtle module has a function \code{Pen()}, which is used to create a Pen object (basically a canvas on which the turtle moves)---you can import the entire turtle module and then use the \code{Pen} function, as follows:
+%When importing a module, you can just import the part of it you need, using the \textbf{from} keyword. For example, the turtle module has a function \code{Pen()}, which is used to create a Pen object (basically a canvas on which the turtle moves)---you can import the entire turtle module and then use the \code{Pen} function, as follows:
+Beim importieren von einem Modul, kannst du auch nur die Teile importieren, die du benötigst. Dazu verwendest du das \textbf{from} Schlüsselwort. Das turtle Modul hat zum Beispiel die Funktionen \code{Pen()}, mit dem das Pen Objekt erzeugt wird (eine Leinwand auf der die Schildkröte sich bewegen kann)---du kannst nun das gesamte turtle Modul importieren und dann die \code{Pen} Funktion verwenden:
 
+%\begin{Verbatim}[frame=single]
+%>>> import turtle
+%>>> t = turtle.Pen()
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> import turtle
->>> t = turtle.Pen()
+>>> schildkroete = turtle.Pen()
 \end{Verbatim}
 
-Or, you can just import the \code{Pen} function on its own, and then use it directly (without needing to refer to the turtle module at all):
+%Or, you can just import the \code{Pen} function on its own, and then use it directly (without needing to refer to the turtle module at all):
+Oder du importierst nur die \code{Pen} Funktion aus dem Modul und verwendest die Funktion direkt (ohne überhaupt das turtle module zu verwenden).
 
+%\begin{Verbatim}[frame=single]
+%>>> from turtle import Pen
+%>>> t = Pen()
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> from turtle import Pen
->>> t = Pen()
+>>> schildkroete = Pen()
 \end{Verbatim}
 
-Of course, this does mean that you can't use the parts of the module you haven't imported.  For example, the time module has a functions called localtime and gmtime.  If we import localtime, then try to use gmtime, we'll get an error:
+%Of course, this does mean that you can't use the parts of the module you haven't imported.  For example, the time module has a functions called localtime and gmtime.  If we import localtime, then try to use gmtime, we'll get an error:
+Das heißt natürlich, dass du nur diese Funktionen verwenden kannst, die du aus dem Modul importiert hast. Das Modul `time' hat beispielsweise die Funktionen `localtime' und `gmtime'. Wenn wir localtime importiren und dann gmtime verwenden wollen, wird es einen Fehler geben: 
 
+%\begin{Verbatim}[frame=single]
+%>>> from time import localtime
+%>>> print(localtime())
+%(2007, 1, 30, 20, 53, 42, 1, 30, 0)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> from time import localtime
 >>> print(localtime())
-(2007, 1, 30, 20, 53, 42, 1, 30, 0)
+time.struct_time(tm_year=2010, tm_mon=1, tm_mday=16, tm_hour=16, 
+tm_min=45, tm_sec=14, tm_wday=5, tm_yday=16, tm_isdst=0)
 \end{Verbatim}
 
 \noindent
-This works fine, but:
+%This works fine, but:
+Das funktioniert gut, aber:
 
+%\begin{Verbatim}[frame=single]
+%>>> print(gmtime())
+%Traceback (most recent call last):
+%  File "<stdin>", line 1, in <module>
+%NameError: name 'gmtime' is not defined
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> print(gmtime())
 Traceback (most recent call last):
@@ -277,25 +379,44 @@ Traceback (most recent call last):
 NameError: name 'gmtime' is not defined
 \end{Verbatim}
 
-By saying ```gmtime' is not defined'' Python is telling us that it doesn't know about the function \code{gmtime}$\ldots$ yet. If there are a bunch of functions in a particular module that you want to use, and you don't want to refer to them by using the module name (i.e. \code{time.localtime}, or \code{time.something-else}) you can import everything in the module using an asterisk (*):
+%By saying ```gmtime' is not defined'' Python is telling us that it doesn't know about the function \code{gmtime}$\ldots$ yet. If there are a bunch of functions in a particular module that you want to use, and you don't want to refer to them by using the module name (i.e. \code{time.localtime}, or \code{time.something-else}) you can import everything in the module using an asterisk (*):
+Python sagt uns ```gmtime' is not defined'', also kann Python die Funktion \code{gmtime}$\ldots$ noch nicht finden. Wenn du mehrere Funktionen aus einem Modul verwenden willst und du sie nicht mit dem vollen Modul Namen ansprechen willst (das heißt \code{time.localtime} und \code{time.gmtime} und so weiter), kannst du alles auf einmal importieren, indem du das Stern Symbol (*) verwendest:
 
+%\begin{Verbatim}[frame=single]
+%>>> from time import *
+%>>> print(localtime())
+%(2007, 1, 30, 20, 57, 7, 1, 30, 0)
+%>>> print(gmtime())
+%(2007, 1, 30, 13, 57, 9, 1, 30, 0)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> from time import *
 >>> print(localtime())
-(2007, 1, 30, 20, 57, 7, 1, 30, 0)
+time.struct_time(tm_year=2010, tm_mon=1, tm_mday=16, tm_hour=17, 
+tm_min=39, tm_sec=15, tm_wday=5, tm_yday=16, tm_isdst=0)
 >>> print(gmtime())
-(2007, 1, 30, 13, 57, 9, 1, 30, 0)
+time.struct_time(tm_year=2010, tm_mon=1, tm_mday=16, tm_hour=16, 
+tm_min=39, tm_sec=37, tm_wday=5, tm_yday=16, tm_isdst=0)
 \end{Verbatim}
 
-In this case, we import everything from the time module, and can refer to the individual functions by name.
+%In this case, we import everything from the time module, and can refer to the individual functions by name.
+Somit haben wir alle Funktionen aus dem time Modul importiert und können sie direkt mit dem Namen der Funktion ansprechen.
 
 %\subsection*{global}\index{keywords!global}
 \subsection*{global}\index{Schlüsselwörter!global}
 
-In Chapter~\ref{ch:sortoflikerecycling}, we talked about \emph{scope}.  Scope is the `visibility' of a variable. If a variable is defined outside of a function, usually it can be seen inside the function. If defined inside a function, usually it can't be seen \textbf{outside} of that function.
+%In Chapter~\ref{ch:sortoflikerecycling}, we talked about \emph{scope}.  Scope is the `visibility' of a variable. If a variable is defined outside of a function, usually it can be seen inside the function. If defined inside a function, usually it can't be seen \textbf{outside} of that function.
+In Kapitel~\ref{ch:sortoflikerecycling} haben wir über \emph{scope} geredet. Scope bezeichnet die `Sichtbarkeit' von einer Variable. Wenn eine Variable ausserhalb einer Funktion definiert wurde, kann sie normalerweise innerhalb einer Funktion gesehen werden. Variablen, die innerhalb von Funktionen definiert werden, sind für gewöhnlich \textbf{ausserhalb} der Funktion unsichtbar.
 \par
-The \code{global} keyword is one exception to this rule. A variable that is defined as global, can be seen everywhere. The definition of the word global is world-wide or universal, so if you think of your Python console as like a mini-world, then global truly means world-wide.  For example:
+%The \code{global} keyword is one exception to this rule. A variable that is defined as global, can be seen everywhere. The definition of the word global is world-wide or universal, so if you think of your Python console as like a mini-world, then global truly means world-wide.  For example:
+Mit dem \code{global} Schlüsselwort gibt es eine Ausnahme. Variablen die als global definiert werden, können überall gesehen werden. Wenn die Python Konsole so etwas wie eine kleine Erdkugel ist, dann heißt global so viel wie weltweit sichtbar:
 
+%\begin{Verbatim}[frame=single]
+%>>> def test():
+%...     global a
+%...     a = 1
+%...     b = 2
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> def test():
 ...     global a
@@ -303,8 +424,18 @@ The \code{global} keyword is one exception to this rule. A variable that is defi
 ...     b = 2
 \end{Verbatim}
 
-What do you think happens when you call print(a), and then print(b), after running the function test?  The first will work, and then second will cause an error message to be displayed:
+%What do you think happens when you call print(a), and then print(b), after running the function test?  The first will work, and then second will cause an error message to be displayed:
+Was wird passieren, wenn du nach dem Ausführen von der Funktion test(), print(a) und print(b) eintippst? Das Erste wird funktionieren, das Zweite wird einen Fehler erzeugen:
 
+%\begin{Verbatim}[frame=single]
+%>>> test()
+%>>> print(a)
+%1
+%>>> print(b)
+%Traceback (most recent call last):
+%  File "<stdin>", line 1, in <module>
+%NameError: name 'b' is not defined
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> test()
 >>> print(a)
@@ -315,208 +446,333 @@ Traceback (most recent call last):
 NameError: name 'b' is not defined
 \end{Verbatim}
 
-The variable \code{a} is now global (visible across the `world'), but \code{b} is still only visible inside the function.  Note that you must call \code{global} before saving a value using in your global variable.
+%The variable \code{a} is now global (visible across the `world'), but \code{b} is still only visible inside the function.  Note that you must call \code{global} before saving a value using in your global variable.
+Die Variable \code{a} ist global (sichtbar von überall auf der `Erde'), aber \code{b} ist nur sichtbar innerhalb der Funktion. Wichtig zu merken ist, dass du \code{global} verwendun musst, bevor du der globalen Variable einen Wert zuweist.
 
 %\subsection*{if}\index{keywords!if}
 \subsection*{if}\index{Schlüsselwörter!if}
 
-A statement making a decision about something---which is sometimes used with the additional keywords \code{else} and \code{elif} (else if).  An if-statement is a way of saying, ``if something is true, then perform an action of some kind''.  For example:
+%A statement making a decision about something---which is sometimes used with the additional keywords \code{else} and \code{elif} (else if).  An if-statement is a way of saying, ``if something is true, then perform an action of some kind''.  For example:
+Mit dem if Schlüsselwort wird eine Entscheidung über irgendwas gefällt---was manchmal mit den Schlüsselworten \code{else} und \code{elif} (else if) kombiniert wird. Eine if-Bedingung ist eine Art zu sagen, ``wenn etwas wahr ist, dann mache etwas bestimmtes''. Zum Beispiel:
 
+%\begin{Verbatim}[frame=single]
+%if toy_price > 1000:
+%    print('That toy is over-priced')
+%elif toy_price > 100:
+%    print('That toy is expensive')
+%else:
+%    print('I would like that toy')
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
-if toy_price > 1000:
-    print('That toy is over-priced')
-elif toy_price > 100:
-    print('That toy is expensive')
+if spielzeug_preis > 1000:
+    print('Diese Spielzeug ist zu teuer')
+elif spielzeug_preis > 100:
+    print('Dieses Spielzeug ist teuer')
 else:
-    print('I would like that toy')
+    print('Dieses Spielzeug will ich kaufen')
 \end{Verbatim}
 
-This if-statement says that if a toy price is over \$1000, it is over-priced; if the toy price is over \$100, then it's expensive.... otherwise it says (prints) ``I would like that toy''. Chapter~\ref{ch:howtoaskaquestion} has more information about if-statements.
+%This if-statement says that if a toy price is over \$1000, it is over-priced; if the toy price is over \$100, then it's expensive.... otherwise it says (prints) ``I would like that toy''. Chapter~\ref{ch:howtoaskaquestion} has more information about if-statements.
+Diese if-Bedingung sagt, dass wenn ein Spielzeug über \EUR{1000} kostet, es zu teuer ist; wenn es über \EUR{100} kostet, dann ist es teuer und ansonsten sagt es ``Dieses Spielzeug will ich kaufen''. In Kapiel~\ref{ch:howtoaskaquestion} gibt es mehr Informationen zu if-Bedingungen.
 
 %\subsection*{import}\index{keywords!import}
 \subsection*{import}\index{Schlüsselwörter!import}
 
-The \textbf{import} keyword is to tell Python to load a module so it can be used. For example:
+%The \textbf{import} keyword is to tell Python to load a module so it can be used. For example:
+Mit dem \textbf{import} Schlüsselwort lädt Python ein Modul damit du es verwenden kannst. Zum Beispiel:
 
+%\begin{Verbatim}[frame=single]
+%>>> import sys
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> import sys
 \end{Verbatim}
 
-This code tells Python you want to use the module \code{sys}.
+%This code tells Python you want to use the module \code{sys}.
+Mit diesem Code gibst du Python Bescheid, dass du das Modul \code{sys} verwenden willst.
 
 \section*{in}\index{keywords!in}
 
-The \textbf{in} keyword is used in expressions, to find if an item is within a collection of items. For example, can the number 1 be found in a list (a collection) of numbers:
+%The \textbf{in} keyword is used in expressions, to find if an item is within a collection of items. For example, can the number 1 be found in a list (a collection) of numbers:
+\textbf{in} wird in Ausdrücken verwendet um herauszufinden ob ein Eintrag sich innerhalb einer Liste befindet. Um zu sehen, ob die Nummer 1 in einer Liste von Zahlen dabei ist, kannst du folgendes eingeben:
 
+%\begin{Verbatim}[frame=single]
+%>>> if 1 in [1,2,3,4]:
+%...     print('number is in list')
+%number is in list
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> if 1 in [1,2,3,4]:
-...     print('number is in list')
-number is in list
+...     print('Die Nummer 1 ist in der Liste']
+...
+Die Nummer 1 ist in der Liste
 \end{Verbatim}
 
 \noindent
-Or can lettuce be found in a shopping list:
+Oder ob Salat auf der Einkaufsliste ist:
 
+%\begin{Verbatim}[frame=single]
+%>>> shopping_list = [ 'eggs', 'milk', 'cheese' ]
+%>>> if 'lettuce' in shopping_list:
+%...     print('lettuce is in the shopping list')
+%... else:
+%...     print('lettuce is not in the shopping list')
+%...
+%lettuce is not in the shopping list
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> shopping_list = [ 'eggs', 'milk', 'cheese' ]
->>> if 'lettuce' in shopping_list:
-...     print('lettuce is in the shopping list')
+>>> einkaufsliste = [ 'Milch', 'Eier', 'Käse']
+>>> if 'Salat' in einkaufsliste:
+...     print('Salat ist auf der Einkaufsliste')
 ... else:
-...     print('lettuce is not in the shopping list')
+...     print('Salat fehlt auf der Einkaufsliste')
 ...
-lettuce is not in the shopping list
+Salat fehlt auf der Einkaufsliste
 \end{Verbatim}
 
 %\subsection*{is}\index{keywords!is}
 \subsection*{is}\index{Schlüsselwörter!is}
 
-The keyword \textbf{is}, is sort of like the equals operator (==) which is used to tell if two things are equal (for example 10 == 10 is true, 10 == 11 is false).  However, there is a fundamental difference between \textbf{is} and ==. If you are comparing two things, == may return true, where is may not (even if you think the things are the same).
+%The keyword \textbf{is}, is sort of like the equals operator (==) which is used to tell if two things are equal (for example 10 == 10 is true, 10 == 11 is false).  However, there is a fundamental difference between \textbf{is} and ==. If you are comparing two things, == may return true, where is may not (even if you think the things are the same).
+Das Schlüsselwort \textbf{is} ist so ähnlich die der ist gleich operator (==) mit dem Dinge verglichen werden (10 == 10 ergibt wahr wogegen 10 == 11 falsch ergibt). Es gibt aber einen fundamentalen Unterschied zwischen \textbf{is} und ==. Beim Vergleich von Dingen kommt bei == manchmal wahr zurück und bei is falsch (auch wenn du glaubst die Dinge sind gleich).
 \par
-This is one of those extremely advanced programming concepts, that tends to be enormously confusing, so for the moment just stick with using ==.
+%This is one of those extremely advanced programming concepts, that tends to be enormously confusing, so for the moment just stick with using ==.
+Das ist etwas von den extrem fortgeschrittenen Konzepten und enorm verwirrend am Anfang. Lass uns am Anfang also immer == verwenden.
 
 %\subsection*{lambda}\index{keywords!lambda}
 \subsection*{lambda}\index{Schlüsselwörter!lambda}
 
-Another advanced keyword. In fact lambda is so complicated, even to write an explanation about it would cause this book to burst into flames.
+%Another advanced keyword. In fact lambda is so complicated, even to write an explanation about it would cause this book to burst into flames.
+Ein anderes Schlüsselwort für Fortgeschrittene. In Wirklichkeit ist es so kompliziert, dass sogar ein Erklärungsversuch diese Buch zerstören würde.
 \par
-\emph{So best not to talk about it.}
+%\emph{So best not to talk about it.}
+\emph{Am besten wir reden gar nicht darüber.}
 
 %\subsection*{not}\index{keywords!not}
 \subsection*{not}\index{Schlüsselwörter!not}
 
-If something is true, the \textbf{not} keyword makes it false.  For example, if we create a variable \code{x} and set it to the value True...
+%If something is true, the \textbf{not} keyword makes it false.  For example, if we create a variable \code{x} and set it to the value True...
+Wenn etwas wahr ist macht das \textbf{not} Schlüsselwort es falsch. Wenn wir zum Beispiel die Variable \code{x} auf true (wahr) setzen...
 
+%\begin{Verbatim}[frame=single]
+%>>> x = True
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> x = True
 \end{Verbatim}
 
-...and then print the value of x using \textbf{not}, we get:
+%...and then print the value of x using \textbf{not}, we get:
+... und dann den Wert der Variable unter Verwendung von not ausgeben:
 
+%\begin{Verbatim}[frame=single]
+%>>> print(not x)
+%False
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> print(not x)
 False
 \end{Verbatim}
 
-Which doesn't seem very useful, until you start using \textbf{not} in if-statements.  For example, if you are 12 years old, and the most important age for you is 12, you don't particular want to refer to all other years by saying:
+%Which doesn't seem very useful, until you start using \textbf{not} in if-statements.  For example, if you are 12 years old, and the most important age for you is 12, you don't particular want to refer to all other years by saying:
+Das schaut nicht besonders nützlich aus, bis du anfängst dieses Schlüsselwort in if-Bedingungen zu verwenden. Wenn du 10 Jahre alt wärst und das wichtigste Alter für dich ist 10, dann willst du nicht alle anderen Zahlen so benennen:
 
+%\begin{quotation}
+%``1 is not an important age''
+%``2 is not an important age''
+%``3 is not an important age''
+%``4 is not an important age''
+%...
+%...
+%``50 is not an important age''
+%\end{quotation}
 \begin{quotation}
-``1 is not an important age''
-``2 is not an important age''
-``3 is not an important age''
-``4 is not an important age''
+``1 ist kein wichtiges alter''
+``2 ist kein wichtiges alter''
+``3 ist kein wichtiges alter''
+``4 ist kein wichtiges alter''
 ...
 ...
-``50 is not an important age''
+``50 ist kein wichtiges alter''
 \end{quotation}
 
-And so on.
+%And so on.
+Und so weiter.
 \par\noindent
-In terms of an if-statement, we could write that as$\ldots$
+%In terms of an if-statement, we could write that as$\ldots$
+Mit einer if-Bedingung könnten wir das folgendermaßen schreiben$\ldots$
 
+%\begin{Verbatim}[frame=single]
+%if age == 1:
+%    print("1 is not an important age")
+%elif age == 2:
+%    print("2 is not an important age")
+%elif age == 3:
+%    print("3 is not an important age")
+%elif age == 4:
+%    print("4 is not an important age")
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
-if age == 1:
-    print("1 is not an important age")
-elif age == 2:
-    print("2 is not an important age")
-elif age == 3:
-    print("3 is not an important age")
-elif age == 4:
-    print("4 is not an important age")
+if alter == 1:
+    print("1 ist kein wichtiges Alter")
+elif alter == 2:
+    print("2 ist kein wichtiges Alter")
+elif alter == 3:
+    print("3 ist kein wichtiges Alter")
+elif alter == 4:
+    print("4 ist kein wichtiges Alter")
 \end{Verbatim}
 
 \noindent
-$\ldots$continuing on forever. A simpler way to write the statement would be:
-
+%$\ldots$continuing on forever. A simpler way to write the statement would be:
+$\ldots$ und so weiter. Einfacher würde es so ausschauen:
+%\begin{Verbatim}[frame=single]
+%if age < 10 or age > 10:
+%    print("%s is not an important age" % age)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
-if age < 10 or age > 10:
-    print("%s is not an important age" % age)
+if alter < 10 or alter > 10:
+    print("%s ist kein wichtiges Alter" % alter)
 \end{Verbatim}
 
 \noindent
-But one of the most simple ways to write that if-statement is by using \textbf{not}:
+%But one of the most simple ways to write that if-statement is by using \textbf{not}:
+Aber der einfachste Weg diese if-Bedingung zu formulieren ist \textbf{not} zu verwenden.
 
+%\begin{Verbatim}[frame=single]
+%if not age == 10:
+%    print("%s is not an important age" % age)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
-if not age == 10:
-    print("%s is not an important age" % age)
+if not alter == 10:
+    print("%s ist kein wichtiges Alter" % alter)
 \end{Verbatim}
 
 \noindent
-Which, you've probably already realised, is just another way of saying, ``if age is not 10''.
+%Which, you've probably already realised, is just another way of saying, ``if age is not 10''.
+Was eine andere Art um ``wenn das Alter nicht 10 ist'' zu sagen.
 
 %\subsection*{or}\index{keywords!or}
 \subsection*{or}\index{Schlüsselwörter!or}
 
-The \textbf{or} keyword is used to join two expressions together in a statement (such as an if-statement), to say that at least one of the expressions should be true.  For example:
+%The \textbf{or} keyword is used to join two expressions together in a statement (such as an if-statement), to say that at least one of the expressions should be true.  For example:
+Mit dem \textbf{or} Schlüsselwort werden zwei Ausdrücke miteinander verbunden (wie bei einer if-Bedingung). Damit wird festgestellt, ob einer der Ausdrücke wahr ist. Zum Beispiel:
 
+%\begin{Verbatim}[frame=single]
+%>>> if friend == 'Rachel' or friend == 'Rob':
+%...     print('The Robinsons')
+%... elif friend == 'Bill' or friend == 'Bob':
+%...     print('The Baxters')
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> if friend == 'Rachel' or friend == 'Rob':
-...     print('The Robinsons')
-... elif friend == 'Bill' or friend == 'Bob':
-...     print('The Baxters')
+>>> if freund == 'Ruth' or freund == 'Robert':
+...     print('Die Rapps')
+... elif freund == 'Barbara' or freund == 'Bert':
+...     print('Die Bergers')
 \end{Verbatim}
 
-In this case, if the variable \code{friend} contains `Rachel' or `Rob' then it prints `The Robinsons'.  If the variable friend contains `Bill' or `Bob' then it prints `The Baxters'.
+%In this case, if the variable \code{friend} contains `Rachel' or `Rob' then it prints `The Robinsons'.  If the variable friend contains `Bill' or `Bob' then it prints `The Baxters'.
+Wenn also die Variable \code{freund} `Ruth' oder `Robert' enthält, dann kommt `Die Rapps' raus. Wenn die Variable `Barbara' oder `Bert' enthält, dann wird `Die Bergers' ausgegeben.
 
 %\subsection*{pass}\index{keywords!pass}
 \subsection*{pass}\index{Schlüsselwörter!pass}
 
-Sometimes when you're writing a program you only want to write bits of it, to try things out.  The problem with this is that you can't have an if-statement without the block of code that should be run if the expression in the if-statement is true. You also can't have a for-loop without the block of code that should be run in the loop. For example:
+%Sometimes when you're writing a program you only want to write bits of it, to try things out.  The problem with this is that you can't have an if-statement without the block of code that should be run if the expression in the if-statement is true. You also can't have a for-loop without the block of code that should be run in the loop. For example:
+Manchmal, beim Schreiben von Programmen willst du nur Teile davon schreiben um Dinge auszuprobieren. Das Problem bei der Sache ist, dass du if-Bedingungen nicht halbfertig lassen kannst. Der Codeblock der bei der if-Bedingung ausgeführt werden soll, muss definiert werden. Bei for-Schleifen ist es genau so. Zum Beispiel: 
 
+%\begin{Verbatim}[frame=single]
+%>>> if age > 10:
+%...     print('older than 10')
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> if age > 10:
-...     print('older than 10')
+>>> if alter > 10:
+...     print('Älter als 10')
 \end{Verbatim}
 
 \noindent
-The above code will work, but if you type:
+%The above code will work, but if you type:
+Der Code von oben wird funktionieren. Aber wenn du folgendes eintippst:
 
+%\begin{Verbatim}[frame=single]
+%>>> if age > 10:
+%...
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> if age > 10:
+>>> if alter > 10:
 ...
 \end{Verbatim}
 
 \noindent
-You'll get an error message in the console that looks something like this:
+%You'll get an error message in the console that looks something like this:
+Wirst du folgenden Fehler in der Konsole erhalten:
 
+%\begin{Verbatim}[frame=single]
+%  File "<stdin>", line 2
+%    ^
+%IndentationError: expected an indented block
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
   File "<stdin>", line 2
     ^
 IndentationError: expected an indented block
 \end{Verbatim}
 
-This is the error message Python displays, when you should have a block of code after a statement of some kind.
+%This is the error message Python displays, when you should have a block of code after a statement of some kind.
+Dies ist die Fehlermeldung, die Python ausgibt, wenn nach einer Bedingung ein Code-Block fehlt.
 \par
-The \textbf{pass} keyword can be used in these cases, so you can write a statement, but not provide the block of code that goes with it.  For example, you might want to write a for-loop, with an if-statement inside it.  Perhaps you haven't decided what to put in the if-statement yet.  Maybe you'll put a print, maybe you'll put a break, maybe something else.  In which case, you can use \textbf{pass} and the code will still work (even if it doesn't do exactly what you want yet).  The code:
+%The \textbf{pass} keyword can be used in these cases, so you can write a statement, but not provide the block of code that goes with it.  For example, you might want to write a for-loop, with an if-statement inside it.  Perhaps you haven't decided what to put in the if-statement yet.  Maybe you'll put a print, maybe you'll put a break, maybe something else.  In which case, you can use \textbf{pass} and the code will still work (even if it doesn't do exactly what you want yet).  The code:
+In diesen Fällen kannst du mit \textbf{pass} arbeiten. Somit kannst du zum Beispiel eine for-Schleife schreiben, mit einer if-Bedingung drin, ohne aber alles auszuformulieren. Später kannst du dich dann entscheiden ob du ein break, ein print oder was anderes in der if-Bedingung verwenden willst. Vorerst verwendest du \textbf{pass} und der Code wird funktionieren (auch wenn er noch nicht das macht, was er soll). Das Codebeispiel:
 
+%\begin{Verbatim}[frame=single]
+%>>> for x in range(1,7):
+%...     print('x is %s' % x)
+%...     if x == 5:
+%...         pass
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> for x in range(1,7):
-...     print('x is %s' % x)
+...     print('x ist %s' % x)
 ...     if x == 5:
 ...         pass
 \end{Verbatim}
 
 \noindent
-will print out the following:
+%will print out the following:
+wird folgendes ausgeben:
 
+%\begin{Verbatim}[frame=single]
+%x is 1
+%x is 2
+%x is 3
+%x is 4
+%x is 5
+%x is 6
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
-x is 1
-x is 2
-x is 3
-x is 4
-x is 5
-x is 6
+x ist 1
+x ist 2
+x ist 3
+x ist 4
+x ist 5
+x ist 6
 \end{Verbatim}
 
 \noindent
-Later on you can add the code in the block for the if-statement (replacing the \textbf{pass} keyword).
+%Later on you can add the code in the block for the if-statement (replacing the \textbf{pass} keyword).
+Später kannst du den Block der if-Bedingung ausbauen (indem du \textbf{pass} mit dem richtigen Code austauscht).
 
 %\subsection*{print}\index{keywords!print}
 \subsection*{print}\index{Schlüsselwörter!print}
 
-The \textbf{print} keyword, writes something to the Python console; such as a string, a number or a variable:
+%The \textbf{print} keyword, writes something to the Python console; such as a string, a number or a variable:
+Mit dem \textbf{print} Schlüsselwort kannst du etwas auf der Python Konsole ausgeben; einen Stirng, eine Zahl oder eine Variable etwa:
 
+%\begin{Verbatim}[frame=single]
+%print('hello there')
+%print(10)
+%print(x)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
-print('hello there')
+print('Hallo, wie gehts')
 print(10)
 print(x)
 \end{Verbatim}
@@ -524,66 +780,97 @@ print(x)
 %\subsection*{raise}\index{keywords!raise}
 \subsection*{raise}\index{Schlüsselwörter!raise}
 
-Another advanced keyword.  In this case, \textbf{raise} is used to cause an error to happen---which might seem like a strange thing to do but, in advanced programs, is actually quite useful.
+%Another advanced keyword.  In this case, \textbf{raise} is used to cause an error to happen---which might seem like a strange thing to do but, in advanced programs, is actually quite useful.
+Das ist wieder ein fortgeschrittenes Schlüsselwort. \textbf{raise} wird benutzt um einen Fehler zu erzeugen---was vielleicht unsinnig erscheint, aber in komplexen Programmen sehr nützlich ist.
 
 %\subsection*{return}\index{keywords!return}
 \subsection*{return}\index{Schlüsselwörter!return}
 
-The \textbf{return} keyword is used to return a value from a function.  For example, you might create a function to return the amount of money you've saved:
+%The \textbf{return} keyword is used to return a value from a function.  For example, you might create a function to return the amount of money you've saved:
+\textbf{return} wird benutzt um einen Wert von einer Funktion zurückzugeben. Zum Beispiel könntest du eine Funktion schreiben, die den Betrag des gesparten Geldes zurückgibt.
 
+%\begin{Verbatim}[frame=single]
+%>>> def mymoney():
+%...     return money_amount
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> def mymoney():
-...     return money_amount
+>>> def mein_geld():
+...     return geld_menge
 \end{Verbatim}
 
 \noindent
-When you call this function, the value returned can be assigned to another variable:
+%When you call this function, the value returned can be assigned to another variable:
+Wenn du diese Funktion ausführst, kannst du den zurückgegebenen Wert einer anderen Variable zuweisen:
 
+%\begin{Verbatim}[frame=single]
+%>>> money = mymoney()
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> money = mymoney()
+>>> geld = mein_geld()
 \end{Verbatim}
 
 \noindent
-or printed:
+%or printed:
+oder ausgeben:
 
+%\begin{Verbatim}[frame=single]
+%>>> print(mymoney())
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> print(mymoney())
+>>> print(mein_geld())
 \end{Verbatim}
 
 %\subsection*{try}\index{keywords!try}
 \subsection*{try}\index{Schlüsselwörter!try}
 
-The \textbf{try} keyword is the beginning of a block of code that ends with the \textbf{except} and/or \textbf{finally} keywords.  All together, these \textbf{try/except/finally} blocks of code are used to handle errors in a program---for example, to make sure that the program displays a useful message to the user, rather than an ugly Python error.
+%The \textbf{try} keyword is the beginning of a block of code that ends with the \textbf{except} and/or \textbf{finally} keywords.  All together, these \textbf{try/except/finally} blocks of code are used to handle errors in a program---for example, to make sure that the program displays a useful message to the user, rather than an ugly Python error.
+Mit \textbf{try} fängt ein Block an, der mit \textbf{except} und/oder \textbf{finally} aufhört. Zusammen genommen sorgen \textbf{try/except/finally} dafür, dass im Fehlerfall nützliche verständliche Fehlermeldungen ausgegeben werden, anstatt der normalen Python Fehlermeldungen.
 
 %\subsection*{while}\index{keywords!while}
 \subsection*{while}\index{Schlüsselwörter!while}
 
-A bit like a for-loop, \textbf{while} is another way of looping code.  Where a for-loop counts through a range (of numbers), a while loop keeps running while an expression is True.  You have to be rather careful with while loops, because if the expression is always True, the loop will never end (this is called an infinite loop).  For example:
+%A bit like a for-loop, \textbf{while} is another way of looping code.  Where a for-loop counts through a range (of numbers), a while loop keeps running while an expression is True.  You have to be rather careful with while loops, because if the expression is always True, the loop will never end (this is called an infinite loop).  For example:
+Ähnlich wie ein for-loop, macht eine \textbf{while}-Schleife auch mehrere Durchgänge. Während aber die for-Schleife eine Anzahl von Nummern durchgeht, läuft eine while-Schleife solange eine Bedingung wahr ist. Da musst du auch aufpassen. Denn wenn eine Bedingung immer Wahr ist, wird der Loop immer weiterlaufen und nie aufhören (das nennt man auch Endlos-Schleife). Zum Beispiel:
 
+%\begin{Verbatim}[frame=single]
+%>>> x = 1
+%>>> while x == 1:
+%...     print('hello')
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> x = 1
 >>> while x == 1:
-...     print('hello')
+...     print('Hallo')
 \end{Verbatim}
 
-If you run the above code, it will loop forever.  Well, at least until you either close the Python console, or hit \textbf{CTRL+C} (the control key and the C key together) to interrupt it. However the following code:
+%If you run the above code, it will loop forever.  Well, at least until you either close the Python console, or hit \textbf{CTRL+C} (the control key and the C key together) to interrupt it. However the following code:
+Wenn du den Code oben ausführst, wird der Code in der Schleife ewig ausgeführt. Oder bis du die Pyton Konsole mit \textbf{STRG+Z} oder \textbf{STRG+C} beendest. Der folgende Code hat dieses Problem nicht:
 
+%\begin{Verbatim}[frame=single]
+%>>> x = 1
+%>>> while x < 10:
+%...     print('hello')
+%...     x = x + 1
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> x = 1
 >>> while x < 10:
-...     print('hello')
+...     print('Hallo')
 ...     x = x + 1
 \end{Verbatim}
 
-Will print `hello' 9 times (each time adding 1 to the variable \code{x}, until \code{x} is no longer less than 10). This is obviously a bit like a for-loop, but does have its uses in certain situations.
+%Will print `hello' 9 times (each time adding 1 to the variable \code{x}, until \code{x} is no longer less than 10). This is obviously a bit like a for-loop, but does have its uses in certain situations.
+Diesmal wird `Hallo' 9 mal ausgegeben (und jedesmal wird der variable \code{x} auch 1 hinzugezählt), solange \code{x} kleiner als 10 ist. Das ist ähnlich wie eine for-Schleife, passt aber in bestimmten Situationen besser.
 
 %\subsection*{with}\index{keywords!with}
 \subsection*{with}\index{Schlüsselwörter!with}
 
-\textbf{With} is a very advanced keyword.
+%\textbf{With} is a very advanced keyword.
+\textbf{with} ist zu fortgeschritten für diese Buch.
 
 %\subsection*{yield}\index{keywords!yield}
 \subsection*{yield}\index{Schlüsselwörter!yield}
-\textbf{Yield} is another very advanced keyword.
+%\textbf{Yield} is another very advanced keyword.
+Auch \textbf{yield} wirst du erst später benötigen, wenn du mehr mit Python programmierst.
 
 \newpage
