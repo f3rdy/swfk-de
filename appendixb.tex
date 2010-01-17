@@ -8,13 +8,21 @@
 %\chapter{Built-in Functions}\label{app:builtinfunctions}
 \chapter{Eingebaute Funktionen}\label{app:builtinfunctions}
 
-Python has a number of built-in functions---functions that can be used without needing to \textbf{import} them first.  Some of the available built-in functions are listed below.
+%Python has a number of built-in functions---functions that can be used without needing to \textbf{import} them first.  Some of the available built-in functions are listed below.
+Python hat schon eine Menge von eingebauten Funktionen---Funktionen, die sofort benützt werden können, ohne sie zuerst den \textbf{import} Befehl auszuführen. Einige dieser eingebauten Funktionen sind hier ausgelistet.
 
 %\subsection*{abs}\index{functions!abs}
 \subsection*{abs}\index{Funktionen!abs}
 
-The \textbf{abs} function returns the absolute value of a number.  An absolute value is a number that is not negative.  So the absolute value of 10 is 10, and the absolute value of -20.5 is 20.5.  For example:
+%The \textbf{abs} function returns the absolute value of a number.  An absolute value is a number that is not negative.  So the absolute value of 10 is 10, and the absolute value of -20.5 is 20.5.  For example:
+Die \textbf{abs} Fuktion gibt den absoluten Wert einer Zahl zurück. Ein absoluter Wert ist nie negativ. Also ist der absolute Wert von 10 auch 10, aber von -20.5 ist der absolute Wert 20.5. Zum Beispiel:
 
+%\begin{Verbatim}[frame=single]
+%>>> print(abs(10))
+%10
+%>>> print(abs(-20.5))
+%20.5
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> print(abs(10))
 10
@@ -25,8 +33,19 @@ The \textbf{abs} function returns the absolute value of a number.  An absolute v
 %\subsection*{bool}\index{functions!bool}
 \subsection*{bool}\index{Funktionen!bool}
 
-The \textbf{bool} function returns either True or False based on the value passed as its parameter. For numbers, 0 returns False, while any other number returns True:
+%The \textbf{bool} function returns either True or False based on the value passed as its parameter. For numbers, 0 returns False, while any other number returns True:
+Die Funktion \textbf{bool} gibt entweder True (wahr) oder False (falsch) zurück, abhängig von den Parametern, die die Funktion bekommt. Bei Zahlen gibt 0 ein False zurück, während alle anderen Zahlen True zurückgeben:
 
+%\begin{Verbatim}[frame=single]
+%>>> print(bool(0))
+%False
+%>>> print(bool(1))
+%True
+%>>> print(bool(1123.23))
+%True
+%>>> print(bool(-500))
+%True
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> print(bool(0))
 False
@@ -38,8 +57,15 @@ True
 True
 \end{Verbatim}
 
-For other values, None returns False while anything else returns True:
+%For other values, None returns False while anything else returns True:
+Für alle anderen Parameter erzeugt None ein False und alles andere ein True:
 
+%\begin{Verbatim}[frame=single]
+%>>> print(bool(None))
+%False
+%>>> print(bool('a'))
+%True
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> print(bool(None))
 False
@@ -47,117 +73,211 @@ False
 True
 \end{Verbatim}
 
-%\subsection*{cmp}\index{functions!cmp}
-\subsection*{cmp}\index{Funktionen!cmp}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% In Python3 gibt es keine cmp Funktion mehr
 
-The \textbf{cmp} function compares two values and returns a negative number if the first value is less than the second; returns 0 if the first value is equal to the second; and returns a positive number if the first value is greater than the second. For example, 1 is less than 2:
+%%\subsection*{cmp}\index{functions!cmp}
+%\subsection*{cmp}\index{Funktionen!cmp}
 
-\begin{Verbatim}[frame=single]
->>> print(cmp(1,2))
--1
-\end{Verbatim}
+%%The \textbf{cmp} function compares two values and returns a negative number if the first value is less than the second; returns 0 if the first value is equal to the second; and returns a positive number if the first value is greater than the second. For example, 1 is less than 2:
+%Mit der \textbf{cmp} Funktion werden 2 Werte miteinander verglichen. Wenn der erste Wert kleiner als der zweite ist, dann wird eine negative Zahl zurückgegeben. Wenn beide Zahlen gleich sind, dann wird 0 zurückgegeben. Wenn erste Zahl größer als die zweite Zahl ist, dann wird eine positive Zahl zurückgegeben. 1 ist zum Beispiel kleiner als 2:
 
-\noindent
-And 2 is equal to 2:
+%%\begin{Verbatim}[frame=single]
+%%>>> print(cmp(1,2))
+%%-1
+%%\end{Verbatim}
+%\begin{Verbatim}[frame=single]
+%>>> print(cmp(1,2))
+%-1
+%\end{Verbatim}
 
-\begin{Verbatim}[frame=single]
->>> print(cmp(2,2))
-0
-\end{Verbatim}
+%\noindent
+%%And 2 is equal to 2:
+%Und 2 ist gleich groß wie 2:
 
-\noindent
-But 2 is greater than 1:
+%%\begin{Verbatim}[frame=single]
+%%>>> print(cmp(2,2))
+%%0
+%%\end{Verbatim}
+%\begin{Verbatim}[frame=single]
+%>>> print(cmp(2,2))
+%0
+%\end{Verbatim}
 
-\begin{Verbatim}[frame=single]
->>> print(cmp(2,1))
-1
-\end{Verbatim}
+%\noindent
+%%But 2 is greater than 1:
+%Aber 2 ist größer als 1:
 
-\noindent
-Compare doesn't only work with numbers. You can use other values, such as strings:
+%%\begin{Verbatim}[frame=single]
+%%>>> print(cmp(2,1))
+%%1
+%%\end{Verbatim}
+%\begin{Verbatim}[frame=single]
+%>>> print(cmp(2,1))
+%1
+%\end{Verbatim}
 
-\begin{Verbatim}[frame=single]
->>> print(cmp('a','b'))
--1
->>> print(cmp('a','a'))
-0
->>> print(cmp('b','a'))
-1
-\end{Verbatim}
+%\noindent
+%%Compare doesn't only work with numbers. You can use other values, such as strings:
+%Vergleichen funktioniert auch mit anderen Variablen wie Strings:
 
-\noindent
-But do be careful with strings; the return value may not be exactly what you expect$\ldots$
+%%\begin{Verbatim}[frame=single]
+%%>>> print(cmp('a','b'))
+%%-1
+%%>>> print(cmp('a','a'))
+%%0
+%%>>> print(cmp('b','a'))
+%%1
+%%\end{Verbatim}
+%\begin{Verbatim}[frame=single]
+%>>> print(cmp('a','b'))
+%-1
+%>>> print(cmp('a','a'))
+%0
+%>>> print(cmp('b','a'))
+%1
+%\end{Verbatim}
 
-\begin{Verbatim}[frame=single]
->>> print(cmp('a','A'))
-1
->>> print(cmp('A','a'))
--1
-\end{Verbatim}
+%\noindent
+%%But do be careful with strings; the return value may not be exactly what you expect$\ldots$
+%Bei Strings musst du aber aufpassen; der Rückgabewert ist nicht immer so wie du erwarten würdest $\ldots$
 
-A lower-case 'a' is actually greater than an upper-case 'A'. Of course$\ldots$
+%%\begin{Verbatim}[frame=single]
+%%>>> print(cmp('a','A'))
+%%1
+%%>>> print(cmp('A','a'))
+%%-1
+%%\end{Verbatim}
+%\begin{Verbatim}[frame=single]
+%>>> print(cmp('a','A'))
+%1
+%>>> print(cmp('A','a'))
+%-1
+%\end{Verbatim}
 
-\begin{Verbatim}[frame=single]
->>> print(cmp('aaa','aaaa'))
--1
->>> print(cmp('aaaa','aaa'))
-1
-\end{Verbatim}
+%%A lower-case 'a' is actually greater than an upper-case 'A'. Of course$\ldots$
+%Ein kleineas 'a' ist also größer als ein großes 'A'. Natürlich$\ldots$
 
-\noindent
-$\ldots$3 letter a's (aaa) are less than 4 letter a's (aaaa).
+%%\begin{Verbatim}[frame=single]
+%%>>> print(cmp('aaa','aaaa'))
+%%-1
+%%>>> print(cmp('aaaa','aaa'))
+%%1
+%%\end{Verbatim}
+%\begin{Verbatim}[frame=single]
+%>>> print(cmp('aaa','aaaa'))
+%-1
+%>>> print(cmp('aaaa','aaa'))
+%1
+%\end{Verbatim}
+
+%\noindent
+%%$\ldots$3 letter a's (aaa) are less than 4 letter a's (aaaa).
+%$\ldots$3 a's (aaa) sind weniger als 4 a's (aaaa)
+
+%%% In Python3 gibt es keine cmp Funktion mehr
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %\subsection*{dir}\index{functions!dir}
 \subsection*{dir}\index{Funktionen!dir}
 
-The \textbf{dir} function returns a list of information about a value.  You can use dir on strings, numbers, functions, modules, objects, classes---pretty much anything.  On some values, the information might not be all that useful (in fact it might not make a huge amount of sense at all).  For example, calling dir on the number 1 results in$\ldots$
+%The \textbf{dir} function returns a list of information about a value.  You can use dir on strings, numbers, functions, modules, objects, classes---pretty much anything.  On some values, the information might not be all that useful (in fact it might not make a huge amount of sense at all).  For example, calling dir on the number 1 results in$\ldots$
+Die \textbf{dir} Funktion gibt eine Liste von Informationen zu einem Wert zurück. Du kannst die \textbf{dir} Funktion mit Strings, Zahlen, Funktionen, Module, Objekte, Klassen---eigentlich fast allem verwenden. Manchmal wird die zurückgegebe Information nützlich sein und manchmal weniger. Wenn du die Funktion dir auf die Nummer 1 anwendest, kommt das zurück:
 
+%\begin{Verbatim}[frame=single]
+%>>> dir(1)
+%['__abs__', '__add__', '__and__', '__class__', '__cmp__',
+%'__coerce__', '__delattr__', '__div__', '__divmod__', '__doc__',
+%'__float__', '__floordiv__', '__getattribute__', '__getnewargs__',
+%'__hash__', '__hex__', '__index__', '__init__', '__int__',
+%'__invert__', '__long__', '__lshift__', '__mod__', '__mul__',
+%'__neg__', '__new__', '__nonzero__', '__oct__', '__or__', '__pos__', 
+%'__pow__', '__radd__', '__rand__', '__rdiv__', '__rdivmod__',
+%'__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__',
+%'__rlshift__', '__rmod__', '__rmul__', '__ror__', '__rpow__',
+%'__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__',
+%'__setattr__', '__str__', '__sub__', '__truediv__', '__xor__']
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> dir(1)
-['__abs__', '__add__', '__and__', '__class__', '__cmp__',
-'__coerce__', '__delattr__', '__div__', '__divmod__', '__doc__',
-'__float__', '__floordiv__', '__getattribute__', '__getnewargs__',
-'__hash__', '__hex__', '__index__', '__init__', '__int__',
-'__invert__', '__long__', '__lshift__', '__mod__', '__mul__',
-'__neg__', '__new__', '__nonzero__', '__oct__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdiv__', '__rdivmod__',
-'__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__',
-'__rlshift__', '__rmod__', '__rmul__', '__ror__', '__rpow__',
-'__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__',
-'__setattr__', '__str__', '__sub__', '__truediv__', '__xor__']
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__',
+'__class__', '__delattr__', '__divmod__', '__doc__', '__eq__',
+'__float__', '__floor__', '__floordiv__', '__format__', '__ge__',
+'__getattribute__', '__getnewargs__', '__gt__', '__hash__',
+'__index__', '__init__', '__int__', '__invert__', '__le__',
+'__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__',
+'__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__',
+'__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__',
+'__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__',
+'__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__',
+'__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__',
+'__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__',
+'bit_length', 'conjugate', 'denominator', 'imag', 'numerator',
+'real']
 \end{Verbatim}
 
-$\ldots$quite a large number of special functions. Whereas calling dir on the string 'a' results in...
+%$\ldots$quite a large number of special functions. Whereas calling dir on the string 'a' results in...
+$\ldots$eine ganze Menge von speziellen Funktionen. Wenn du die Funktion \textbf{dir} nun auf den String 'a' anwendest, dann kommt folgendes zurück:
 
+%\begin{Verbatim}[frame=single]
+%>>> dir('a')
+%['__add__', '__class__', '__contains__', '__delattr__', '__doc__',
+%'__eq__', '__ge__', '__getattribute__', '__getitem__',
+%'__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__',
+%'__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__',
+%'__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__',
+%'__rmul__', '__setattr__', '__str__', 'capitalize', 'center',
+%'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find',
+%'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace',
+%'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition',
+%'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit',
+%'rstrip', 'split', 'splitlines','startswith', 'strip', 'swapcase',
+%'title', 'translate', 'upper', 'zfill']
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> dir('a')
 ['__add__', '__class__', '__contains__', '__delattr__', '__doc__',
-'__eq__', '__ge__', '__getattribute__', '__getitem__',
-'__getnewargs__', '__getslice__', '__gt__', '__hash__', '__init__',
+'__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__',
+'__getnewargs__', '__gt__', '__hash__', '__init__', '__iter__',
 '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__',
 '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__',
-'__rmul__', '__setattr__', '__str__', 'capitalize', 'center',
-'count', 'decode', 'encode', 'endswith', 'expandtabs', 'find',
-'index', 'isalnum', 'isalpha', 'isdigit', 'islower', 'isspace',
-'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'partition',
-'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit',
-'rstrip', 'split', 'splitlines','startswith', 'strip', 'swapcase',
-'title', 'translate', 'upper', 'zfill']
+'__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__',
+'_formatter_field_name_split', '_formatter_parser', 'capitalize',
+'center', 'count', 'encode', 'endswith', 'expandtabs', 'find',
+'format', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit',
+'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace',
+'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans',
+'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition',
+'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip',
+'swapcase', 'title', 'translate', 'upper', 'zfill']
 \end{Verbatim}
 
-Which shows you there are functions such as \code{capitalize} (change the first letter in a string to a capital)$\ldots$
+%Which shows you there are functions such as \code{capitalize} (change the first letter in a string to a capital)$\ldots$
+Und hier kannst du erkennen, dass es Funktionen wie \code{capitalize} gibt (den ersten Buchstaben in einen Großbuchstaben wandeln) $\ldots$
 
+%\begin{Verbatim}[frame=single]
+%>>> print('aaaaa'.capitalize())
+%Aaaaa
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> print('aaaaa'.capitalize())
 Aaaaa
 \end{Verbatim}
 
-$\ldots$\code{isalnum} (which returns True if a string is alphanumeric---contains only letters and numbers), \code{isalpha} (which returns True if a string contains only letters), and so on. Dir can be useful when you have a variable and quickly want to find out what you can do with it.
+%$\ldots$\code{isalnum} (which returns True if a string is alphanumeric---contains only letters and numbers), \code{isalpha} (which returns True if a string contains only letters), and so on. Dir can be useful when you have a variable and quickly want to find out what you can do with it.
+$\ldots$\code{isalnum} wiederum ist eine Funktion, die True (wahr) zurückgibt, wenn der String alphanumerisch ist---also nur Buchstaben und Zahlen enthält. Dir Funktion dir ist nützlich, um schnell herauszufinden was du mit einer Variable so alles anstellen kannst. 
 
 %\subsection*{eval}\index{functions!eval}
 \subsection*{eval}\index{Funktionen!eval}
 
-The \textbf{eval} function takes a string as a parameter and runs it as though it were a Python expression.  This is similar to the \textbf{exec} keyword, but works a little differently.  With exec you can create mini Python programs in your string, but eval only allows simple expressions, such as:
+%The \textbf{eval} function takes a string as a parameter and runs it as though it were a Python expression.  This is similar to the \textbf{exec} keyword, but works a little differently.  With exec you can create mini Python programs in your string, but eval only allows simple expressions, such as:
+Der \textbf{eval} Funktion gibst du einen String als Parameter mit und führst es aus, als wäre es normaler Python Code. Das ist ähnlich zum \textbf{exec} Schlüsselwort, aber funktioniert leicht anders. Mit exec kannst du kleine Python Programme in einen String packen, aber eval erlaubt nur einfache Ausdrücke wie:
 
+%\begin{Verbatim}[frame=single]
+%>>> eval('10*5')
+%50
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> eval('10*5')
 50
@@ -166,141 +286,229 @@ The \textbf{eval} function takes a string as a parameter and runs it as though i
 %\subsection*{file}\index{functions!file}
 \subsection*{file}\index{Funktionen!file}
 
-A function to open a file and return a file object with functions that can access information in the file (the contents of the file, its size and so on). You can find more information about file and file objects in Chapter~\ref{ch:ashortchapteraboutfiles}.
+%A function to open a file and return a file object with functions that can access information in the file (the contents of the file, its size and so on). You can find more information about file and file objects in Chapter~\ref{ch:ashortchapteraboutfiles}.
+Mit der \textbf{file} Funktion öffnest du eine Datei und bekommst ein Datei Objekt mit eigenen Funktionen zurück. Du kannst dann den Inhalt der Datei auslesen oder die Größe und so weiter. Genaueres steht in Kapitel~\ref{ch:ashortchapteraboutfiles}.
 
 %\subsection*{float}\index{functions!float}
 \subsection*{float}\index{Funktionen!float}
 
-The \textbf{float} function converts a string or a number into a floating point number. A floating point number is a number with a decimal place (also called a real number). For example, the number 10 is an `integer' (also called a whole number), but 10.0, 10.1, 10.253, and so on, are all `floats'. You can convert a string to a float by calling:
+%The \textbf{float} function converts a string or a number into a floating point number. A floating point number is a number with a decimal place (also called a real number). For example, the number 10 is an `integer' (also called a whole number), but 10.0, 10.1, 10.253, and so on, are all `floats'. You can convert a string to a float by calling:
+Die \textbf{float} Funktion verwandelt ein String in eine Fließkommazahl. Also eine Zahl mit einer Kommastelle. Die Zahl 10 ist zum Beispiel ein `integer' (eine Ganzzahl), aber 10.0, 10.1, 10.253 und so weiter sind `floats' (Fließkommazahlen). Das Umwandeln eines Strings in eine float geht so:
 
+%\begin{Verbatim}[frame=single]
+%>>> float('12')
+%12.0
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> float('12')
 12.0
 \end{Verbatim}
 
 \noindent
-You can use a decimal place in the string as well:
+%You can use a decimal place in the string as well:
+Du kannst auch die Kommastellen gleich im String haben:
 
+%\begin{Verbatim}[frame=single]
+%>>> float('123.456789')
+%123.456789
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> float('123.456789')
 123.456789
 \end{Verbatim}
 
 \noindent
-A number can be converted to a float by calling:
+%A number can be converted to a float by calling:
+Auch eine normale Ganzzahl (integer) kann in eine Fließkommazahl verwandelt werden:
 
+%\begin{Verbatim}[frame=single]
+%>>> float(200)
+%200.0
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> float(200)
 200.0
 \end{Verbatim}
 
 \noindent
-Of course, converting a floating point number just returns another floating point number:
+%Of course, converting a floating point number just returns another floating point number:
+Und wenn du eine Fließkommazahl umwandeln willst, kommt natürlich die gleich Fließkommazahl geraus:
 
+%\begin{Verbatim}[frame=single]
+%>>> float(100.123)
+%100.123
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> float(100.123)
 100.123
 \end{Verbatim}
 
 \noindent
-Calling float with no arguments, returns 0.0.
+%Calling float with no arguments, returns 0.0.
+Das aufrufen der float Funktion ohne Argumente gibt 0.0 zurück.
 
 %\subsection*{int}\index{functions!int}
 \subsection*{int}\index{Funktionen!int}
 
-The \textbf{int} function converts a string or a number into a whole number (or integer). For example:
+%The \textbf{int} function converts a string or a number into a whole number (or integer). For example:
+Mit \textbf{int} kannst du eine Nummer oder einen String in eine Ganzzahl (oder Integer) verwandeln:
 
+%\begin{Verbatim}[frame=single]
+%>>> int(123.456)
+%123
+%>>> int('123')
+%123
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> int(123.456)
-123
->>> int('123')
-123
+>>> int(12345.678)
+12345
+>>> int('12345')
+12345
 \end{Verbatim}
 
-This function works a little differently from the \textbf{float} function. If you try to convert a floating point number in a string, you will get an error message:
+%This function works a little differently from the \textbf{float} function. If you try to convert a floating point number in a string, you will get an error message:
+Diese Funktion funktioniert etwas anders als die \textbf{float} Funktion. Beim Umwandeln von einem String, der eine Fließkommazahl darstellt, gibt es diesen Fehler:
 
+%\begin{Verbatim}[frame=single]
+%>>> int('123.456')
+%Traceback (most recent call last):
+%  File "<stdin>", line 1, in <module>
+%ValueError: invalid literal for int() with base 10: '123.456'
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> int('123.456')
+>>> int('12345.678')
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-ValueError: invalid literal for int() with base 10: '123.456'
+ValueError: invalid literal for int() with base 10: '12345.678'
 \end{Verbatim}
 
 \noindent
-However, if you call int with no argument, then 0 is returned.
+%However, if you call int with no argument, then 0 is returned.
+Beim Aufrufen ohne Parameter wird 0 zurückgegeben.
 
 %\subsection*{len}\index{functions!len}
 \subsection*{len}\index{Funktionen!len}
 
-The \textbf{len} function returns the length of an object. In this case of a string, it returns the number of characters in the string:
+%The \textbf{len} function returns the length of an object. In this case of a string, it returns the number of characters in the string:
+Die \textbf{len} Funktion gibt die Länge von einem Objekt zurück. Wenn das Objekt ein String ist, dann bekommst du die Anzahl der Zeichen zurück:
 
+%\begin{Verbatim}[frame=single]
+%>>> len('this is a test string')
+%21
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> len('this is a test string')
-21
+>>> len('Das ist ein Test String')
+23
 \end{Verbatim}
 
 \noindent
-For a list or a tuple, it returns the number of items:
+%For a list or a tuple, it returns the number of items:
+Bei einer Liste oder einem Tupel bekommst du die Anzahl der Dinge zurück:
 
+%\begin{Verbatim}[frame=single]
+%>>> mylist = [ 'a', 'b', 'c', 'd' ]
+%>>> print(len(mylist))
+%4
+%>>> mytuple = (1,2,3,4,5,6)
+%>>> print(len(mytuple))
+%6
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> mylist = [ 'a', 'b', 'c', 'd' ]
->>> print(len(mylist))
+>>> meine_liste = [ 'a', 'b', 'c', 'd' ]
+>>> print(len(meine_liste))
 4
->>> mytuple = (1,2,3,4,5,6)
->>> print(len(mytuple))
+>>> mein_tupel = (1,2,3,4,5,6)
+>>> print(len(mein_tupel))
 6
 \end{Verbatim}
 
 \noindent
-For a map, it also returns the number of items:
+%For a map, it also returns the number of items:
+Für map's bekommst du auch die Anzahl der Einträge zurück:
 
+%\begin{Verbatim}[frame=single]
+%>>> mymap = { 'a' : 100, 'b' : 200, 'c' : 300 }
+%>>> print(len(mymap))
+%3
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> mymap = { 'a' : 100, 'b' : 200, 'c' : 300 }
->>> print(len(mymap))
+>>> meine_map = { 'a' : 100, 'b' : 200, 'c' : 300 }
+>>> print(len(meine_map))
 3
 \end{Verbatim}
 
 \noindent
-You might find the len function useful with loops, if you want to count through the elements in a list.  You could do this using the following code:
+%You might find the len function useful with loops, if you want to count through the elements in a list.  You could do this using the following code:
+Vielleicht wirst du die len Funktion nützlich finden, wenn du sie mit Schleifen kombinierst. Wenn du zum Beispiel die Einträge einer Liste durchgehen willst, könntest du folgendes eingeben:
 
+%\begin{Verbatim}[frame=single]
+%>>> mylist = [ 'a', 'b', 'c', 'd' ]
+%>>> for item in mylist:
+%...     print(item)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> mylist = [ 'a', 'b', 'c', 'd' ]
->>> for item in mylist:
-...     print(item)
+>>> meine_liste = [ 'a', 'b', 'c', 'd' ]
+>>> for eintrag in meine_liste:
+...     print(eintrag)
 \end{Verbatim}
 
 \noindent
-Which would print out all the items in the list (a,b,c,d)---but what if you wanted to print the index position of each item in the list?  In this case we could find the length of the list, then count through the items as follows:
+%Which would print out all the items in the list (a,b,c,d)---but what if you wanted to print the index position of each item in the list?  In this case we could find the length of the list, then count through the items as follows:
+Damit würden alle Einträge der Liste ausgegeben (a, b, c, d)---aber wenn wir auch die Position des Eintrages ausgeben wollen? In diesem Fall könnten wir die Länge der Liste vorher bestimmen und dann durchzählen:
 
+%\begin{Verbatim}[frame=single]
+%>>> mylist = [ 'a', 'b', 'c', 'd' ]
+%>>> length = len(mylist)
+%>>> for x in range(0, length):
+%...     print('the item at index %s is %s' % (x, mylist[x]))
+%...
+%the item at index 0 is a
+%the item at index 1 is b
+%the item at index 2 is c
+%the item at index 3 is d
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> mylist = [ 'a', 'b', 'c', 'd' ]
->>> length = len(mylist)
->>> for x in range(0, length):
-...     print('the item at index %s is %s' % (x, mylist[x]))
+>>> meine_liste = [ 'a', 'b', 'c', 'd' ]
+>>> laenge = len(meine_liste)
+>>> for x in range(0, laenge):
+...     print('Eintrag auf Position %s ist %s' % (x, meine_liste[x]))
 ...
-the item at index 0 is a
-the item at index 1 is b
-the item at index 2 is c
-the item at index 3 is d
+Eintrag auf Position 0 ist a
+Eintrag auf Position 1 ist b
+Eintrag auf Position 2 ist c
+Eintrag auf Position 3 ist d
 \end{Verbatim}
 
 \noindent
-We store the length of the list in the variable `length', and then use that variable in the \code{range} function to create our loop.
+%We store the length of the list in the variable `length', and then use that variable in the \code{range} function to create our loop.
+Somit speichern wir die Länge des Liste in der Variable mit dem Namen `laenge' und verwenden sie in der \code{range} Funktion um unsere Schleife zu erzeugen.
 
 %\subsection*{max}\index{functions!max}
 \subsection*{max}\index{Funktionen!max}
 
-The \textbf{max} function returns the largest item in a list, tuple or even a string. For example:
+%The \textbf{max} function returns the largest item in a list, tuple or even a string. For example:
+Die \textbf{max} Funktion gibt den größten Eintrag einer Liste, einem Tupel und sogar einem String zurück. Zum Beispiel:
 
+%\begin{Verbatim}[frame=single]
+%>>> mylist = [ 5, 4, 10, 30, 22 ]
+%>>> print(max(mylist))
+%30
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> mylist = [ 5, 4, 10, 30, 22 ]
->>> print(max(mylist))
+>>> meine_liste = [ 5, 4, 10, 30, 22 ]
+>>> print(max(meine_liste))
 30
 \end{Verbatim}
 
 \noindent
-A string with the items are separated by commas or spaces will also work:
+%A string with the items are separated by commas or spaces will also work:
+Was auch funktioniert ist eine String, bei dem die einzelnen Einträge mit Kommas unterteilt sind:
 
+%\begin{Verbatim}[frame=single]
+%>>> s = 'a,b,d,h,g'
+%>>> print(max(s))
+%h
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> s = 'a,b,d,h,g'
 >>> print(max(s))
@@ -308,8 +516,13 @@ h
 \end{Verbatim}
 
 \noindent
-And you don't have to use lists, or tuples or strings. You can also call the max function directly with a number of arguments:
+%And you don't have to use lists, or tuples or strings. You can also call the max function directly with a number of arguments:
+Aber du kannst auch direkt die max Funktion mit den Werten aufrufen:
 
+%\begin{Verbatim}[frame=single]
+%>>> print(max(10, 300, 450, 50, 90))
+%450
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> print(max(10, 300, 450, 50, 90))
 450
@@ -318,19 +531,36 @@ And you don't have to use lists, or tuples or strings. You can also call the max
 %\subsection*{min}\index{functions!min}
 \subsection*{min}\index{Funktionen!min}
 
-The \textbf{min} function works in the same way as max, except it returns the smallest item in the list/tuple/string:
+%The \textbf{min} function works in the same way as max, except it returns the smallest item in the list/tuple/string:
+Die \textbf{min} Funktion funktioniert genau gleich wie die \textbf{max} Funktion, aber es gibt den kleinsten Eintrag zurück:
 
+%\begin{Verbatim}[frame=single]
+%>>> mylist = [ 5, 4, 10, 30, 22 ]
+%>>> print(min(mylist))
+%4
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> mylist = [ 5, 4, 10, 30, 22 ]
->>> print(min(mylist))
+>>> meine_liste = [ 5, 4, 10, 30, 22 ]
+>>> print(min(meine_liste))
 4
 \end{Verbatim}
 
 %\subsection*{range}\index{functions!range}
 \subsection*{range}\index{Funktionen!range}
 
-The \textbf{range} function is mainly used in for-loops, when you want to loop through some code a number of times. We first saw range in Chapter~\ref{ch:againandagain}, so we've seen how to use it with two arguments, but it can also be used with three arguments. Here's another example of range with two arguments:
+%The \textbf{range} function is mainly used in for-loops, when you want to loop through some code a number of times. We first saw range in Chapter~\ref{ch:againandagain}, so we've seen how to use it with two arguments, but it can also be used with three arguments. Here's another example of range with two arguments:
+Die \textbf{range} Funktion wird hauptsächlich für for-Schleifen verwendet. In Kapitel~\ref{ch:againandagain} haben wir dir range Funktion mit 2 Parametern verwendet. Wir können aber auch 3 Parameter verwenden. Hier nochmals ein Beispiel mit 2 Parametern:
 
+%\begin{Verbatim}[frame=single]
+%>>> for x in range(0, 5):
+%...     print(x)
+%...
+%0
+%1
+%2
+%3
+%4
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> for x in range(0, 5):
 ...     print(x)
@@ -343,54 +573,88 @@ The \textbf{range} function is mainly used in for-loops, when you want to loop t
 \end{Verbatim}
 
 \noindent
-What you might not have realised, is that the \code{range} function actually just returns a special object (called an iterator) which the for-loop then works through. You can convert the iterator into a list (oddly enough, using the function \code{list}), so if you print the return value when calling range, you'll see the numbers it contains:
+%What you might not have realised, is that the \code{range} function actually just returns a special object (called an iterator) which the for-loop then works through. You can convert the iterator into a list (oddly enough, using the function \code{list}), so if you print the return value when calling range, you'll see the numbers it contains:
+Was du sicher noch nicht gemerkt hast, ist dass die \code{range} Funktion eigentlich ein Objekt zurückgibt (einen Iterator) mit dem die For-Schleife danach arbeitet. Diesen Iterator kannst du mit der \code{list} Funktion in eine Liste umwandeln um zu sehen, was da genau drin ist:
 
+%\begin{Verbatim}[frame=single]
+%>>> print(list(range(0, 5)))
+%[0, 1, 2, 3, 4]
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> print(list(range(0, 5)))
 [0, 1, 2, 3, 4]
 \end{Verbatim}
 
 \noindent
-You get a list of numbers that can be assigned to variables and used elsewhere in your program:
+%You get a list of numbers that can be assigned to variables and used elsewhere in your program:
+Du erhältst also eine Zahlenliste, die du auch woanders in deinem Programm verwenden kannst.
 
+%\begin{Verbatim}[frame=single]
+%>>> my_list_of_numbers = list(range(0, 30))
+%>>> print(my_list_of_numbers)
+%[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+%16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> my_list_of_numbers = list(range(0, 30))
->>> print(my_list_of_numbers)
+>>> meine_zahlenliste = list(range(0, 30))
+>>> print(meine_zahlenliste)
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
 \end{Verbatim}
 
 \noindent
-Range also takes a third argument, called a `step' (the first two arguments are called the `start' and the `stop'). If the step value is not passed into the function (in other words, when you call it with only the start and stop values), by default the number 1 is used. But what happens when we pass the number 2 as the step?  You can see the result in the following example:
+%Range also takes a third argument, called a `step' (the first two arguments are called the `start' and the `stop'). If the step value is not passed into the function (in other words, when you call it with only the start and stop values), by default the number 1 is used. But what happens when we pass the number 2 as the step?  You can see the result in the following example:
+Der \code{range} Funktion kannst du auch ein drittes Argument mitgeben. Ein sogenannter Schrittweite (oder step auf englisch). Wenn du da nichts mitgibst, dann wird die Schrittweite 1 verwendet. Lass uns die Schrittweite 2 mitgeben und schauen was passiert:
 
+%\begin{Verbatim}[frame=single]
+%>>> my_list_of_numbers = list(range(0, 30, 2))
+%>>> print(my_list_of_numbers)
+%[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> my_list_of_numbers = list(range(0, 30, 2))
->>> print(my_list_of_numbers)
+>>> meine_zahlenliste = list(range(0, 30, 2))
+>>> print(meine_zahlenliste)
 [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]
 \end{Verbatim}
 
 \noindent
-Each number in the list increases by 2 from the previous number. We can use larger steps:
+%Each number in the list increases by 2 from the previous number. We can use larger steps:
+Jeder Eintrag der Liste ist um 2 größer als der letzte. Wir können auch größere Schritte verwenden.
 
+%\begin{Verbatim}[frame=single]
+%>>> mylist = list(range(0, 500, 50))
+%>>> print(mylist)
+%[0, 50, 100, 150, 200, 250, 300, 350, 400, 450]
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> mylist = list(range(0, 500, 50))
->>> print(mylist)
+>>> meine_zahlenliste = list(range(0, 500, 50))
+>>> print(meine_zahlenliste)
 [0, 50, 100, 150, 200, 250, 300, 350, 400, 450]
 \end{Verbatim}
 
-This creates a list from 0 to 500 (but not including 500, of course), incrementing the numbers by 50.
+%This creates a list from 0 to 500 (but not including 500, of course), incrementing the numbers by 50.
+Somit bekommen wir eine Liste von 0 bis 500 (500 ist natürlich nicht dabei) und jede Zahl ist 50 größer als die vorhergehende.
 
 %\subsection*{sum}\index{functions!sum}
 \subsection*{sum}\index{Funktionen!sum}
 
-The \textbf{sum} function adds up items in a list and returns the total number. For example:
+%The \textbf{sum} function adds up items in a list and returns the total number. For example:
+Die \textbf{sum} Funkton summiert alle Einträge einer Liste und gibt das Ergebnis zurück.
 
+%\begin{Verbatim}[frame=single]
+%>>> mylist = list(range(0, 500, 50))
+%>>> print(mylist)
+%[0, 50, 100, 150, 200, 250, 300, 350, 400, 450]
+
+%>>> print(sum(mylist))
+%2250
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> mylist = list(range(0, 500, 50))
->>> print(mylist)
+>>> meine_zahlenliste = list(range(0, 500, 50))
+>>> print(meine_zahlenliste)
 [0, 50, 100, 150, 200, 250, 300, 350, 400, 450]
 
->>> print(sum(mylist))
+>>> print(sum(meine_zahlenliste))
 2250
 \end{Verbatim}
 
