@@ -4,48 +4,82 @@
 % zu http://creativecommons.org/licenses/by-nc-sa/3.0/de/ oder schicken Sie einen Brief an 
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Nicht verwendete Pakete
+%\usepackage[dvips]{graphicx}
+%\usepackage[usenames]{color}
+%%\usepackage[colorlinks,pdfauthor={Jason R Briggs},pdftitle={Snake Wrangling for Kids - Learning to Program with Python},pdfsubject={Programming for Kids},pdfkeywords={python,kids,programming}]{hyperref}
+
+%%% Layout
+%\parindent 1cm
+%\parskip 0.2cm
+%\topmargin 0.2cm
+%\oddsidemargin 1cm
+%\evensidemargin 0.5cm
+%\textwidth 15cm
+%\textheight 21cm
+
+
+%\usepackage[utf8]{inputenc} %für deutsche Übersetzung hinzugefügt
+%\usepackage[ngerman]{babel} %für deutsche Übersetzung hinzugefügt
+
+%\usepackage[absolute]{textpos}
+
+%\usepackage[right]{eurosym} %für das Euro Symbol hinzugefügt % nicht mehr nötig mit xelibertine
+
+%\usepackage{color}
+%\usepackage{fix-cm}
+
+%\newenvironment{listingignore}
+%{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\footnotesize\samepage}
+%{\end{list}}
+
+
+
+%\usepackage{float}
+%\usepackage{subfigure}
+%\usepackage[all]{hypcap}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Layout, Schriften, Kapitelformatierung
 \documentclass[12pt,leqno,a4paper]{book}
+\usepackage[a4paper, margin=2cm]{geometry}
+\usepackage{xunicode}
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{xelibertine}
+\usepackage{scalefnt}
+\usepackage{fancybox} %für die runden Rahmen auf dem Cover
+\usepackage{eso-pic}  %fürs Cover \AddToShipoutPicture
 
-%%% Schriften, funktioniert nicht mit Latex, vielleicht mit xetex?
-%\usepackage{fontspec}
-%\setmainfont{Linux Libertine O}
-%\setromanfont[Mapping=tex-text]{Linux Libertine O}
-%\setsansfont[Mapping=tex-text]{Linux Biolinum O}
+\setmainfont{Linux Libertine O}
+\setromanfont[Mapping=tex-text]{Linux Libertine O}
+\setsansfont[Mapping=tex-text]{Linux Biolinum O}
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage[Bjornstrup]{fncychap}
 
-%% Pakete
-\usepackage[dvips]{graphicx}
-\usepackage[usenames]{color}
-%\usepackage[colorlinks,pdfauthor={Jason R Briggs},pdftitle={Snake Wrangling for Kids - Learning to Program with Python},pdfsubject={Programming for Kids},pdfkeywords={python,kids,programming}]{hyperref}
-\usepackage[colorlinks,pdfauthor={Jason R Briggs, translated by Joe Ehrensberger},pdftitle={Schlangengerangel fuer Kinder - Programmieren Lernen mit Python)},pdfsubject={Programmieren fuer Kinder},pdfkeywords={python,kinder,programmieren}]{hyperref}
-\usepackage{longdiv}
-\usepackage{makeidx}
-\usepackage{versions}
-\usepackage[absolute]{textpos}
-\usepackage{wrapfig}
-\usepackage{eso-pic}
-\usepackage[utf8]{inputenc} %für deutsche Übersetzung hinzugefügt
-\usepackage[ngerman]{babel} %für deutsche Übersetzung hinzugefügt
-\usepackage[right]{eurosym} %für das Euro Symbol hinzugefügt
+\usepackage{fancyvrb} %für die Rahmen um die Codebeispiele \begin{Verbatim}
+\usepackage{listings} %für das Kapitelverkzeichnis
 
-
-\usepackage[Bjornstrup]{fncychap} %% Option Bjornstrup ist in neueren, ansonsten Option Glenn probieren
-%\usepackage{fancybox} %für die Rahmen um die Codebeispiele
-\usepackage{fancyvrb} %für die Rahmen um die Codebeispiele
-\usepackage{listings}
-\usepackage{color}
-\usepackage{fix-cm}
-\usepackage{makeidx} 
-
-%%%%%%problem \usepackage[xetex=true, colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
-%\usepackage{scalefnt}
-\usepackage{float}
-\usepackage{subfigure}
-\usepackage[all]{hypcap}
 \usepackage[tight]{shorttoc}
 \usepackage{url}
 
-%% Farben der Links
-\hypersetup{
+\usepackage[xetex=true, colorlinks=true, linkcolor=blue, urlcolor=blue]{hyperref}
+\usepackage{makeidx}
+
+\hypersetup{ 
+    pdfauthor   = {Jason R. Briggs \& Joe Ehrensberger},
+    pdftitle    = {Schlangengerangel für Kinder},
+    pdfsubject  = {Programmieren Lernen mit Python},
+    pdfkeywords = {Python, Python3, programmieren, lernen, Kinder},
+    pdfcreator  = {XeTeX},
+    pdfproducer = {XeTeX}
     colorlinks = true,
     linkcolor = blue,
     anchorcolor = blue,
@@ -55,57 +89,57 @@
     urlcolor = blue
 }
 
-%% Maße
-\parindent 1cm
-\parskip 0.2cm
-\topmargin 0.2cm
-\oddsidemargin 1cm
-\evensidemargin 0.5cm
-\textwidth 15cm
-\textheight 21cm
 
-%% Farbe für die Achtung Boxen
-\definecolor{PaleBlue}{rgb}{0.95,0.95,1}
-
-\newenvironment{listing}
-{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\footnotesize\samepage}
-{\end{list}}
-
-\newenvironment{listingignore}
-{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\footnotesize\samepage}
-{\end{list}}
-
-\newcommand{\code}{\textcolor{OliveGreen}\bfseries}
-
+%%% für Mac, Linux und Windows Versionen aus der gleichen Quelle
+\usepackage{versions} 
 \@FRONTCOVER_INC@version{FRONTCOVER}
 \@WINDOWS_INC@version{WINDOWS}
 \@MAC_INC@version{MAC}
 \@LINUX_INC@version{LINUX}
 
-\title{Snake Wrangling for Kids - Learning to Program with Python}
-\author{Jason R Briggs}
+\usepackage{wrapfig}
 
 
+%%% Farbe für die Achtung Boxen
+\definecolor{PaleBlue}{rgb}{0.95,0.95,1}
+\definecolor{BrickRed}{rgb}{0.95,0.1,0.1}
+\definecolor{DummyColor}{rgb}{0.9,0.9,0.9}
+
+\definecolor{bleu}{rgb}{0,0,0.4}
+\definecolor{lbleu}{rgb}{0.9,0.9,1}
+\definecolor{mbleu}{rgb}{0.5,0.5,1}
+\definecolor{gray}{rgb}{0.7,0.7,0.7}
+
+\newenvironment{listing}
+{\begin{list}{}{\setlength{\leftmargin}{1em}}\item\footnotesize\samepage}
+{\end{list}}
+
+\newcommand{\code}{\textcolor{DummyColor}\bfseries}
+
+
+
+\usepackage{makeidx}
 \makeindex
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Hier geht das Dokument los
 \begin{document}
 
-%% Titelbild, Umschlag
+%%% Titelbild, Umschlag
 \include{frontmatter} 
 
-%%%% Wie \tableofcontents, aber nur Kapitel, wenn {0} mitgegeben
-%%%% funktioniert noch nicht ganz
-%%%\shorttableofcontents{Kapitel}{0} 
 
-%% Vorwort
+\shorttableofcontents{Kapitel}{0}  % Nur die Kapitel
+
+%%% Vorwort
 \include{preface}
 
 \pagestyle{headings}
 \pagenumbering{arabic}
 
-%% Kapitel
+%%% Kapitel
+\include{ch0}
 \include{ch1}
 \include{ch2}
 \include{ch3}
@@ -117,17 +151,18 @@
 \include{ch9}
 \include{ch10}
 
-
+%%% Anhang
 \appendix
 \include{appendixa}
 \include{appendixb}
 \include{appendixc}
 \include{appendixd}
 
-%% Stichwortverzeichnis
+%%% Stichwortverzeichnis
 \printindex
 
-%% genaues Inhaltsverzeichnis
-%% \tableofcontents
+
+%%% genaues Inhaltsverzeichnis
+\tableofcontents
 
 \end{document}
