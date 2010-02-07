@@ -32,7 +32,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 Die Sterntaste (*) wird anstelle des normalen Multiplikationszeichen\index{Operatoren!Multiplikation} \textsf{X} verwendet, welches du in der Schule verwendest. Die Sterntaste must du verwenden, damit der Computer weiß, ob du den Buchstaben \emph{x} oder das Multiplikationszeichen \textsf{X} meinst. Wie wäre es nun mit einer Formel, die etwas nützlicher ist?
 
 %Suppose you do chores once a week, for which you get \$5 pocket money, and you have a paper round which you do 5 times a week and get \$30---how much money would you earn in a year?
-Nehmen wir an, du machst Hausarbeiten und bekommst \EUR{5} Taschengeld dafür, trägst die Zeitung fünf mal die Woche aus und bekommst dafür \EUR{30}---wie viel Geld würdest du in einem Jahr verdienen?
+Nehmen wir an, du machst Hausarbeiten und bekommst 5 € Taschengeld dafür, trägst die Zeitung fünf mal die Woche aus und bekommst dafür 30 €---wie viel Geld würdest du in einem Jahr verdienen?
 
 %% Probleme mit \begin{figure}[t] -> weggelassen
 %\begin{figure}[t]
@@ -67,7 +67,7 @@ Auf Papier würden wir folgendes schreiben:
 \end{verbatim}
 
 %Which is \$5 + \$30 multiplied by 52 weeks in a year.  \begin{samepage}Of course, we're smart, and we know that 5 + 30 is 35, so the equation is really:
-Das ist \EUR{5} + \EUR{30} multipliziert mit 52 Wochen im Jahr. \begin{samepage}Natürlich sind wir so schlau und wissen, dass 5 + 30 eigentlich 35 ergibt, und so ergibt sich die Formel:
+Das ist 5 € + 30 € multipliziert mit 52 Wochen im Jahr. \begin{samepage}Natürlich sind wir so schlau und wissen, dass 5 + 30 eigentlich 35 ergibt, und so ergibt sich die Formel:
 
 
 \begin{verbatim}
@@ -86,7 +86,7 @@ Was einfach genug ist, es auf Papier oder im Taschenrechner zu rechnen. Aber wir
 \end{Verbatim}
 
 %So, what if you spend \$10 each week?  How much do you have left at the end of the year?  We could write the equation on paper a couple of different ways, but let's just type it into the console:
-Was passiert also, wenn du jede Woche \EUR{10} ausgibst? Wie viel hast du dann am Ende des Jahres übrig? Wir könnten die Formel auf Papier aufschreiben, aber probieren wir es in der Konsole.
+Was passiert also, wenn du jede Woche 10 € ausgibst? Wie viel hast du dann am Ende des Jahres übrig? Wir könnten die Formel auf Papier aufschreiben, aber probieren wir es in der Konsole.
 
 \begin{Verbatim}[frame=single]
 >>> (5 + 30 - 10) * 52
@@ -94,7 +94,7 @@ Was passiert also, wenn du jede Woche \EUR{10} ausgibst? Wie viel hast du dann a
 \end{Verbatim}
 
 %That's \$5 and \$30 minus \$10 multiplied by 52 weeks in the year.  And you'd have \$1300 left at the end of the year. Okay, so that's not looking all that useful so far.  We can do all of that with a calculator.  But we'll come back to this later and show how to make it much more useful.
-Das sind \EUR{5} und \EUR{30} minus \EUR{10} multipliziert mit 52 Wochen im Jahr. Am Endes des Jahres wären \EUR{1300} übrig. Gut, das ist jetzt immer noch nicht so besonders spannend. Das hätten wir auch alles mit einem Taschenrechner machen können. Aber wir kommen da nochmals zurück und zeigen, wie das noch nützlicher und spannender wird.
+Das sind 5 € plus 30 € minus 10 € multipliziert mit 52 Wochen im Jahr. Am Endes des Jahres wären 1300 € übrig. Gut, das ist jetzt immer noch nicht so besonders spannend. Das hätten wir auch alles mit einem Taschenrechner machen können. Aber wir kommen da nochmals zurück und zeigen, wie das noch nützlicher und spannender wird.
 
 %You can do multiplication\index{multiplication} and addition\index{addition} (obviously), and subtraction\index{subtraction} and division\index{division} in the Python console, along with a bunch of other maths operations that we won't go into now.  For the moment the basic maths symbols for Python (actually they're called operators\index{operators}) are:
 Du kannst in der Python Konsole Multipizieren\index{Operatoren!Multiplikation}, Addieren\index{Operatoren!Addition}, Substrahieren\index{Operatoren!Substraktion} und auch Dividieren\index{Operatoren!Division}, aber auch andere mathematische Funktionen verwenden, auf die wir später eingehen werden. Fürs Erste sind die wichtigsten mathematischen Symbole in Python (eigentlich heißen sie Operatoren\index{Operatoren}):
@@ -224,7 +224,7 @@ Ohne Klammern wird zuerst 30 mit 20 multipliziert, das Ergebnis durch 10 dividie
 Eine `Variable' ist eine Programmierausdruck der einen Platz zum Speichern von Dingen bezeichnet. Diese `Dinge' können Nummern, Text, Listen von Zahlen oder auch eine Vielzahl von anderen Dingen sein. Eine Variable ist so etwas wie ein Briefkasten.
 
 \begin{center}
-\includegraphics*[width=76mm]{girlbubble.eps}
+\includegraphics*[width=76mm]{images/girlbubble}
 \end{center}
 
 %You can put things (such as a letter or a package) in a mailbox, just as you can put things (numbers, text, lists of numbers and text, etc, etc, etc) in a variable.  This mailbox idea is the way many programming languages work.  But not all.
@@ -351,7 +351,7 @@ das_ist_auch_eine_gueltige_variable_aber_vielleicht_nicht_so_nuetzlich
 \section{Variablen verwenden}\index{Variablen}
 
 %Now we know how to create a variable, how do we use it?  Remember that equation we came up with earlier?  The one to work out how much money you'd have left at the end of the year, if you earned \$5 a week doing chores, \$30 a week on a paper round, and spent \$10 per week.  So far we have:
-Jetzt wissen wir wie man Variablen erzeugt. Aber wie wenden wir sie an? Erinnerst du dich an die Rechnung von früher? Die Berechnung wieviel Geld du am Ende des Jahres gespart haben würdest, wenn du \EUR{5} für die Hausarbeit bekommst und \EUR{30} fürs Zeitung austragen. \EUR{10} pro Woche gibst du aus. Bis jetzt schaut das so aus:
+Jetzt wissen wir wie man Variablen erzeugt. Aber wie wenden wir sie an? Erinnerst du dich an die Rechnung von früher? Die Berechnung wieviel Geld du am Ende des Jahres gespart haben würdest, wenn du 5 € für die Hausarbeit bekommst und 30 € fürs Zeitung austragen. 10 € pro Woche gibst du aus. Bis jetzt schaut das so aus:
 
 \begin{Verbatim}[frame=single]
 >>> print((5 + 30 - 10) * 52)
@@ -391,7 +391,7 @@ Somit haben wir eben die Variablen `Hausarbeit', `Zeitung\_austragen' und `Ausga
 \end{Verbatim}
 
 %Which gives the exact same answer.  What if you get \$2 more per week, for doing extra chores.  Change the `chores' variable to 7, then hit the up-arrow key ($\uparrow$) on your keyboard a couple of times, until the equation re-appears, and hit the Enter key:
-Es kommt das genau das gleiche raus. Wenn du nun \EUR{2} mehr für die Hausarbeit bekommst, kannst du einfach die `Hausarbeit' Variable auf 7 setzen. Danach drückst du die `Pfeil nach oben Taste' ($\uparrow$) und wenn die Rechnung wieder erscheint, drückst du Enter.
+Es kommt das genau das gleiche raus. Wenn du nun 2 € mehr für die Hausarbeit bekommst, kannst du einfach die `Hausarbeit' Variable auf 7 setzen. Danach drückst du die `Pfeil nach oben Taste' ($\uparrow$) und wenn die Rechnung wieder erscheint, drückst du Enter.
 
 %\begin{listing}
 %\begin{verbatim}
@@ -407,7 +407,7 @@ Es kommt das genau das gleiche raus. Wenn du nun \EUR{2} mehr für die Hausarbei
 \end{Verbatim}
 
 %That's a lot less typing to find out that you now end up with \$1404 at the end of the year.  You can try changing the other variables, then hit the up-arrow to perform the calculation again, and see what effect it has.
-Das bedeutet schon eine Menge weniger Tippen um herauszufinden dass am Ende des Jahres \EUR{1404} übrig sind. Du kannst die anderen Variablen auch verändern und schauen wie sich das aufs Ergebnis der Rechnung auswirkt.
+Das bedeutet schon eine Menge weniger Tippen um herauszufinden dass am Ende des Jahres 1404 € übrig sind. Du kannst die anderen Variablen auch verändern und schauen wie sich das aufs Ergebnis der Rechnung auswirkt.
 
 %\begin{listing}
 %\begin{verbatim}
@@ -425,7 +425,7 @@ Wenn du doppelt so viel in der Woche ausgibst:
 \end{Verbatim}
 
 %You're only left with \$884 savings at the end of the year. This is still only slightly useful.  We haven't hit really useful yet.  But for the moment, it's enough to understand that variables are used to store things.
-So bleiben dir also \EUR{884} am Ende des Jahres übrig. Fürs arbeiten mit Variablen ist es fürs erste ausreichend, wenn man versteht, dass Variablen zum Speichern von Dingen verwendet werden.
+So bleiben dir also 884 € am Ende des Jahres übrig. Fürs arbeiten mit Variablen ist es fürs erste ausreichend, wenn man versteht, dass Variablen zum Speichern von Dingen verwendet werden.
 
 \noindent
 %\emph{Think of a mailbox with a label on it!}

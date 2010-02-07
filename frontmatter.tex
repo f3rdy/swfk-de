@@ -4,53 +4,129 @@
 % zu http://creativecommons.org/licenses/by-nc-sa/3.0/de/ oder schicken Sie einen Brief an 
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
-\pagestyle{empty}
-\frontmatter
-\begin{FRONTCOVER}
-\begin{titlepage}
-\begin{textblock*}{210mm}(0mm,0mm)
-%\includegraphics[width=0.9\paperwidth]{cover.eps}
-\begin{WINDOWS}
-\includegraphics[width=0.95\paperwidth]{cover-de-win.eps}
-\end{WINDOWS}
-\begin{MAC}
-\includegraphics[width=0.95\paperwidth]{cover-de-mac.eps}
-\end{MAC}
-\begin{LINUX}
-\includegraphics[width=0.95\paperwidth]{cover-de-linux.eps}
-\end{LINUX}
-\end{textblock*}
-\begin{flushright}
-
-%% Die Etidion hat immer den Titel überlagert,
-%% deshalb für jede Edition ein komplettes Titelbild (z.B.: cover-de-linux.eps)
+%\pagestyle{empty}
+%\frontmatter
+%\begin{FRONTCOVER}
+%\begin{titlepage}
+%\begin{textblock*}{210mm}(0mm,0mm)
+%%\includegraphics[width=0.9\paperwidth]{cover.eps}
 %\begin{WINDOWS}
-%  %\includegraphics[width=40mm]{windows-edition.eps}
+%\includegraphics[width=0.95\paperwidth]{images/cover-de-win}
 %\end{WINDOWS}
 %\begin{MAC}
-%  %\includegraphics[width=40mm]{mac-edition.eps}
+%\includegraphics[width=0.95\paperwidth]{images/cover-de-mac}
 %\end{MAC}
 %\begin{LINUX}
-%  %\includegraphics[width=40mm]{linux-edition.eps}
+%\includegraphics[width=0.95\paperwidth]{images/cover-de-linux}
 %\end{LINUX}
+%\end{textblock*}
+%\begin{flushright}
+
+%%% Die Edition hat immer den Titel überlagert,
+%%% deshalb für jede Edition ein komplettes Titelbild (z.B.: cover-de-linux.eps)
+%%\begin{WINDOWS}
+%%  %\includegraphics[width=40mm]{windows-edition.eps}
+%%\end{WINDOWS}
+%%\begin{MAC}
+%%  %\includegraphics[width=40mm]{mac-edition.eps}
+%%\end{MAC}
+%%\begin{LINUX}
+%%  %\includegraphics[width=40mm]{linux-edition.eps}
+%%\end{LINUX}
 
 
+%\end{flushright}
+%\end{titlepage}
+%\end{FRONTCOVER}
+
+
+
+
+
+
+% This work is licensed under the Creative Commons Attribution-Share Alike 2.0 France License.
+% To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/2.0/fr/legalcode
+% or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+
+\scalefont{0.8}
+\ChNumVar{\fontsize{100}{100}\selectfont\textit} 
+%\ChNameVar{\fontsize{5}{5}\selectfont\textrm} 
+\ChTitleVar{\fontsize{28}{28}\selectfont\textrm}
+
+\frontmatter
+
+%\lstset{language=Python}
+%\addfontfeature{Ligatures=Historical}
+
+%\addfontfeature{Numbers=OldStyle}
+
+\addfontfeature{Fractions=On}
+\thispagestyle{empty}
+
+
+
+\begin{center}
+\textcolor{bleu}{\textbf{\fontsize{40}{40}\selectfont\textsf{Schlangengerangel für Kinder}}}
+
+\textcolor{bleu}{\textsf{\begin{Huge}Programmieren lernen mit Python\end{Huge}}}
+
+\vspace{1cm}
+
+\begin{flushleft}
+
+\sf
+\begin{Huge}
+\color{red}
+\Ovalbox{\begin{WINDOWS}Windows\end{WINDOWS}\begin{LINUX}Linux\end{LINUX}\begin{MAC}Mac Os X\end{MAC} Ausgabe}
+\end{Huge}
+\color{black}
+\rm
+\end{flushleft}
+
+
+\AddToShipoutPicture*{
+ \put(0,0){
+ \parbox[b][\paperheight]{\paperwidth}{
+ \vfill
+ \vspace{2cm}
+\begin{flushleft}
+\hspace*{0cm}\includegraphics[width=20cm]{images/cover}
+\end{flushleft}
+ \vfill
+ }}}
+
+\vspace{16cm}
+
+%\includegraphics[scale=0.35]{images/couv.jpg} 
+\end{center}
+
+\begin{flushright}
+\textcolor{bleu}{\begin{Huge}\textsf{Geschrieben von Jason R. Briggs}\end{Huge}}
+
+\textcolor{bleu}{\begin{huge}\textsf{Übersetzt von Joe Ehrensberger}\end{huge}}
 \end{flushright}
-\end{titlepage}
-\end{FRONTCOVER}
 
+\newpage
+
+
+
+
+
+
+\newpage
 \noindent
 %\textsf{\emph{Snake Wrangling for Kids, Learning to Program with Python}}\\
 \textsf{\emph{Schlangengerangel für Kinder, Programmieren lernen mit Python}}\\
 %by Jason R. Briggs\\
 von Jason R. Briggs\\
-Version 0.8.3
-%Version 0.8.3 weil 8 Kapitel fertig übersetzt sind.
+Version 0.8.4
+%Version 0.8.4 weil 8 Kapitel fertig übersetzt sind.
 \\
 Copyright \copyright 2007.\\
 \\
 \textsf{\emph{Übersetzung ins Deutsche: Joe Ehrensberger}}\\
-Version 0.8.3\\
+Version 0.8.4\\
 Copyright der Übersetzung \copyright 2010.\\
 Webseite der Übersetzung: \href{http://code.google.com/p/swfk-de/}{http://code.google.com/p/swfk-de/}\\
 \\
@@ -73,7 +149,7 @@ An Guido van Rossum (für seine wohlwollende Diktatur über Python), die Mitglie
 %License:\\
 Lizenz:\\
 \\
-\includegraphics[width=40mm]{by-nc-sa.eps}\\
+\includegraphics[width=40mm]{images/by-nc-sa}\\
 %This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 3.0 New Zealand License. To view a copy of this license, visit\\ \href{http://creativecommons.org/licenses/by-nc-sa/3.0/nz/}{http://creativecommons.org/licenses/by-nc-sa/3.0/nz/} or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.\\
 Dieses Werk ist unter einem Creative Commons Namensnennung-Keine kommerzielle Nutzung-Weitergabe unter gleichen Bedingungen 3.0 Deutschland Lizenzvertrag lizenziert. Um die Lizenz anzusehen, gehen Sie bitte zu \\
 \href{http://creativecommons.org/licenses/by-nc-sa/3.0/de/}{http://creativecommons.org/licenses/by-nc-sa/3.0/de/} oder schicken Sie einen Brief an Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
@@ -124,7 +200,7 @@ Im Falle einer Verbreitung müssen Sie anderen alle Lizenzbedingungen mitteilen,
 
 \vspace*{4cm}
 \begin{center}
-\includegraphics[width=5cm]{python-powered.eps}
+\includegraphics[width=5cm]{images/python-powered}
 \end{center}
 
 \mainmatter

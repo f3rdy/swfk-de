@@ -12,14 +12,15 @@ import re
 target_dir = 'target'
 
 #
-# 
+# Choose the versions you want to build
 #
-#platforms = 'linux', 'mac', 'win'
-platforms = 'linux', # for bulding only one version (faster)
+platforms = 'linux', 'mac', 'win'
+#platforms = 'linux', # for bulding only one version (faster)
 
 #
 # find the executables to use in compiling the books
 #
+xelatex = find_executable('xelatex')
 latex = find_executable('latex')
 makeindex = find_executable('makeindex')
 dvipdf = find_executable('dvipdf')
@@ -93,17 +94,32 @@ class LatexCommand(Command):
             swfk_tex.close()
         
             tex = 'swfk.tex'
-            spawn([latex, '--output-directory=%s' % target_dir, tex])
 
-            spawn([makeindex, '%s/swfk.idx' % target_dir])
-            spawn([latex, '--output-directory=%s' % target_dir, tex])
+#            #
+#            # Building pdf with xelatex 
+#            #
+            spawn([xelatex, '--output-directory=%s' % target_dir, tex])
+#            spawn([makeindex, '%s/swfk.idx' % target_dir])
+#            spawn([xelatex, '--output-directory=%s' % target_dir, tex])
+            old_name = '%s/swfk.pdf' % target_dir
+            new_name = '%s/swfk-de-%s-%s%s.pdf' % (target_dir, platform, version, fname_suffix)
+            os.rename(old_name, new_name)
 
-            pdf = '%s/swfk-de-%s-%s%s.pdf' % (target_dir, platform, version, fname_suffix)
-            spawn([dvipdf, '%s/swfk.dvi' % target_dir, pdf])
 
-            zf = ZipFile('%s/swfk-%s-%s%s.zip' % (target_dir, platform, version, fname_suffix), 'w')
-            zf.write(pdf)
-            zf.close()
+            #
+            # Building pdf with latex  and dvips
+            #
+#            spawn([latex, '--output-directory=%s' % target_dir, tex])
+
+#            spawn([makeindex, '%s/swfk.idx' % target_dir])
+#            spawn([latex, '--output-directory=%s' % target_dir, tex])
+
+#            pdf = '%s/swfk-de-%s-%s%s.pdf' % (target_dir, platform, version, fname_suffix)
+#            spawn([dvipdf, '%s/swfk.dvi' % target_dir, pdf])
+
+#            zf = ZipFile('%s/swfk-%s-%s%s.zip' % (target_dir, platform, version, fname_suffix), 'w')
+#            zf.write(pdf)
+#            zf.close()
 
 
 setup(
