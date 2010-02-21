@@ -5,7 +5,7 @@ Farben überprüfen
 Bilder von 600 dpi auf 300 dpi damit das pdf am Ende kleiner wird
 
 Kapitelverzeichnis
-pdf fastview?
+
 
 In Appendix A das Bild der Wunschliste anpassen
 In Appendix B eine Alternative für die in Python 3 weggefallene cmp Funktion finden
@@ -24,7 +24,6 @@ Alle Kapitel in die Rechtschreibkorrektur werfen
 
 
 
-
 Anpassen der Titelbilder                                   OK
 swfk.tex.pre pdf Titel anpassen                            OK
 preface: Bilder vom Installieren in den Mac Abschnitt?
@@ -32,9 +31,11 @@ preface: Bilder vom Installieren in den Mac Abschnitt?
 
 
 Übernehmen vom Design der französischen Version
+
     Kapiteldesign \usepackage[Bjornstrup]{fncychap}        OK
     Rahmen um Codebeispiele mit \usepackage{fancyvrb}      OK
     Schriften Linux Libertine einbauen                     OK
+
 
 
 Umstieg von latex auf xelates
