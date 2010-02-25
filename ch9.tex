@@ -508,84 +508,145 @@ Somit ist die obere linke Ecke auf den Koordinaten 10, 10 (also 10 nach rechts u
 \caption{Verschiedene Varianten von Bögen.}\label{fig37}
 \end{figure}
 
-\section{Drawing Ovals}
+%\section{Drawing Ovals}
+\section{Ellipsen zeichnen}
 
-While the last statement in the above example draws an oval, you can also draw ovals using the \code{create\_oval}\index{modules!tkinter!create\_oval} function.  Similar to drawing arcs, an oval is drawn inside the boundaries of a rectangle. For example, the following code:
+%While the last statement in the above example draws an oval, you can also draw ovals using the \code{create\_oval}\index{modules!tkinter!create\_oval} function.  Similar to drawing arcs, an oval is drawn inside the boundaries of a rectangle. For example, the following code:
+Mit dem letzten Befehl des vorigen Abschnitts kommt schon ein ovaler Kreis (Ellipse) raus. Aber auch die Funktion \code{create\_oval}\index{Module!tkinter!create\_oval} erzeugt eine Ellipse. Ähnlich zu den Bögen, wird der ovale Kreis innerhalb eines Rechtecks gezeichnet. Zum Beispiel mit folgendem Code:
 
+%\begin{Verbatim}[frame=single]
+%>>> tk = Tk()
+%>>> canvas = Canvas(tk, width=400,height=400)
+%>>> canvas.pack()
+%>>> canvas.create_oval(1, 1, 300, 200)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> tk = Tk()
->>> canvas = Canvas(tk, width=400,height=400)
->>> canvas.pack()
->>> canvas.create_oval(1, 1, 300, 200)
+>>> leinwand = Canvas(tk, width=400,height=400)
+>>> leinwand.pack()
+>>> leinwand.create_oval(1, 1, 300, 200)
 \end{Verbatim}
 
-This example draws an oval in the (imaginary) square drawn from pixel positions 1,1 to 300,200. If we draw a red rectangle with the same coordinates, you can properly see how the oval is drawn inside (figure~\ref{fig38}):
+%This example draws an oval in the (imaginary) square drawn from pixel positions 1,1 to 300,200. If we draw a red rectangle with the same coordinates, you can properly see how the oval is drawn inside (figure~\ref{fig38}):
+Dieser Code zeichnet die Ellipse ins imaginäre Rechteck mit den Eckpunkten 1,1 und 300,200. Zum verdeutlischen kannst du noch ein rotes Rechteck herum zeichnen (siehe Abbildung~\ref{fig39}):
 
+%\begin{Verbatim}[frame=single]
+%>>> canvas.create_rectangle(1, 1, 300, 200, outline="#ff0000")
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> canvas.create_rectangle(1, 1, 300, 200, outline="#ff0000")
+>>> leinwand.create_rectangle(1, 1, 300, 200, outline="#ff0000")
 \end{Verbatim}
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=80mm]{images/figure38}
-\end{center}
-\caption{The outline of an oval.}\label{fig38}
-\end{figure}
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=80mm]{images/figure38}
+%\end{center}
+%\caption{The outline of an oval.}\label{fig38}
+%\end{figure}
+%% Diesel Bild (reine Ellipse) weggelassen, da kein erkennbarer Mehrwert zu figure39.
 
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=80mm]{images/figure39}
+%\end{center}
+%\caption{The outline of an oval inside a rectangle.}\label{fig39}
+%\end{figure}
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{images/figure39}
 \end{center}
-\caption{The outline of an oval inside a rectangle.}\label{fig39}
+\caption{Die Ellipse innerhalb des roten Rechtecks.}\label{fig39}
 \end{figure}
 
 \noindent
-To draw a circle, rather than an elliptical oval, the imaginary rectangle should be a square (which produces the circle in figure~\ref{fig40}):
+%To draw a circle, rather than an elliptical oval, the imaginary rectangle should be a square (which produces the circle in figure~\ref{fig40}):
+Um einen Kreis anstatt einer Ellipse zu zeichnen, muss das imaginäre Rechteck quadratisch sein (siehe Abbildung~\ref{fig40}):
 
+%\begin{Verbatim}[frame=single]
+%>>> tk = Tk()
+%>>> canvas = Canvas(tk, width=400,height=400)
+%>>> canvas.pack()
+%>>> canvas.create_oval(1, 1, 300, 300)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> tk = Tk()
->>> canvas = Canvas(tk, width=400,height=400)
->>> canvas.pack()
->>> canvas.create_oval(1, 1, 300, 300)
+>>> leinwand = Canvas(tk, width=400,height=400)
+>>> leinwnad.pack()
+>>> leinwand.create_oval(1, 1, 300, 300)
 \end{Verbatim}
 
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=80mm]{images/figure40}
+%\end{center}
+%\caption{A simple circle.}\label{fig40}
+%\end{figure}
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{images/figure40}
 \end{center}
-\caption{A simple circle.}\label{fig40}
+\caption{Ein einfacher Kreis.}\label{fig40}
 \end{figure}
 
-\section{Drawing Polygons}\index{modules!tkinter!create\_polygon}
+%\section{Drawing Polygons}\index{modules!tkinter!create\_polygon}
+\section{Polygone zeichnen}\index{Module!tkinter!create\_polygon}
 
-A polygon is any shape with 3 or more sides. Triangles, squares, rectangles, pentagons, hexagons, and so on are all examples of polygons. As well as these more regular shapes, you can also create irregular shaped polygons. For example, to draw a triangle, you need to provide 3 sets of coordinates (that's a position across plus a position down) for each point of the triangle (creating the triangle in figure~\ref{fig41}):
+%A polygon is any shape with 3 or more sides. Triangles, squares, rectangles, pentagons, hexagons, and so on are all examples of polygons. As well as these more regular shapes, you can also create irregular shaped polygons. For example, to draw a triangle, you need to provide 3 sets of coordinates (that's a position across plus a position down) for each point of the triangle (creating the triangle in figure~\ref{fig41}):
+Ein Polygon ist eine Form mit mehr als drei Seiten. Dreiecke, Vierecke, Fünfecke, Sechsecke und so weiter sind solche Beispiele. Und die Formen können auch ganz ungleichmäßig sein. Für ein Dreieck musst du 3 Koordinatenpaare angeben (für jeden Eckpunkt). 
 
+%\begin{Verbatim}[frame=single]
+%>>> from tkinter import *
+%>>> tk = Tk()
+%>>> canvas = Canvas(tk, width=400,height=400)
+%>>> canvas.pack()
+%>>> canvas.create_polygon(10, 10, 100, 10, 100, 50, fill="", outline="black")
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> from tkinter import *
 >>> tk = Tk()
->>> canvas = Canvas(tk, width=400,height=400)
->>> canvas.pack()
->>> canvas.create_polygon(10, 10, 100, 10, 100, 50, fill="", outline="black")
+>>> leinwand = Canvas(tk, width=400,height=400)
+>>> leinwand.pack()
+>>> leinwand.create_polygon(10, 10, 100, 10, 100, 50, fill="", outline="black")
 \end{Verbatim}
 
+Das Ergebnis siehst du in Abbildung~\ref{fig41}.
+
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=80mm]{images/figure41}
+%\end{center}
+%\caption{A simple triangle.}\label{fig41}
+%\end{figure}
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{images/figure41}
 \end{center}
-\caption{A simple triangle.}\label{fig41}
+\caption{Ein einfaches Dreieck.}\label{fig41}
 \end{figure}
 
-We can add an irregular polygon using the following code. Figure~\ref{fig42} shows both the triangle and the oddly shaped polygon.
+%We can add an irregular polygon using the following code. Figure~\ref{fig42} shows both the triangle and the oddly shaped polygon.
+Zeichnen wir da noch ein unregelmäßiges Vieleck mit dem folgenden Code dazu.
 
+%\begin{Verbatim}[frame=single]
+%>>> canvas.create_polygon(200, 10, 240, 30, 120, 100, 140, 120, fill="", outline="black")
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> canvas.create_polygon(200, 10, 240, 30, 120, 100, 140, 120, fill="", outline="black")
+>>> leinwand.create_polygon(200, 10, 240, 30, 120, 100, 140, 120, fill="", outline="black")
 \end{Verbatim}
 
+Dreieck und Vieleck siehst du in Abbildung~\ref{fig42}.
+
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=80mm]{images/figure42}
+%\end{center}
+%\caption{A simple triangle.}\label{fig42}
+%\end{figure}
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{images/figure42}
 \end{center}
-\caption{A simple triangle.}\label{fig42}
+\caption{Das Dreieck und das unregelmäßige Vieleck.}\label{fig42}
 \end{figure}
 
 \section{Drawing Images}

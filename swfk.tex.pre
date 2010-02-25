@@ -130,39 +130,39 @@
 \include{frontmatter} 
 
 
-\shorttableofcontents{Kapitel}{0}  % Nur die Kapitel
+%\shorttableofcontents{Kapitel}{0}  % Nur die Kapitel
 
-%%% Vorwort
-\include{preface}
+%%%% Vorwort
+%\include{preface}
 
-\pagestyle{headings}
-\pagenumbering{arabic}
+%\pagestyle{headings}
+%\pagenumbering{arabic}
 
-%%% Kapitel
-\include{ch0}
-\include{ch1}
-\include{ch2}
-\include{ch3}
-\include{ch4}
-\include{ch5}
-\include{ch6}
-\include{ch7}
-\include{ch8}
+%%%% Kapitel
+%\include{ch0}
+%\include{ch1}
+%\include{ch2}
+%\include{ch3}
+%\include{ch4}
+%\include{ch5}
+%\include{ch6}
+%\include{ch7}
+%\include{ch8}
 \include{ch9}
-\include{ch10}
+%\include{ch10}
 
-%%% Anhang
-\appendix
-\include{appendixa}
-\include{appendixb}
-\include{appendixc}
-\include{appendixd}
+%%%% Anhang
+%\appendix
+%\include{appendixa}
+%\include{appendixb}
+%\include{appendixc}
+%\include{appendixd}
 
-%%% Stichwortverzeichnis
+%%%% Stichwortverzeichnis
 \printindex
 
 
-%%% genaues Inhaltsverzeichnis
-\tableofcontents
+%%%% genaues Inhaltsverzeichnis
+%\tableofcontents
 
 \end{document}

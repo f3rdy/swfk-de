@@ -14,8 +14,8 @@ target_dir = 'target'
 #
 # Choose the versions you want to build
 #
-platforms = 'linux', 'mac', 'win'
-#platforms = 'linux', # for bulding only one version (faster)
+#platforms = 'linux', 'mac', 'win'
+platforms = 'linux', # for bulding only one version (faster)
 
 #
 # find the executables to use in compiling the books
@@ -100,7 +100,8 @@ class LatexCommand(Command):
 #            #
             spawn([xelatex, '--output-directory=%s' % target_dir, tex])
 #            spawn([makeindex, '%s/swfk.idx' % target_dir])
-#            spawn([xelatex, '--output-directory=%s' % target_dir, tex])
+            # Build it twice so that the index is OK 
+            spawn([xelatex, '--output-directory=%s' % target_dir, tex])
             old_name = '%s/swfk.pdf' % target_dir
             new_name = '%s/swfk-de-%s-%s%s.pdf' % (target_dir, platform, version, fname_suffix)
             os.rename(old_name, new_name)
