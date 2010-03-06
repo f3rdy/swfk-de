@@ -194,7 +194,7 @@ Hätte die Schildkröte diese Linie zeichnen sollen, hätte das so ausgeschaut:
 Wie du siehst ist der \code{tkinter} Code schon eine Verbesserung, da er kürzer und einfacher ist. Und das canvas Objekt hat auch sonst noch einige nützliche Methoden, die wir mit dem Leinwand Objekt verwenden können.
 
 %\section{Drawing Boxes}
-\section{Rechtecke zeichnen}
+\section{Rechtecke}
 
 %In turtle, we drew a box by moving forward, turning, moving forward, turning again and so on. Eventually you can draw a rectangular or square box, just by changing how far you move forward. With tkinter, drawing a square or rectangle is considerably easier---you just need to know the coordinates for the corners.
 Mit der Schildkröte haben wir Rechtecke und Quadrate gezeichnet, indem die Schildkröte immer eine Seite entlanggewendert ist, sich nach rechts umgedreht hat und die nächste Seite gezeichnet hat. Mit tkinter ist es viel einfacher ein Rechteck zu zeichnen---du brauchst nur die Koordinaten der Ecken zu kennen.
@@ -452,7 +452,7 @@ Du kannst das auch mit der zufaelliges\_rechteck Funktion von vorher kombinieren
 \end{figure}
 
 %\section{Drawing Arcs}
-\section{Bögen zeichnen}
+\section{Bögen}
 
 %An arc is a part of a circle, but to draw one with tkinter you need to draw a rectangle. Which doesn't make a lot of sense until you try to draw a rectangle and then draw an arc inside it (see figure~\ref{fig36}). The code to draw this arc might look something like this\index{modules!tkinter!create\_arc}:
 Um mit tkinter einen Bogen zu zeichnen, fängt man mit einem Rechteck an. Und in dieses Rechteck wird dann der Bogen reingezeichnet (siehe Abbildung~\ref{fig36}). Der Code dazu könnte so ausschauen\index{Module!tkinter!create\_arc}:
@@ -509,7 +509,7 @@ Somit ist die obere linke Ecke auf den Koordinaten 10, 10 (also 10 nach rechts u
 \end{figure}
 
 %\section{Drawing Ovals}
-\section{Ellipsen zeichnen}
+\section{Ellipsen}
 
 %While the last statement in the above example draws an oval, you can also draw ovals using the \code{create\_oval}\index{modules!tkinter!create\_oval} function.  Similar to drawing arcs, an oval is drawn inside the boundaries of a rectangle. For example, the following code:
 Mit dem letzten Befehl des vorigen Abschnitts kommt schon ein ovaler Kreis (Ellipse) raus. Aber auch die Funktion \code{create\_oval}\index{Module!tkinter!create\_oval} erzeugt eine Ellipse. Ähnlich zu den Bögen, wird der ovale Kreis innerhalb eines Rechtecks gezeichnet. Zum Beispiel mit folgendem Code:
@@ -589,7 +589,7 @@ Um einen Kreis anstatt einer Ellipse zu zeichnen, muss das imaginäre Rechteck q
 \end{figure}
 
 %\section{Drawing Polygons}\index{modules!tkinter!create\_polygon}
-\section{Polygone zeichnen}\index{Module!tkinter!create\_polygon}
+\section{Polygone}\index{Module!tkinter!create\_polygon}
 
 %A polygon is any shape with 3 or more sides. Triangles, squares, rectangles, pentagons, hexagons, and so on are all examples of polygons. As well as these more regular shapes, you can also create irregular shaped polygons. For example, to draw a triangle, you need to provide 3 sets of coordinates (that's a position across plus a position down) for each point of the triangle (creating the triangle in figure~\ref{fig41}):
 Ein Polygon ist eine Form mit mehr als drei Seiten. Dreiecke, Vierecke, Fünfecke, Sechsecke und so weiter sind solche Beispiele. Und die Formen können auch ganz ungleichmäßig sein. Für ein Dreieck musst du 3 Koordinatenpaare angeben (für jeden Eckpunkt). 
@@ -649,181 +649,315 @@ Dreieck und Vieleck siehst du in Abbildung~\ref{fig42}.
 \caption{Das Dreieck und das unregelmäßige Vieleck.}\label{fig42}
 \end{figure}
 
-\section{Drawing Images}
+%\section{Drawing Images}
+\section{Zeichne Bilder}
+%You can draw an image on a canvas using \code{tkinter} by first loading the image, then using the \code{create\_image}\index{modules!tkinter!create\_image} function on the canvas object. This sounds a bit illogical, but it works as follows:
+Du kannst auch Bilder auf die Leinwand laden. Zuerst lädst du das Bild, dann benützt du die Funktion \code{create\_image}\index{Module!tkinter!create\_image} und es erscheint auf der Leinwand. Probiere es aus:
 
-You can draw an image on a canvas using \code{tkinter} by first loading the image, then using the \code{create\_image}\index{modules!tkinter!create\_image} function on the canvas object. This sounds a bit illogical, but it works as follows:
-
+%\begin{Verbatim}[frame=single]
+%1. >>> from tkinter import *
+%2. >>> tk = Tk()
+%3. >>> canvas = Canvas(tk, width=400, height=400)
+%4. >>> canvas.pack()
+%5. >>> myimage = PhotoImage(file='test.gif')
+%6. >>> canvas.create_image(0, 0, image=myimage, anchor=NW)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 1. >>> from tkinter import *
 2. >>> tk = Tk()
-3. >>> canvas = Canvas(tk, width=400, height=400)
-4. >>> canvas.pack()
-5. >>> myimage = PhotoImage(file='test.gif')
-6. >>> canvas.create_image(0, 0, image=myimage, anchor=NW)
+3. >>> leinwand = Canvas(tk, width=400, height=400)
+4. >>> leinwand.pack()
+5. >>> mein_bild = PhotoImage(file='test.gif')
+6. >>> canvas.create_image(0, 0, image=mein_bild, anchor=NW)
 \end{Verbatim}
 
-In lines 1 to 4 we set up the canvas the same as we have in previous examples. In line 5, the image is loaded into the variable \code{myimage}. It's important that the image you want to load is in a directory that's accessible to Python. This is usually the directory that the Python console is running from. You can find out the name of this directory by importing the \code{os}\index{modules!os} module and using the \code{getcwd()} function:
+%In lines 1 to 4 we set up the canvas the same as we have in previous examples. In line 5, the image is loaded into the variable \code{myimage}. It's important that the image you want to load is in a directory that's accessible to Python. This is usually the directory that the Python console is running from. You can find out the name of this directory by importing the \code{os}\index{modules!os} module and using the \code{getcwd()} function:
+In den ersten 4 Zeilen generieren wir wieder die Leinwand wie in den vorigen Beispielen. In der fünften Zeile laden wir dann das Bild in die Variable \code{mein\_bild}. Das Bild muss in einem Ordner liegen, auf den Python zugreifen kann. Normalerweise ist dies das Verzeichnis in dem die Python Konsole gestartet wurde. Wo genau dieses Verzeichnis ist, kannst du leicht herausfinden. Importiere das \code{os}\index{Module!os} Modul und verwende die \code{getcwd()} Funktion: 
 
+%\begin{Verbatim}[frame=single]
+%>>> import os
+%>>> print(os.getcwd())
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> import os
 >>> print(os.getcwd())
 \end{Verbatim}
 
 \begin{WINDOWS}
-This will probably print out something like `c:\\Python30'.
+%This will probably print out something like `c:\\Python30'.
+Unter Windows wirst du vermutlich etwas wie `c:\\Python30' bekommen.
 \end{WINDOWS}
 
 \begin{MAC}
-This will probably print out something like `/Users/yourname'$\ldots$, so if your name is Jane Matthews, \code{getcwd()} might return `/Users/janematthews'.
+%This will probably print out something like `/Users/yourname'$\ldots$, so if your name is Jane Matthews, \code{getcwd()} might return `/Users/janematthews'.
+Wenn du einen Mac verwendest wirst du etwas wie `/Users/dein\_name' $\ldots$ bekommen. 
 \end{MAC}
 
 \begin{LINUX}
-This will probably print out something like `/home/yourname'$\ldots$, so if your name is Jane Matthews, \code{getcwd()} might return `/home/jane' or `/home/janematthews', depending upon how your computer has been setup.
+%This will probably print out something like `/home/yourname'$\ldots$, so if your name is Jane Matthews, \code{getcwd()} might return `/home/jane' or `/home/janematthews', depending upon how your computer has been setup.
+Unter Linux wirst du etwas wie `/home/dein\_name' $\ldots$ zurückbekommen. Wenn du also Jana Thaler heißt, könnte die Ausgabe von \code{getcwd()} etwa `/home/jana' oder `/home/janathaler' ausgeben, je nachdem wie der Computer installiert wurde.
 \end{LINUX}
 
-Copy your image into that directory and then load it using the PhotoImage function (same as line 5). You then use the \code{create\_image} function on the canvas to display your image (line 6). If you've done all this correctly, you'll see something like figure~\ref{fig43}.
+%Copy your image into that directory and then load it using the PhotoImage function (same as line 5). You then use the \code{create\_image} function on the canvas to display your image (line 6). If you've done all this correctly, you'll see something like figure~\ref{fig43}.
+Kopiere nun das Bild ins Verzeichnis und lade es mit der PhotoImage Funktion (siehe Zeile 5). Dann benützt du die \code{create\_image} Funktion um das Bild auf der Leinwand zu befestigen. Das Ergebnis könnte wie in Abbildung~\ref{fig43} aussehen.
 
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=80mm]{images/figure43}
+%\end{center}
+%\caption{A photo image.}\label{fig43}
+%\end{figure}
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{images/figure43}
 \end{center}
-\caption{A photo image.}\label{fig43}
+\caption{Ein Photo auf der Leinwand.}\label{fig43}
 \end{figure}
 
-PhotoImage can load image files with the extensions .gif, .ppm and .pgm. If you want to load other types of images (there are lots of different ways you can create image files---for example, digital cameras usually store images with the extension .jpg), then you'll need to use an extension which adds that capability to Python. The Python Imaging Library (PIL)\footnote{The Python Imaging Library can be found at \href{http://www.pythonware.com/products/pil/index.htm}{http://www.pythonware.com/products/pil/index.htm}} adds the ability to load all kinds of images, as well as do things like expand and shrink, change image colours, reverse images and so on. However, installing and using the Python Imaging Library, is a bit beyond the scope of this book.
+%PhotoImage can load image files with the extensions .gif, .ppm and .pgm. If you want to load other types of images (there are lots of different ways you can create image files---for example, digital cameras usually store images with the extension .jpg), then you'll need to use an extension which adds that capability to Python. The Python Imaging Library (PIL)\footnote{The Python Imaging Library can be found at \href{http://www.pythonware.com/products/pil/index.htm}{http://www.pythonware.com/products/pil/index.htm}} adds the ability to load all kinds of images, as well as do things like expand and shrink, change image colours, reverse images and so on. However, installing and using the Python Imaging Library, is a bit beyond the scope of this book.
+Mit PhotoImage kannst du Dateien mit den Endungen .gif, .ppm und .pgm laden. Wenn du andere Bildformate laden willst (zum Beispiel speichern Digitalkameras meistens Bilder als .jpg), musst du zuerst eine Python Erweiterung laden. Die Python Bilder Bibliothek \footnote{Du findest die Python Bibliothek für Bilder unter \href{http://www.pythonware.com/products/pil/index.htm}{http://www.pythonware.com/products/pil/index.htm}} (Python Imaging Library auch PIL genannt) wäre so ein Beispiel.
 
-\section{Basic Animation}\index{modules!tkinter!basic animation}
 
-So far, we've seen how to do static drawing---that's pictures that don't move. What about animation? Animation is not necessarily \code{Tk}'s strong suit, but you can do the basics. For example, we can create a filled triangle and then make it move across the screen using the following code:
+%\section{Basic Animation}\index{modules!tkinter!basic animation}
+\section{Einfache Animationen}\index{Module!tkinter!Einfache Animationen}
 
+%So far, we've seen how to do static drawing---that's pictures that don't move. What about animation? Animation is not necessarily \code{Tk}'s strong suit, but you can do the basics. For example, we can create a filled triangle and then make it move across the screen using the following code:
+Bis jetzt haben wir immer statische Bilder---das sind Bilder, die sich nicht bewegen, gezeichnet. Was ist mit Animationen? \code{Tk} ist zwar nicht direkt darauf ausgelegt, aber für einfache kleine Sachen reicht es schon. Zum Beispiel können wir ein Dreieck füllen und dann über den Bildschirm wandern lassen:
+
+%\begin{Verbatim}[frame=single]
+%1.  >>> import time
+%2.  >>> from tkinter import *
+%3.  >>> tk = Tk()
+%4.  >>> canvas = Canvas(tk, width=400, height=400)
+%5.  >>> canvas.pack()
+%6.  >>> canvas.create_polygon(10, 10, 10, 60, 50, 35)
+%7.  1
+%8.  >>> for x in range(0, 60):
+%9.  ...     canvas.move(1, 5, 0)
+%10. ...     tk.update()
+%11. ...     time.sleep(0.05)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 1.  >>> import time
 2.  >>> from tkinter import *
 3.  >>> tk = Tk()
-4.  >>> canvas = Canvas(tk, width=400, height=400)
-5.  >>> canvas.pack()
-6.  >>> canvas.create_polygon(10, 10, 10, 60, 50, 35)
+4.  >>> leinwand = Canvas(tk, width=400, height=400)
+5.  >>> leinwand.pack()
+6.  >>> leinwand.create_polygon(10, 10, 10, 60, 50, 35)
 7.  1
-8.  >>> for x in range(0, 60):
-9.  ...     canvas.move(1, 5, 0)
+8.  >>> for x in range(0, 40):
+9.  ...     leinwand.move(1, 5, 0)
 10. ...     tk.update()
 11. ...     time.sleep(0.05)
 \end{Verbatim}
 
-The moment you press the Enter key after typing the last line, the triangle will start moving across the screen (you can see it half-way across in figure~\ref{fig44}).
+%The moment you press the Enter key after typing the last line, the triangle will start moving across the screen (you can see it half-way across in figure~\ref{fig44}).
+Wenn du nun nach dem letzten Befehl Enter drückst, wird sich das Dreieck über den Bildschirm bewegen (und dann nach 40 x 5 = 200 Pixeln etwa in der Mitte stehenbleiben wie in Abbildung~\ref{fig44}).
 
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=80mm]{images/figure44}
+%\end{center}
+%\caption{The triangle moving across the screen.}\label{fig44}
+%\end{figure}
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{images/figure44}
 \end{center}
-\caption{The triangle moving across the screen.}\label{fig44}
+\caption{Das Dreieck wandert über den Bildschirm.}\label{fig44}
 \end{figure}
 
 \par
-\emph{How does it work?}
+%\emph{How does it work?}
+\emph{Wie funktioniert das?}
 \par
-Lines 1 to 5 we've seen before---it's just the basic setup to display a canvas---and in line 6, we create the triangle (using the \code{create\_polygon} function), and in line 7 you can see the identifier (the number 1) that is returned by this function. In line 8, we setup a simple for-loop to count from 0 to 59.
+%Lines 1 to 5 we've seen before---it's just the basic setup to display a canvas---and in line 6, we create the triangle (using the \code{create\_polygon} function), and in line 7 you can see the identifier (the number 1) that is returned by this function. In line 8, we setup a simple for-loop to count from 0 to 59.
+Zeile 1 bis 5 haben wir schon öfters so verwendet---wir stellen die Leinwand in einer bestimmten Größe dar---in Zeile 6 wird das Dreieck gezeichnet (mit der \code{create\_polygon} Funktion, und in Zeile 7 siehst du die eindeutige Nummer des Dreiecks (hier die Zahl 1), unter der das Dreieck ansprechbar ist. In Zeile 8 zählten wir in einer for-Schleife von 0 bis 40.
 
-The block of lines (9 to 11) is the code to move the triangle. The \code{move} function on the canvas object will move any drawn object by adding values to the object's x and y coordinates. For example, in line 9 we move the object with id 1 (the identifier for the triangle) 5 pixels across and 0 pixels down. If we wanted to move the back again we might use canvas.move(1, -5, 0)\index{modules!tkinter!move}.
+%The block of lines (9 to 11) is the code to move the triangle. The \code{move} function on the canvas object will move any drawn object by adding values to the object's x and y coordinates. For example, in line 9 we move the object with id 1 (the identifier for the triangle) 5 pixels across and 0 pixels down. If we wanted to move the back again we might use canvas.move(1, -5, 0)\index{modules!tkinter!move}.
+Im Block der Zeilen 9 bis 11 wird das Dreieck bewegt. Die \code{move} Funktion bewegt ein definiertes Objekt indem es die x- und y-Koordinaten des Objektes verändert. In Zeile 9 bewegen wird das Objekt mit der Nummer 1 (also das Dreieck) um 5 Pixel nach rechts und 0 Pixel nach unten. Wenn wir wieder zurück nach links bewegen wollten, müssten wir \code{leinwand.move(1, -5, 0)}\index{Module!tkinter!move} verwenden.
 
-The function \code{update} on the \code{tk} object forces it to update (if we didn't use \code{update}, tkinter would wait until the loop had finished before moving the triangle, which means you wouldn't see it move). Finally line 11 tells Python to sleep for 1/20th of a second (0.05), before continuing. We can change this code, so the triangle moves diagonally down the screen, by calling \code{move(1, 5, 5)}.  First, close the canvas (by clicking on the X button on the window), then try this code:
+%The function \code{update} on the \code{tk} object forces it to update (if we didn't use \code{update}, tkinter would wait until the loop had finished before moving the triangle, which means you wouldn't see it move). Finally line 11 tells Python to sleep for 1/20th of a second (0.05), before continuing. We can change this code, so the triangle moves diagonally down the screen, by calling \code{move(1, 5, 5)}.  First, close the canvas (by clicking on the X button on the window), then try this code:
+Die Funktion \code{tk.update} zeichnet das Dreieck in jedem Durchlauf der Schleife an die neue Position. Ansonsten würden wir die Bewegung nicht sehen. Und zu guter letzt sagen wir Python in Zeile 11, dass Python 1/20 Sekunde (0.05) warten soll. Lass und den Code so verändern, dass sich das Dreieck schräg nach unten bewegt. Mach zuerst die Leinwand zu, indem du auf die X-Schaltfläche am oberen Eck klickst. Probiere danach diesen Code:
 
+%\begin{Verbatim}[frame=single]
+%>>> import time
+%>>> tk = Tk()
+%>>> canvas = Canvas(tk, width=400, height=400)
+%>>> canvas.pack()
+%>>> canvas.create_polygon(10, 10, 10, 60, 50, 35)
+%1
+%>>> for x in range(0, 60):
+%...     canvas.move(1, 5, 5)
+%...     tk.update()
+%...     time.sleep(0.05)
+%...
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> import time
 >>> tk = Tk()
->>> canvas = Canvas(tk, width=400, height=400)
->>> canvas.pack()
->>> canvas.create_polygon(10, 10, 10, 60, 50, 35)
+>>> leinwand = Canvas(tk, width=400, height=400)
+>>> leinwand.pack()
+>>> leinwand.create_polygon(10, 10, 10, 60, 50, 35)
 1
->>> for x in range(0, 60):
-...     canvas.move(1, 5, 5)
+>>> for x in range(0, 40):
+...     leinwand.move(1, 5, 5)
 ...     tk.update()
 ...     time.sleep(0.05)
 ...
 \end{Verbatim}
 
-Figure~\ref{fig45} shows the triangle part way down the screen. Move the triangle diagonally back up the screen to its starting position, by using -5, -5:
+%Figure~\ref{fig45} shows the triangle part way down the screen. Move the triangle diagonally back up the screen to its starting position, by using -5, -5:
+In Abbildung~\ref{fig45} zeigt dir das Ergebnis der Bewegung. Wenn du das Dreieck wieder diogonal zurückbewegen willst, kannst du -5, -5 eingeben:
 
+%\begin{Verbatim}[frame=single]
+%>>> import time
+%>>> for x in range(0, 60):
+%...     canvas.move(1, -5, -5)
+%...     tk.update()
+%...     time.sleep(0.05)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> import time
->>> for x in range(0, 60):
-...     canvas.move(1, -5, -5)
+>>> for x in range(0, 40):
+...     leinwand.move(1, -5, -5)
 ...     tk.update()
 ...     time.sleep(0.05)
 \end{Verbatim}
 
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=80mm]{images/figure45}
+%\end{center}
+%\caption{The triangle moving down the screen.}\label{fig45}
+%\end{figure}
 \begin{figure}
 \begin{center}
 \includegraphics[width=80mm]{images/figure45}
 \end{center}
-\caption{The triangle moving down the screen.}\label{fig45}
+\caption{Das Dreieck bewegt sich schräg nach unten.}\label{fig45}
 \end{figure}
 
-\section{Reacting to events$\ldots$}\index{modules!tkinter!events}
+%\section{Reacting to events$\ldots$}\index{modules!tkinter!events}
+\section{Reagiere auf Ereignisse$\ldots$}\index{Module!tkinter!events}
 
-We can also make the triangle react when someone hits a key, by using what are called \emph{event bindings}.  Events are things that occur while a program is running, such as someone moving the mouse, hitting a key, or even closing a window. You can setup \code{Tk} to look out for these events, and then do something in response. To begin handling events we need to start by creating a function. Suppose we want the triangle to move when the enter key is pressed? We can define a function to move the triangle:
+%We can also make the triangle react when someone hits a key, by using what are called \emph{event bindings}.  Events are things that occur while a program is running, such as someone moving the mouse, hitting a key, or even closing a window. You can setup \code{Tk} to look out for these events, and then do something in response. To begin handling events we need to start by creating a function. Suppose we want the triangle to move when the enter key is pressed? We can define a function to move the triangle:
+Wir können das Dreieck auch mit der Tastatur steuern indem wir sogenannte \emph{event bindings} verwenden. Ereignisse (engl. events) sind Dinge, die sich erreignen, während das Programm läuft. Also eine Mausbewegung oder ein Tastaturanschlag. Du kannst \code{Tk} so einstellen, dass es auf diese Ereignisse wartet und reagiert. Damit das also funktioniert, machen wir zuerst eine Funktion. Nehmen wir an, das Dreieck soll sich beim Drücken der Enter Taste bewegen. Also definieren wir eine Funktion um das Dreieck zu bewegen:
 
+%\begin{Verbatim}[frame=single]
+%>>> def movetriangle(event):
+%...     canvas.move(1, 5, 0)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> def movetriangle(event):
-...     canvas.move(1, 5, 0)
+>>> def bewege_dreieck(ereignis):
+...     leinwand.move(1, 5, 0)
 \end{Verbatim}
 
-The function needs to have a single parameter (event), which is used by Tk to send information to the function about what has happened.  We then tell Tk that this function should be used for a particular event, using the \code{bind\_all}\index{modules!tkinter!bind\_all} function on the canvas. The full code looks like this:
+%The function needs to have a single parameter (event), which is used by Tk to send information to the function about what has happened.  We then tell Tk that this function should be used for a particular event, using the \code{bind\_all}\index{modules!tkinter!bind\_all} function on the canvas. The full code looks like this:
+Diese Funktion benötigt einen Parameter (eregnis), über den Tk Information an die Funktion sendet, was genau passiert ist. Zusätzlich sagen wir Tk, das wenn das die Funktion immer bei einem bestimmten Ereignis aufgerufen wird, indem wir die \code{bind\_all}\index{Module!tkinter!bind\_all} Funktion mit der leinwand verbinden. Der Code schaut dann so aus:
 
+%\begin{Verbatim}[frame=single]
+%>>> from tkinter import *
+%>>> tk = Tk()
+%>>> canvas = Canvas(tk, width=400, height=400)
+%>>> canvas.pack()
+%>>> canvas.create_polygon(10, 10, 10, 60, 50, 35)
+%>>> def movetriangle(event):
+%...     canvas.move(1, 5, 0)
+%...
+%>>> canvas.bind_all('<KeyPress-Return>', movetriangle)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> from tkinter import *
 >>> tk = Tk()
->>> canvas = Canvas(tk, width=400, height=400)
->>> canvas.pack()
->>> canvas.create_polygon(10, 10, 10, 60, 50, 35)
->>> def movetriangle(event):
-...     canvas.move(1, 5, 0)
+>>> leinwand = Canvas(tk, width=400, height=400)
+>>> leinwand.pack()
+>>> leinwand.create_polygon(10, 10, 10, 60, 50, 35)
+>>> def bewege_dreieck(ereignis):
+...     leinwand.move(1, 5, 0)
 ...
->>> canvas.bind_all('<KeyPress-Return>', movetriangle)
+>>> leinwand.bind_all('<KeyPress-Return>', bewege_dreieck)
 \end{Verbatim}
 
-The first parameter in the \code{bind\_all} function describes the event which we want Tk to look out for. In this case, it's the event \code{<KeyPress-Return>} (which is a press of the enter key).  We tell Tk that the \code{movetriangle} function should be called when this key-press event occurs.  If you run this code, click on the Tk canvas with your mouse, and then try hitting the Enter (or Return) key on your keyboard.
+%The first parameter in the \code{bind\_all} function describes the event which we want Tk to look out for. In this case, it's the event \code{<KeyPress-Return>} (which is a press of the enter key).  We tell Tk that the \code{movetriangle} function should be called when this key-press event occurs.  If you run this code, click on the Tk canvas with your mouse, and then try hitting the Enter (or Return) key on your keyboard.
+Der erste Parameter von der \code{bind\_all} Funktion beschreibt die Ereignisse auf die Tk warten soll. In diesem Fall ist es das Ereignis \code{<KeyPress-Return>} (also das Drücken der Enter Taste). Dann sagen wir Tk dass nach dem Drücken der Enter Taste die Funktion \code{bewege\_dreieck} aufgerufen werden soll. Wenn du diesen Code ausführst, klicke in das Bild mit dem Dreieck und drücke die Enter Taste auf der Tastatur.
 
-How about changing the direction of the triangle depending upon different key presses, such as the arrow keys? First of all we change the \code{move} triangle function to the following:
+%How about changing the direction of the triangle depending upon different key presses, such as the arrow keys? First of all we change the \code{move} triangle function to the following:
+Wir könnten aber auch die Richtung der Bewegung mit den 4 Richtungstasten steuern. Zuerst ändern wir die \code{bewege\_dreieck} Funktion:
 
+%\begin{Verbatim}[frame=single]
+%>>> def movetriangle(event):
+%...     if event.keysym == 'Up':
+%...         canvas.move(1, 0, -3)
+%...     elif event.keysym == 'Down':
+%...         canvas.move(1, 0, 3)
+%...     elif event.keysym == 'Left':
+%...         canvas.move(1, -3, 0)
+%...     else:
+%...         canvas.move(1, 3, 0)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
->>> def movetriangle(event):
-...     if event.keysym == 'Up':
-...         canvas.move(1, 0, -3)
-...     elif event.keysym == 'Down':
-...         canvas.move(1, 0, 3)
-...     elif event.keysym == 'Left':
-...         canvas.move(1, -3, 0)
+>>> def bewege_dreieck(ereignis):
+...     if ereignis.keysym == 'Up':
+...         leinwand.move(1, 0, -3)
+...     elif ereignis.keysym == 'Down':
+...         leinwand.move(1, 0, 3)
+...     elif ereignis.keysym == 'Left':
+...         leinwand.move(1, -3, 0)
 ...     else:
-...         canvas.move(1, 3, 0)
+...         leinwand.move(1, 3, 0)
 \end{Verbatim}
 
-The event object that is passed to \code{movetriangle}, contains a number of \emph{properties}\footnote{Properties are named values, which describe something---for example, a property of the sky is that it's blue (sometimes), a property of a car is that it has wheels. In programming terms, a property has a name and a value.}.  One of these properties is \code{keysym}, which is a string holding the value of the actual key pressed.  If \code{keysym} contains the string `Up', we call \code{canvas.move} with the parameters (1, 0, -3); if it contains down we call with the parameters (1, 0, 3), and so on.  Remember that the first parameter is the identifying number for the shape drawn on the canvas, the second parameter is the value to add to the x (horizontal) coordinate, and the last parameter is the value to add to the y (vertical) coordinate. We then tell Tk that the \code{movetriangle} function should be used to handle events from 4 different keys (up, down, left and right).  So, the code now looks like this:
+%The event object that is passed to \code{movetriangle}, contains a number of \emph{properties}\footnote{Properties are named values, which describe something---for example, a property of the sky is that it's blue (sometimes), a property of a car is that it has wheels. In programming terms, a property has a name and a value.}.  One of these properties is \code{keysym}, which is a string holding the value of the actual key pressed.  If \code{keysym} contains the string `Up', we call \code{canvas.move} with the parameters (1, 0, -3); if it contains down we call with the parameters (1, 0, 3), and so on.  Remember that the first parameter is the identifying number for the shape drawn on the canvas, the second parameter is the value to add to the x (horizontal) coordinate, and the last parameter is the value to add to the y (vertical) coordinate. We then tell Tk that the \code{movetriangle} function should be used to handle events from 4 different keys (up, down, left and right).  So, the code now looks like this:
+Das Objekt welches von Tk an die Funktion \code{bewege\_dreieck} weitergegeben wird, enthält eine Anzahl von \emph{Eigenschaften}\footnote{Eigenschaften sind Werte, die etwas genauer beschreiben. Eine Eigenschaft von einem Auto ist, dass es Räder hat. Eine Eigenschaft hat in Python einen Namen und einen Wert.} Eine von diesen Eigenschaften it \code{keysym}, was ein String ist, in dem die aktuell gedrückte Taste verpackt ist. Wenn \code{keysym} den String `Up' enthält, rufen wir \code{bewege\_dreieck} mit den Parametern (1, 0, -3) auf; wenn es den Wert `Down' enthält, rufen wir die Funktion mit den Parameter (1, 0, 3) auf. Der erste Parameter ist immer die Nummer, die das Dreieck identifiziert, der zweite Parameter gibt an, wie weit nach rechts sich das Dreieck bewegen soll und der dritte Parameter gibt an, wie weit nach unten. Zum Schluss müssen wir Tk noch sagen auf alle 4 Tasten (links, rechts, oben, unten) zu reagieren. Also schaut der Code dann so aus:
 
+%\begin{Verbatim}[frame=single]
+%>>> from tkinter import *
+%>>> tk = Tk()
+%>>> canvas = Canvas(tk, width=400, height=400)
+%>>> canvas.pack()
+%>>> canvas.create_polygon(10, 10, 10, 60, 50, 35)
+%1
+%>>> def movetriangle(event):
+%...     if event.keysym == 'Up':
+%...         canvas.move(1, 0, -3)
+%...     elif event.keysym == 'Down':
+%...         canvas.move(1, 0, 3)
+%...     elif event.keysym == 'Left':
+%...         canvas.move(1, -3, 0)
+%...     else:
+%...         canvas.move(1, 3, 0)
+%...
+%>>> canvas.bind_all('<KeyPress-Up>', movetriangle)
+%>>> canvas.bind_all('<KeyPress-Down>', movetriangle)
+%>>> canvas.bind_all('<KeyPress-Left>', movetriangle)
+%>>> canvas.bind_all('<KeyPress-Right>', movetriangle)
+%\end{Verbatim}
 \begin{Verbatim}[frame=single]
 >>> from tkinter import *
 >>> tk = Tk()
->>> canvas = Canvas(tk, width=400, height=400)
->>> canvas.pack()
->>> canvas.create_polygon(10, 10, 10, 60, 50, 35)
+>>> leinwand = Canvas(tk, width=400, height=400)
+>>> leinwand.pack()
+>>> leinwand.create_polygon(10, 10, 10, 60, 50, 35)
 1
->>> def movetriangle(event):
-...     if event.keysym == 'Up':
-...         canvas.move(1, 0, -3)
-...     elif event.keysym == 'Down':
-...         canvas.move(1, 0, 3)
-...     elif event.keysym == 'Left':
-...         canvas.move(1, -3, 0)
+>>> def bewege_dreieck(ereignis):
+...     if ereignis.keysym == 'Up':
+...         leinwand.move(1, 0, -3)
+...     elif ereignis.keysym == 'Down':
+...         leinwand.move(1, 0, 3)
+...     elif ereignis.keysym == 'Left':
+...         leinwand.move(1, -3, 0)
 ...     else:
-...         canvas.move(1, 3, 0)
+...         leinwand.move(1, 3, 0)
 ...
->>> canvas.bind_all('<KeyPress-Up>', movetriangle)
->>> canvas.bind_all('<KeyPress-Down>', movetriangle)
->>> canvas.bind_all('<KeyPress-Left>', movetriangle)
->>> canvas.bind_all('<KeyPress-Right>', movetriangle)
+>>> leinwand.bind_all('<KeyPress-Up>', bewege_dreieck)
+>>> leinwand.bind_all('<KeyPress-Down>', bewege_dreieck)
+>>> leinwand.bind_all('<KeyPress-Left>', bewege_dreieck)
+>>> leinwand.bind_all('<KeyPress-Right>', bewege_dreieck)
 \end{Verbatim}
 
 \noindent
-With this example, the triangle now moves in the direction of the arrow key that you press.
+%With this example, the triangle now moves in the direction of the arrow key that you press.
+Mit diesem Codebeispiel bewegt sich das Dreieck nun in die Richtung der gedrückten Pfeiltaste.
 
 \newpage
