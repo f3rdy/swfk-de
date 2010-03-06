@@ -123,46 +123,48 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Hier geht das Dokument los
+% Hier geht das Dokument los
 \begin{document}
 
-%%% Titelbild, Umschlag
+%% Titelbild, Umschlag
 \include{frontmatter} 
 
 
-%\shorttableofcontents{Kapitel}{0}  % Nur die Kapitel
+\pagestyle{plain}
+\pagenumbering{roman}
+\tableofcontents
 
-%%%% Vorwort
-%\include{preface}
 
-%\pagestyle{headings}
-%\pagenumbering{arabic}
+%%%%\shorttableofcontents{Kapitel}{0}  % Nur die Kapitel, funktioniert nicht
 
-%%%% Kapitel
-%\include{ch0}
-%\include{ch1}
-%\include{ch2}
-%\include{ch3}
-%\include{ch4}
-%\include{ch5}
-%\include{ch6}
-%\include{ch7}
-%\include{ch8}
+%%% Vorwort
+\include{preface}
+
+\pagestyle{headings}
+\pagenumbering{arabic}
+
+%%% Kapitel
+\include{ch0}
+\include{ch1}
+\include{ch2}
+\include{ch3}
+\include{ch4}
+\include{ch5}
+\include{ch6}
+\include{ch7}
+\include{ch8}
 \include{ch9}
-%\include{ch10}
+\include{ch10}
 
-%%%% Anhang
-%\appendix
-%\include{appendixa}
-%\include{appendixb}
-%\include{appendixc}
-%\include{appendixd}
+%%% Anhang
+\appendix
+\include{appendixa}
+\include{appendixb}
+\include{appendixc}
+\include{appendixd}
 
-%%%% Stichwortverzeichnis
+%%% Stichwortverzeichnis
 \printindex
 
-
-%%%% genaues Inhaltsverzeichnis
-%\tableofcontents
 
 \end{document}
