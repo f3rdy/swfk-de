@@ -9,7 +9,7 @@
 \chapter{8 multipliziert mit 3,57 ergibt$\ldots$}\label{ch:8multipliedby3.57}
 
 %What is 8 multiplied by 3.57?  You'd have to use a calculator, wouldn't you?  Well perhaps you're extremely smart and can do multiplication of fractions in your head---but that's not the point.  You can also do the same thing with the Python console. Start up the console again (see Chapter~\ref{ch:notallsnakeswillsquishyou} for more information, if you've skipped ahead for some strange reason), and once you see the prompt, type 8$*$3.57 and press the Enter key:
-Was ergibt 8 mal 3,57?  Du müsstest einen Taschenrechner verwenden, oder? Oder du bist besonders gut und kannst Multiplikationen mit Kommastellen im Kopf rechnen---aber das ist nicht der Punkt. Du kannst auch die Python Konsole dafür verwenden. Starte wieder die Konsole (siehe Kapitel~\ref{ch:notallsnakeswillsquishyou} für genauere Infos, falls du es aus seltsamen Gründen übersprungen hast), und wenn du den Prompt siehst, tippst du 8 $*$ 3.57 ein und drückst die Enter-Taste:
+Was ergibt 8 mal 3,57?  Du müsstest einen Taschenrechner verwenden, oder? Oder du bist besonders gut im Kopfrechnen und kannst Multiplikationen mit Kommastellen im Kopf rechnen---aber das ist nicht der Punkt. Du kannst auch die Python Konsole dafür verwenden. Starte wieder die Konsole (siehe Kapitel~\ref{ch:notallsnakeswillsquishyou} für genauere Infos, falls du es aus seltsamen Gründen übersprungen hast), und wenn du den Prompt siehst, tippst du 8 $*$ 3.57 ein und drückst die Enter-Taste:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -29,7 +29,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 \end{Verbatim}
 
 %The star (*), or asterisk key (shift 8 on some keyboards), is used for multiplication\index{multiplication}, instead of the normal times symbol (\textsf{X}) that you use at school (using the star key is necessary, otherwise how would the computer know whether you meant the letter \emph{x} or the multiplication symbol \textsf{X} ?).  How about an equation that's a bit more useful?
-Die Sterntaste (*) wird anstelle des normalen Multiplikationszeichen\index{Operatoren!Multiplikation} \textsf{X} verwendet, welches du in der Schule verwendest. Die Sterntaste must du verwenden, damit der Computer weiß, ob du den Buchstaben \emph{x} oder das Multiplikationszeichen \textsf{X} meinst. Wie wäre es nun mit einer Formel, die etwas nützlicher ist?
+Die Sterntaste (*) wird anstelle des normalen Multiplikationszeichen\index{Operatoren!Multiplikation} \textsf{X} verwendet, welches du in der Schule verwendest. Die Sterntaste mußt du verwenden, damit der Computer weiß, ob du den Buchstaben \emph{x} oder das Multiplikationszeichen \textsf{X} meinst. Wie wäre es nun mit einer Rechnung, die etwas interessanter ist?
 
 %Suppose you do chores once a week, for which you get \$5 pocket money, and you have a paper round which you do 5 times a week and get \$30---how much money would you earn in a year?
 Nehmen wir an, du machst Hausarbeiten und bekommst 5 € Taschengeld dafür, trägst die Zeitung fünf mal die Woche aus und bekommst dafür 30 €---wie viel Geld würdest du in einem Jahr verdienen?
@@ -50,7 +50,7 @@ Wenn du gerade mit einem Taschenrecher 8 x 3.57 ausgerechnet hast, wird folgende
 
 \noindent
 %Why is Python different?  Is it broken?\\
-Warum ist Python manchmal verschieden? Ist es kaputt?\\
+Warum gibt Python manchmal ein anderes Ergebnis aus?\\
 
 \noindent
 %Actually, no. The reason can be found in the way floating point\index{floating point} (fractional numbers with a decimal place) numbers are handled by the computer.  It's a complicated and somewhat confusing problem for beginners, so it's best to just remember that when you're working with fractions (i.e. with a decimal place on a number), \emph{sometimes} the result won't be exactly what you were expecting. This is true for multiplication, division, addition or subtraction.
@@ -157,7 +157,7 @@ In Python würdest du die Division aber so notieren ``100 / 20''.
 \section{Verwendung von Klammern und die ``Reihenfolge der Operationen''}\index{Operatoren!Reihenfolge von Operatoren}
 
 %We use brackets in a programming language to control what is called ``Order of Operations''.  An operation is the use of an operator (one of those symbols in the table above).  There are more operators than those basic symbols, but for that simple list (addition, subtraction, multiplication and division), it's enough to know that multiplication and division both have a higher order than addition and subtraction.  Which means you do the multiplication or division part of an equation before you do the addition or subtraction part.  In the following equation, all the operators are addition (+), the numbers are added in order:
-Wir verwenden Klammern in Programmiersprachen um die ``Reihenfolge der Operationen'' zu bestimmen. Bei einer Operation verwendet man Operatoren (einen aus der Liste vorhin). Es gibt mehr Operatoren als in der kurzen Liste stehen, aber fürs Erste genügt zu wissen, dass Multiplikation und Division einen höheren Rang haben als Addition und Subtraktion. Das bedeutet, dass du in einer Rechnung zuerst den Teil mit der Multiplikation und Division berechnest und dann erst die Addition und Subtraktion. In der folgenden Formel kommen nur Additionen vor (+) und die Zahlen werden der Reihenfolge nach addiert:
+Wir verwenden Klammern in Programmiersprachen um die ``Reihenfolge der Operationen'' zu bestimmen. Bei einer Operation verwendet man Operatoren (einen aus der Liste von vorhin). Es gibt mehr Operatoren als in der kurzen Liste stehen, aber fürs Erste genügt zu wissen, dass Multiplikation und Division einen höheren Rang haben als Addition und Subtraktion. Das bedeutet, dass du in einer Rechnung zuerst den Teil mit der Multiplikation und Division berechnest und dann erst die Addition und Subtraktion. In der folgenden Formel kommen nur Additionen vor (+) und die Zahlen werden der Reihenfolge nach addiert:
 
 \begin{Verbatim}[frame=single]
 >>> print(5 + 30 + 20)
@@ -221,14 +221,14 @@ Ohne Klammern wird zuerst 30 mit 20 multipliziert, das Ergebnis durch 10 dividie
 \section{Es gibt nichts unbeständigeres als eine Variable}\index{Variablen}
 
 %A `variable' is a programming term used to describe a place to store things.  The `things' can be numbers, or text, or lists of numbers and text---and all sorts of other items too numerous to go into here.  For the moment, let's just think of a variable as something a bit like a mailbox.
-Eine `Variable' ist eine Programmierausdruck der einen Platz zum Speichern von Dingen bezeichnet. Diese `Dinge' können Nummern, Text, Listen von Zahlen oder auch eine Vielzahl von anderen Dingen sein. Eine Variable ist so etwas wie ein Briefkasten.
+Eine `Variable' ist ein Platz zum Speichern von Dingen. Diese `Dinge' können Nummern, Text, Listen von Zahlen oder auch eine Vielzahl von anderen Dingen sein. Eine Variable ist so etwas wie ein Briefkasten.
 
 \begin{center}
 \includegraphics*[width=76mm]{images/girlbubble}
 \end{center}
 
 %You can put things (such as a letter or a package) in a mailbox, just as you can put things (numbers, text, lists of numbers and text, etc, etc, etc) in a variable.  This mailbox idea is the way many programming languages work.  But not all.
-Du kannst verschiedene Dinge in den Briefkasten geben (wie ein Brief oder ein Paket) so wie man Dinge (Nummern, Text, Listen von Zahlen und so weiter, und so weiter) in einer Variable speichert. So wie dieser Briefkasten funktionieren viele Programmiersprachen. Aber nicht alle.
+Du kannst verschiedene Dinge in den Briefkasten werfen wie einen Brief oder ein Paket, so wie man Dinge (Nummern, Text, Listen von Zahlen und so weiter, und so weiter) in einer Variable speichert. So wie dieser Briefkasten funktionieren viele Programmiersprachen. Aber nicht alle.
 
 %In Python, variables are slightly different.  Rather than being a mailbox with things in it, a variable is more like a label which is stuck on the outside of the mailbox.  We can pull that label off and stick it on something else, or even tie the label (perhaps with a piece of string) to more than one thing. We create a variable by giving it a name, using an equals sign (=), then telling Python what we want that name to point to.  For example:
 In Python sind Variablen etwas verschieden. Eine Variable ist weniger ein Briefkasten sondern viel mehr die Beschriftung auf dem Briefkasten drauf. Du kannst die Beschriftung wegnehmen und woanders draufkleben oder sogar (mit der Hilfe von einem Faden) mit mehreren Dingen verbinden. Wir erzeugen eine Variable indem wir ihr einen Namen geben und das Gleichheitszeichen (=) verwenden. Damit sagen wir Python wohin der Name zeigen soll. Zum Beispiel:
@@ -258,7 +258,7 @@ Wir haben eben die Variable `Fritz' erzeugt und gesagt, dass sie auf die Zahl 10
 100
 \end{Verbatim}
 %We can also tell Python we want the variable \code{fred} to point at something else:
-Wir können Python auch sagen, dass die Variable \code{Franz} auf etwas anderes Zeigen soll:
+Wir können Python auch sagen, dass die Variable \code{Fritz} auf etwas anderes zeigen soll:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -344,7 +344,7 @@ Und du würdest sofort wissen, dass es sich um 200 Studenten handelt. Es ist nic
 %\end{verbatim}
 %\end{listing}
 \begin{Verbatim}[frame=single]
-das_ist_auch_eine_gueltige_variable_aber_vielleicht_nicht_so_nuetzlich
+das_ist_auch_eine_gueltige_variable_aber_vielleicht_nicht_so_praktisch
 \end{Verbatim}
 
 %\section{Using Variable}\index{Variables}
@@ -391,7 +391,7 @@ Somit haben wir eben die Variablen `Hausarbeit', `Zeitung\_austragen' und `Ausga
 \end{Verbatim}
 
 %Which gives the exact same answer.  What if you get \$2 more per week, for doing extra chores.  Change the `chores' variable to 7, then hit the up-arrow key ($\uparrow$) on your keyboard a couple of times, until the equation re-appears, and hit the Enter key:
-Es kommt das genau das gleiche raus. Wenn du nun 2 € mehr für die Hausarbeit bekommst, kannst du einfach die `Hausarbeit' Variable auf 7 setzen. Danach drückst du die `Pfeil nach oben Taste' ($\uparrow$) und wenn die Rechnung wieder erscheint, drückst du Enter.
+Es kommt genau das Gleiche raus. Wenn du nun 2 € mehr für die Hausarbeit bekommst, kannst du einfach die `Hausarbeit' Variable auf 7 setzen. Danach drückst du die `Pfeil nach oben Taste' ($\uparrow$) und wenn die Rechnung wieder erscheint, drückst du Enter.
 
 %\begin{listing}
 %\begin{verbatim}
@@ -442,7 +442,7 @@ Wenn du ein wenig aufpasst und die Seiten nicht nur flüchtig überfliegst, dann
 \emph{Aber vielleicht auch nicht.}
 
 %In which case, all you need to know, is that a string is just a bunch of letters and numbers and other symbols put together in some meaningful way. All the letters, and numbers, and symbols in this book could make up a string.  Your name could be a string.  So could your home address.  The first Python program we created in Chapter \ref{ch:notallsnakeswillsquishyou}, used a string: `Hello World'.
-In diesem Fall solltest du dir einfach merken, dass ein String eine Ansammlung von Buchstaben, Ziffern und anderen Zeichen ist, die irgendwie sinnvoll zusammenhängen. Alle diese Buchstaben, Ziffern und Symbole in diesem Buch könnten einen String ergeben. Dein Name könnte ein String sein. Oder auch deine Adresse. Das erste Python Programm, welches wir in Kapitel \ref{ch:notallsnakeswillsquishyou} geschrieben haben, verwendet den String `Hello World'.
+In diesem Fall solltest du dir einfach merken, dass ein String eine Ansammlung von Buchstaben, Ziffern und anderen Zeichen ist, die irgendwie sinnvoll zusammenhängen. Alle diese Buchstaben, Ziffern und Symbole in diesem Buch könnten einen String ergeben. Dein Name könnte ein String sein. Oder auch deine Adresse. Das erste Python Programm, welches wir in Kapitel \ref{ch:notallsnakeswillsquishyou} geschrieben haben, verwendet den String `Hallo Welt'.
 
 \par
 %In Python, we create a string by putting quotes around the text.  So we can take our useless \code{fred} variable, and put a string inside it like this:
@@ -459,7 +459,7 @@ In Python erzeugen wir einen String indem wir Anführungszeichen um den Text ang
 
 \noindent
 %And we can see what's inside the \code{fred} variable, by typing \code{print(fred)}:
-Und wir können nachschauen, was in der Variable \code{fred} gespeichert ist, indem wir \code{print(fred)} eintippen.
+Und wir können nachschauen, was in der Variable \code{Fritz} gespeichert ist, indem wir \code{print(Fritz)} eintippen.
 
 %\begin{listing}
 %\begin{verbatim}
@@ -511,7 +511,7 @@ SyntaxError: EOL while scanning string literal
 \end{Verbatim}
 
 %\index{multi-line string}We'll talk more about errors later, but for the moment, if you want more than one line of text, you can use 3 single quotes:
-\index{Strings!mehrzeilig}Wir werden die Fehler später noch genauer betrachten, aber wenn du fürs erste Strings mit mehreren Zeilen haben willst, kannst du 3 einfache Anführungsstriche verwenden:
+\index{Strings!mehrzeilig}Wir werden die Fehler später noch genauer betrachten, aber wenn du fürs Erste Strings mit mehreren Zeilen haben willst, kannst du 3 einfache Anführungsstriche verwenden:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -555,7 +555,7 @@ Hier ist eine interessante Frage: was ergibt 10 * 5 (10 mal 5)? Die Antwort ist 
 \emph{Gut, das war jetzt überhaupt nicht interessant.}
 
 %But what is 10 * 'a' (10 times the letter a)?  It might seem like a nonsensical question, but here's the answer from the World of Python:
-Aber was ist 10 * 'a' (10 mal der Buchstab a)? Das ist eine komische Frage, aber hier kommt die Antwort aus der Python Welt.
+Aber was ist 10 * 'a' (10 mal der Buchstabe a)? Das ist eine komische Frage, aber hier kommt die Antwort aus der Python Welt.
 
 \begin{Verbatim}[frame=single]
 >>> print(10 * 'a')
@@ -621,7 +621,7 @@ Im vorigen Beispiel haben wir 3 Variablen erzeugt (mein\_text, name1, name2). Di
 %\end{verbatim}
 %\end{listing}
 \begin{Verbatim}[frame=single]
->>> mein_text = 'Hallo %s and %s, wie geht es euch heute?'
+>>> mein_text = 'Hallo %s und %s, wie geht es euch heute?'
 >>> print(mein_text % (name1, name2))
 Hallo Romeo und Julia, wie geht es euch heute?
 \end{Verbatim}
@@ -763,7 +763,7 @@ Und sogar eine Liste von Listen:
 \end{Verbatim}
 
 %In the above example, a variable called `list1' is created with 3 letters, `list2' is created with a 3 numbers, and `mylist' is created using list1 and list2. Things can get rather confusing, rather quickly, if you start creating lists of lists of lists of lists$\ldots$ but luckily there's not usually much need for making things that complicated in Python. Still it is handy to know that you can store all sorts of items in a Python list.
-Im obigen Beispiel erzeugen wir eine Variable mit dem Namen `liste1' und speichern 3 Buchstaben darin. In `liste2' speichern wir 3 Zahlen. Die `meine\_liste' wird aus den Inhalten der Variablen `liste1' und `liste2' befüllt. Wenn man Listen von Listen erzeugt werden die Dinge schnell etwas verwirrend. Zum Glück braucht man das nicht oft. Praktisch zu wissen ist jedoch, dass man alle möglichen Inhalte in Python Listen speichern kann.
+Im obigen Beispiel erzeugen wir eine Variable mit dem Namen `liste1' und speichern 3 Buchstaben darin. In `liste2' speichern wir 3 Zahlen. Die `meine\_liste' wird aus den Inhalten der Variablen `liste1' und `liste2' befüllt. Wenn man Listen von Listen erzeugt, werden die Dinge schnell etwas verwirrend. Zum Glück braucht man das nicht oft. Praktisch zu wissen ist jedoch, dass man alle möglichen Inhalte in Python Listen speichern kann.
 
 \noindent
 %\emph{And not just your shopping.}
@@ -792,7 +792,7 @@ Wir können einen Eintrag der Liste austauschen, indem wir ihm einen Wert zuweis
 \subsection*{\color{BrickRed}Dinge hinzufügen...}\index{Listen!hinzufügen}
 
 %We can add items to a list by using a method called `append'.  A method is an action or command that tells Python that we want to do something.  We'll talk more about methods later, but for the moment, to add an item to our shopping list, we can do the following:
-Wir können aber auch Dinge an die Einkaufsliste dranhängen indem wir die Methode `append' benutzen. Eine Methode ist ein Kommando damit Python weiß was wir tun wollen. Wir kommen zu Methoden etwas später im Buch, aber zuerst schreiben wir noch ein Ding zur Einkaufliste dazu. Das geht so:
+Wir können aber auch Dinge an die Einkaufsliste dranhängen indem wir die Methode `append' benutzen. Eine Methode ist ein Kommando damit Python weiß was wir tun wollen. Wir kommen etwas später im Buch zu Methoden, aber zuerst schreiben wir noch ein Ding zur Einkaufliste dazu. Das geht so:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -816,7 +816,7 @@ Was die Liste schon um einiges verbessert hat.
 
 
 %We can remove items from a list by using the command `del' (short for delete).  For example, to remove the 6th item in the list (baking soda):
-Wir können auch Einträge von der Liste streichen in dem wir das Kommando `del' (welches eine Kurzform vom englischen delete ist und so viel heißt wie entfernen) verwenden.
+Wir können auch Einträge von der Liste streichen in dem wir das Kommando `del' (was eine Kurzform vom englischen delete ist und so viel heißt wie entfernen) verwenden.
 
 %\begin{listing}
 %\begin{verbatim}
@@ -895,7 +895,7 @@ Und du kannst auch eine Liste multiplizieren, wie damals einen String:
 
 \noindent
 %In the above example, multiplying list1 by five is another way of saying ``repeat list1 five times''. However, division (/) and subtraction (-) don't make sense when working with lists, so you'll get errors when trying the following examples:
-Im vorigen Beispiel wird die liste1 mit fünf multipliziert. Das ist ein anderer Weg ``Wiederhole Liste1 fünf mal''. Division (/) und Subtraktion (-) machen aber mit Listen keinen Sinn und du würdest einen Fehler wie diesen bekommen:
+Im vorigen Beispiel wird die liste1 mit fünf multipliziert. Das ist ein anderer Weg um Python zu sagen ``Wiederhole Liste1 fünf mal''. Division (/) und Subtraktion (-) machen aber mit Listen keinen Sinn und du würdest einen Fehler wie diesen bekommen:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -948,7 +948,7 @@ Wir haben eine Tupel schon früher erwähnt. So ein Tupel ist ein wenig wie eine
 \end{Verbatim}
 
 %The main difference is that, unlike lists, tuples can't change, once you've created them.  So if you try to replace a value like we did earlier with the list, you'll get another error message:
-Der Hauptunterschied zu Listen ist der, dass sich Tupel nach dem erstellen nicht mehr ändern können. Wenn du also einen Wert austauschen willst, so wie das bei Listen funktioniert, wirst du bei Tupel eine Fehlermeldung bekommen:
+Der Hauptunterschied zu Listen ist der, dass sich Tupel nach dem Erstellen nicht mehr ändern können. Wenn du also einen Wert austauschen willst, so wie das bei Listen funktioniert, wirst du bei Tupel eine Fehlermeldung bekommen:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -986,7 +986,7 @@ Zuerst erzeugen wir die Variable \code{meine\_variable} die auf das Tupel mit de
 \section{Probiere es aus}
 
 %\emph{In this chapter we saw how to calculate simple mathematical equations using the Python console.  We also saw how brackets can change the result of an equation, by controlling the order that operators are used.  We found out how to tell Python to remember values for later use---using variables---plus how Python uses `strings' for storing text, and lists and tuples, for handling more than one item.}
-\emph{In diesem Kapitel haben wir gesehen wie man einfache mathematische Gleichungen mit Hilfe der Python Konsole berechnet. Du hast auch gelernt wie die Verwendung von Klammern das Resultat der Rechnung beeinflusst in dem die Reihenfolge der Berechnung sich ändert. Du weißt jetzt wie man in Python Werte für späteren Zugriff speichern kann---mit der Verwendung von Variablen---und was `Strings', Listen und Tupel sind.}
+\emph{In diesem Kapitel haben wir gesehen wie man einfache mathematische Gleichungen mit Hilfe der Python Konsole berechnet. Du hast auch gelernt wie die Verwendung von Klammern das Resultat von Rechnungen beeinflusst in dem die Reihenfolge der Berechnung sich ändert. Du weißt jetzt wie man in Python Werte für späteren Zugriff speichern kann---mit der Verwendung von Variablen---und was `Strings', Listen und Tupel sind.}
 \par
 
 %\subsection*{Exercise 1}
@@ -997,11 +997,11 @@ Mache eine Liste von deinen Lieblingsspielsachen und nenne die Liste \code{spiel
 %\subsection*{Exercise 2}
 \subsection*{Übung 2}
 %If you have 3 boxes containing 25 chocolates, and 10 bags containing 32 sweets, how many sweets and chocolates do you have in total?  (Note: you can do this with one equation with the Python console)
-Du hast 3 Schachteln hast und in jeder sind 25 Schokoladen enthalten. du hast auch 10 Tüten mit jeweils 32 Süßigkeiten. Wie viele Schokoladen und Süßigkeiten hast du insgesamt? (Hinweis: das kannst diese Rechnung mit der Python Konsole durchführen)
+Du hast 3 Schachteln und in jeder sind 25 Schokoladen enthalten. Du hast auch 10 Tüten mit jeweils 32 Süßigkeiten. Wie viele Schokoladen und Süßigkeiten hast du insgesamt? (Hinweis: das kannst diese Rechnung mit der Python Konsole durchführen)
 
 %\subsection*{Exercise 3}
 \subsection*{Übung 3}
 %Create variables for your first and last name. Now create a string and use placeholders to add your name.
-Mache eine Variable für deinen Vorname und deinen Nachname. Erzeuge nun einen String und verwende Platzhalter um deinen Namen auszugeben.
+Mache eine Variable für deinen Vorname und eine Variable für deinen Nachnamen. Erzeuge nun einen String und verwende Platzhalter um deinen Namen auszugeben.
 
 \newpage

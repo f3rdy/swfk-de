@@ -9,7 +9,7 @@
 \chapter{Stelle eine Frage}\label{ch:howtoaskaquestion}
 
 %In programming terms, a question usually means we want to do either one thing, or another, depending upon the answer to the question.  This is called an \textbf{if-statement}\index{if-statement}.  For example:
-Wenn man vom Programmieren spricht, bedeuten Fragen meist entweder das Eine oder Andere zu tun, je nachdem wie die Antwort ist. Hier spricht man von einer \textbf{if-Bedingung}\index{if-Bedingung}. Zum Beispiel:
+Beim Programmieren stellt man Fragen, um je nach Antwort das Eine oder Andere zu tun. Dabei spricht man von einer \textbf{if-Bedingung}\index{if-Bedingung}. Zum Beispiel:
 
 %\begin{quotation}
 %How old are you?  If you're older than 20, you're too old!
@@ -74,7 +74,7 @@ $<$= & kleiner als oder gleich \\
 \end{center}
 
 %For example, if you are 10 years old, then the condition \code{your\_age == 10} would return True (yes), but if you are not 10, it would return False.  Remember: don't mix up the \textbf{two} equals symbols used in a condition (==), with the equals used in assigning values (=)---if you use a single = symbol in a \emph{condition}, you'll get an error message.
-Wenn du zum Beispiel 10 Jahre alt bist, dann würde die Bedingung \code{dein\_alter == 10} zum Beispiel wahr (true) zurückgeben, wenn du aber nicht 10 bist, dann würde falsch (false) zurückkommen. Pass auf dass du die \textbf{zwei} Gleichheitszeichen (==) nicht dem dem normalen einfachen Gleichheitszeichen (=) verwechselt. Wenn du nur ein = Zeichen in einer Bedingung verwendest, dann bekommst du einen Fehler.
+Wenn du zum Beispiel 10 Jahre alt bist, dann würde die Bedingung \code{dein\_alter == 10} zum Beispiel wahr (true) zurückgeben, wenn du aber nicht 10 bist, dann würde falsch (false) zurückkommen. Pass auf dass du die \textbf{zwei} Gleichheitszeichen (==) nicht mit dem normalen einfachen Gleichheitszeichen (=) verwechselt. Wenn du nur ein = Zeichen in einer Bedingung verwendest, dann bekommst du einen Fehler.
 \par
 %Assuming you set the variable \code{age} to your age, then if you are 12 years old, the condition$\ldots$
 Nehmen wir an, dass du die Variable \code{alter} auf dein Alter setzt und du 12 Jahre bist. Dann würde die Bedingung $\ldots$
@@ -89,10 +89,10 @@ alter > 10
 \end{Verbatim}
 
 %$\ldots$ would again return True.  If you are 8 years old, it would return False.  If you are 10 years old, it would also return False---because the condition is checking for greater than ($>$) 10, and not greater than or equal ($>$=) to 10.
-$\ldots$ Wahr (true) zurückgeben. Wenn du 8 Jahre wärst, dann käme Falsch (false) zurück. Wenn du genau 10 Jahre wärest, würde auch Falsch rauskommen---weil die Bedingung ja fragt ob du älter als ($>$) 10 und nicht ob du älter oder auch gleichalt ($>$=) als 10 bist.
+$\ldots$ Wahr (true) zurückgeben. Wenn du 8 Jahre wärst, dann würde Falsch (false) zurückkommen. Wenn du genau 10 Jahre wärest, würde auch Falsch rauskommen---weil die Bedingung ja fragt ob du älter als ($>$) 10 und nicht ob du älter oder auch gleichalt ($>$=) als 10 bist.
 
 %Let's try a few examples:
-Probieren wir es ein paar mal aus:
+Probieren wir es aus:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -134,7 +134,7 @@ Weil der Wert der Variable \code{alter} nicht größer als 10 ist, wird der Bloc
 \end{Verbatim}
 
 %If you try this example, then you should see the message got here printed to the console.  The same will happen for the next example:
-Wenn du das Beispiel von oben nun ausprobierst, solltest die Nachricht `dann kommmst du hier an' auf der Konsole erscheinen. (Nach der Zeile mit dem print Befehl zwei mal die Eingabetaste drücken kann helfen). Das gleiche wird auch beim nächsten Beispiel passieren:
+Wenn du das Beispiel von oben nun ausprobierst, sollte die Nachricht `dann kommmst du hier an' auf der Konsole erscheinen. (Nach der Zeile mit dem print Befehl zwei mal die Eingabetaste drücken kann helfen). Das gleiche wird auch beim nächsten Beispiel passieren:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -206,7 +206,7 @@ Auf Wiedersehen
 \section{Tu das$\ldots$ oder dies$\ldots$ oder jenes$\ldots$ oder!!!}
 
 %We can extend an if-statement even further using elif (short for else-if). For example, we can check if your age is 10, or if it's 11, or if it's 12 and so on:
-Wir können die if-Bedingung sogar weiter aufspalten, indem wir elif (Kurzform für else-if) verwenden. Wir könnten testen, ob dein Alter 10 ist, oder 11, oder 12 uns so weiter:
+Wir können die if-Bedingung sogar weiter aufspalten, indem wir elif (Kurzform für else-if) verwenden. Wir könnten testen, ob dein Alter 10 ist, oder 11, oder 12 und so weiter:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -242,7 +242,7 @@ Wir können die if-Bedingung sogar weiter aufspalten, indem wir elif (Kurzform f
 \end{Verbatim}
 
 %In the code above, line 2 checks whether the value of the age variable is equal to 10.  It's not, so it then jumps to line 4 to check whether the value of the \code{age} variable is equal to 11.  Again, it's not, so it jumps to line 6 to check whether the variable is equal to 12.  In this case it is, so Python moves to the block in line 7, and runs the print command.  (Hopefully you've also noticed that there are 5 groups in this code---lines 3, 5, 7, 9 and line 11)
-Im obigen Code überprüft die zweite Zeile, ob der Wert der Variable 10 entspricht. Wenn nicht springt Python zu Zeile 4 um zu überprüfen, ob der Wert der \code{alter} Variable 11 entspricht. Wenn es wieder nicht so ist, springt Python zu Zeile 6. Dort wird geschaut, ob die Variable den Wert 12 hat. In diesem Fall ist es so und deswegen kommt danach die Zeile 7 dran und der print Befehl wird ausgeführt. Wenn du den Code anschaust, erkennt du 5 Gruppen---Zeile 3, 5, 7, 9 und 11.
+Im obigen Code überprüft die zweite Zeile, ob der Wert der Variable 10 entspricht. Wenn nicht springt Python zu Zeile 4 um zu überprüfen, ob der Wert der \code{alter} Variable 11 entspricht. Wenn es wieder nicht so ist, springt Python zu Zeile 6. Dort wird geschaut, ob die Variable den Wert 12 hat. In diesem Fall ist es so und deswegen kommt danach die Zeile 7 dran und der print Befehl wird ausgeführt. Wenn du den Code anschaust, erkennst du 5 Gruppen---Zeile 3, 5, 7, 9 und 11.
 
 %\section{Combining conditions}\index{conditions!combining}
 \section{Bedingungen kombinieren}\index{Bedingung!kombinieren}
@@ -289,10 +289,10 @@ Hoffentlich erkennst du, dass wenn \textbf{beide} Bedingungen auf der ersten Zei
 \section{Nichts}\index{Nichts}
 
 %There is another sort of value, that can be assigned to a variable, that we didn't talk about in the previous chapter:  \textbf{Nothing}.
-Da gibt es noch einen Typ, den man Variablen zuordnen kann. Nämlich der Typ \textbf{nichts}.
+Da gibt es noch einen Datentyp, den man Variablen zuordnen kann. Nämlich der Typ \textbf{nichts}.
 \par
 %In the same way that numbers, strings and lists are all values that can be assigned to a variable, `nothing' is also a kind of value that can be assigned.  In Python, an empty value is referred to as \code{None} (in other programming languages, it is sometimes called null) and you can use it in the same way as other values:
-Variablen können Nummern, Strings und Listen sein. Aber man kann auch `nichts' einer Variable zuweisen. In Python bezeichnet man das als \code{None} (in anderen Programmiersprachen spricht man oft von null). Das zuweisen funktioniert wie bei anderen Typen:
+Variablen können Nummern, Strings und Listen sein. Aber man kann auch `nichts' einer Variable zuweisen. In Python bezeichnet man das als \code{None} (in anderen Programmiersprachen spricht man oft von null). Das Zuweisen funktioniert wie bei anderen Typen:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -341,7 +341,7 @@ Mit einer if-Bedingung könnten wir diese Variablen überprüfen um zu sehen, ob
 >>> if spieler1 is None or spieler2 is None or spieler3 is None:
 ...     print('Warte bitte bis alle Spieler zurückgekommen sind')
 ... else:
-...     print('Ihr habt %s gesammelt' % (spieler1 + spieler22 + spieler3))
+...     print('Ihr habt %s gesammelt' % (spieler1 + spieler2 + spieler3))
 \end{Verbatim}
 
 %The if-statement checks whether any of the variables have a value of \code{None}, and prints the first message if they do.  If each variable has a real value, then the second message is printed with the total money raised. If you try this code out with all variables set to None, you'll see the first message (don't forget to create the variables first or you'll get an error message):
@@ -392,7 +392,7 @@ Warte bitte bis alle Spieler zurückgekommen sind
 
 \noindent
 %Finally, once all variables are set, you'll see the message in the second block:
-Erst wenn alle Variablen Werte zugewiesen haben, kommt die Nachricht vom zweiten block:
+Erst wenn alle Variablen Werte zugewiesen bekommen haben, kommt die Nachricht vom zweiten Block:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -425,7 +425,7 @@ Ihr habt 900 gesammelt
 Was ist der Unterschied zwischen \code{10} und \code{'10'}?
 \par
 %Not much apart from the quotes, you might be thinking.  Well, from reading the earlier chapters, you know that the first is a number and the second is a string. This makes them differ more than you might expect.  Earlier we compared the value of a variable (age) to a number in an if-statement:
-Abgesehen von den Anführungsstrichen nicht viel könntest du denken.  Aber nachdem du die vorigen Kapitel gelesen hast, weißt du das das erste eine Zahl und das zweite ein String ist. Das macht sie verschiedener als du vielleicht denkst. Früher haben wir die Werte von einer Variable (alter) bei einer if-Bedingung mit einer Zahl verglichen.
+Abgesehen von den Anführungsstrichen nicht viel könntest du denken.  Aber nachdem du die vorigen Kapitel gelesen hast, weißt du das 10 eine Zahl und '10' ein String ist. Das macht sie verschiedener als du vielleicht denkst. Früher haben wir die Werte von einer Variable (alter) bei einer if-Bedingung mit einer Zahl verglichen.
 
 %\begin{listing}
 %\begin{verbatim}
