@@ -57,6 +57,7 @@
 \usepackage{scalefnt}
 \usepackage{fancybox} %für die runden Rahmen auf dem Cover
 \usepackage{eso-pic}  %fürs Cover \AddToShipoutPicture
+\usepackage[ngerman]{babel} %für deutsche Übersetzung hinzugefügt
 
 \setmainfont{Linux Libertine O}
 \setromanfont[Mapping=tex-text]{Linux Libertine O}
