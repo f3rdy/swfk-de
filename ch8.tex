@@ -22,7 +22,7 @@ Lass uns wieder das \code{turtle} (Schildkröte) Modul anschauen, das wir schon 
 \end{Verbatim}
 
 %We can now use basic functions to move the turtle around the canvas and draw simple shapes, but it's more interesting to use some of what we've already covered in the previous chapters.  For example, the code we used to create a square earlier was:
-Jetzt können wir wieder mit den bekannten Funktionen die Schildkröte auf der Leinwand rumbewegen und einfache Formen zeichnen. Oder aber wir verwenden ein Paar Dinge, die wir in den letzten Kapiteln gelernt haben. Bis jetzt hat unser Code um ein Rechteck zu zeichnen so ausgesehen:
+Jetzt können wir wieder mit den bekannten Funktionen die Schildkröte auf der Leinwand herumbewegen und einfache Formen zeichnen. Oder aber wir verwenden ein paar Dinge, die wir in den letzten Kapiteln gelernt haben. Bis jetzt hat unser Code um ein Rechteck zu zeichnen so ausgesehen:
 
 %\begin{Verbatim}[frame=single]
 %>>> t.forward(50)
@@ -61,7 +61,7 @@ Wenn wir das mit einer for-Schleife machen, könnte es so aussehen:
 \end{Verbatim}
 
 %This is certainly less typing, but for something a bit more interesting, try the following:
-Das ist schon viel weniger Tipparbeit und damit es interessanter aussieht probier das folgende:
+Das ist schon viel weniger Tipparbeit, und damit es interessanter aussieht, probier das Folgende:
 
 %\begin{Verbatim}[frame=single]
 %>>> t.reset()
@@ -79,7 +79,7 @@ Das ist schon viel weniger Tipparbeit und damit es interessanter aussieht probie
 \end{Verbatim}
 
 %This code produces the 8-point star shown in figure~\ref{fig20} (the turtle turns 225 degrees, each time it goes forward 100 pixels).
-Dieser Code erzeugt einen 8-zackigen Stern wie in Abbildung~\ref{fig20} (die Schildkröte dreht sich immer um 225 Grad, jedes mal wenn sie um 100 Pixel zurückgelegt hat).
+Dieser Code erzeugt einen 8-zackigen Stern wie in Abbildung~\ref{fig20} (die Schildkröte dreht sich immer um 225 Grad, jedes Mal wenn sie 100 Pixel zurückgelegt hat).
 
 \begin{figure}
 \begin{center}
@@ -91,7 +91,7 @@ Dieser Code erzeugt einen 8-zackigen Stern wie in Abbildung~\ref{fig20} (die Sch
 
 \noindent
 %With a different angle (175 degrees), and a longer loop (37 times), we can make a star with even more points (shown in figure~\ref{fig21}):
-Mit einem anderen Winkel (175 Grad), und einer längeren Schleife (37 mal), können wir einen Stern mit noch mehr Punkten (wie in Abbildung~\ref{fig21}) zeichnen:
+Mit einem anderen Winkel (175 Grad) und einer längeren Schleife (37 Mal), können wir einen Stern mit noch mehr Punkten (wie in Abbildung~\ref{fig21}) zeichnen:
 
 %\begin{Verbatim}[frame=single]
 %>>> t.reset()
@@ -113,12 +113,12 @@ Mit einem anderen Winkel (175 Grad), und einer längeren Schleife (37 mal), kön
 \includegraphics[width=72mm]{images/figure21}
 \end{center}
 %\caption{A star with a lot more points.}\label{fig21}
-\caption{Ein Stern mit vielen Spitzen.}\label{fig21}
+\caption{Ein Stern mit vielen spitzen Zacken.}\label{fig21}
 \end{figure}
 
 \noindent
 %Or how about the following code, which produces the spiral-like star figure~\ref{fig22}.
-Probier mal diesen Code aus, der ein spiralenähnlichen Stern wie in Abbildung~\ref{fig22} erzeugt:
+Probier mal diesen Code aus, der einen spiralenähnlichen Stern wie in Abbildung~\ref{fig22} erzeugt:
 
 %\begin{Verbatim}[frame=single]
 %>>> for x in range(1,20):
@@ -138,12 +138,12 @@ Probier mal diesen Code aus, der ein spiralenähnlichen Stern wie in Abbildung~\
 \includegraphics[width=72mm]{images/figure22}
 \end{center}
 %\caption{A star with a lot more points.}\label{fig22}
-\caption{Ein Stern mit viel mehr Spitzen.}\label{fig22}
+\caption{Ein Stern mit vielen Zacken.}\label{fig22}
 \end{figure}
 
 \noindent
 %Here's something a bit more complicated:
-Und hier etwas komplizierteres:
+Und hier etwas Komplizierteres:
 
 %\begin{Verbatim}[frame=single]
 %>>> t.reset()
@@ -171,7 +171,7 @@ Und hier etwas komplizierteres:
 Im obigen Code wird überprüft, ob \code{x} eine gerade Zahl enthält. Dafür verwenden wir den sogenannten modulo Operator (\%)\\ index{Operator!Modulo}, in der Zeile \code{if x \% 2 == 0:}.
 \par
 %x \% 2 is equal to zero, if the number in variable \code{x} can be divided by two, with nothing left over (no remainder)---if this doesn't make much sense, don't worry too much about it, just remember you can use `\code{x \% 2 == 0}' to check if a number in a variable is an even number.  The result of running this code is the 9-point star in figure~\ref{fig23}.
-x \% 2 ist dann Null, wenn die Nummer in der Variable \code{x} durch 2 dividiert werden kann, ohne das ein Rest übrigbleibt---wenn das keinen Sinn macht, mach dir keine Sorgen, Merke dir nur, dass du `\code{x \% 2 == 0}' dafür verwenden kannst, ob eine Nummer gerade ist. Wenn du den Code ausführst wirst du den 9-zackigen Stern von Abbildung~\ref{fig23} sehen.
+x \% 2 ist dann Null, wenn die Nummer in der Variable \code{x} durch 2 dividiert werden kann, ohne dass ein Rest übrigbleibt---wenn das keinen Sinn macht, mach dir keine Sorgen. Merke dir nur, dass du `\code{x \% 2 == 0}' verwenden kannst, um herauszufinden, ob eine Nummer gerade ist. Wenn du den Code ausführst, wirst du den 9-zackigen Stern von Abbildung~\ref{fig23} sehen.
 
 \begin{figure}
 \begin{center}
@@ -261,7 +261,7 @@ schildkroete.end_fill()
 
 \noindent
 %Which is a long, long, long, drawn-out way to draw the rather ugly and primitive-looking car in figure~\ref{fig24}. But it does demonstrate a couple of other turtle functions:  \code{color}, to change the colour of the pen being used by the turtle; \code{fill}, which fills in an area of the canvas; and \code{circle}, to draw a circle of a particular size.
-Was eine langsame Methode ist, ein ziemlich einfach ausschauendes Auto zu zeichnen (siehe Abbildung~\ref{fig24}. Aber es zeigt einige neue Funktionen, die die Schildkröte beherscht: \code{color}, um die Farbe des Zeichenstifts zu ändern, \code{fill} um einen Bereich mit Farbe zu füllen und \code{circle}, um einen Kreis mit einer bestimmten Größe zu zeichnen.
+Was eine langsame Methode ist, ein ziemlich einfach aussehendes Auto zu zeichnen (siehe Abbildung~\ref{fig24}. Aber es zeigt einige neue Funktionen, die die Schildkröte beherrscht: \code{color}, um die Farbe des Zeichenstifts zu ändern, \code{fill}, um einen Bereich mit Farbe zu füllen, und \code{circle}, um einen Kreis mit einer bestimmten Größe zu zeichnen.
 
 \begin{figure}
 \begin{center}
@@ -280,10 +280,10 @@ Die \code{color}\index{Schildkröte!Farbe} Funktion nimmt 3 Parameter.
 \emph{Warum rot, grün und blau?}
 \par
 %If you've ever played around with different colours of paint, you'll already know part of the answer to that question.  When you mix two different paint colours, you get another colour\footnote{Actually, the three \textbf{primary} paint colours are red, yellow and blue, and not the red/green/blue (RGB) on a computer.}.  When you mix blue and red together, you get purple$\ldots$ and when you mix too many colours together, you usually get a muddy brown. On a computer you can mix colours together in a similar fashion---put red and green together to get yellow---except with a computer, we are combining colours of light, not colours of paint.
-Wenn du schon mal mit verschiedenen Farben des Malkastens herumgespielt hast, dann kennst du die Antwort schon fast. Wenn du zwei verschiedene Farben mischt, bekommst du eine andere Farbe\footnote{Eigentlich sind die 3 \textbf{Grundfarben} beim Malen rot, gelb und blau, und nicht rot, grün und blau (RGB) wie auf dem Computer. Malen vs. Computer ist der Unterschied subtraktive vs. additive Farbmischung} Wenn du beim Malen die Blau und Rot zusammenmischt bekommst du ein Lila$\ldots$ und wenn du zu viele Farben mischt erhältst du für gewöhnlich einen bräunlichen Ton. Auf dem Computer kannst du Farben in einer ähnlichen Weise mischen---bringe rot und grün zusammen und es kommt gelb raus---beim Computer mischt du aber Lichter und beim Malen Farben.
+Wenn du schon mal mit verschiedenen Farben des Malkastens herumgespielt hast, dann kennst du die Antwort schon fast. Wenn du zwei verschiedene Farben mischt, bekommst du eine andere Farbe\footnote{Eigentlich sind die 3 \textbf{Grundfarben} beim Malen rot, gelb und blau, und nicht rot, grün und blau (RGB) wie auf dem Computer. Beim Malen gibt es das Prinzip der substraktiven Farbmischung und beim Computer ist es das Prinzip der additiven Farbmischung.}. Wenn du beim Malen Blau und Rot zusammenmischt, bekommst du Lila$\ldots$ und wenn du zu viele Farben mischt, erhältst du für gewöhnlich einen bräunlichen Ton. Auf dem Computer kannst du Farben in einer ähnlichen Weise mischen---bringe rot und grün zusammen, und es kommt gelb raus---beim Computer mischt du aber Lichter und beim Malen Farben.
 
 %Even though we're not using paint, for a moment, think about 3 large pots of paint.  One red, one green, and one blue.  Each pot is full, so we'll say that a full pot of paint has a value of 1 (or 100\%).  We then pour all of the red paint (100\%) into a vat, followed by all of the green paint (again 100\%).  After a bit of mixing, we get a yellow colour.  Let's draw a yellow circle using turtle:
-Denke dir drei große Farbtöpfe mit Farbe. Ein roter, ein grüner und ein blauer Farbtopf. Jede Topf ist voll und wir sagen sie hat den Wert 1 (oder 100\%). Dann leeren wir den ganzen roten (100\%) und grünen (100\%) Topf in einen leeren Behälter und mischen. Nach etwas rühren bekommen wir eine gelbe Farbe. Lass uns nun einen gelben Kreis mit unserer Schildkröte zeichnen:
+Denke dir drei große Farbtöpfe mit Farbe. Ein roter, ein grüner und ein blauer Farbtopf. Jeder Topf ist voll, und wir sagen die Farbe hat den Wert 1 (oder 100\%). Dann leeren wir den ganzen roten (100\%) und grünen (100\%) Topf in einen leeren Behälter und mischen. Nach etwas Rühren bekommen wir eine gelbe Farbe. Lass uns nun einen gelben Kreis mit unserer Schildkröte zeichnen:
 
 %\begin{Verbatim}[frame=single]
 %>>> t.color(1,1,0)
@@ -299,7 +299,7 @@ Denke dir drei große Farbtöpfe mit Farbe. Ein roter, ein grüner und ein blaue
 \end{Verbatim}
 
 %So in the above example, we call the color function with 100\% for red, 100\% for green and 0\% for blue (in other words, 1, 1, and 0).  To make it easier to experiment with different colours, let's turn that into a function:
-Im obigen Beispiel rufen wir die \code{color} Funktion mit 100\% für rot, 100\% für grün und 0\% für blau auf (oder in anderen Worten 1, 1, 0). Um das experimentieren mit anderen Farben einfacher zu machen, packen wir das alles in eine Funktion:
+Im obigen Beispiel rufen wir die \code{color}-Funktion mit 100\% für rot, 100\% für grün und 0\% für blau auf (oder in anderen Worten 1, 1, 0). Um das Experimentieren mit anderen Farben einfacher zu machen, packen wir das alles in eine Funktion:
 
 %\begin{Verbatim}[frame=single]
 %>>> def mycircle(red, green, blue):
@@ -320,7 +320,7 @@ Im obigen Beispiel rufen wir die \code{color} Funktion mit 100\% für rot, 100\%
 
 \noindent
 %We can draw a bright green circle, by using all of the green paint (1 or 100\%):
-Jetzt können wir einen hellen grünen Kreis zeichnen mit der ganzen grünen Farbe (1 oder 100\%) zeichnen:
+Jetzt können wir einen hellen grünen Kreis mit der ganzen grünen Farbe (1 oder 100\%) zeichnen:
 
 %\begin{Verbatim}[frame=single]
 %>>> mycircle(0, 1, 0)
@@ -331,7 +331,7 @@ Jetzt können wir einen hellen grünen Kreis zeichnen mit der ganzen grünen Far
 
 \noindent
 %And we can draw a darker green circle, by using only half the green paint (0.5 or 50\%):
-Und einen Kreis mit dunklerem Grün können wir zeichnen indem wir nur das halbe grün (0.5 oder 50\%) verwenden.
+Und einen Kreis mit dunklerem Grün können wir zeichnen, indem wir nur das halbe grün (0.5 oder 50\%) verwenden.
 
 %\begin{Verbatim}[frame=single]
 %>>> mycircle(0, 0.5, 0)
@@ -341,7 +341,7 @@ Und einen Kreis mit dunklerem Grün können wir zeichnen indem wir nur das halbe
 \end{Verbatim}
 
 %Here's where thinking about paint doesn't make much sense any more.  In the real world, if you've got a pot of green paint, it doesn't matter how much you use, it's still going to look the same.  With colours on a computer, because we're playing with light, using less of that colour generally results in a darker shade.  It's the same as if you shine a torch at night, you get a yellowish light---when the batteries start to run out and the light begins to fade, the yellow colour gets darker and darker.  Just to see for yourself, try drawing a circle with full red and half red (1 and 0.5), and full blue and half blue.
-Hier macht die Analogie mit dem Farbtopf nicht mehr viel Sinn. In der echten Welt ist es egal wieviel man von einer Farbe nimmt, sie schaut immer gleich aus. Da am Computer die Farben aus Licht bestehen macht es einen Unterschied. Weniger Licht (weniger Farbe) erscheint dunkler. Das ist das gleiche mit einer Taschenlampe in der Nacht. Wenn die Batterien immer schwächer werden, wird das Licht immer dunkler. Probiere es am Computer selber aus indem du einen roten Kreis (1, 0, 0) und einen `halbroten' (0.5, 0, 0) und einen blauen und `halbblauen' Kreis zeichnest.
+Hier macht die Analogie mit dem Farbtopf nicht mehr viel Sinn. In der echten Welt ist es egal, wieviel man von einer Farbe nimmt, sie schaut immer gleich aus. Da am Computer die Farben aus Licht bestehen, macht es einen Unterschied. Weniger Licht (weniger Farbe) erscheint dunkler. Das ist das Gleiche mit einer Taschenlampe in der Nacht. Wenn die Batterien immer schwächer werden, wird das Licht immer dunkler. Probiere es am Computer selber aus, indem du einen roten Kreis (1, 0, 0), einen `halbroten' (0.5, 0, 0), und einen blauen und `halbblauen' Kreis zeichnest.
 
 %\begin{Verbatim}[frame=single]
 %>>> mycircle(1, 0, 0)
@@ -360,7 +360,7 @@ Hier macht die Analogie mit dem Farbtopf nicht mehr viel Sinn. In der echten Wel
 
 \noindent
 %Different combinations of red, green and blue will produce a huge variety of colours.  You can get a gold colour by using 100\% of red, 85\% of green and no blue:
-Verschiedenen Kombinationen von rot, grün und blau erzeugen alle möglichen Farben. Eine goldene Farbe gibt es wenn du 100\% rot, 85\% grün und kein blau verwendest:
+Verschiedenen Kombinationen von rot, grün und blau erzeugen alle möglichen Farben. Eine goldene Farbe ergibt sich, wenn du 100\% rot, 85\% grün und kein blau verwendest:
 
 %\begin{Verbatim}[frame=single]
 %>>> mycircle(1, 0.85, 0)
@@ -382,7 +382,7 @@ Eine rosarote Farbe erreichst du mit 100\% rot, 70\% grün und 75\% blau:
 
 \noindent
 %And you get orange by combining 100\% red and 65\% green; and brown by combining 60\% red, 30\% green and 15\% blue:
-Orange wird die Mischung aus 100\% rot und 65\% grün; Braun ist 60\% rot, 30\% grün und 15\% blau:
+Orange ist eine Mischung aus 100\% rot und 65\% grün; Braun ist 60\% rot, 30\% grün und 15\% blau:
 
 %\begin{Verbatim}[frame=single]
 %>>> mycircle(1, 0.65, 0)
@@ -395,7 +395,7 @@ Orange wird die Mischung aus 100\% rot und 65\% grün; Braun ist 60\% rot, 30\% 
 
 \noindent
 %Don't forget, you can clear the canvas by using \code{t.clear()}.
-Die Leinwand kannst du wieder mit \code{schildkroete.clear()} löschen.
+Die Leinwand kannst du mit \code{schildkroete.clear()} wieder löschen.
 
 %\section{Darkness}\index{turtle!color!black}
 \section{Die Dunkelheit}\index{Schildkröte!Farbe!schwarz}
@@ -414,7 +414,7 @@ Das gleiche passiert mit den Farben am Computer. Kein Licht bedeutet keine Farbe
 \end{Verbatim}
 
 %Produces the black spot in figure~\ref{fig25}.
-Und das ergibt einen dicken schwarzen Punkt (wie in Abbildung~\ref{fig25}.
+Und das ergibt einen dicken, schwarzen Punkt (wie in Abbildung~\ref{fig25}).
 
 \begin{figure}
 \begin{center}
@@ -425,7 +425,7 @@ Und das ergibt einen dicken schwarzen Punkt (wie in Abbildung~\ref{fig25}.
 \end{figure}
 
 %The opposite is true; if you use 100\% red, 100\% green and 100\% blue, you get white.  Use the following code and the black circle will be wiped out again:
-Und auch das Gegenteil ist wahr; wenn du 100\% für rot, 100\% für grün und 100\% für blau verwendest, bekommst du weiß. Nimm den folgenden Code und der schwarze Kreis wird wieder ausgelöscht:
+Und auch das Gegenteil ist wahr: wenn du 100\% für rot, 100\% für grün und 100\% für blau verwendest, erhältst du weiß. Nimm den folgenden Code, und der schwarze Kreis wird wieder ausgelöscht:
 
 %\begin{Verbatim}[frame=single]
 %>>> mycircle(1,1,1)
@@ -489,7 +489,7 @@ Etwas flexibler wird das ganze, wenn wir eine Funktion erzeugen und die Größe 
 
 \noindent
 %We can test our function by calling:
-Du kannst die Funktion aufrufen, indem du folgendes eingibst:
+Du kannst die Funktion aufrufen, indem du Folgendes eingibst:
 
 %\begin{Verbatim}[frame=single]
 %>>> mysquare(50)
@@ -499,7 +499,7 @@ Du kannst die Funktion aufrufen, indem du folgendes eingibst:
 \end{Verbatim}
 
 %That's a start, but it's not quite perfect.  If you look at the code above, you'll see a pattern.  We repeat: \code{forward(size)} and \code{left(90)} four times.  That's a waste of typing.  So we can use a for-loop to do it for us (pretty much the same as we did earlier):
-Als Anfang schon ganz gut, aber noch nicht perfekt. Wenn du den Code oben anschaust, wirst du ein Muster erkennen. Wir wiederholen: \code{forward(groesse)} und \code{left(90)} vier Mal. Das ist unnötige Tipparbeit. Wie können eine for-Schleife verwenden die uns das erspart:
+Als Anfang schon ganz gut, aber noch nicht perfekt. Wenn du den Code oben anschaust, wirst du ein Muster erkennen. Wir wiederholen: \code{forward(groesse)} und \code{left(90)} vier Mal. Das ist unnötige Tipparbeit. Wir können eine for-Schleife verwenden, die uns das erspart:
 
 %\begin{Verbatim}[frame=single]
 %>>> def mysquare(size):
@@ -515,7 +515,7 @@ Als Anfang schon ganz gut, aber noch nicht perfekt. Wenn du den Code oben anscha
 \end{Verbatim}
 
 %That's a big improvement on the previous version. You can test the function with different sizes:
-Das ist eine große Verbesserung zur vorigen Version. Testen wir die Funktion mit verschiedenen Größen (verschiedenen Parametern):
+Das ist eine große Verbesserung im Vergleich zur vorigen Version. Testen wir die Funktion mit verschiedenen Größen (verschiedenen Parametern):
 
 %\begin{Verbatim}[frame=single]
 %>>> t.reset()
@@ -582,7 +582,7 @@ Du siehst immer noch das leere Quadrat bis du die Funktion `ausfüllen' wieder a
 
 \noindent
 %Which produces something like the square in figure~\ref{fig27}.
-Und nun erhälts du etwas wie Bild~\ref{fig27}.
+Und nun erhältst du etwas wie Bild~\ref{fig27}.
 
 \begin{figure}
 \begin{center}
@@ -593,7 +593,7 @@ Und nun erhälts du etwas wie Bild~\ref{fig27}.
 \end{figure}
 
 %How about changing the function so that we can either draw a filled or an unfilled square? We need another parameter, and slightly more complicated code, to do this:
-Sollen wir unsere Funktion ein wenig verändern, damit wir entweder befüllte oder unbefüllte Quadrate zeichen können? Dazu verwenden wir einen zusätzlichen Parameter, um das anzustellen:
+Sollen wir unsere Funktion ein wenig verändern, damit wir entweder befüllte oder unbefüllte Quadrate zeichen können? Um das zu erreichen, verwenden wir einen zusätzlichen Parameter:
 
 %\begin{Verbatim}[frame=single]
 %>>> def mysquare(size, filled):
@@ -619,7 +619,7 @@ Sollen wir unsere Funktion ein wenig verändern, damit wir entweder befüllte od
 \end{Verbatim}
 
 %The first two lines check to see if the value of parameter `filled' is set to True. If it is, then filling is turned on.  We then loop four times to draw the four sides of the rectangle, before checking a second time whether the parameter `filled' is True, and if so, turn filling off once again. You can now draw a filled square by calling:
-Die ersten zwei Zeilen überprüfen ob der Parameter `fuellen' auf True gesetzt wurde. Wenn ja wird \code{filling} ein geschalten. Dann wird die Schleife vier mal durchlaufen und danach wieder der Paramter `fuellen' überprüft. Wenn ja, dann wird \code{filling} wieder ausgeschalten. Ein gefülltes Quadrat kann also so gezeichnet werden:
+Die ersten zwei Zeilen überprüfen, ob der Parameter `fuellen' auf True gesetzt wurde. Wenn ja, wird \code{filling} eingeschalten. Dann wird die Schleife vier Mal durchlaufen und danach wieder der Paramter `fuellen' überprüft. Wenn der Wert True ist, dann wird \code{filling} wieder ausgeschalten. Ein gefülltes Quadrat kann also so gezeichnet werden:
 
 \begin{Verbatim}[frame=single]
 >>> mein_quadrat(50, True)
@@ -638,7 +638,7 @@ Und ein leeres Quadrat so:
 
 \noindent
 %Which causes our turtle to draw the image in figure~\ref{fig28}$\ldots$ $\ldots$which, now that I think about it, looks like a weird square eye.
-Als Ergebnis zeichnet die Schildkröte ein Bild wie in Abbildung~\ref{fig28}$\ldots$ $\ldots$ und das schaut ein wenig wie ein seltsames viereckiges Auge aus.
+Als Ergebnis zeichnet die Schildkröte ein Bild wie in Abbildung~\ref{fig28}$\ldots$ $\ldots$ und das schaut ein wenig wie ein seltsames, viereckiges Auge aus.
 
 \begin{figure}
 \begin{center}
@@ -648,7 +648,7 @@ Als Ergebnis zeichnet die Schildkröte ein Bild wie in Abbildung~\ref{fig28}$\ld
 \end{figure}
 
 %You can draw all sorts of shapes and fill them with colour. Let's turn the star, we drew earlier, into a function. The original code looked like this:
-Du kannst alle möglichen Formen zeichnen und sie mit Farbe füllen. Lass uns den Stern vor vorhin in eine Funktion verpacken. Der original Code hat so ausgeshen:
+Du kannst alle möglichen Formen zeichnen und sie mit Farbe füllen. Lass uns den Stern von vorhin in eine Funktion verpacken. Der Originalcode hat so ausgesehen:
 
 %\begin{Verbatim}[frame=single]
 %>>> for x in range(1,19):
@@ -670,7 +670,7 @@ Du kannst alle möglichen Formen zeichnen und sie mit Farbe füllen. Lass uns de
 \end{Verbatim}
 
 %We can use the same if-statements from the mysquare function, and use the size parameter in the \code{forward} function.
-Wie können die gleiche if-Bedingung von der \code{mein\_stern} Funktion nehmen und als Parameter die Größe übergeben:
+Wir können die gleiche if-Bedingung von der \code{mein\_stern} Funktion nehmen und als Parameter die Größe übergeben:
 
 %\begin{Verbatim}[frame=single]
 %1.  >>> def mystar(size, filled):
@@ -700,7 +700,7 @@ Wie können die gleiche if-Bedingung von der \code{mein\_stern} Funktion nehmen 
 \end{Verbatim}
 
 %In lines 2 and 3, we switch filling on, depending upon the value of the parameter \code{filled} (turn filling on, if the parameter is set to True, turn it off, if the parameter is set to False).  We do the reverse in lines 10 and 11 (switch filling back off again).  The other difference about this function is that we pass the size of the star in the parameter \code{size}, and use this value in line 5.
-In Zeile 2 und 3 wird abhängig vom Parameter \code{fuellen} die Funktion \code{begin\_fill()} ausgeführt oder nicht (bei `True' ist es an, bei `False' ist es aus). Das verkehrte machen wir bei Zeile 10 und 11. Zusätzlich übergeben wir die Größe als Parameter und verwenden sie in Zeile 5.
+In Zeile 2 und 3 wird abhängig vom Parameter \code{fuellen} die Funktion \code{begin\_fill()} ausgeführt oder nicht (bei `True' ist es an, bei `False' ist es aus). Das Gegenteil machen wir bei Zeile 10 und 11. Zusätzlich übergeben wir die Größe als Parameter und verwenden sie in Zeile 5.
 \par
 %Now let's set the colour to gold (you might remember that gold can be made by using 100\% of red, 85\% of green and no blue), and then call the function:
 Lass uns die Farbe nun auf Gold (besteht aus 100\% rot, 85\% grün und ohne blau) setzen und die Funktion nochmals aufrufen.
@@ -716,14 +716,14 @@ Lass uns die Farbe nun auf Gold (besteht aus 100\% rot, 85\% grün und ohne blau
 
 \noindent
 %The turtle should draw the gold star in figure~\ref{fig29}. We can add an outline for the star, by changing the colour again (this time to black) and redrawing the star with filling turned off
-Die Schildkröte sollte nun den goldenen Stern in figure~\ref{fig29} zeichnen. Für die schwarze Umrandung können wir die Farbe nochmals ändern (diesmal auf schwarz) und den Stern nochmals ohne zeichnen ohne ihn mit schwarz auszufüllen.
+Die Schildkröte sollte nun den goldenen Stern in figure~\ref{fig29} zeichnen. Für die schwarze Umrandung können wir die Farbe nochmals ändern (diesmal auf schwarz) und den Stern nochmals zeichnen ohne ihn mit schwarz auszufüllen.
 
 \begin{figure}
 \begin{center}
 \includegraphics[width=85mm]{images/figure29}
 \end{center}
 %\caption{A gold star.}\label{fig29}
-\caption{Ein goldener stern.}\label{fig29}
+\caption{Ein goldener Stern.}\label{fig29}
 \end{figure}
 
 %\begin{Verbatim}[frame=single]
@@ -744,14 +744,14 @@ Und so schaut der Stern nun aus wie Abbildung~\ref{fig30}.
 \includegraphics[width=85mm]{images/figure30}
 \end{center}
 %\caption{A star with an outline.}\label{fig30}
-\caption{Ein Stern mit Umriß.}\label{fig30}
+\caption{Ein Stern mit Umriss.}\label{fig30}
 \end{figure}
 
 %\section{Things to try}
 \section{Probiere es aus}
 
 %\emph{In this chapter we learned about the turtle module, using it to draw a few basic geometric shapes. We used functions in order to re-use some of our code, to make it easier to draw shapes with different colours.}
-\emph{In diesem Kapitel haben wir mehr über das \code{turtle} Modul gelern und es verwendet um geometrische Formen zu zeichnen. Funktionen wurden verwendet um Code wieder zu verwenden und es einfacher zu machen verschiedene Formen zu zeichnen und zu füllen.}
+\emph{In diesem Kapitel haben wir mehr über das \code{turtle} Modul gelernt und es verwendet um geometrische Formen zu zeichnen. Funktionen wurden verwendet um Code wieder zu verwenden und es einfacher zu machen verschiedene Formen zu zeichnen und zu füllen.}
 
 %\subsection*{Exercise 1}
 \subsection*{Übung 1}

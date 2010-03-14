@@ -49,8 +49,9 @@ username = Vorname Nachname <vorname.nachname@gmail.com>
 Offen
 -----------------------------------------------------------------
 
-Farben überprüfen
+Anleitung zum pdf mit xelatex bauen aktualisieren
 
+Farben überprüfen
 
 In Appendix A das Bild der Wunschliste anpassen
 In Appendix B eine Alternative für die in Python 3 weggefallene cmp Funktion finden
@@ -61,11 +62,9 @@ und dazuschreiben, welche Pakete auf Ubuntu installiert sein müssen
 in appendix d bei Übungen Links einfügen zu Übung 1, Übung 2 der einzelnen Kapitel
 
 
-
-swfk.tex.pre pdf Titel anpassen                            OK
 preface: Bilder vom Installieren in den Mac Abschnitt?
 
-
+als print on demand Buch veröffentlichen?
 
 -----------------------------------------------------------------
 Fertig
@@ -102,6 +101,7 @@ Build Prozess
     setup.py anpassen damit der Dateiname richtig          OK
     Stickwortverzeichnis mit makeindex dabei               OK
 
-
+Verschiedenes
+    swfk.tex.pre pdf Titel anpassen                        OK
 
 
