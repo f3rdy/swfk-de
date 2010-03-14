@@ -8,7 +8,7 @@
 \chapter{Antworten zu ``Probiere es aus''}\label{app:answers}
 
 %Here is where you can find the answers to the questions asked in each chapter in the section ``Things to try''.
-Hier kannst du die gesamten Antworten finden, die in jedem Kapitel unter `Dinge zum ausprobieren' gestellt werden.
+Hier kannst du die Antworten zu den Fragen finden, die in jedem Kapitel unter `Probiere es aus' gestellt wurden.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\subsection*{Chapter \ref{ch:8multipliedby3.57}}
@@ -29,10 +29,10 @@ Die Antwort zu Kapitel~\ref{ch:8multipliedby3.57}, \textbf{Übung 1} könnte so 
 %\end{listing}
 \begin{Verbatim}[frame=single]
 >>> spielsachen = [ 'Auto', 'Nintendo Wii', 'Computer', 'Fahrrad' ]
->>> speisen = [ 'Pfannkuchen', 'Schokolade', 'Pizza' ]
+>>> speisen = [ 'Pfannkuchen', 'Schokolade' ]
 >>> favouriten = spielsachen + speisen
 >>> print(favouriten)
-['Auto', 'Nintendo Wii', 'Computer', 'Fahrrad', 'Pfannkuchen', 'Schokolade', 'Pizza']
+['Auto', 'Nintendo Wii', 'Computer', 'Fahrrad', 'Pfannkuchen', 'Schokolade']
 \end{Verbatim}
 
 \noindent
@@ -56,7 +56,7 @@ Aber vielleicht hast du auch Klammern verwendet, nachdem wir das in  Kapitel \re
 
 \noindent
 %The answer is the same, because multiplication is done before addition.  In either equation, the two multiplication operations are performed first, and the results are added.  However, the second equation is possibly slightly better than the first---because it's immediately obvious to the reader which operations are performed first.  A less knowledgeable programmer (who doesn't know as much about the order of operations) might think that, in the first equation, you multiply 3 by 25, then add 10, then multiply the result by 32 (the answer to that is 2720---completely wrong).  With the brackets, it's a bit more obvious what gets calculated first.
-Das Ergebnis ist wieder das gleiche, weil die Multiplikation vor der Addition ausgeführt wird. In jeder Formel werden die zwei Multiplikationen zuerst ausgeführt und dann addiert. Aber die zweite Formel ist etwas besser als die erste---weil der Leser sofort erkennt, welche Teile zuerst berechnet werden. Jemand, der sich mit der Reihenfolge der Operatoren nicht so gut auskennt, könnte ansonsten meinen, dass in der ersten Formel 3 mit 25 multipliziert wird, dann 10 dazugezählt und das Ergebnis mit 32 multipliziert wird (das Ergebnis wäre dann 2720 und das wäre völlig falsch). Mit den Klammern wird es etwas klarer, was zuerst berechnet wird.
+Das Ergebnis ist wieder das gleiche, weil die Multiplikation vor der Addition ausgeführt wird. In jeder Formel werden die zwei Multiplikationen zuerst ausgeführt und dann addiert. Aber die zweite Formel ist etwas besser als die Erste---weil der Leser sofort erkennt, welche Teile zuerst berechnet werden. Jemand, der sich mit der Reihenfolge der Operatoren nicht so gut auskennt, könnte ansonsten meinen, dass in der ersten Formel 3 mit 25 multipliziert wird, dann 10 dazugezählt und das Ergebnis mit 32 multipliziert wird (das Ergebnis wäre dann 2720 und das wäre völlig falsch). Mit den Klammern wird es etwas klarer, was zuerst berechnet wird.
 
 \noindent
 %3.  The answer to \textbf{Exercise 3} will be something like the following:
@@ -209,7 +209,7 @@ Hallo 0
 
 \noindent
 %The reason it stops after the first print is that during the first run of the loop, the value of the variable \code{x} is zero.  Since zero is less than nine, the break statement stops the loop from running any further.
-Der Grund, warum nur einmal etwas ausgegeben wird ist folgender: die Variable \code{x} ist am Anfang 0. Da 0 weniger als 9 ist, wird der break Befehl ausgeführt und beendet die Schleife.
+Der Grund, warum nur einmal etwas ausgegeben wird, ist folgender: die Variable \code{x} ist am Anfang 0. Da 0 weniger als 9 ist, wird der break Befehl ausgeführt und beendet die Schleife.
 
 \noindent
 %2. To figure out how much money you get when you are paid 3\% interest, you need to multiply the number by 0.03.  To begin with we should create a variable and point it at the amount of our savings:
@@ -286,7 +286,7 @@ Die Zinsen für das 10 Jahr sind 3.91431955149
 %In the first line we create a for-loop using the variable \code{year} and the function \code{range} to count from 1 to 10.  The second line calculates the interest, multiplying the value in variable \code{amount} by 0.03.  The next line is the print statement---which uses place holders (\code{\%s}) to include the values for \code{year} and \code{interest}.  Finally in the last line, we add the interest back into the amount.
 In der ersten Zeile erzeugen wir eine for-Schleife mit der \code{jahr} Variable und der \code{range} Funktion, die von 1 bis 10 zählt. Die zweite Zeile berechnet die Zinsen, indem die Variable \code{geldsumme} mit 0.03 multipliziert wird. In der nächsten Zeile kommt die print Funktion mit allen Platzhaltern (\code{\%s}) damit die Werte von den Variablen \code{jahr} und \code{zinsen} eingefügt werden.
 %All the decimal places---the numbers after the period (.) in the print lines---are a bit confusing, but you can tell that the amount of interest each year increases a little bit as you add the interest.
-Die vielen Nachkommastellen sind vielleicht verwirrend. Aber du erkennst, wie du jedes Jahr ein wenig mehr Zinsen bekommst, da sie Geldsumme steigt.
+Die vielen Nachkommastellen sind vielleicht verwirrend. Aber du erkennst, wie du jedes Jahr ein wenig mehr Zinsen bekommst, da die Geldsumme steigt.
 %The code might be a bit more helpful if we also add the total saved each year:
 Im nachfolgenden Code geben wir noch die Geldmenge dazu, damit du einen besseren Überblick bekommst.
 
@@ -337,7 +337,7 @@ Zinsen für 130.477318383 Euro im 10 Jahr sind 3.91431955149
 \noindent
 %1. Turning the for-loop into a function is actually quite easy.  The function will look something like this:
 \subsubsection{Lösung zu Kapitel~\ref{ch:sortoflikerecycling}, Übung 1}
-Das Umwandelnt von einer for-Schleife in eine Funktion ist recht einfach. Die Funktion wird ungefähr so ausschauen:
+Das Umwandeln von einer for-Schleife in eine Funktion ist recht einfach. Die Funktion wird ungefähr so ausschauen:
 
 %\begin{Verbatim}[frame=single]
 %>>> def calculate_interest(amount, rate):
@@ -564,7 +564,7 @@ schildkroete = turtle.Pen()
 
 \noindent
 %You can see from that code that we tell the turtle to move forward 50 pixels, then turn right 45 degrees.  We do this 8 times.  Which is a lot of time.  The easier way to draw an octagon is the following code (which produces the octagon in figure~\ref{fig48}):
-Wie du sehen kannst, sagen wir der Schildkröte, dass sie sich 50 Pixel nach vorne bewegen soll und dann 45 Grad nach rechts drehen. Wir machen das ganze 8 mal. Was ziemlich oft ist. Die kurzte Variante ist folgende (die das folgende Achteck in Bild~\ref{fig48} erzeugt):
+Wie du sehen kannst, sagen wir der Schildkröte, dass sie sich 50 Pixel nach vorne bewegen soll und dann 45 Grad nach rechts drehen. Wir machen das ganze 8 mal. Was ziemlich oft ist. Die kurze Variante ist Folgende (die das folgende Achteck in Abbildung~\ref{fig48} erzeugt):
 
 %\begin{Verbatim}[frame=single]
 %>>> for x in range(0,8):
@@ -588,7 +588,7 @@ Wie du sehen kannst, sagen wir der Schildkröte, dass sie sich 50 Pixel nach vor
 \noindent
 %2.  If you take another look at the other functions in Chapter~\ref{ch:turtlesgalore}, you'll already see how to create a filled shape. We can convert the octagon code into a function that takes a colour, but we'll also want to reuse the hexcolour function
 \subsubsection{Lösung zu Kapitel~\ref{ch:turtlesgalore}, Übung 2}
-Wenn du dich nochmals in Kapitel~\ref{ch:turtlesgalore} schlau machst, findest du die Funktion, die nötig ist, um die Formen mit Farbe zu füllen. Ändern wir die \code{achteck} Funktion, damit wir gleich die Farbe mitgeben können.
+Wenn du dich nochmals in Kapitel~\ref{ch:turtlesgalore} schlau machst, findest du die Funktion, die nötig ist, um die Formen mit Farbe zu füllen. Ändern wir die \code{achteck}-Funktion, damit wir gleich die Farbe mitgeben können.
 
 %\begin{Verbatim}[frame=single]
 %>>> def octagon(red, green, blue):
@@ -610,7 +610,7 @@ Wenn du dich nochmals in Kapitel~\ref{ch:turtlesgalore} schlau machst, findest d
 \end{Verbatim}
 
 %We set the colour, then turn filling on.  Then we run the for loop to draw the octagon, finally we switch filling back off again to fill in the shape. How about a blue octagon (see figure~\ref{fig49}):
-In der Funktion setzen wir die Farbe und schalten dann `ausfüllen' ein. Wir zeichnen danach das Achteck und schalten `ausfüllen' aus, um das Achteck zu füllen. Für ein blaues Achteck (siehe Bild~\ref{fig49}) geben wir folgendes ein:
+In der Funktion setzen wir die Farbe und schalten dann `ausfüllen' ein. Wir zeichnen danach das Achteck und schalten `ausfüllen' aus, um das Achteck zu füllen. Für ein blaues Achteck (siehe Bild~\ref{fig49}) geben wir Folgendes ein:
 
 %\begin{Verbatim}[frame=single]
 %>>> octagon(0, 0, 1)
