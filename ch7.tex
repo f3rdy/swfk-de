@@ -13,7 +13,7 @@ Wahrscheinlich weißt du schon, was eine Datei ist.
 \par
 \noindent
 %If your parents have a home office, chances are they've got a file cabinet of some sort.  Various important papers (mostly boring adult stuff) are stored in those cabinets, usually in cardboard folders labelled with letters of the alphabet, or months of the year. Files on a computer are rather similar to those cardboard folders. They have labels (the name of the file), and are used to store important information. The drawers on a file cabinet, which might be used to organise paperwork so they are easier to find, are similar to directories (or folders) on a computer.
-Wenn deine Eltern ein Büro zu Hause haben, ist sicher irgendwo auch ein Aktenschrank zu finden. Da sind verschiedene wichtige Zettel drin (meist ziemlich langweilige). Die Zettel sind sicher in verschiedenen Mappen einsortiert und die Mappen (Aktenordner) sind vermutlich mit Buchstaben oder Zahlen beschriftet und nach dem Alphabet sortiert. Dateien auf dem Computer sind zu diesen Aktenordnern recht ähnlich. Die Dateien sind auch beschriftet (entspricht dem Namen der Datei) und sie speichern wichtige Informationen. Die Aktenordner um die Zettel zu sortieren, entsprechen den Verzeichnissen (oder auch Ordner genannt) auf dem Computer.
+Wenn deine Eltern ein Büro zu Hause haben, ist sicher irgendwo auch ein Aktenschrank zu finden. Da sind verschiedene wichtige Zettel drin (meist ziemlich langweilige). Die Zettel sind sicher in verschiedenen Mappen einsortiert und die Mappen (Aktenordner) sind vermutlich mit Buchstaben oder Zahlen beschriftet und nach dem Alphabet sortiert. Dateien auf dem Computer sind diesen Aktenordnern recht ähnlich. Die Dateien sind auch beschriftet (entspricht dem Namen der Datei), und sie speichern wichtige Informationen. Die Aktenordner um die Zettel zu sortieren, entsprechen den Verzeichnissen (oder auch Ordner genannt) im Computer.
 \par
 %We've already created a file object, using Python, in the previous chapter.  The example looked like this:
 Im vorigen Kapitel haben wir schon eine Datei mit Python erstellt. Das Beispiel hat so ausgesehen:
@@ -50,8 +50,8 @@ Im vorigen Kapitel haben wir schon eine Datei mit Python erstellt. Das Beispiel 
 Falls du einen Fehler wie
 [Errno 2] No such file or directory: 'Desktop/test.txt' bekommst,
 dann öffne die Python Konsole wieder aus dem Home Verzeichnis
-heraus, oder gib den absoluten Pfad zur Datei an
-wie beispielsweise /Users/benutzer/Desktop/text.txt
+heraus, oder gib den absoluten Pfad zur Datei an wie
+beispielsweise /Users/benutzer/Desktop/text.txt
 \end{Verbatim}
 
 \end{MAC}
@@ -80,7 +80,7 @@ wie beispielsweise /home/benutzer/Desktop/text.txt
 \end{LINUX}
 
 %A file object doesn't just have the function \code{read}\index{functions!file!read}. After all, file cabinets wouldn't be very useful if you could only open a drawer and take papers out, but could never put them back in. We can create a new, empty file, by passing another parameter when we call the \code{file} function:
-Mit dem Datei Objekt in Python kannst du mehr machen als nur \code{lesen}\index{Funktionen!Datei!lesen}. Aktenschränke wären auch nicht besonders sinnvoll, wenn du nur Dinge rausnehmen, aber nicht mehr zurückbringen kannst. Wie können eine neue leere Datei erstellen, indem wir andere Parameter der Python Datei Funktion mitgeben.
+Mit dem Datei Objekt in Python kannst du mehr machen als nur \code{lesen}\index{Funktionen!Datei!lesen}. Aktenschränke wären auch nicht besonders sinnvoll, wenn du nur Dinge rausnehmen, aber nicht mehr zurückbringen kannst. Wir können eine neue leere Datei erstellen, indem wir andere Parameter der Python Datei Funktion mitgeben.
 
 %\begin{listing}
 %\begin{verbatim}
@@ -92,7 +92,7 @@ Mit dem Datei Objekt in Python kannst du mehr machen als nur \code{lesen}\index{
 \end{Verbatim}
 
 %'w' is the way we tell Python we want to write to the file object, and not read from it.  We can now add information to the file using the function \code{write}\index{functions!file!write}.
-Mit dem Parameter \textbf{w} (kommt vom englischen write) sagen wir Python, dass wir auch in die Datei schreiben wollen. Mit der Funktion \code{write}\index{Funktionen!Datei!schreiben} können wir nun Information in die Datei schreiben.
+Mit dem Parameter \textbf{w} (kommt vom englischen write) sagen wir Python, dass wir in die Datei auch schreiben wollen. Mit der Funktion \code{write}\index{Funktionen!Datei!schreiben} können wir nun Information in die Datei schreiben.
 
 %\begin{listing}
 %\begin{verbatim}
@@ -106,7 +106,7 @@ Mit dem Parameter \textbf{w} (kommt vom englischen write) sagen wir Python, dass
 \end{Verbatim}
 
 %Then we need to tell Python when we're finished with the file, and don't want to write to it any more---we use the function \code{close}\index{functions!file!close} to do this.
-Wenn wir fertig mit schreiben sind, müssen wir es Python sagen und Python macht dann die Datei zu---wir verwenden dazu die Funktion \code{close}\index{Funktionen!Datei!schließen}.
+Wenn wir fertig mit schreiben sind, müssen wir es Python sagen, und Python macht dann die Datei zu---wir verwenden dazu die Funktion \code{close}\index{Funktionen!Datei!schließen}.
 
 %\begin{listing}
 %\begin{verbatim}
