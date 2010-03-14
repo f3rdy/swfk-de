@@ -9,13 +9,13 @@
 \chapter{Ein Paar Python Module}\label{app:afewpythonmodules}\index{Module}
 
 %Python has a large number of modules available for doing all sorts of things.  If you want to read about them, you can look at the Python documentation at the following address: \href{http://docs.python.org/modindex.html}{docs.python.org/modindex.html}, however, a few of the more useful modules are explained below.  A warning if you do decide to look at the Python documentation---the list of modules is very long, and some of them are quite complicated.
-Für Python gibt es eine große Menge von verfügbaren Modulen, die viele nützliche Dinge abdecken. Wenn du Details dazu nachlesen willst, bist du auf \href{http://docs.python.org/3.1/modindex.html} richtig. Diese Liste ist sehr lang und einige der Module sind ziemlich kompliziert. Ein Paar der gebräuchlichsten werden aber gleich hier erklärt. 
+Für Python gibt es eine große Menge von verfügbaren Modulen, die viele nützliche Dinge tun können. Wenn du Details dazu nachlesen willst, bist du auf \href{http://docs.python.org/3.1/modindex.html}{http://docs.python.org/3.1/modindex.html} richtig. Diese Liste ist sehr lang und einige der Module sind auch kompliziert. Aber ein Paar der gebräuchlichsten werden gleich hier erklärt. 
 
 %\subsection*{The `random' module}\index{modules!random}
 \subsection*{Das `random' Modul}\index{Module!random}
 
 %If you've ever played the game where you ask someone to guess a number between 1 and 100, you'll know what to do with the random module.  Random contains a number of functions useful for coming up with$\ldots$ random numbers. It's kind of like asking the computer to pick a number. The random module contains a number of functions, but the most useful are \code{randint}\index{modules!random!randint}, \code{choice} and \code{shuffle}. The first function, \code{random},  picks a random number between a start and end number (in other words, between 1 and 100, or between 100 and 1000, or between 1000 and 5000, and so on).  For example:
-Wenn du jemals das Zahlen Rate Spiel gespielt hast, bei dem der Mitspieler eine Zahl zwischen 1 und 100 erraten muss, dann wirst du das `random' Modul gut verwenden können. In diesem Modul sind viele Funktionen verpackt, die mit zufälligen Zahlen zurück kommen. Ein wenig so, wie wenn du den Computer nach einer Zahl fragen würdest. Die interessantesten Funktionen im `random' Modul sind \code{randint}\index{Module!random!randint}, \code{choice} und \code{shuffle}. Die erste Funktion, \code{random} pickt eine Zahl zwischen der Start- und Endnummer (zwischen 1 und 100, 100 und 1000, oder 1000 und 5000, und so weiter). Zum Beispiel:
+Wenn du jemals das Zahlen-Rate-Spiel gespielt hast, bei dem der Mitspieler eine Zahl zwischen 1 und 100 eraten muss, dann wirst du das `random' Modul gut verwenden können. In diesem Modul sind viele Funktionen verpackt, die zufällige Zahlen zurückgeben. Ein wenig so, wie wenn du den Computer nach einer Zahl fragen würdest. Die interessantesten Funktionen im `random' Modul sind \code{randint}\index{Module!random!randint}, \code{choice} und \code{shuffle}. Die erste Funktion, \code{random} pickt eine Zahl zwischen der Start- und Endnummer heraus (zwischen 1 und 100, 100 und 1000, oder 1000 und 5000, und so weiter). Zum Beispiel:
 
 %\begin{Verbatim}[frame=single]
 %>>> import random
@@ -95,7 +95,7 @@ Pudding
 \end{Verbatim}
 
 %And finally, use \code{shuffle}\index{modules!shuffle} if you want to mix up a list (like shuffling cards):
-Und wenn du zum Beispiel die Dinge mischen willst, kannst du \code{shuffle}\index{Module!shuffle} verwenden. Damit werden die Inhalte neu der Liste gemischt und wieder gespeichert.
+Und wenn du zum Beispiel die Dinge mischen willst, kannst du \code{shuffle}\index{Module!shuffle} verwenden. Damit werden die Inhalte der Liste neu gemischt und wieder gespeichert.
 
 \begin{Verbatim}[frame=single]
 >>> import random
@@ -113,7 +113,7 @@ Und wenn du zum Beispiel die Dinge mischen willst, kannst du \code{shuffle}\inde
 \subsection*{Das `sys' Modul}\index{Module!sys}
 
 %The \code{sys} module contains useful `system' functions. This is just an odd way of saying that they are very important within Python. Some of the most useful functions and values available in \code{sys} are: \code{exit}, \code{stdin}, \code{stdout}, and \code{version}.
-Im \code{sys} sind nützliche Funktionen des `system' enthalten. Diese Funktionen sind auch innerhalb von Python sehr wichtig. Die nützlichsten Funktionen sind: \code{exit}, \code{stdin}, \code{stdout} und \code{version}
+Im \code{sys} sind nützliche Funktionen des `systems' enthalten. Diese Funktionen sind auch innerhalb von Python sehr wichtig. Die nützlichsten Funktionen sind: \code{exit}, \code{stdin}, \code{stdout} und \code{version}
 \par
 %The \code{exit}\index{modules!sys!exit} function is another way of stopping the Python console. For example if you type:
 Mit der \code{exit}\index{Module!sys!exit} Funktion kannst du auch die Python Konsole beenden. Wenn du zum Beispiel folgendes eintippst:
@@ -131,7 +131,7 @@ Mit der \code{exit}\index{Module!sys!exit} Funktion kannst du auch die Python Ko
 Somit stoppt die Konsole. Das schaut in Windows, am Mac oder in Linux immer ein wenig verschieden aus---aber das Resultat ist das gleiche: die Python Konsole läuft nicht mehr.
 
 %\code{Stdin}\index{modules!sys!stdin} has been used elsewhere in this book (see Chapter~\ref{ch:sortoflikerecycling}), to prompt someone using a program to enter some values. For example:
-\code{stdin}\index{Module!sys!stdin} haben wir auch woanders in diesem Buch verwendet (schau ins Kapitel~\ref{ch:sortoflikerecycling}), um Benutzereingaben zu verarbeiten. Zum Beispiel:
+Mit \code{stdin}\index{Module!sys!stdin} haben wir schon in Kapitel~\ref{ch:sortoflikerecycling} für Benutzereingaben verwendet. Ein kleines Beispiel schaut so aus:
 
 %\begin{Verbatim}[frame=single]
 %>>> import sys
@@ -163,7 +163,7 @@ Das ist ein Test>>>
 \end{Verbatim}
 
 %Notice where the prompt ($>>>$) reappears?  It's not an error, that it's at the end of the message.  That's because, unlike \code{print}, when you call \code{write}, it doesn't automatically move to the next line. To do the same with \code{write} we can do the following:
-Schon gemerkt wo der Promt ($>>>$) erscheint? Das ist kein Fehler, dass es am Ende der Nachricht ist. Anders als \code{print} springt nämlich \code{stdout.write} nicht automatisch aufs die nächste Zeile. Damit \code{stdout.write} auch auf die nächste Zeile springt, musst du folgendes eingeben:
+Schon gemerkt wo der Promt ($>>>$) erscheint? Das ist kein Fehler, dass es am Ende der Nachricht ist. Anders als \code{print} springt nämlich \code{stdout.write} nicht automatisch auf die nächste Zeile. Damit \code{stdout.write} auch auf die nächste Zeile springt, musst du Folgendes eingeben:
 
 %\begin{Verbatim}[frame=single]
 %>>> import sys
@@ -184,7 +184,7 @@ Das ist ein Test
 
 \noindent
 %{\textbackslash}n is the \emph{escape} character\index{escape characters} for a newline (what you get when you hit the enter key).  An escape character is a special character that you use in strings when you can't type it directly. For example, if you want to create a string with a newline in the middle, but try to use the enter key, you'll get an error:
-{\textbackslash}n ist Teil einer sogenannten \emph{escape} Sequenz\index{escape Sequenz} für einen Zeilenumbruch (das gleiche wie du bei Drücken der Enter Taste bekommst). Wenn du einen String mit einem Zeilenumbruch in der Mitte erzeugen willst und die Enter Taste direkt eingibts, wird es aber einen Fehler geben: 
+{\textbackslash}n ist Teil einer sogenannten \emph{escape} Sequenz\index{escape Sequenz} für einen Zeilenumbruch (das gleiche wie du bei Drücken der Enter Taste bekommst). Wenn du einen String mit einem Zeilenumbruch in der Mitte erzeugen willst und die Enter Taste direkt eingibst, wird es aber einen Fehler geben: 
 
 %\begin{Verbatim}[frame=single]
 %>>> s = 'test test
@@ -212,7 +212,7 @@ Stattdessen kannst du die Escape Sequenz für den Zeilenumbruch verwenden:
 
 \noindent
 %Finally, \code{version}\index{modules!sys!version} is just a way of displaying the version of Python you are running:
-Zu guter letzt kannst du mit \code{version}\index{Module!sys!version} die Version von Python überprüfen:
+Zu guter Letzt kannst du mit \code{version}\index{Module!sys!version} die Version von Python überprüfen:
 
 %\begin{Verbatim}[frame=single]
 %>>> import sys
@@ -231,7 +231,7 @@ Zu guter letzt kannst du mit \code{version}\index{Module!sys!version} die Versio
 \subsection*{Das `time' Modul}\index{Module!time}
 
 %Python's time module contains functions for displaying$\ldots$ well, the time, obviously. However, if you try to call the most obvious function (\code{time})\index{modules!time!time (function)}, the result won't quite be what you were expecting:
-Das Zeit Module (time) in Python enthält Funktionen um$\ldots$ ... natürlich um die Zeit darzustellen. Wenn du aber die offensichtlichste Funktion \code{time}\index{Module!time!time} aufrufst wird das Ergebnis dich wahrscheinlich überraschen:
+Das Zeit Module (time) in Python enthält Funktionen um$\ldots$ ... natürlich um die Zeit darzustellen. Wenn du aber die offensichtlichste Funktion \code{time}\index{Module!time!time} aufrufst, wird das Ergebnis dich wahrscheinlich überraschen:
 
 %\begin{Verbatim}[frame=single]
 %>>> import time
@@ -246,7 +246,7 @@ Das Zeit Module (time) in Python enthält Funktionen um$\ldots$ ... natürlich u
 
 %The number returned by \code{time()} is actually the number of seconds since the 1st of January, 1970 (at 00:00:00am to be exact). You might not think this is enormously useful, however it does, occasionally, have its purpose. For example, if you create a program and want to know how fast bits of it run, you can record the time at the beginning, the time at the end, and then compare the values. For example, how long would it take to print all the numbers from 0 to 100,000?  We can easily create a function to print them out:
 \subsubsection*{time}
-Die Zahl die von \code{time()} zurückgegeben wird entspricht der Anzahl von Sekunden die seit dem 1. Januar 1970 vergangen sind (seit 00:00 um exakt zu sein). Das klingt auf den ersten Blick nicht sehr nützlich, kann es aber sein. Wenn du zum Beispiel die Zeit, die dein Programm braucht, stoppen willst. Dann musst du dir nur die Startzeit deines Programmes merken und die Endzeit und dann vergleichen. Wie lange dauert zum Beispiel das Ausgeben von den Zahlen von 0 bis 100000? Packen wir das in eine Funktion und drucken es aus:
+Die Zahl die von \code{time()} zurückgegeben wird, entspricht der Anzahl von Sekunden die seit dem 1. Januar 1970 vergangen sind (seit 00:00 um exakt zu sein). Das klingt auf den ersten Blick nicht sehr nützlich, kann es aber sein. Wenn du zum Beispiel die Zeit, die dein Programm braucht, stoppen willst. Dann musst du dir nur die Startzeit deines Programmes merken und die Endzeit und dann vergleichen. Wie lange dauert zum Beispiel das Ausgeben von den Zahlen von 0 bis 100000? Packen wir das in eine Funktion und probieren es aus:
 
 %\begin{Verbatim}[frame=single]
 %>>> def lots_of_numbers(max):
@@ -326,14 +326,14 @@ Es dauerte 34.92557406425 Sekunden
 
 \noindent
 %How does it work?  The first time we call the \code{time()} function, we assign the value to the variable \code{t1}. We then loop and print out all the numbers. Again we call the \code{time()} function and this time assign the value to the variable \code{t2}. Since it took a few seconds for the loop to complete, the value in \code{t2} will be higher (or later to be exact) than \code{t1} (the number of seconds since 1st of Jan, 1970 will have increased). So if you subtract \code{t2} from \code{t1}, you have the number of seconds it took to print all those numbers.
-Wie funktioniert das? Wenn wir das erste mal die \code{time()} Funktion aufrufen, speichern wir den Wert in der Variable \code{t1}. Danach werden in der Schleife alle Nummern ausgegeben. Danach rufen wir die \code{time()} Funktion wieder auf und speichern das Ergebnis in der Variable \code{t2}. Da es einige Sekunden dauerte um alle Zahlen auszugeben ist der Wert in \code{t2} höher (da da ja schon mehr Sekunden seit dem 1.1.1970 vergangen sind). Wenn du dann also \code{t1} von \code{t2} substrahierst, dann hast du die Zeit, die fürs Ausgeben der Zahlen benötigt wurde.
+Wie funktioniert das? Wenn wir das erste Mal die \code{time()}-Funktion aufrufen, speichern wir den Wert in der Variable \code{t1}. Danach werden in der Schleife alle Nummern ausgegeben. Danach rufen wir die \code{time()} Funktion wieder auf und speichern das Ergebnis in der Variable \code{t2}. Da es einige Sekunden dauerte um alle Zahlen auszugeben, ist der Wert in \code{t2} höher (da ja schon mehr Sekunden seit dem 1.1.1970 vergangen sind). Wenn du dann also von der Endzeit \code{t2} die Anfangszeit \code{t1} abziehst, dann erhältst du die Zeit, die für die Ausgabe der Zahlen benötigt wurde.
 
 %Other functions available on the time module include: \code{asctime}, \code{ctime}, \code{localtime}, \code{sleep}, \code{strftime}, and \code{strptime}.
 Andere Funktionen, die im time Modul enthalten sind: \code{asctime}, \code{ctime}, \code{localtime}, \code{sleep}, \code{strftime} und \code{strptime}.
 
 %The function \code{asctime}\index{modules!time!asctimes} takes a date as a tuple (remember: a tuple is a list of values that cannot be changed) and converts it into a readable form. You can also call it without any argument and it will display the current date and time in a readable form:
 \subsubsection*{asctime}
-Die Funktion \code{asctime}\index{Module!time!asctime} nimmt ein Datum als Tupel (ein Tupel ist eine Liste mit Werten, die nicht geändert werden können) und gibt sie als lesbare Form aus. Du kannst die Funktion auch ohne Argumente aufrufen und es gibt das aktuelle Datum und die Zeit in einer lesbaren Form zurück:
+Die Funktion \code{asctime}\index{Module!time!asctime} nimmt ein Datum als Tupel (ein Tupel ist eine Liste mit Werten, die nicht geändert werden können) und wandelt sie in eine lesbare Form um. Du kannst die Funktion auch ohne Argumente aufrufen und es gibt das aktuelle Datum und die Zeit in einer lesbaren Form zurück:
 
 %\begin{Verbatim}[frame=single]
 %>>> import time
@@ -349,7 +349,7 @@ Sat Jan 23 18:43:14 2010
 
 \noindent
 %To call it with an argument, we first need to make a tuple with the correct values for date and time.  Let's assign the tuple to the variable \code{t}:
-Um die Funktion mit einem Argument aufzurufen, müssen wir erst ein tupel mit den korrekten Werten für Datum und Zeit erzeugen. Lass uns Werte für das Tupel \code{t} erzeugen:
+Um die Funktion mit einem Argument aufzurufen, müssen wir erst ein Tupel mit den korrekten Werten für Datum und Zeit erzeugen. Lass uns Werte für das Tupel \code{t} erzeugen:
 
 %\begin{Verbatim}[frame=single]
 %>>> t = (2007, 5, 27, 10, 30, 48, 6, 0, 0)
@@ -376,7 +376,7 @@ Sat Jan 23 18:45:48 2010
 
 \noindent
 %But be careful with the values you put in a tuple. You can end up with a nonsensical date if you put in the wrong values:
-Beim Tupel erstellen musst du vorsichtig sein. Ansonsten bekommst du ein falsches unsinniges Datum zurück wie zum Beispiel:
+Beim Tupel erstellen musst du vorsichtig sein. Ansonsten bekommst du ein falsches unsinniges Datum zurück, wie zum Beispiel:
 
 %\begin{Verbatim}[frame=single]
 %>>> import time
@@ -396,7 +396,7 @@ Weil nun der Wert für `Tag der Woche' auf 6 gestellt ist, denkt asctime nun, da
 
 %The function \code{ctime}\index{modules!time!ctime} is used to convert a number of seconds into a readable form.  For example, we can use the \code{time()} function explained in the beginning of this section:
 \subsubsection*{ctime}
-Mit der \code{ctime}\index{Module!time!ctime} Funktion kannst du die Sekunden, die seit dem 1.1.1970 verstrichen sind wieder in eine lesbare Form wandeln:
+Mit der \code{ctime}\index{Module!time!ctime} Funktion kannst du die Sekunden, die seit dem 1.1.1970 verstrichen sind in eine lesbare Form umwandeln:
 
 %\begin{Verbatim}[frame=single]
 %>>> import time
@@ -418,7 +418,7 @@ Sat Jan 23 18:55:22 2010
 \noindent
 %The function \code{localtime}\index{modules!time!localtime} returns the current date and time as a tuple in the same sequence of values we've just used:
 \subsubsection*{localtime}
-Ein Tupel kommt zurück wenn du \code{localtime}\index{Module!time!localtime} verwendest:
+Ein Tupel kommt zurück, wenn du \code{localtime}\index{Module!time!localtime} verwendest:
 
 %\begin{Verbatim}[frame=single]
 %>>> import time
@@ -452,7 +452,7 @@ Sat Jan 23 20:52:30 2010
 \noindent
 %The function \code{sleep}\index{modules!time!sleep} is quite useful when you want to delay your program for a certain period of time.  For example, if you wanted to print out one number every second, the following loop wouldn't be very successful:
 \subsubsection*{sleep}
-Mit der Funktion \code{sleep}\index{Module!time!sleep} ist nützlich, wenn du dein Programm für eine bestimmte Zeit anhalten willst. Wenn du zum Beispiel jede Sekunde eine Zahl ausgeben willst wäre diese Schleife etwas zu schnell:
+Die Funktion \code{sleep}\index{Module!time!sleep} ist nützlich, wenn du dein Programm für eine bestimmte Zeit anhalten willst. Wenn du zum Beispiel jede Sekunde eine Zahl ausgeben willst, wäre diese Schleife etwas zu schnell:
 
 %\begin{Verbatim}[frame=single]
 %>>> for x in range(1, 61):
@@ -491,7 +491,7 @@ Alle Zahlen von 1 bis 60 würden sofort ausgegeben werden. Aber du kannst Python
 
 \noindent
 %There will be a short (1 second) delay between the display of each number. Telling a computer to sleep might not seem all that useful, but there are times when it can be.  Think about your alarm clock that wakes you up in the morning.  When you hit the sleep button, it stops buzzing for a few minutes, giving you an extra few moments of sleep (at least until someone calls you for breakfast).  The \code{sleep} function is just as useful in certain situations.
-Jetzt gibt es eine kurze Pause (1 Sekunde) zwischen den Zahlen. Einen Computer zu sagen, dass er warte soll, scheint vielleicht nicht sehr nützlich, aber es gibt Situationen wo es sehr wohl nützlich ist.  Denke an deinen Wecker, wenn er in der Früh klingeln anfängt. Wenn du auf den Sleep oder Snooze Knopf drückst, kannst du 10 Minuten weiterschlafen, oder bis jemand dich zum Frühstück ruft. Die \code{sleep} Funktion ist manchmal genau so nützlich.
+Jetzt gibt es eine kurze Pause (1 Sekunde) zwischen den Zahlen. Einen Computer zu sagen, dass er warten soll, scheint vielleicht nicht sehr nützlich, aber es gibt Situationen wo es sehr wohl nützlich ist.  Denke an deinen Wecker, wenn er in der Früh klingeln anfängt. Wenn du auf den Sleep- oder Snooze-Knopf drückst, kannst du 10 Minuten weiterschlafen, oder bis jemand dich zum Frühstück ruft. Die \code{sleep} Funktion ist manchmal genau so nützlich.
 
 %The function \code{strftime}\index{modules!time!strftime} is used to change the way a date and time value is displayed, and \code{strptime} is used to take a string and convert it into a date/time tuple. Let's look at strftime first.  Just before we saw how to change a tuple into a string using \code{asctime}:
 \subsubsection*{strftime}
@@ -510,7 +510,7 @@ Sat Jan 23 18:45:48 2010
 
 \noindent
 %That works fine for most situations, but what if you don't like the way that string is displayed---what if you only want to display the date and not the time?  We can do that with \code{strftime}:
-Die meiste Zeit funktioniert das ganz gut. Aber was wenn du die Art wie das Datum dargestellt ist, ändern willst? Wenn du nur das Datum ohne die Zeit haben willst. Das geht dann mit \code{strftime}:
+Die meiste Zeit funktioniert das ganz gut. Aber was, wenn du die Art wie das Datum dargestellt ist, ändern willst? Wenn du nur das Datum ohne die Zeit haben willst. Das geht dann mit \code{strftime}:
 
 %\begin{Verbatim}[frame=single]
 %>>> print(time.strftime('%d %b %Y', t))
@@ -522,7 +522,7 @@ Die meiste Zeit funktioniert das ganz gut. Aber was wenn du die Art wie das Datu
 \end{Verbatim}
 
 %As you can see, \code{strftime} takes 2 arguments:  the first is a date/time format (which describes how the date/time should be displayed), and the second is the tuple containing the time values.  The format, \%d \%b \%Y is another way of saying: `show the day, the month and then the year'.  We could also display the month as a number, for example:
-Wie du siehst braucht \code{strtime} 2 Argumente: das Erste für die Art der Anzeige und das zweite mit dem Tupel für die Zeit und Datumswerte. Die Kürzel \%d \%b \%Y  sagen Python: zeige nur den Tag, das Monat und das Jahr. Wir könnten auch das Monat als Nummer ausgeben:
+Wie du siehst, braucht \code{strtime} 2 Argumente: das Erste für die Art der Anzeige und das Zweite mit dem Tupel für die Zeit und Datumswerte. Die Kürzel \%d \%b \%Y  sagen Python: zeige nur den Tag, das Monat und das Jahr. Wir könnten auch das Monat als Nummer ausgeben:
 
 %\begin{Verbatim}[frame=single]
 %>>> print(time.strftime('%d/%m/%Y', t))
@@ -534,7 +534,7 @@ Wie du siehst braucht \code{strtime} 2 Argumente: das Erste für die Art der Anz
 \end{Verbatim}
 
 %This format is a way of saying, `display the day, then a forward-slash, then display the month as a number, then a forward-slash, then display the year'.  There are a number of different values you can use in a format\index{date/time formats}:
-Damit sagst du Python `zeige den Tag dann einen Schrägstrich, dann den Monat als Nummer, dann wieder einen Schrägstrich, dann das Jahr. Es gibt eine Anzahl von verschiedenen Varianten die du für die Anzeige verwenden kannst.
+Damit sagst du Python `zeige den Tag dann einen Schrägstrich, dann den Monat als Nummer, dann wieder einen Schrägstrich, dann das Jahr. Es gibt eine Anzahl von verschiedenen Varianten, die du für die Anzeige verwenden kannst.
 
 %\begin{center}
 %\begin{tabular}{|l|p{12cm}|}
@@ -626,7 +626,7 @@ Damit sagst du Python `zeige den Tag dann einen Schrägstrich, dann den Monat al
 
 \subsubsection*{strptime}
 %The function \code{strptime}\index{modules!time!strptime} is almost the reverse of \code{strftime}---it takes a string and converts it into a tuple containing the date and time values. It also takes the same values in the format string. An example of using this function is:
-Die Funktion \code{strptime}\index{Module!time!strptime} ist fast das Gegenteil von \code{strftime}---es nimmt einen String und wandelt den String in einen Tupel um. Dazu gibst du der Funktion die gleichen Parameter mit wie sie auch strftime versteht:
+Die Funktion \code{strptime}\index{Module!time!strptime} ist fast das Gegenteil von \code{strftime}---es nimmt einen String und wandelt den String in einen Tupel um. Dazu gibst du der Funktion die gleichen Parameter mit, wie sie auch strftime versteht:
 
 %\begin{Verbatim}[frame=single]
 %>>> import time
@@ -644,7 +644,7 @@ tm_min=0, tm_sec=0, tm_wday=4, tm_yday=1, tm_isdst=-1)
 
 \noindent
 %If the date in our string is day/month/year (for example, 01/02/2007), we might use:
-Wenn unser String jedoch so aussieht Tag/Monat/Jahr (zum Beispiel, 23/01/2010) dann würden wir folgendes schreiben:
+Wenn unser String jedoch so aussieht Tag/Monat/Jahr (zum Beispiel, \verb+23/01/2010+) dann würden wir folgendes schreiben:
 
 %\begin{Verbatim}[frame=single]
 %>>> import time

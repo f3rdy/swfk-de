@@ -53,18 +53,17 @@ Anleitung zum pdf mit xelatex bauen aktualisieren
 
 Farben überprüfen
 
-In Appendix A das Bild der Wunschliste anpassen
 In Appendix B eine Alternative für die in Python 3 weggefallene cmp Funktion finden
 
 testen ob hg clone und bauen mit latex nach frischem checkout funktioniert
 und dazuschreiben, welche Pakete auf Ubuntu installiert sein müssen
 
-in appendix d bei Übungen Links einfügen zu Übung 1, Übung 2 der einzelnen Kapitel
-
 
 preface: Bilder vom Installieren in den Mac Abschnitt?
 
 als print on demand Buch veröffentlichen?
+
+
 
 -----------------------------------------------------------------
 Fertig
