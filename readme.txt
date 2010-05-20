@@ -11,60 +11,6 @@ Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105,
 
 
 
-Auf einem frischen Ubuntu sollten diese Pakete installiert sein, damit das Generieren der pdf's gleich klappt.
-Am besten gleich in der Konsole
-sudo apt-get mercurial python3 python3-tk texmaker texlive-full ttf-linux-libertine
-eingeben und auch die Abhängigkeiten mit Installieren.
-
-
-Nachdem das fncychap Makro noch von 2005 war:
-von http://www.ctan.org/tex-archive/macros/latex/contrib/fncychap/
-das fncychap.sty holen und nach /usr/share/texmf-texlive/tex/latex/fncychap/fncychap.sty kopieren.
-
-
-Anleitung zum PDF's generieren
-
-
-python setup.py build
-oder auch
-python3 setup.py build
-
-Nach ein paar Minuten sind die PDF's für Linux, Windows und Mac im target Verzeichnis fertig.
-
-P.s. in diesen Files wird die Generierung des pdf eingetellt
-+ in setup.py auf Zeile 19 oder 20 ob nur ein pdf oder drei pdf rauskommen (für Mac, Linux, Windows)
-+ in swfk.tex.pre von Zeile 130 bis Zeile 162 welche Kapitel dabei sind und welche nicht.
-+ auf frontmatter.tex auf Zeile 74 welche Version im Dateinamen des pdf stehen wird.
-
-
-P.p.s.: damit beim hg push auch der richtige Benutzer mitkommt, in die 
-.hg/hgrc Datei
-den Abschnitt hinzufügen
-[ui]
-username = Vorname Nachname <vorname.nachname@gmail.com> 
-
-
-
------------------------------------------------------------------
-Offen
------------------------------------------------------------------
-
-Anleitung zum pdf mit xelatex bauen aktualisieren
-
-Farben überprüfen
-
-In Appendix B eine Alternative für die in Python 3 weggefallene cmp Funktion finden
-
-testen ob hg clone und bauen mit latex nach frischem checkout funktioniert
-und dazuschreiben, welche Pakete auf Ubuntu installiert sein müssen
-
-
-preface: Bilder vom Installieren in den Mac Abschnitt?
-
-als print on demand Buch veröffentlichen?
-
-
-
 -----------------------------------------------------------------
 Fertig
 -----------------------------------------------------------------
@@ -102,5 +48,169 @@ Build Prozess
 
 Verschiedenes
     swfk.tex.pre pdf Titel anpassen                        OK
+
+
+
+
+-----------------------------------------------------------------
+Offen
+-----------------------------------------------------------------
+
+Farben überprüfen
+
+In Appendix B eine Alternative für die in Python 3 weggefallene cmp Funktion finden
+
+preface: Bilder vom Installieren in den Mac Abschnitt?
+
+als print on demand Buch veröffentlichen?
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+---------------------------------------------------------------------
+Anleitung wie das Buch auf einem Ubuntu 10.04 generiert wird
+---------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+---------------------------------------------------------------------
+0. Vorbereitung
+---------------------------------------------------------------------
+
+sudo apt-get mercurial python3 python3-tk eingeben und auch die Abhängigkeiten mit Installieren.
+
+
+---------------------------------------------------------------------
+1. Install Texlive 2009 from ISO 
+---------------------------------------------------------------------
+
+Torrent Download von http://www.tug.org/texlive/acquire-iso.html#torrent oder 
+einem Mirrow von CTAN http://www.ctan.org/tex-archive/CTAN.sites wie zum Beispiel
+http://sunsite.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/systems/texlive/Images/texlive2009-20091107.iso.xz
+
+sudo apt-get install xz-utils
+xz Archiv entpacken
+
+
+texlive.iso mounten
+sudo mount -t iso9660 -o ro,loop,noauto /pfad/zu/texlive2009-20091107.iso /mnt 
+cd /mnt
+
+sudo ./install-tl
+default Werte lassen bis auf <5> TEXMFHOME und installieren (wichtig für Punkt 3. xelibertine)
+
+
+Current directories setup:
+===============================================================================
+
+ <1> TEXDIR:       /usr/local/texlive/2009
+     support tree: /usr/local/texlive/2009/texmf
+
+ <2> TEXMFLOCAL:     /usr/local/texlive/texmf-local
+ <3> TEXMFSYSVAR:    /usr/local/texlive/2009/texmf-var
+ <4> TEXMFSYSCONFIG: /usr/local/texlive/2009/texmf-config
+
+ <5> TEXMFHOME:      /home/user/Downloads/texmf
+
+ Note: ~ will expand to $HOME (or to %USERPROFILE% on Windows)
+
+Other actions:
+ <R> return to main menu
+ <Q> quit
+
+---------------------------------------------------------------------
+ See
+   /usr/local/texlive/2009/index.html
+ for links to documentation.  The TeX Live web site (http://tug.org/texlive/)
+ contains any updates and corrections.
+
+ TeX Live is a joint project of the TeX user groups around the world;
+ please consider supporting it by joining the group best for you. The
+ list of groups is available on the web at http://tug.org/usergroups.html.
+
+ Add /usr/local/texlive/2009/texmf/doc/man to MANPATH.
+ Add /usr/local/texlive/2009/texmf/doc/info to INFOPATH.
+ Most importantly, add /usr/local/texlive/2009/bin/i386-linux
+ to your PATH for current and future sessions.
+
+ Welcome to TeX Live!
+---------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------
+2. Umgebungsvariablen setzen
+---------------------------------------------------------------------
+
+gedit /home/user/.profile
+ganz unten dazuhängen
+
+# new PATH für Latex
+PATH=$PATH:/usr/local/texlive/2009/bin/i386-linux
+export PATH 
+
+----------
+damit es gleich gültig ist ein 
+source ~/.profile 
+ausführen um die Umgebunsvariblen zu aktualisieren.
+
+$ exec bash 
+
+
+
+---------------------------------------------------------------------
+3. XELibertine bereitstellen
+--------------------------------------------------------------------
+http://mirror.ctan.org/systems/win32/miktex/tm/packages/xelibertine.tar.lzma
+xelibertine.tar.lzma entpacken nach /home/user/Downloads/texmf
+
+
+
+---------------------------------------------------------------------
+4. Schrift nachinstallieren
+---------------------------------------------------------------------
+
+Download Linux Libertine Fonts von http://sourceforge.net/projects/linuxlibertine/files/
+mkdir /home/user/.fonts
+LinLibertineFont-4.4.1.tgz entpacken und Ordner nach /home/user/.fonts kopieren
+sudo fc-cache -f -v
+
+
+
+---------------------------------------------------------------------
+5. Anleitung zum PDF's generieren
+---------------------------------------------------------------------
+
+python  setup.py build   
+oder auch   
+python3 setup.py build
+
+Nach ein paar Minuten sind die PDF's für Linux, Windows und Mac im target Verzeichnis fertig.
+
+P.s. in diesen Files wird die Generierung des pdf eingetellt
++ in setup.py auf Zeile 19 oder 20 ob nur ein pdf oder drei pdf rauskommen (für Mac, Linux, Windows)
++ in swfk.tex.pre von Zeile 130 bis Zeile 162 welche Kapitel dabei sind und welche nicht.
++ auf frontmatter.tex auf Zeile 74 welche Version im Dateinamen des pdf stehen wird.
+
+
+
+
+
+
+P.p.s.: damit beim hg push auch der richtige Benutzer mitkommt, in die 
+.hg/hgrc Datei
+den Abschnitt hinzufügen
+[ui]
+username = Vorname Nachname <vorname.nachname@gmail.com> 
+
+
+
+
+
+
 
 
