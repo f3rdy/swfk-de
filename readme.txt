@@ -81,7 +81,8 @@ Anleitung wie das Buch auf einem Ubuntu 10.04 generiert wird
 0. Vorbereitung
 ---------------------------------------------------------------------
 
-sudo apt-get mercurial python3 python3-tk eingeben und auch die Abhängigkeiten mit Installieren.
+sudo apt-get install mercurial python3 python3-tk xz-utils 
+eingeben und auch die Abhängigkeiten mit Installieren.
 
 
 ---------------------------------------------------------------------
@@ -92,8 +93,9 @@ Torrent Download von http://www.tug.org/texlive/acquire-iso.html#torrent oder
 einem Mirrow von CTAN http://www.ctan.org/tex-archive/CTAN.sites wie zum Beispiel
 http://sunsite.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/systems/texlive/Images/texlive2009-20091107.iso.xz
 
-sudo apt-get install xz-utils
 xz Archiv entpacken
+~/ xz --decompress texlive2009-20091107.iso.aachen.xz 
+
 
 
 texlive.iso mounten
@@ -159,6 +161,9 @@ source ~/.profile
 ausführen um die Umgebunsvariblen zu aktualisieren.
 
 $ exec bash 
+
+überprüfen mit 
+echo $PATH
 
 
 
