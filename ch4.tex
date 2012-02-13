@@ -502,7 +502,7 @@ Warum wird der Code im Block (der print Block) nicht ausgeführt? Weil ein Strin
 Siehst du! Sie schauen genau gleich aus. Aber weil die eine Variable ein String ist und die andere Variable eine Nummer, sind es verschiedene Werte. Deswegen wird alter == 10 (alter ist gleich 10) bei einem String nie wahr sein.
 \par
 %Probably the best way to think about it, is to consider 10 books and 10 bricks.  The number of items might be the same, but you couldn't say that 10 books are exactly the same as 10 bricks, could you? Luckily in Python we have magic functions which can turn strings into numbers and numbers into strings (even if they won't quite turn bricks into books). For example, to convert the string '10' into a number you would use the function \code{int}:
-Der wahrscheinlich beste Weg das zu verstehen ist an 10 Bücher und 10 Ziegelsteine zu denken. Die Anzahl ist die gleiche, aber könntest du sagen, dass 10 Bücher das gleich wie 10 Ziegelsteine sind? Zum Glück hat Python einige magische Funktionen, die Strings in Nummern und Nummern in Strings verwandeln können (auch wenn dadurch Bücher nicht zu Ziegelsteinen werden). Wenn du zum Beispiel den string '10' in eine Nummer wandeln willst, dann könntest du die Funktion \code{int} verwenden:
+Der wahrscheinlich beste Weg das zu verstehen ist an 10 Bücher und 10 Ziegelsteine zu denken. Die Anzahl ist die gleiche, aber könntest du sagen, dass 10 Bücher das gleiche wie 10 Ziegelsteine sind? Zum Glück hat Python einige magische Funktionen, die Strings in Nummern und Nummern in Strings verwandeln können (auch wenn dadurch Bücher nicht zu Ziegelsteinen werden). Wenn du zum Beispiel den string '10' in eine Nummer wandeln willst, dann könntest du die Funktion \code{int} verwenden:
 
 %\begin{listing}
 %\begin{verbatim}
@@ -566,7 +566,7 @@ Wenn wir nun die Variable zu einer Zahl machen, \emph{bevor} wir die Bedingung �
 \begin{Verbatim}[frame=single]
 >>> alter = '10'
 >>> verwandeltes_alter = int(alter)
->>> if verwendeltes_alter == 10:
+>>> if verwandeltes_alter == 10:
 ...     print('du bist 10')
 ...
 du bist 10
