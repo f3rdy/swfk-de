@@ -71,9 +71,10 @@ als print on demand Buch veröffentlichen?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ---------------------------------------------------------------------
-Anleitung wie das Buch auf einem Ubuntu 10.04 generiert wird
+Anleitung wie das Buch auf einem Ubuntu 11.10 generiert wird
 ---------------------------------------------------------------------
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 
@@ -85,62 +86,85 @@ sudo apt-get install mercurial python3 python3-tk xz-utils
 eingeben und auch die Abhängigkeiten mit Installieren.
 
 
+
+
 ---------------------------------------------------------------------
-1. Install Texlive 2009 from ISO 
+1. Install Texlive 2011 from ISO 
 ---------------------------------------------------------------------
+
+Torrent Download von http://www.tug.org/texlive/acquire-iso.html
 
 Torrent Download von http://www.tug.org/texlive/acquire-iso.html#torrent oder 
 einem Mirrow von CTAN http://www.ctan.org/tex-archive/CTAN.sites wie zum Beispiel
 http://sunsite.informatik.rwth-aachen.de/ftp/pub/mirror/ctan/systems/texlive/Images/texlive2009-20091107.iso.xz
 
 xz Archiv entpacken
-~/ xz --decompress texlive2009-20091107.iso.aachen.xz 
+~/ xz --decompress texlive2011.iso.aachen.xz 
 
 
 
 texlive.iso mounten
-sudo mount -t iso9660 -o ro,loop,noauto /pfad/zu/texlive2009-20091107.iso /mnt 
+sudo mount -t iso9660 -o ro,loop,noauto /pfad/zu/texlive2011-20110705.iso /mnt 
 cd /mnt
 
 sudo ./install-tl
-default Werte lassen bis auf <5> TEXMFHOME und installieren (wichtig für Punkt 3. xelibertine)
+
+------------- Auszug aus Installationoptionen von texlive2011 --------------
+
+ Detected platform: Intel x86 with GNU/Linux
+ 
+ <B> platforms: 1 out of 19
+
+ <S> installation scheme (scheme-full)
+     84 collections out of 85, disk space required: 2600 MB
+
+ Customizing installation scheme:
+   <C> standard collections
+   <L> language collections
+
+ <D> directories:
+   TEXDIR (the main TeX directory):
+     /usr/local/texlive/2011
+   TEXMFLOCAL (directory for site-wide local files):
+     /usr/local/texlive/texmf-local
+   TEXMFSYSVAR (directory for variable and automatically generated data):
+     /usr/local/texlive/2011/texmf-var
+   TEXMFSYSCONFIG (directory for local config):
+     /usr/local/texlive/2011/texmf-config
+   TEXMFVAR (personal directory for variable and automatically generated data):
+     ~/.texlive2011/texmf-var
+   TEXMFCONFIG (personal directory for local config):
+     ~/.texlive2011/texmf-config
+   TEXMFHOME (directory for user-specific files):
+     ~/texmf
+
+-----------------------------------------------------------------------------
+
+default Werte für Installation lassen 
 
 
-Current directories setup:
-===============================================================================
 
- <1> TEXDIR:       /usr/local/texlive/2009
-     support tree: /usr/local/texlive/2009/texmf
 
- <2> TEXMFLOCAL:     /usr/local/texlive/texmf-local
- <3> TEXMFSYSVAR:    /usr/local/texlive/2009/texmf-var
- <4> TEXMFSYSCONFIG: /usr/local/texlive/2009/texmf-config
+------------ Installation gibt zuletzt folgendes aus -----------------------
 
- <5> TEXMFHOME:      /home/user/Downloads/texmf
-
- Note: ~ will expand to $HOME (or to %USERPROFILE% on Windows)
-
-Other actions:
- <R> return to main menu
- <Q> quit
-
----------------------------------------------------------------------
- See
-   /usr/local/texlive/2009/index.html
- for links to documentation.  The TeX Live web site (http://tug.org/texlive/)
- contains any updates and corrections.
+See
+   /usr/local/texlive/2011/index.html
+ for links to documentation.  The TeX Live web site
+ contains updates and corrections: http://tug.org/texlive.
 
  TeX Live is a joint project of the TeX user groups around the world;
  please consider supporting it by joining the group best for you. The
  list of groups is available on the web at http://tug.org/usergroups.html.
 
- Add /usr/local/texlive/2009/texmf/doc/man to MANPATH.
- Add /usr/local/texlive/2009/texmf/doc/info to INFOPATH.
- Most importantly, add /usr/local/texlive/2009/bin/i386-linux
+ Add /usr/local/texlive/2011/texmf/doc/man to MANPATH, if not dynamically determined.
+ Add /usr/local/texlive/2011/texmf/doc/info to INFOPATH.
+
+ Most importantly, add /usr/local/texlive/2011/bin/i386-linux
  to your PATH for current and future sessions.
 
  Welcome to TeX Live!
----------------------------------------------------------------------
+Logfile: /usr/local/texlive/2011/install-tl.log
+
 
 
 
@@ -152,7 +176,7 @@ gedit /home/user/.profile
 ganz unten dazuhängen
 
 # new PATH für Latex
-PATH=$PATH:/usr/local/texlive/2009/bin/i386-linux
+PATH=$PATH:/usr/local/texlive/2011/bin/i386-linux
 export PATH 
 
 ----------
@@ -167,11 +191,15 @@ echo $PATH
 
 
 
+
 ---------------------------------------------------------------------
 3. XELibertine bereitstellen
 --------------------------------------------------------------------
+Dateien laden von 
 http://mirror.ctan.org/systems/win32/miktex/tm/packages/xelibertine.tar.lzma
-xelibertine.tar.lzma entpacken nach /home/user/Downloads/texmf
+
+xelibertine.tar.lzma entpacken nach /home/user/texmf
+
 
 
 
@@ -179,10 +207,15 @@ xelibertine.tar.lzma entpacken nach /home/user/Downloads/texmf
 4. Schrift nachinstallieren
 ---------------------------------------------------------------------
 
+sudo apt-get install ttf-linux-libertine
+
+Alternative
+
 Download Linux Libertine Fonts von http://sourceforge.net/projects/linuxlibertine/files/
 mkdir /home/user/.fonts
 LinLibertineFont-4.4.1.tgz entpacken und Ordner nach /home/user/.fonts kopieren
 sudo fc-cache -f -v
+
 
 
 
@@ -204,8 +237,6 @@ P.s. in diesen Files wird die Generierung des pdf eingetellt
 
 
 
-
-
 P.p.s.: damit beim hg push auch der richtige Benutzer mitkommt, in die 
 .hg/hgrc Datei
 den Abschnitt hinzufügen
@@ -216,6 +247,14 @@ username = Vorname Nachname <vorname.nachname@gmail.com>
 
 
 
+---------------------------------------------------------------------
+zzz Wahrscheinlich nicht mehr benötigt
+---------------------------------------------------------------------
 
+zusätzlich 
+
+sudo cp -r texmf/doc/  /etc/texmf/
+sudo cp -r texmf/tex/  /etc/texmf/
+sudo cp -r texmf/tpm/  /etc/texmf/
 
 
