@@ -5,10 +5,11 @@
 % Creative Commons, 171 Second Street, Suite 300, San Francisco, California 94105, USA.
 
 
-%\chapter{Sort of like recycling$\ldots$}\label{ch:sortoflikerecycling}
-\chapter{Wie Recycling$\ldots$}\label{ch:sortoflikerecycling}
+%\chapter{Sort of like recycling\texorpdfstring{$\ldots$}{...}}\label{ch:sortoflikerecycling}
+%\chapter{Wie Recycling\texorpdfstring{$\ldots$}{...}}\label{ch:sortoflikerecycling}
+\chapter{Wie Recycling...}\label{ch:sortoflikerecycling}
 
-%Think about how much rubbish you create each day. Bottled water or bottles of soft drink, packets of crisps, plastic sandwich wrappers, bags of vegetables, meat on plastic trays, plastic shopping bags, newspapers, magazines, and so on and so on and so on$\ldots$
+%Think about how much rubbish you create each day. Bottled water or bottles of soft drink, packets of crisps, plastic sandwich wrappers, bags of vegetables, meat on plastic trays, plastic shopping bags, newspapers, magazines, and so on and so on and so on\texorpdfstring{$\ldots$}{...}
 Denke einmal darüber nach, wie viel Müll du jeden Tag erzeugst. Getränkeflaschen, Chipstüten, Sandwichpapier, Fleischtassen, Einkaufstaschen, Zeitungen, Magazine und so weiter.
 \par
 %Now just think about what would happen if all of that trash just got dumped in a pile at the end of your driveway.
@@ -275,10 +276,10 @@ Woche 3 = 90
 Woche 4 = 120
 Woche 5 = 150
 
-(continues on...)
+(geht so weiter...)
 \end{Verbatim}
 
-%This is a bit more useful than re-typing the for-loop every time you want to try it with a different value. Functions can also be grouped together into something called `modules', which is where Python becomes really useful$\ldots$ as opposed to just mildly useful.
+%This is a bit more useful than re-typing the for-loop every time you want to try it with a different value. Functions can also be grouped together into something called `modules', which is where Python becomes really useful\texorpdfstring{$\ldots$}{...} as opposed to just mildly useful.
 Das ist doch schon schöner, als die ganze for-Schleife immer wieder neu zu tippen, wenn du neue Werte übergeben willst. Mehrere Gruppen können auch in sogenannte `Module' zusammengefasst werden und da bringt Python auch schon einige fixfertige Modlue mit.
 \par
 \noindent
@@ -328,8 +329,8 @@ Nun kannst du die Python Konsole wieder öffnen und Folgendes eintippen:
 >>> print(f.read())
 \end{Verbatim}
 
-%The contents of the file you just created should be printed to the console. You can now jump ahead to the bit that says: ``Continuing from here$\ldots$''.
-Der Inhalt der Datei, die du eben erzeugt und gespeichert hast, sollte auf der Konsole ausgegeben werden. %Nun kannst du dem Teil springen wo steht: ``Hier gehts weiter$\ldots$''.
+%The contents of the file you just created should be printed to the console. You can now jump ahead to the bit that says: ``Continuing from here\texorpdfstring{$\ldots$}{...}''.
+Der Inhalt der Datei, die du eben erzeugt und gespeichert hast, sollte auf der Konsole ausgegeben werden. %Nun kannst du dem Teil springen wo steht: ``Hier gehts weiter\texorpdfstring{$\ldots$}{...}''.
 \end{WINDOWS}
 
 \begin{MAC}
@@ -363,8 +364,8 @@ Falls es nicht funktioniert, könnntest du den ganzen Pfad zur Datei direkt ange
 >>> print(f.read())
 \end{Verbatim}
 
-%The contents of the file you just created should be printed to the console.  You can now jump ahead to the bit that says: ``Continuing from here$\ldots$''.
-Der Inhalt der Datei die du eben erzeugt und gespeichert hast, sollte auf der Konsole ausgegeben werden. %Nun kannst du dem Teil springen wo steht: ``Hier gehts weiter$\ldots$''.
+%The contents of the file you just created should be printed to the console.  You can now jump ahead to the bit that says: ``Continuing from here\texorpdfstring{$\ldots$}{...}''.
+Der Inhalt der Datei die du eben erzeugt und gespeichert hast, sollte auf der Konsole ausgegeben werden. %Nun kannst du dem Teil springen wo steht: ``Hier gehts weiter\texorpdfstring{$\ldots$}{...}''.
 \end{MAC}
 
 \begin{LINUX}
@@ -391,7 +392,7 @@ Nun kannst du die Python Konsole wieder öffnen und folgendes eintippen:
 >>> print(f.read())
 \end{Verbatim}
 
-Der Inhalt der Datei die du eben erzeugt und gespeichert hast, sollte auf der Konsole ausgegeben werden. %Nun kannst du dem Teil springen wo steht: ``Hier gehts weiter$\ldots$''.
+Der Inhalt der Datei die du eben erzeugt und gespeichert hast, sollte auf der Konsole ausgegeben werden. %Nun kannst du dem Teil springen wo steht: ``Hier gehts weiter\texorpdfstring{$\ldots$}{...}''.
 \end{LINUX}
 
 %So what does that little bit of code do?  The first line calls the function \code{file}, passing the name of the file you just created, as a parameter.  The function returns a special type of value (called an object) which represents that file.  It's not the file itself; rather it's a bit like a big finger pointing at the file going ``HERE IT IS!!!!''  The file object is stored in the variable \code{f}.
@@ -497,8 +498,8 @@ else:
     print('was?')
 \end{Verbatim}
 
-%Rather than creating the variable \code{age} beforehand, we can now ask someone to enter the value instead.  How about first turning the code into a function$\ldots$
-Statt die Variable \code{alter} schon vorher zu erzeugen, bitten wir jemanden sein Alter einzugeben. Zuerst machen wir aus dem Code eine Funktion$\ldots$
+%Rather than creating the variable \code{age} beforehand, we can now ask someone to enter the value instead.  How about first turning the code into a function\texorpdfstring{$\ldots$}{...}
+Statt die Variable \code{alter} schon vorher zu erzeugen, bitten wir jemanden sein Alter einzugeben. Zuerst machen wir aus dem Code eine Funktion\texorpdfstring{$\ldots$}{...}
 
 %\begin{Verbatim}[frame=single]
 %>>> def your_age(age):
@@ -551,7 +552,7 @@ Jetzt wissen wir, dass unsere Funktion funktioniert. Nun ändern wir die Funktio
 ...     print('Bitte gib dein Alter ein')
 ...     alter = int(sys.stdin.readline())
 ...     if alter >= 10 and alter <= 13:
-...         print('Du bist %s' % age)
+...         print('Du bist %s' % alter)
 ...     else:
 ...         print('was?')
 ...
