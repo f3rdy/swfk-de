@@ -379,8 +379,8 @@ Traceback (most recent call last):
 NameError: name 'gmtime' is not defined
 \end{Verbatim}
 
-%By saying ```gmtime' is not defined'' Python is telling us that it doesn't know about the function \code{gmtime}$\ldots$ yet. If there are a bunch of functions in a particular module that you want to use, and you don't want to refer to them by using the module name (i.e. \code{time.localtime}, or \code{time.something-else}) you can import everything in the module using an asterisk (*):
-Python sagt uns ```gmtime' is not defined'', also kann Python die Funktion \code{gmtime}$\ldots$ noch nicht finden. Wenn du mehrere Funktionen aus einem Modul verwenden willst und du sie nicht mit dem vollen Modul Namen ansprechen willst (das heißt \code{time.localtime} und \code{time.gmtime} und so weiter), kannst du alles auf einmal importieren, indem du das Stern Symbol (*) verwendest:
+%By saying ```gmtime' is not defined'' Python is telling us that it doesn't know about the function \code{gmtime}\texorpdfstring{$\ldots$}{...} yet. If there are a bunch of functions in a particular module that you want to use, and you don't want to refer to them by using the module name (i.e. \code{time.localtime}, or \code{time.something-else}) you can import everything in the module using an asterisk (*):
+Python sagt uns ```gmtime' is not defined'', also kann Python die Funktion \code{gmtime}\texorpdfstring{$\ldots$}{...} noch nicht finden. Wenn du mehrere Funktionen aus einem Modul verwenden willst und du sie nicht mit dem vollen Modul Namen ansprechen willst (das heißt \code{time.localtime} und \code{time.gmtime} und so weiter), kannst du alles auf einmal importieren, indem du das Stern Symbol (*) verwendest:
 
 %\begin{Verbatim}[frame=single]
 %>>> from time import *
@@ -598,8 +598,8 @@ Das schaut nicht besonders nützlich aus, bis du anfängst dieses Schlüsselwort
 %And so on.
 Und so weiter.
 \par\noindent
-%In terms of an if-statement, we could write that as$\ldots$
-Mit einer if-Bedingung könnten wir das folgendermaßen schreiben$\ldots$
+%In terms of an if-statement, we could write that as\texorpdfstring{$\ldots$}{...}
+Mit einer if-Bedingung könnten wir das folgendermaßen schreiben\texorpdfstring{$\ldots$}{...}
 
 %\begin{Verbatim}[frame=single]
 %if age == 1:
@@ -623,8 +623,8 @@ elif alter == 4:
 \end{Verbatim}
 
 \noindent
-%$\ldots$continuing on forever. A simpler way to write the statement would be:
-$\ldots$ und so weiter. Einfacher würde es so ausschauen:
+%\texorpdfstring{$\ldots$}{...}continuing on forever. A simpler way to write the statement would be:
+\texorpdfstring{$\ldots$}{...} und so weiter. Einfacher würde es so ausschauen:
 %\begin{Verbatim}[frame=single]
 %if age < 10 or age > 10:
 %    print("%s is not an important age" % age)
