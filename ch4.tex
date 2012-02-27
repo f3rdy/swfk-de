@@ -76,8 +76,8 @@ $<$= & kleiner als oder gleich \\
 %For example, if you are 10 years old, then the condition \code{your\_age == 10} would return True (yes), but if you are not 10, it would return False.  Remember: don't mix up the \textbf{two} equals symbols used in a condition (==), with the equals used in assigning values (=)---if you use a single = symbol in a \emph{condition}, you'll get an error message.
 Wenn du zum Beispiel 10 Jahre alt bist, dann würde die Bedingung \code{dein\_alter == 10} zum Beispiel wahr (true) zurückgeben, wenn du aber nicht 10 bist, dann würde falsch (false) zurückkommen. Pass auf dass du die \textbf{zwei} Gleichheitszeichen (==) nicht mit dem normalen einfachen Gleichheitszeichen (=) verwechselt. Wenn du nur ein = Zeichen in einer Bedingung verwendest, dann bekommst du einen Fehler.
 \par
-%Assuming you set the variable \code{age} to your age, then if you are 12 years old, the condition$\ldots$
-Nehmen wir an, dass du die Variable \code{alter} auf dein Alter setzt und du 12 Jahre bist. Dann würde die Bedingung $\ldots$
+%Assuming you set the variable \code{age} to your age, then if you are 12 years old, the condition\texorpdfstring{$\ldots$}{...}
+Nehmen wir an, dass du die Variable \code{alter} auf dein Alter setzt und du 12 Jahre bist. Dann würde die Bedingung \texorpdfstring{$\ldots$}{...}
 
 %\begin{listing}
 %\begin{verbatim}
@@ -88,8 +88,8 @@ Nehmen wir an, dass du die Variable \code{alter} auf dein Alter setzt und du 12 
 alter > 10
 \end{Verbatim}
 
-%$\ldots$ would again return True.  If you are 8 years old, it would return False.  If you are 10 years old, it would also return False---because the condition is checking for greater than ($>$) 10, and not greater than or equal ($>$=) to 10.
-$\ldots$ Wahr (true) zurückgeben. Wenn du 8 Jahre wärst, dann würde Falsch (false) zurückkommen. Wenn du genau 10 Jahre wärest, würde auch Falsch rauskommen---weil die Bedingung ja fragt ob du älter als ($>$) 10 und nicht ob du älter oder auch gleichalt ($>$=) als 10 bist.
+%\texorpdfstring{$\ldots$}{...} would again return True.  If you are 8 years old, it would return False.  If you are 10 years old, it would also return False---because the condition is checking for greater than ($>$) 10, and not greater than or equal ($>$=) to 10.
+\texorpdfstring{$\ldots$}{...} Wahr (true) zurückgeben. Wenn du 8 Jahre wärst, dann würde Falsch (false) zurückkommen. Wenn du genau 10 Jahre wärest, würde auch Falsch rauskommen---weil die Bedingung ja fragt ob du älter als ($>$) 10 und nicht ob du älter oder auch gleichalt ($>$=) als 10 bist.
 
 %Let's try a few examples:
 Probieren wir es aus:
@@ -152,8 +152,8 @@ Wenn du das Beispiel von oben nun ausprobierst, sollte die Nachricht `dann kommm
 dann kommst du hier an
 \end{Verbatim}
 
-%\section{Do this$\ldots$ or ELSE!!!}
-\section{Tu dies$\ldots$ oder das!!!}
+%\section{Do this\texorpdfstring{$\ldots$}{...} or ELSE!!!}
+\section{Tu dies\texorpdfstring{$\ldots$}{...} oder das!!!}
 
 %We can also extend an if-statement, so that it does something when a condition is not true.  For example, print the word `Hello' out to the console if your age is 12, but print `Goodbye' if it's not.  To do this, we use an if-then-else-statement\index{if-then-else-statement} (this is another way of saying \emph{``if something is true, then do \textbf{this}, otherwise do \textbf{that}''}):
 Wir können die if-Bedingung auch erweitern, so dass auch etwas passiert, wenn die Bedingung falsch ist. Zum Beispiel das Wort `Hallo' ausgeben, wenn du 12 Jahre bist und `Auf Wiedersehen' wenn nicht. Das geht mit einer if-then-else-Bedingung\index{Bedingung!if-then-else-Bedingung} (das ist nur eine andere Art um folgendes auszudrücken \emph{``wenn etwas wahr ist tue \textbf{das Eine}, wenn es falsch ist tue \textbf{das Andere}''}):
@@ -202,8 +202,8 @@ Nachdem du das Beispiel eingetippt hast, sollte die Ausgabe `Hallo' auf der Kons
 Auf Wiedersehen
 \end{Verbatim}
 
-%\section{Do this$\ldots$ or do this$\ldots$ or do this$\ldots$ or ELSE!!!}
-\section{Tu das$\ldots$ oder dies$\ldots$ oder jenes$\ldots$ oder!!!}
+%\section{Do this\texorpdfstring{$\ldots$}{...} or do this\texorpdfstring{$\ldots$}{...} or do this\texorpdfstring{$\ldots$}{...} or ELSE!!!}
+\section{Tu das\texorpdfstring{$\ldots$}{...} oder dies\texorpdfstring{$\ldots$}{...} oder jenes\texorpdfstring{$\ldots$}{...} oder!!!}
 
 %We can extend an if-statement even further using elif (short for else-if). For example, we can check if your age is 10, or if it's 11, or if it's 12 and so on:
 Wir können die if-Bedingung sogar weiter aufspalten, indem wir elif (Kurzform für else-if) verwenden. Wir könnten testen, ob dein Alter 10 ist, oder 11, oder 12 und so weiter:
@@ -418,8 +418,8 @@ Erst wenn alle Variablen Werte zugewiesen bekommen haben, kommt die Nachricht vo
 Ihr habt 900 gesammelt
 \end{Verbatim}
 
-%\section{What's the difference$\ldots$?}\label{whatsthedifference}\index{equality}
-\section{Was ist der Unterschied$\ldots$?}\label{whatsthedifference}\index{Gleichheit}
+%\section{What's the difference\texorpdfstring{$\ldots$}{...}?}\label{whatsthedifference}\index{equality}
+\section{Was ist der Unterschied\texorpdfstring{$\ldots$}{...}?}\label{whatsthedifference}\index{Gleichheit}
 
 %What's the difference between \code{10} and \code{'10'}?
 Was ist der Unterschied zwischen \code{10} und \code{'10'}?
@@ -502,7 +502,7 @@ Warum wird der Code im Block (der print Block) nicht ausgeführt? Weil ein Strin
 Siehst du! Sie schauen genau gleich aus. Aber weil die eine Variable ein String ist und die andere Variable eine Nummer, sind es verschiedene Werte. Deswegen wird alter == 10 (alter ist gleich 10) bei einem String nie wahr sein.
 \par
 %Probably the best way to think about it, is to consider 10 books and 10 bricks.  The number of items might be the same, but you couldn't say that 10 books are exactly the same as 10 bricks, could you? Luckily in Python we have magic functions which can turn strings into numbers and numbers into strings (even if they won't quite turn bricks into books). For example, to convert the string '10' into a number you would use the function \code{int}:
-Der wahrscheinlich beste Weg das zu verstehen ist an 10 Bücher und 10 Ziegelsteine zu denken. Die Anzahl ist die gleiche, aber könntest du sagen, dass 10 Bücher das gleiche wie 10 Ziegelsteine sind? Zum Glück hat Python einige magische Funktionen, die Strings in Nummern und Nummern in Strings verwandeln können (auch wenn dadurch Bücher nicht zu Ziegelsteinen werden). Wenn du zum Beispiel den string '10' in eine Nummer wandeln willst, dann könntest du die Funktion \code{int} verwenden:
+Der wahrscheinlich beste Weg das zu verstehen ist an 10 Bücher und 10 Ziegelsteine zu denken. Die Anzahl ist die gleiche, aber könntest du sagen, dass 10 Bücher das gleiche wie 10 Ziegelsteine sind? Zum Glück hat Python einige magische Funktionen, die Strings in Nummern und Nummern in Strings verwandeln können (auch wenn dadurch Bücher nicht zu Ziegelsteinen werden). Wenn du zum Beispiel den string '10' in eine Nummer wandeln willst, dann könntest du die Funktion \code{int}\footnote{Das Wort ``Integer'' bezeichnet eine ganze Zahl} verwenden:
 
 %\begin{listing}
 %\begin{verbatim}
