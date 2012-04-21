@@ -41,8 +41,8 @@ hallo
 hallo
 \end{Verbatim}
 
-%Which is\texorpdfstring{$\ldots$}{...} rather tedious.
-Und das ist\texorpdfstring{$\ldots$}{...} ziemlich mühsam.
+%Which is$\ldots$ rather tedious.
+Und das ist$\ldots$ ziemlich mühsam.
 
 %Or you could use a for-loop (note: there's 4 spaces on the second line before the print statement---I've highlighted them using @ so that you can see where they are):
 Oder du verwendest die for-Schleife (beachte die 4 Leerzeichen auf der zweiten Zeile---anstatt der Leerzeichen schreibe ich dir das @-Symbol auf, damit du siehst, wo die Leerzeichen sind. Beim Abtippen lässt du wieder die @ weg):
@@ -147,7 +147,7 @@ Wenn du das Code Beispiel gerade selber ausprobiert hast, hast du vielleicht ein
 IndentationError: expected an indented block
 \end{listing}
 
-%If you see an error like this, then you missed typing the spaces on the second line.  Spaces in Python (either a normal space or a tab) are extremely important.  We'll talk more about this shortly\texorpdfstring{$\ldots$}{...}
+%If you see an error like this, then you missed typing the spaces on the second line.  Spaces in Python (either a normal space or a tab) are extremely important.  We'll talk more about this shortly$\ldots$
 Wenn du diesen Fehler bekommst, hast du die Leerzeichen auf der zweiten Zeile vergessen. Leerzeichen (normale Leerzeichen oder ein Tabulator) sind in Python extrem wichtig. Das behandeln wir etwas später genauer.
 }}}
 \linebreak
@@ -635,11 +635,11 @@ Oder wir lassen uns für jede Woche im Jahr den zusammengesparten Betrag ausrech
 %On line 1 the variable `savings' is loaded with 0 (because we haven't saved anything yet).\\
 In der ersten Zeile setzen wir die Variable `erspartes' auf 0 (am Anfang des Jahres haben wir noch nichts gespart).\\
 %Line 2 sets up the for-loop, which will run the commands in the block (the block is made up of lines 3 and 4).  Each time it loops, the variable week is loaded with the next number in the range 1-52.\\
-Auf Linie 2 beginnen wir die for-Schleife, die den Block auf Zeile 3 und 4 immer wieder ausführen wird. Bei jedem Durchlauf des Blocks hat die Variable woche eine höhere Zahl.\\
+Auf Linie 2 beginnen wir die for-Schleife, die den Block auf Zeile 3 und 4 immer wieder ausführen wird. Bei jedem Durchlauf des Blocks hat die Variable Woche eine höhere Zahl.\\
 %Line 3 is a bit more complicated.  Basically, each week we want to add what we've saved to our total savings.  Think of the variable `savings' as something like a bank.  We add up the money we earn doing odd jobs and the paper route, subtract our spending money and then take the rest to the bank.  So in computer-speak, line 3 really means, ``replace the contents of the variable savings with my current savings, plus what I've earned this week''. Basically, the equals symbol (=) is a bossy piece of code that is a way of saying, ``work out some stuff on the right first and then save it for later, using the name on the left''.\\
 Zeile 3 musst du dir vielleich ein wenig länger anschauen. Denke dir dabei vielleicht die Variable `erspartes' wie eine Sparbüchse. Jede Woche gibtst du das Geld von der Hausarbeit und dem Zeitung austragen hinein. Gleichzeitig nimmst du aber auch 10 € heraus. Der Computer rechnet den Teil rechts vom Gleichheitszeichen (=) zuerst aus und speichert das Ergebnis zur Variable auf der linken Seite.\\
-%Line 4 is a slightly more complicated print statement, which prints the week number and the total amount saved (for that week) to the screen.  Check the section \emph{Tricks with Strings} on page~\pageref{trickswithstrings}, if this line doesn't make a lot of sense to you. So, if you run this program, you'll see something like the following\texorpdfstring{$\ldots$}{...}
-In Zeile 4 ist ein print Befehl, der gleichzeitig die Woche sowie den gesammelten Geldbetrag ausgibt. Schau nochmals auf Seite~\pageref{trickswithstrings} nach, wenn es dir nicht gleich klar wird. Nachdem du alle Zeilen eingegeben hast, wird folgendes ausgegeben\texorpdfstring{$\ldots$}{...}
+%Line 4 is a slightly more complicated print statement, which prints the week number and the total amount saved (for that week) to the screen.  Check the section \emph{Tricks with Strings} on page~\pageref{trickswithstrings}, if this line doesn't make a lot of sense to you. So, if you run this program, you'll see something like the following$\ldots$
+In Zeile 4 ist ein print Befehl, der gleichzeitig die Woche sowie den gesammelten Geldbetrag ausgibt. Schau nochmals auf Seite~\pageref{trickswithstrings} nach, wenn es dir nicht gleich klar wird. Nachdem du alle Zeilen eingegeben hast, wird folgendes ausgegeben$\ldots$
 
 %\begin{listing}
 %\begin{verbatim}
@@ -678,11 +678,11 @@ In Zeile 4 ist ein print Befehl, der gleichzeitig die Woche sowie den gesammelte
 15 Woche = 375
 \end{Verbatim}
 
-%\texorpdfstring{$\ldots$}{...}going all the way up to week 52.
-\texorpdfstring{$\ldots$}{...}bis zur 52. Woche.
+%$\ldots$going all the way up to week 52.
+$\ldots$bis zur 52. Woche.
 
-%\section{While we're talking about looping\texorpdfstring{$\ldots$}{...}}\index{while-loop}
-\section{Wenn wir schon von Schleifen reden\texorpdfstring{\texorpdfstring{$\ldots$}{...}}{...}}\index{while-Schleife}
+%\section{While we're talking about looping$\ldots$}\index{while-loop}
+\section{Wenn wir schon von Schleifen reden\texorpdfstring{$\ldots$}{...}}\index{while-Schleife}
 
 %A for-loop isn't the only kind of looping you can do in Python. There's also the while-loop. If a for-loop is a loop where you know exactly when you'll stop running, a while-loop is a loop where you don't necessarily know ahead of time when you'll stop. Imagine a staircase with 20 steps.  You know you can easily climb 20 steps.  That's a for-loop.
 Die for-Schleife ist nicht die einzige Art von Schleifen, die du in Python verwenden kannst. Da gibt es auch die while-Schleife. Bei der for-Schleife, weißt du schon im vornhinein, wann die Schleife zu Ende geht. Bei einer while-Schleife weißt du das nicht. Stell dir eine Stiege mit 20 Treppen vor. Du kannst 20 Stufen einfach hochsteigen. Das ist eine for-Schleife.
@@ -827,7 +827,7 @@ Was wird der folgende Code machen?
 
 %\subsection*{Exercise 2}
 \subsection*{Übung 2}
-%When you save money in a bank, you earn interest.  `Interest' is the money the bank pays you for letting them use your money---each year you are paid a small amount of money depending upon how much you've saved.  This payment is usually added back to your savings account at the bank, and it also makes you money\texorpdfstring{$\ldots$}{...} which is a bit confusing, so you might have to ask Mum or Dad to explain.
+%When you save money in a bank, you earn interest.  `Interest' is the money the bank pays you for letting them use your money---each year you are paid a small amount of money depending upon how much you've saved.  This payment is usually added back to your savings account at the bank, and it also makes you money$\ldots$ which is a bit confusing, so you might have to ask Mum or Dad to explain.
 Wenn du Geld in die Bank bringst, bekommst du Zinsen. `Zinsen' ist der Geldbetrag, den du von der Bank bekommst, damit die Bank dein Geld benutzen kann---jedes Jahr bekommst du so einen kleinen Betrag auf dein Sparbuch zum anderen Geld. Vielleicht fragst du deine Eltern wie das alles funktioniert.
 %Interest is calculated using percentages.  If you don't know what a percentage is, don't worry, it's enough to know that if the bank is paying you 1\% (1 percent) interest, you can multiply the monetary amount by the number 0.01 (if your amount is \$1000, then you will do: 1000 * 0.01).  If they're paying you 2\% interest, you can use the number 0.02, and so on.
 Jedenfalls berechnet man die Zinsen mit Prozent. Wenn du nicht weißt, was Prozent sind, macht das nichts. Du musst dir nur merken, wenn du 1\% (1 Prozent) Zinsen bekommst, kannst du die Geldsumme mit 0.01 multiplizieren um die Zinsen zu berechnen (bei 1000 € bekommst du also 1000 x 0.01 = 10 €). Bei zwei Prozent Zinsen multiplizierst du mit 0.02 und so weiter.
